@@ -155,6 +155,16 @@
       margin: 0 1rem;
       text-decoration: none;
     }
+
+    /* Fix for the date input field */
+    #event-date {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -206,7 +216,7 @@
         <input type="tel" name="phone" placeholder="Your Phone Number"  />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="event" placeholder="Event Type (e.g. birthday, corporate)" required />
-        <input type="date" name="date"  />
+        <input type="text" name="date" placeholder="The Event Date" id="event-date" />
         <input type="text" name="address" placeholder="Event Address (Hong Kong)"  />
         <input type="number" name="participants" placeholder="Number of Participants"  />
         <textarea name="details" placeholder="Tell us more about what you need..." rows="4"></textarea>
