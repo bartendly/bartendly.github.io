@@ -51,10 +51,23 @@
       font-weight: 600;
     }
     .hero {
+      position: relative;
       background: url('images/IMG_5405.jpeg') center/cover no-repeat;
       color: white;
       padding: 6rem 2rem;
       text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero h1, .hero p, .hero .cta-btn {
+      position: relative;
+      z-index: 2;
     }
     .hero h1 {
       font-size: 3rem;
@@ -162,7 +175,19 @@
   <section id="how-it-works">
     <h2 class="section-title">How It Works</h2>
     <div class="how-it-works">
-      <p>Tell us about your event. We'll connect you directly with professional bartenders who fit your needs. You’ll receive proposals quickly and can book directly — easy and transparent. Bartender browsing coming soon!</p>
+      <div class="step">
+        <h3>1. Tell us about your event</h3>
+        <p>Give us details like date, location, type of event, and any preferences.</p>
+      </div>
+      <div class="step">
+        <h3>2. Receive proposals</h3>
+        <p>We send your request to top bartenders in Hong Kong — they get back to you fast with offers.</p>
+      </div>
+      <div class="step">
+        <h3>3. Book directly</h3>
+        <p>Choose your favorite and book easily. Transparent, quick, and professional.</p>
+      </div>
+      <p style="text-align: center; font-style: italic;">Bartender browsing coming soon!</p>
     </div>
   </section>
 
@@ -195,6 +220,7 @@
       <a href="mailto:martial@bartendly.com">Contact</a>
     </div>
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
+    <p>Website by <a href="https://anthonymasi.com" target="_blank" rel="noopener noreferrer">anthonymasi.com</a></p>
   </footer>
 </body>
 </html>
