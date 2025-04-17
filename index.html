@@ -164,6 +164,7 @@
       border: none;
       border-radius: 5px;
       font-size: 1rem;
+      background-color: white;
     }
   </style>
 </head>
@@ -216,7 +217,10 @@
         <input type="tel" name="phone" placeholder="Your Phone Number"  />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="event" placeholder="Event Type (e.g. birthday, corporate)" required />
-        <input type="text" name="date" placeholder="The Event Date" id="event-date" />
+        
+        <!-- Date Picker -->
+        <input type="date" name="date" placeholder="The Event Date" id="event-date" required />
+        
         <input type="text" name="address" placeholder="Event Address (Hong Kong)"  />
         <input type="number" name="participants" placeholder="Number of Participants"  />
         <textarea name="details" placeholder="Tell us more about what you need..." rows="4"></textarea>
