@@ -166,6 +166,14 @@
       font-size: 1rem;
       background-color: white;
     }
+
+    /* Larger date picker on larger screens (like laptops) */
+    @media (min-width: 768px) {
+      #event-date {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -218,7 +226,7 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="event" placeholder="Event Type (e.g. birthday, corporate)" required />
         
-        <!-- Date Picker -->
+        <!-- Date Picker with no default value -->
         <input type="date" name="date" placeholder="The Event Date" id="event-date" required />
         
         <input type="text" name="address" placeholder="Event Address (Hong Kong)"  />
