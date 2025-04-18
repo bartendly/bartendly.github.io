@@ -122,7 +122,15 @@
       border: none;
       border-radius: 5px;
       font-size: 1rem;
-      box-sizing: border-box;
+    }
+    /* ✅ Fix for iPhone Flatpickr input */
+    input#date {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 48px;
+      font-size: 1rem;
+      line-height: 1.2;
     }
     .form-container button {
       background: #ff5733;
@@ -172,21 +180,6 @@
       .floating-btn {
         display: block;
       }
-      input#date {
-        font-size: 1rem;
-        padding: 0.8rem;
-      }
-    }
-    input#date::placeholder {
-      color: #999;
-      opacity: 1;
-    }
-    input#date {
-      appearance: none;
-      -webkit-appearance: none;
-      font-size: 1rem;
-      min-height: 3.2rem;
-      box-sizing: border-box;
     }
   </style>
 </head>
@@ -250,9 +243,9 @@
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
         <input type="email" name="email" placeholder="Your Email" required/>
-        <input type="text" name="event" placeholder="Event Type (e.g. birthday, cocktail class)" required/>
+        <input type="text" name="event" placeholder="Event Type (e.g. birthday, cocktail class)"  required/>
         <textarea name="details" placeholder="Tell us more about what you need..." rows="5"></textarea>
-        <input type="text" id="date" name="date" placeholder="The event date" required />
+        <input type="text" id="date" name="date" placeholder="The event date" />
         <input type="text" name="address" placeholder="Event Address (Hong Kong)" />
         <input type="number" name="participants" placeholder="Number of Participants" />
         <button type="submit">Send Request</button>
@@ -279,7 +272,7 @@
       allowInput: true,
       clickOpens: true,
       defaultDate: null,
-      wrap: false,
+      disableMobile: true // ✅ Force Flatpickr on iPhone
     });
 
     const form = document.getElementById('contact-form');
