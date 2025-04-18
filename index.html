@@ -122,6 +122,10 @@
       border: none;
       border-radius: 5px;
       font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .form-container input#date::placeholder {
+      color: #999;
     }
     .form-container button {
       background: #ff5733;
@@ -264,6 +268,7 @@
       clickOpens: true,
       defaultDate: null,
       wrap: false,
+      placeholder: "The event date"
     });
 
     const form = document.getElementById('contact-form');
