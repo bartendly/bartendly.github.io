@@ -40,12 +40,19 @@
       margin-left: 1.5rem;
       font-weight: 600;
     }
+    /* Fallback for older browsers */
     .hero {
-      position: relative;
-      background: url('images/IMG_5405.jpeg') center/cover no-repeat;
-      color: white;
-      padding: 6rem 2rem;
-      text-align: center;
+        position: relative;
+        background: url('images/IMG_5405.jpeg') center/cover no-repeat;
+        color: white;
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+    /* WebP version for modern browsers */
+    @supports (background-image: url("images/IMG_5405.webp")) {
+        .hero {
+            background-image: url('images/IMG_5405.webp');
+        }
     }
     .hero img {
       display: none;
@@ -55,9 +62,13 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
     }
+    .hero > * {
+        position: relative;
+        z-index: 1;
+    }   
     .hero h1, .hero p, .hero .cta-btn {
       position: relative;
       z-index: 2;
@@ -106,28 +117,47 @@
       padding-left: 30px;
       margin-bottom: 1rem;
     }
+    /* Fallback for older browsers */
     .form-section {
-      background: url('images/IMG_5406.jpeg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('images/IMG_5406.jpeg') center/cover no-repeat;
+      background-blend-mode: darken;
       background-size: cover;
       padding: 3rem 2rem;
       color: white;
-      background-blend-mode: darken;
+    }
+    /* WebP version for modern browsers */
+    @supports (background-image: url("images/IMG_5406.webp")) {
+        .form-section {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                          url('images/IMG_5406.webp');
+        }
     }
     .form-container {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
       padding: 2rem;
       border-radius: 8px;
       max-width: 500px;
       margin: auto;
     }
-    .form-container input, .form-container textarea, .form-container select {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
+    /* Ensure consistent box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.form-container input, 
+.form-container textarea, 
+.form-container select, 
+.form-container button {
+  width: 100%; /* Ensure all form elements are the same width */
+  padding: 0.8rem; /* Consistent padding for all form elements */
+  margin-bottom: 1rem; /* Consistent margin */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
     /* ✅ Fix for iPhone Flatpickr input */
     input#date {
         appearance: none;
@@ -190,6 +220,9 @@
         display: block;
       }
     }
+    #book {
+        scroll-margin-top: -80px; /* Adjust this value as needed */
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -226,8 +259,11 @@
     <h1>Book Professional Bartenders in Hong Kong</h1>
     <p>Private events, cocktail classes, corporate parties — we're partnering with the best bartenders in Central, Wan Chai, and across Hong Kong.</p>
     <a href="#book" class="cta-btn">Book a Bartender</a>
-    <img src="images/IMG_5405.jpeg" alt="Professional bartender in Hong Kong preparing cocktails" loading="lazy">
-  </section>
+    <picture>
+        <source srcset="images/IMG_5405.webp" type="image/webp">
+        <img src="images/IMG_5405.jpeg" alt="Professional bartender in Hong Kong preparing cocktails" loading="lazy">
+    </picture>
+</section>
 
   <section id="how-it-works">
     <h2 class="section-title">How It Works</h2>
@@ -265,7 +301,7 @@
     <div class="form-container">
       <h2 style="text-align: center; margin-bottom: 1.5rem;">Book a Bartender</h2>
       <form action="https://formspree.io/f/mdkevral" method="POST" id="contact-form">
-        <select name="client_type">
+        <select name="client_type" aria-label="Select client type">
           <option value="Private" selected>Private customer</option>
           <option value="Corporate">Corporate</option>
         </select>
