@@ -158,6 +158,29 @@
   border-radius: 5px;
   font-size: 1rem;
 }
+
+.form-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff; /* same as other inputs */
+  color: #999 !important; /* gray like other input text */
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Optional: add a custom arrow for consistency */
+.form-container select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'12'%20height%3D'12'%20viewBox%3D'0%200%2012%2012'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M2%204l4%204%204-4'%20stroke%3D'%23666'%20stroke-width%3D'2'%20fill%3D'none'%20fill-rule%3D'evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
     /* ✅ Fix for iPhone Flatpickr input */
     input#date {
         appearance: none;
@@ -172,7 +195,7 @@
         box-sizing: border-box;
     }
     .form-container button {
-      background: #ff5733;
+        background: #ff5733 !important;
       color: white;
       border: none;
       padding: 1rem;
@@ -180,6 +203,10 @@
       border-radius: 5px;
       cursor: pointer;
       width: 100%;
+    }
+    .form-container button:hover,
+    .form-container button:focus {
+        background: #e14a29 !important;
     }
     .success-message {
       display: none;
