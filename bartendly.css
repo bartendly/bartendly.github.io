@@ -636,7 +636,7 @@ input::placeholder {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 1rem 1.5rem 0.5rem; /* reduce bottom space */
   }
 
   header,
@@ -647,8 +647,8 @@ input::placeholder {
 
   header .logo a {
     display: inline-block;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem; /* tighter spacing under logo */
   }
 
   header nav {
@@ -656,13 +656,14 @@ input::placeholder {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 0.8rem;
-    padding-left: 0.5rem;
+    gap: 0.5rem;
+    padding: 0; /* remove left padding */
+    margin-top: 0; /* tighter spacing */
   }
 
   header nav a {
     font-size: 1rem;
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 0.5rem;
     white-space: nowrap;
   }
 }
