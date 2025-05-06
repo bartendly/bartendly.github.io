@@ -1,0 +1,46 @@
+body {
+    --hero-overlay: rgba(0, 0, 0, 0.4);
+    --form-overlay: rgba(0, 0, 0, 0.4);
+  }
+
+/*.hero {
+    background: url('/hong-kong/images/IMG_5405.jpg') center/cover no-repeat;
+  }
+  
+  @supports (background-image: url("/hong-kong/images/IMG_5405.webp")) {
+    .hero {
+      background-image: url('/hong-kong/images/IMG_5405.webp');
+    }
+  }*/
+
+  .hero {
+    background: url('images/IMG_5405.jpg') center/cover no-repeat;
+  }
+  
+  @supports (background-image: url("images/IMG_5405.webp")) {
+    .hero {
+      background-image: url('images/IMG_5405.webp');
+    }
+  }
+  
+ 
+  
+  /*.form-section {
+    background-image: url('/hong-kong/images/form.jpg');
+  }
+  
+  @supports (background-image: url("/hong-kong/images/form.webp")) {
+    .form-section {
+      background-image: url('/hong-kong/images/form.webp');
+    }
+  }*/
+
+  .form-section {
+    background-image: url('images/IMG_5406.jpg') center/cover no-repeat;
+  }
+  
+  @supports (bbackground-image: url("images/IMG_5406.webp")) {
+    .form-section {
+        background-image: url('images/IMG_5406.webp');
+    }
+  }
