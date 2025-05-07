@@ -19,19 +19,21 @@ body {
     margin-left: 1.5rem;
     font-weight: 600;
   }
-  /* Fallback for older browsers */
+
   .hero {
-      position: relative;
-      background: url('images/IMG_5405.jpeg') center/cover no-repeat;
-      color: white;
-      padding: 6rem 2rem;
-      text-align: center;
+    position: relative;
+    background: url('images/IMG_5405.jpeg') center 45% / cover no-repeat;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
   }
   /* WebP version for modern browsers */
   @supports (background-image: url("images/IMG_5405.webp")) {
-      .hero {
-          background-image: url('images/IMG_5405.webp');
-      }
+    .hero {
+      background-image: url('images/IMG_5405.webp');
+      background-position: center 45%;
+      background-size: cover;
+    }
   }
   .hero img {
     position: absolute;
@@ -46,14 +48,13 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    /*background-color: rgba(0, 0, 0, 0.6);*/
     background-color: var(--hero-overlay, rgba(0, 0, 0, 0.6));
     z-index: 0;
   }
   .hero > * {
-      position: relative;
-      z-index: 1;
-  }   
+    position: relative;
+    z-index: 1;
+  }
   .hero h1, .hero p, .hero .cta-btn {
     position: relative;
     z-index: 2;
@@ -66,7 +67,12 @@ body {
     font-size: 1.25rem;
     margin: 1rem 0;
   }
-
+  /* Increase height on wider screens to show more of the image */
+  @media (min-width: 768px) {
+    .hero {
+      padding: 8rem 2rem;
+    }
+  }
   @media (max-width: 768px) {
     .hero h1 {
       font-size: 2.2rem;
@@ -82,7 +88,7 @@ body {
     .hero p {
       font-size: 0.9rem;
     }
-  }
+  }  
   
   section {
     padding: 3rem 2rem;
@@ -112,7 +118,7 @@ body {
   /* Fallback for older browsers */
 .form-section {
   position: relative;
-  background: url('images/IMG_5406.jpeg') center/cover no-repeat;
+  background-image: url('images/IMG_5406.jpeg') center/cover no-repeat;
   background-blend-mode: darken;
   background-size: cover;
   color: white;
@@ -646,7 +652,7 @@ input::placeholder {
 
   header .logo a {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
   }
