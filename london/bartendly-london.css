@@ -44,12 +44,14 @@
   
   /* FORM override */
   .form-section {
-    background: url('/london/images/form.jpeg') center/cover no-repeat !important;
+    background: url('/london/images/form.jpeg') left 40%/cover no-repeat !important;
   }
   
   @supports (background-image: url("/london/images/form.webp")) {
     .form-section {
       background-image: url('/london/images/form.webp') !important;
+      background-position: left 40% !important;
+      background-size: cover !important;
     }
   }
   
