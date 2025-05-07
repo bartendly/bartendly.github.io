@@ -4,21 +4,21 @@ body {
   }
 
 .hero {
-    background: url('/hong-kong/images/IMG_5405.jpg') center/cover no-repeat;
+    background: url('/hong-kong/images/hero.jpeg') center/cover no-repeat;
   }
   
-  @supports (background-image: url("/hong-kong/images/IMG_5405.webp")) {
+  @supports (background-image: url("/hong-kong/images/hero.webp")) {
     .hero {
-      background-image: url('/hong-kong/images/IMG_5405.webp');
+      background-image: url('/hong-kong/images/hero.webp');
     }
   }
 
   .form-section {
-    background-image: url('/hong-kong/images/IMG_5406.jpg') center/cover no-repeat;
+    background: url('/hong-kong/images/form.jpeg') center/cover no-repeat !important;
   }
   
-  @supports (bbackground-image: url("/hong-kong/images/IMG_5406.webp")) {
+  @supports (background-image: url("/hong-kong/images/form.webp")) {
     .form-section {
-        background-image: url('/hong-kong/images/IMG_5406.webp');
+      background-image: url('/hong-kong/images/form.webp') !important;
     }
   }
