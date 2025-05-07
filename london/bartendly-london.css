@@ -30,14 +30,14 @@
   
   /* HERO override - full match with !important */
   .hero {
-    background: url('/london/images/hero.jpeg') center 50% / cover no-repeat !important;
+    background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
     padding: 8rem 2rem !important;
   }
   
   @supports (background-image: url("/london/images/hero.webp")) {
     .hero {
       background-image: url('/london/images/hero.webp') !important;
-      background-position: center 50% !important;
+      background-position: center 70% !important;
       background-size: cover !important;
     }
   }
