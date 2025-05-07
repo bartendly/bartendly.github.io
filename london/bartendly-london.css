@@ -1,4 +1,4 @@
-body {
+/*body {
     --hero-overlay: rgba(0, 0, 0, 0.6);
     --form-overlay: rgba(0, 0, 0, 0.5);
   }
@@ -21,4 +21,35 @@ body {
     .form-section {
       background-image: url('/london/images/form.webp') !important;
     }
+  }*/
+
+  body {
+    --hero-overlay: rgba(0, 0, 0, 0.6);
+    --form-overlay: rgba(0, 0, 0, 0.5);
   }
+  
+  /* HERO override - full match with !important */
+  .hero {
+    background: url('/london/images/hero.jpeg') center 50% / cover no-repeat !important;
+    padding: 8rem 2rem !important;
+  }
+  
+  @supports (background-image: url("/london/images/hero.webp")) {
+    .hero {
+      background-image: url('/london/images/hero.webp') !important;
+      background-position: center 50% !important;
+      background-size: cover !important;
+    }
+  }
+  
+  /* FORM override */
+  .form-section {
+    background: url('/london/images/form.jpeg') center/cover no-repeat !important;
+  }
+  
+  @supports (background-image: url("/london/images/form.webp")) {
+    .form-section {
+      background-image: url('/london/images/form.webp') !important;
+    }
+  }
+  
