@@ -1,10 +1,10 @@
 body {
-    --hero-overlay: rgba(0, 0, 0, 0.7);
+    --hero-overlay: rgba(0, 0, 0, 0.6);
     --form-overlay: rgba(0, 0, 0, 0.5);
   }
 
 .hero {
-    background: url('/london/images/hero.jpg') center/cover no-repeat;
+    background: url('/london/images/hero.jpeg') center/cover no-repeat;
   }
   
   @supports (background-image: url("/london/images/hero.webp")) {
@@ -14,11 +14,11 @@ body {
   }
 
   .form-section {
-    background-image: url('/london/images/form.jpg') center/cover no-repeat;
+    background: url('/london/images/form.jpeg') center/cover no-repeat !important;
   }
   
-  @supports (bbackground-image: url("/london/images/form.webp")) {
+  @supports (background-image: url("/london/images/form.webp")) {
     .form-section {
-        background-image: url('/london/images/form.webp');
+      background-image: url('/london/images/form.webp') !important;
     }
   }
