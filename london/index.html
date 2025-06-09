@@ -6,9 +6,8 @@
     <meta name="description" content="Book top bartenders and mixologists in London for private events, parties, and cocktail classes. No commission. Trusted, fast, and effortless with Bartendly." />
     <meta name="keywords" content="book bartender London, hire bartender GB, cocktail class London, mixologist London, bartender for party GB, event bartender Central, private bartender Soho, mixology workshop GB, cocktail masterclass GB" />
     <meta name="author" content="Bartendly" />
-    <!--<meta name="robots" content="index, follow" />-->
-    <!--let's not index it for now-->
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow" />
+    <!--<meta name="robots" content="noindex, nofollow">-->
     <meta property="og:title" content="Book Bartenders & Cocktail Classes in London | Bartendly" />
     <meta property="og:description" content="Hire professional bartenders and mixologists in London for parties, events, and cocktail classes. Fast, easy, and commission-free." />
     <meta property="og:image" content="https://www.bartendly.com/london/images/hero.webp" />
@@ -52,11 +51,13 @@
 </head>
 <body>
   <header>
-    <div class="logo"><a href="/">Bartendly</a></div>
-    <nav>
-      <a href="#how-it-works">How it Works</a>
-      <a href="#bartenders">Meet the Bartenders</a>
-    </nav>
+    <div class="logo"><a href="#">Bartendly</a></div>
+    <div class="header-right">
+      <nav>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#bartenders">Meet the bartenders</a>
+      </nav>
+    </div>
   </header>
 
 <section class="hero">
@@ -90,30 +91,19 @@
   </section>
 
 <!-- START CARROUSSEL -->
-<section id="bartenders" class="bartender-carousel" aria-label="Featured Bartenders from London">
+<!--<section id="bartenders" class="bartender-carousel" aria-label="Featured Bartenders from London">
   <div class="carousel-header">
     <h2>Meet some of the best bartenders in London</h2>
   </div>
-
   <div class="swiper" id="carousel" role="region" aria-roledescription="carousel" aria-label="Bartender Profiles Carousel" aria-live="polite">
     <div class="swiper-wrapper">
-      <!-- Slides added via JS -->
+      
     </div>
-
-    <!-- Navigation buttons -->
     <button class="swiper-button-prev" type="button" aria-label="Previous bartender" aria-controls="carousel"></button>
     <button class="swiper-button-next" type="button" aria-label="Next bartender" aria-controls="carousel"></button>
-
-    <!-- Optional pagination -->
     <div class="swiper-pagination" aria-hidden="true"></div>
   </div>
-
-  <!--<p class="view-all-link">
-    <a href="/bartenders" class="carousel-link" aria-label="View all featured bartenders in Hong Kong">
-      View all featured bartenders →
-    </a>
-  </p>-->
-</section>
+</section>-->
 
 
 
@@ -151,7 +141,7 @@
         <label for="details" class="sr-only">Tell us more about what you need</label>
         <textarea id="details" name="details" placeholder="Tell us more about what you need..." rows="5"></textarea>
         <label for="date" class="sr-only">The event date</label>
-        <input id="date" type="text" id="date" name="date" placeholder="The event date" />
+        <input id="date" type="text" name="date" placeholder="The event date" />
         <label for="address" class="sr-only">Event Address</label>
         <input id="address" type="text" name="address" placeholder="Event Address (London)" />
         <label for="participants" class="sr-only">Number of participants</label>
