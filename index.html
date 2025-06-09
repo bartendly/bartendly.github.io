@@ -3,390 +3,258 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Find and book professional bartenders and mixologists in Hong Kong for private events, cocktail classes, and corporate parties. Trusted, easy, and fast booking.">
-    <meta name="keywords" content="bartender Hong Kong, hire bartender, cocktail classes Hong Kong, private bartender HK, event bartender HK, bartender Central Hong Kong, bartender Wan Chai, mixologist Hong Kong, hire mixologist, private mixologist HK, event mixologist HK, mixologist Central Hong Kong, mixologist Wan Chai, book bartender" />
+    <meta name="description" content="Book world-class bartenders and mixologists for private events, parties, and cocktail experiences in cities like London and Hong Kong. No commissions, easy booking, and verified talent." />
+    <meta name="keywords" content="book bartender, hire mixologist, cocktail class, private bartender, mixology experience, bartender for events" />
     <meta name="author" content="Bartendly" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Bartendly - Hire Top Bartenders & Mixologists in Hong Kong" />
-    <meta property="og:description" content="Book professional bartenders and mixologists for private events, cocktail workshops, and parties in Hong Kong. Easy, fast, and reliable." />
-    <meta property="og:image" content="https://www.bartendly.com/images/IMG_5405.jpeg" />
+    <meta property="og:title" content="Bartendly | Book Bartenders in London, Hong Kong & More" />
+    <meta property="og:description" content="Hire top bartenders and mixologists for events in your city. Fast, easy, commission-free." />
+    <meta property="og:image" content="https://www.bartendly.com/images/IMG_5405.webp" />
     <meta property="og:url" content="https://www.bartendly.com" />
-    <title>Hire Bartenders & Mixologists in Hong Kong | Private Events & Cocktail Classes - Bartendly</title>
+    <meta property="og:type" content="website" />   
+    <title>Bartendly | Hire Professional Bartenders for Private Events</title>
+    <link rel="stylesheet" href="bartendly.min.css">
     <link rel="canonical" href="https://www.bartendly.com/" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preload" as="image" href="images/IMG_5405.webp" type="image/webp">
+    <link rel="icon" href="https://www.bartendly.com/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
-    }
-    header {
-      background-color: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-weight: 600;
-    }
-    /* Fallback for older browsers */
-    .hero {
-        position: relative;
-        background: url('images/IMG_5405.jpeg') center/cover no-repeat;
-        color: white;
-        padding: 6rem 2rem;
-        text-align: center;
-    }
-    /* WebP version for modern browsers */
-    @supports (background-image: url("images/IMG_5405.webp")) {
-        .hero {
-            background-image: url('images/IMG_5405.webp');
-        }
-    }
-    .hero img {
-      display: none;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-    .hero > * {
-        position: relative;
-        z-index: 1;
-    }   
-    .hero h1, .hero p, .hero .cta-btn {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin: 1rem 0;
-    }
-    .cta-btn {
-      background: #ff5733;
-      padding: 1rem 2rem;
-      color: white;
-      font-size: 1.1rem;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 1.5rem;
-    }
-    section {
-      padding: 3rem 2rem;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .how-it-works, .about, .why-bartendly {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .how-it-works p, .about p, .why-bartendly p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .why-bartendly ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .why-bartendly li {
-      background: url('images/check.svg') no-repeat left center;
-      background-size: 20px;
-      padding-left: 30px;
-      margin-bottom: 1rem;
-    }
-    /* Fallback for older browsers */
-    .form-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('images/IMG_5406.jpeg') center/cover no-repeat;
-      background-blend-mode: darken;
-      background-size: cover;
-      padding: 3rem 2rem;
-      color: white;
-    }
-    /* WebP version for modern browsers */
-    @supports (background-image: url("images/IMG_5406.webp")) {
-        .form-section {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                          url('images/IMG_5406.webp');
-        }
-    }
-    .form-container {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 700px;
-      margin: auto;
-    }
-    /* Ensure consistent box-sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.form-container input, 
-.form-container textarea, 
-.form-container select, 
-.form-container button {
-  width: 100%; /* Ensure all form elements are the same width */
-  padding: 0.8rem; /* Consistent padding for all form elements */
-  margin-bottom: 1rem; /* Consistent margin */
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.form-container select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #fff; /* same as other inputs */
-  color: #999 !important; /* gray like other input text */
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  border-radius: 4px;
-  width: 100%;
-}
-
-/* Optional: add a custom arrow for consistency */
-.form-container select {
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'12'%20height%3D'12'%20viewBox%3D'0%200%2012%2012'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M2%204l4%204%204-4'%20stroke%3D'%23666'%20stroke-width%3D'2'%20fill%3D'none'%20fill-rule%3D'evenodd'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 12px;
-}
-
-    /* ✅ Fix for iPhone Flatpickr input */
-    input#date {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        padding: 0.8rem;
-        margin-bottom: 1rem;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .form-container button {
-        background: #FF6447 !important;
-      color: white;
-      border: none;
-      padding: 1rem;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
-    .form-container button:hover,
-    .form-container button:focus {
-        background: #e14a29 !important;
-    }
-    .success-message {
-      display: none;
-      margin-top: 1rem;
-      background: #28a745;
-      color: white;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: center;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 3rem;
-    }
-    footer a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    .floating-btn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #ff5733;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    @media (max-width: 768px) {
-      .floating-btn {
-        display: block;
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bartendly",
+        "url": "https://www.bartendly.com",
+        "logo": "https://www.bartendly.com/images/logo.png",
+        "description": "Bartendly connects clients with professional bartenders and mixologists for events in cities like London, Hong Kong, and more.",
+        "email": "martial@bartendly.com",
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "London"
+          },
+          {
+            "@type": "Place",
+            "name": "Hong Kong"
+          }
+        ],
+        "sameAs": [
+          "https://instagram.com/bartendly",
+          "https://facebook.com/bartendly",
+          "https://linkedin.com/company/bartendly"
+        ]
       }
-    }
-    #book {
-        scroll-margin-top: -80px; /* Adjust this value as needed */
-    }
-  </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Bartendly",
-      "image": "https://www.bartendly.com/images/IMG_5405.jpeg",
-      "description": "Professional bartender and mixologist booking platform in Hong Kong for private and corporate events.",
-      "url": "https://www.bartendly.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Hong Kong",
-        "addressCountry": "HK"
-      },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Hong Kong"
-      },
-      "email": "martial@bartendly.com"
-    }
-  </script>  
+      </script>
 </head>
 <body>
   <header>
     <div class="logo"><a href="#">Bartendly</a></div>
-    <nav>
-      <a href="#how-it-works">How it Works</a>
-      <!--<a href="#why-bartendly">Why Bartendly</a>-->
-      <a href="#about">About Us</a>
-    </nav>
+    <div class="header-right">
+      <nav>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#bartenders">Meet the bartenders</a>
+      </nav>
+      <button id="city-toggle" aria-label="Choose your city">🌍</button>
+      <div id="city-menu" class="city-menu" hidden>
+        <ul>
+          <li><a href="/london/">🇬🇧 London</a></li>
+          <li><a href="/hong-kong/">🇭🇰 Hong Kong</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Book Professional Bartenders & Mixologists in Hong Kong</h1>
-    <p>Private events, cocktail classes, corporate parties — we're partnering with the best bartenders and mixologists in Central, Wan Chai, and across Hong Kong.</p>
-    <a href="#book" class="cta-btn">Book a Bartender or Mixologist</a>
-    <picture>
-        <source srcset="images/IMG_5405.webp" type="image/webp">
-        <img src="images/IMG_5405.jpeg" alt="Professional bartender in Hong Kong preparing cocktails" loading="lazy">
-    </picture>
-  </section>
+<section class="hero">
+  <h1>Elevate Your Event with Professional Bartending Services</h1>
+  <p>Bartendly connects you with experienced, high-end bartenders & mixologists for private events, corporate functions, and cocktail experiences</p>
+  <a href="#book" class="cta-btn">Request a Bartender</a>
+  <picture>
+    <source srcset="images/IMG_5405.webp" type="image/webp">
+    <img src="images/IMG_5405.jpeg" alt="Bartender in Hong Kong mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
+  </picture>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <p>
+      At Bartendly, we believe every occasion deserves exceptional service. Whether you are planning an intimate gathering, a wedding, or a corporate soirée, our hand-selected bartenders bring expertise, style, and a touch of sophistication to your event.
+    </p>
+  </div>
+</section>
 
   <section id="how-it-works">
     <h2 class="section-title">How It Works</h2>
     <div class="how-it-works">
-      <h3>1. Tell us about your event</h3>
-      <p>Include the date, location in Hong Kong, type of event, and any preferences.</p>
-      <h3>2. Receive proposals</h3>
-      <p>Top bartenders & mixologists in Hong Kong will respond with offers quickly.</p>
-      <h3>3. Book directly</h3>
-      <p>Choose your favorite and book — transparent, fast, and reliable.</p>
-      <p style="text-align: center; font-style: italic;">Bartender browsing coming soon!</p>
+      <h3>1. Tell Us About Your Event</h3>
+      <p>Share your event details — date, location, type of occasion, and any special requests.</p>
+      <h3>2. Receive Proposals</h3>
+      <p>Top bartenders and mixologists will respond quickly with tailored offers.</p>
+      <h3>3. Book Directly</h3>
+      <p>Select your favorite and book directly — simple, fast, and transparent.</p>
     </div>
   </section>
 
-  <section id="why-bartendly">
-    <h2 class="section-title">Why Bartendly?</h2>
-    <div class="why-bartendly">
-      <ul>
-        <li>✅ Only trusted, pre-vetted professionals</li>
-        <li>🥂 Great for private and corporate events across Hong Kong</li>
-        <li>⚡ Fast, no-hassle booking process</li>
-        <li>📍 Based in Hong Kong, we know the local scene</li>
-      </ul>
+<!-- START CARROUSSEL -->
+<section id="bartenders" class="bartender-carousel" aria-label="Featured Bartenders from Hong Kong and London">
+  <div class="carousel-header">
+    <h2>Meet some of the best bartenders in Hong Kong and London</h2>
+  </div>
+
+  <div class="swiper" id="carousel" role="region" aria-roledescription="carousel" aria-label="Bartender Profiles Carousel" aria-live="polite">
+    <div class="swiper-wrapper">
+      <!-- Slides added via JS -->
+    </div>
+
+    <!-- Navigation buttons -->
+    <button class="swiper-button-prev" type="button" aria-label="Previous bartender" aria-controls="carousel"></button>
+    <button class="swiper-button-next" type="button" aria-label="Next bartender" aria-controls="carousel"></button>
+
+    <!-- Optional pagination -->
+    <div class="swiper-pagination" aria-hidden="true"></div>
+  </div>
+
+  <!--<p class="view-all-link">
+    <a href="/bartenders" class="carousel-link" aria-label="View all featured bartenders in Hong Kong">
+      View all featured bartenders →
+    </a>
+  </p>-->
+</section>
+
+
+
+<section id="why-bartendly">
+  <h2 class="section-title">Why Choose Bartendly?</h2>
+  <div class="why-bartendly">
+    <ul>
+      <li>✅ Only trusted, pre-vetted professional bartenders</li>
+      <li>🥂 Ideal for both private gatherings and corporate events across Hong Kong, London & more</li>
+      <li>⚡ Fast, hassle-free booking — no surprises</li>
+      <li>📍 Locally based in Hong Kong and London, we understand the scene like no one else</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="book" class="form-section">
+    <div class="form-container">
+   <h2 id="formTitle" class="form-title">Book a World-Class Bartender for Your Event</h2>
+    <p class="form-subtitle">No account needed. Connect instantly with top bartenders.</p>
+    <form role="form" aria-labelledby="formTitle" action="https://formspree.io/f/mdkevral" method="POST" id="contact-form">
+       <label for="client_type" class="sr-only">Client type</label>
+       <select id="client_type" name="client_type" aria-label="Select client type">
+          <option value="Private" selected>Private customer</option>
+          <option value="Corporate">Corporate</option>
+        </select>
+        <label for="city" class="sr-only">City</label>
+        <select id="city" name="city" aria-label="Select a city" required>
+          <option value="">Select a city</option>
+          <option value="London">London</option>
+          <option value="Hong Kong">Hong Kong</option>
+        </select>
+        <label for="name" class="sr-only">Name</label>
+        <input id="name" type="text" name="name" placeholder="Your Name" required />
+        <label for="phone" class="sr-only">Your Phone/Whatsapp Number</label>
+        <input id="phone" type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
+        <label for="email" class="sr-only">Your Email</label>
+        <input id="email" type="email" name="email" placeholder="Your Email" />
+        <label for="event" class="sr-only">Event type</label>
+        <input id="event" type="text" name="event" placeholder="Event Type (e.g. birthday, cocktail class)"  required/>
+        <label for="details" class="sr-only">Tell us more about what you need</label>
+        <textarea id="details" name="details" placeholder="Tell us more about what you need..." rows="5"></textarea>
+        <label for="date" class="sr-only">The event date</label>
+        <input id="date" type="text" name="date" placeholder="The event date" />
+        <label for="address" class="sr-only">Event Address</label>
+        <input id="address" type="text" name="address" placeholder="Event Address" />
+        <label for="participants" class="sr-only">Number of participants</label>
+        <input id="participants" type="number" name="participants" placeholder="Number of Participants" />
+        <button type="submit">Send Request</button>
+      </form>
+      <div id="success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
     </div>
   </section>
 
   <section id="about">
     <h2 class="section-title">About Bartendly</h2>
     <div class="about">
-      <p>Bartendly is a new platform making it simple to hire expert bartenders for events in Hong Kong. Whether it’s a private party in Central, a corporate gathering in Wan Chai, or a rooftop in TST — we’ve got you covered.</p>
+      <p><strong>Our Vision:</strong> To make world-class bartending accessible to everyone, everywhere — elevating events with unforgettable cocktail experiences.</p> 
+      <p>Bartendly was founded by a team of seasoned bartenders and IT professionals with a shared passion for hospitality and innovation. Our bartenders have worked in some of the world's most renowned venues, including several of the <em>World’s 50 Best Bars</em>, bringing decades of expertise to every event.</p>
+      <p>Previously, we helped create the global bartending community <strong>World of Mixologists</strong> and the popular Instagram page <a href="https://www.instagram.com/world.of.mixologists/" target="_blank">@world.of.mixologists</a>, connecting cocktail lovers and professionals around the globe.</p>
+      <p>With Bartendly, we aim to bridge the gap between talented bartenders and people seeking exceptional service for private parties, corporate events, and special occasions. Starting in Hong Kong and London, our goal is to expand worldwide — one unforgettable cocktail at a time.</p>
     </div>
   </section>
 
-  <section id="book" class="form-section">
-    <div class="form-container">
-      <h2 style="text-align: center; margin-bottom: 1.5rem;">Book a Bartender</h2>
-      <form action="https://formspree.io/f/mdkevral" method="POST" id="contact-form">
-        <select name="client_type" aria-label="Select client type">
-          <option value="Private" selected>Private customer</option>
-          <option value="Corporate">Corporate</option>
-        </select>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
-        <input type="email" name="email" placeholder="Your Email" required/>
-        <input type="text" name="event" placeholder="Event Type (e.g. birthday, cocktail class)"  required/>
-        <textarea name="details" placeholder="Tell us more about what you need..." rows="5"></textarea>
-        <input type="text" id="date" name="date" placeholder="The event date" />
-        <input type="text" name="address" placeholder="Event Address (Hong Kong)" />
-        <input type="number" name="participants" placeholder="Number of Participants" />
-        <button type="submit">Send Request</button>
-      </form>
-      <div id="success-message" class="success-message">We will come back to you shortly with proposals from professional bartenders.</div>
+  <section id="testimonials">
+    <h2 class="section-title">What Our Customers Are Saying</h2>
+    <div class="testimonial">
+      <blockquote>
+        “Fantastic cocktails and seamless communication from start to finish. We’ll definitely book again for our next event.”
+        <footer>— Priya S., London</footer>
+      </blockquote>
+    </div>
+    <div class="testimonial">
+      <blockquote>
+        “Professional, elegant, and easy to work with. Highly recommend Bartendly for any private event.”
+        <footer>— Michelle L., Central District, Hong Kong</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>When should I book my bartender?</h3>
+      <p>We recommend booking at least two weeks in advance to secure the best availability.</p>
+    </div>
+  
+    <div class="faq-item">
+      <h3>Can I request specific cocktails or a theme?</h3>
+      <p>Absolutely. Our bartenders can create bespoke menus tailored to your event.</p>
+    </div>
+  
+    <div class="faq-item">
+      <h3>Do I need to provide my own ingredients?</h3>
+      <p>No, our bartenders will bring all necessary ingredients and equipment for your event.</p>
     </div>
   </section>
 
   <footer>
-    <div>
-      <a href="#how-it-works">How it Works</a>
-      <a href="#about">About Us</a>
-      <a href="mailto:martial@bartendly.com">Contact</a>
+    <div class="footer-links">
+      <a href="mailto:martial@bartendly.com">Contact Us</a>
     </div>
+  
+    <div class="social-links">
+      <a href="https://facebook.com/bartendly" target="_blank" class="facebook" aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/bartendly" target="_blank" class="instagram" aria-label="Visit us on Instagram">
+        <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
+        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+      </a>
+    </div>
+  
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
+  
+    <div class="cta-footer">
+      <p>Ready to elevate your next event?</p>
+      <a href="#book" class="cta-btn">Request a Bartender</a>
+    </div>
   </footer>
 
-  <!--<a href="#book" class="floating-btn">Book Now</a>-->
+<!-- External libraries -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script>
-    flatpickr("#date", {
-      dateFormat: "Y-m-d",
-      allowInput: true,
-      clickOpens: true,
-      defaultDate: null,
-      disableMobile: true // ✅ Force Flatpickr on iPhone
-    });
+<!-- Bartendly js-->
+<script src="data.js" defer></script>
+<script src="bartendly.min.js" defer></script>
 
-    const form = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.reset();
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
-      } else {
-        alert('Oops! Something went wrong while sending your message.');
-      }
-    });
-  </script>
 </body>
 </html>
