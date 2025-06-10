@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const wrapper = document.querySelector('.swiper-wrapper');
-  
+  if (wrapper){
   finalList.forEach(({ name, bar, img, alt }) => {
   const slide = document.createElement('div');
   slide.className = 'swiper-slide';
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   wrapper.appendChild(slide);
 });
+}
 
   window.addEventListener('load', () => {
     new Swiper('.swiper', {
