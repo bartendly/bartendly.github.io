@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const wrapper = document.querySelector('.swiper-wrapper');
-
+  
   finalList.forEach(({ name, bar, img, alt }) => {
   const slide = document.createElement('div');
   slide.className = 'swiper-slide';
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="#book" class="promo-slide-link" aria-label="Book a bartender with Bartendly">
       <div class="text-slide">
         <div class="text-slide-content">
-          <h3>And many other talented bartenders in Hong Kong</h3>
+          <h3>And many other talented professional bartenders</h3>
           <p>Try Bartendly today — no commission fees during our launch! <span class="cta-arrow" aria-hidden="true">→</span></p>
         </div>
       </div>
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   wrapper.appendChild(slide);
 });
-
 
   window.addEventListener('load', () => {
     new Swiper('.swiper', {
