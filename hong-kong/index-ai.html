@@ -61,34 +61,36 @@
     </div>
   </header>
 
-  <section class="hero" style="padding: 2em 1em 1em 1em;">
-    <h1 style="margin-bottom: 0.5em; font-size: 2em;">Hire a Bartender Instantly in Hong Kong</h1>
-    <p style="margin-bottom: 1em;">Tell us what you need — we’ll match you with a top bartender right away. No middlemen. No hassle.</p>
+  <section class="hero" style="padding: 1.5em 1em 0.5em 1em;">
+    <h1 style="margin-bottom: 0.4em; font-size: 2.2em; text-align: center;">Hire a Bartender Instantly in Hong Kong</h1>
+    <p style="margin-bottom: 1em; text-align: center; font-size: 1.05em;">Tell us what you need — we’ll match you with a top bartender right away.</p>
 
     <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form">
       <label for="ai-prompt" class="sr-only">Your Request</label>
       <input type="hidden" name="city" value="Hong Kong">
       <input type="text" name="details" id="ai-prompt" placeholder="e.g. Bartender for mocktail event at IFC Mall on June 22" required />
       <input type="text" name="name" placeholder="Your Name" required>
-      <input type="text" name="contact" placeholder="Phone/WhatsApp or Email" required>
+      <input type="text" name="contact" placeholder="WhatsApp or Email" required>
       <button type="submit">Send Request</button>
     </form>
-    <p style="text-align: center; font-size: 0.85em; color: #ccc; margin-top: 0.3em;">
-        Powered by smart tech — like having a personal bartender concierge.
-    </p>
-      
-    <p class="reassurance">
-      <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 0.4em;"></i>We'll get back to you via WhatsApp within a few hours with 1–2 great matches. 100% commission-free.
+
+    <p class="reassurance" style="font-size: 0.95em; color: #bbb; text-align: center; margin-top: 0.75em;">
+      <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 0.4em;"></i> We'll reply via WhatsApp or email — fast, personal, and commission-free.
     </p>
 
     <p style="margin-top: 0.5em; font-size: 0.95em; text-align: center;">
       <a href="#book" style="color: #fff; text-decoration: underline;">Prefer a full form?</a>
     </p>
 
+    <p style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.8em;">
+      <em>Powered by smart matching technology.</em>
+    </p>
+
     <picture>
       <source srcset="images/IMG_5405.webp" type="image/webp">
       <img src="images/IMG_5405.jpeg" alt="Bartender in Hong Kong mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
     </picture>
+  </section>
   </section>
 
 
@@ -247,47 +249,41 @@
     </div>
   </footer>
 
-  <!-- External libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Bartendly js-->
-  <script src="/hong-kong/data.js" defer></script>
-  <script src="/bartendly.min.js" defer></script>
-  <style>
-    .ai-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75em;
-      max-width: 600px;
-      margin: 0 auto;
-      margin-top: 1em;
-    }
-    .ai-form input[type="text"] {
-      padding: 0.75em;
-      font-size: 1em;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .ai-form button {
-      background-color: #000;
-      color: #fff;
-      padding: 0.8em 1.2em;
-      font-weight: 600;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .reassurance {
-      font-size: 0.95em;
-      color: #fff;
-      text-align: center;
-      margin-top: 0.75em;
-    }
-    @media screen and (max-width: 600px) {
-      .ai-form {
-        padding: 0 1em;
-      }
-    }
-  </style>
+ <!-- External libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- Bartendly js-->
+ <script src="/hong-kong/data.js" defer></script>
+ <script src="/bartendly.min.js" defer></script>
+ <style>
+   .ai-form {
+     display: flex;
+     flex-direction: column;
+     gap: 0.75em;
+     max-width: 600px;
+     margin: 0 auto;
+     margin-top: 1em;
+   }
+   .ai-form input[type="text"] {
+     padding: 0.75em;
+     font-size: 1em;
+     border-radius: 6px;
+     border: 1px solid #ccc;
+   }
+   .ai-form button {
+     background-color: #000;
+     color: #fff;
+     padding: 0.8em 1.2em;
+     font-weight: 600;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+   }
+   @media screen and (max-width: 600px) {
+     .ai-form {
+       padding: 0 1em;
+     }
+   }
+ </style>
 </body>
 </html>
