@@ -872,7 +872,7 @@ input::placeholder {
   color: #ddd;
 }
 
-.hero .reassurance .whatsapp-icon {
+.hero .reassurance .whatsapp-icon, f.a-whatsapp  {
   color: #25D366;
   margin-right: 0.4em;
 }
