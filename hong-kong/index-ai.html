@@ -61,31 +61,35 @@
     </div>
   </header>
 
-<section class="hero">
-    <h1>Hire a Bartender Instantly in Hong Kong</h1>
-    <p>Tell us what you need — we’ll match you with a top bartender right away. No middlemen. No hassle.</p>
+  <section class="hero" style="padding: 2em 1em 1em 1em;">
+    <h1 style="margin-bottom: 0.5em; font-size: 2em;">Hire a Bartender Instantly in Hong Kong</h1>
+    <p style="margin-bottom: 1em;">Tell us what you need — we’ll match you with a top bartender right away. No middlemen. No hassle.</p>
 
     <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form">
       <label for="ai-prompt" class="sr-only">Your Request</label>
       <input type="hidden" name="city" value="Hong Kong">
       <input type="text" name="details" id="ai-prompt" placeholder="e.g. Bartender for mocktail event at IFC Mall on June 22" required />
       <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone or WhatsApp" required>
-      <input type="email" name="email" placeholder="Email (optional)">
+      <input type="text" name="contact" placeholder="Phone/WhatsApp or Email" required>
       <button type="submit">Send Request</button>
     </form>
-
+    <p style="text-align: center; font-size: 0.85em; color: #ccc; margin-top: 0.3em;">
+        Powered by smart tech — like having a personal bartender concierge.
+    </p>
+      
     <p class="reassurance">
-        <i class="fab fa-whatsapp" style="color: #25D366;"></i>
-        We'll get back to you via <a href="https://wa.me/34618502493" target="_blank" style="color: #25D366; font-weight: 600;">WhatsApp</a> within a few hours with 1–2 great matches. 100% commission-free.
-      </p>
-    <p style="margin-top: 0.5em; font-size: 0.95em;"><a href="#book">Prefer a full form?</a></p>
+      <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 0.4em;"></i>We'll get back to you via WhatsApp within a few hours with 1–2 great matches. 100% commission-free.
+    </p>
+
+    <p style="margin-top: 0.5em; font-size: 0.95em; text-align: center;">
+      <a href="#book" style="color: #fff; text-decoration: underline;">Prefer a full form?</a>
+    </p>
 
     <picture>
       <source srcset="images/IMG_5405.webp" type="image/webp">
       <img src="images/IMG_5405.jpeg" alt="Bartender in Hong Kong mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
     </picture>
-</section>
+  </section>
 
 
 <section class="intro">
@@ -230,8 +234,11 @@
       <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
         <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
       </a>
+      <a href="https://wa.me/618502493" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
     </div>
-  
+      
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
   
     <div class="cta-footer">
@@ -255,9 +262,7 @@
       margin: 0 auto;
       margin-top: 1em;
     }
-    .ai-form input[type="text"],
-    .ai-form input[type="email"],
-    .ai-form input[type="tel"] {
+    .ai-form input[type="text"] {
       padding: 0.75em;
       font-size: 1em;
       border-radius: 6px;
@@ -274,9 +279,9 @@
     }
     .reassurance {
       font-size: 0.95em;
-      color: #333;
+      color: #fff;
       text-align: center;
-      margin-top: 0.5em;
+      margin-top: 0.75em;
     }
     @media screen and (max-width: 600px) {
       .ai-form {
