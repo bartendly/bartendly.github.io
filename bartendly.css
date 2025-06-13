@@ -828,3 +828,33 @@ input::placeholder {
 .city-menu a:hover {
   text-decoration: underline;
 }
+
+.ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.ai-form input[type="text"] {
+  padding: 0.75em;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.ai-form button {
+background-color: #25D366;
+color: #000;
+font-size: 1.05em;
+padding: 0.85em 1.2em;
+border-radius: 6px;
+font-weight: 600;
+border: none;
+cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .ai-form {
+    padding: 0 1em;
+  }
+}
