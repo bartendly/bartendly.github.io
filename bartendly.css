@@ -50,6 +50,14 @@ body {
     /*padding: 6rem 2rem;*/
     text-align: center;
   }
+
+  /*.hero {
+    padding: 1.5em 1em 0.5em 1em;
+  }*/
+  .hero {
+    padding: 3em 1em;
+  }
+
   /* WebP version for modern browsers */
   @supports (background-image: url("images/IMG_5405.webp")) {
     .hero {
@@ -903,13 +911,7 @@ input::placeholder {
   }
 }
 
-
-
-
 /* === HERO SECTION CLEANUP === */
-.hero {
-  padding: 1.5em 1em 0.5em 1em;
-}
 
 .hero-title {
   margin-bottom: 0.4em;
