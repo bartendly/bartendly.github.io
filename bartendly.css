@@ -47,7 +47,7 @@ body {
     position: relative;
     background: url('images/IMG_5405.jpeg') center 45% / cover no-repeat;
     color: white;
-    padding: 6rem 2rem;
+    /*padding: 6rem 2rem;*/
     text-align: center;
   }
   /* WebP version for modern browsers */
