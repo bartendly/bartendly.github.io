@@ -47,8 +47,9 @@ body {
     position: relative;
     background: url('images/IMG_5405.jpeg') center 45% / cover no-repeat;
     color: white;
-    padding: 6rem 2rem;
+    /*padding: 6rem 2rem;*/
     text-align: center;
+    padding: 1.5em 1em 0.5em 1em;
   }
   /* WebP version for modern browsers */
   @supports (background-image: url("images/IMG_5405.webp")) {
@@ -867,32 +868,12 @@ input::placeholder {
 
 /* WhatsApp reassurance line */
 .hero .reassurance {
-  margin-top: 1.2em;
   font-size: 0.95em;
-  color: #ddd;
-}
-
-.hero .reassurance .whatsapp-icon, f.a-whatsapp  {
-  color: #25D366;
-  margin-right: 0.4em;
-}
-
-/* Form link below reassurance */
-.hero .form-link {
-  margin-top: 0.6em;
-  font-size: 0.9em;
-}
-.hero .form-link a {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-/* AI subtitle line */
-.hero .powered-by {
-  margin-top: 1em;
-  font-size: 0.85em;
   color: #bbb;
+  text-align: center;
+  margin-top: 0.75em;
 }
+
 @media screen and (max-width: 600px) {
   .hero .ai-form {
     padding: 0 1em;
@@ -921,4 +902,63 @@ input::placeholder {
   .blog-article {
     padding: 3rem 2rem;
   }
+}
+
+
+
+
+/* === HERO SECTION CLEANUP === 
+.hero {
+  padding: 1.5em 1em 0.5em 1em;
+}*/
+
+.hero-title {
+  margin-bottom: 0.4em;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.hero-subtitle {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+/* === AI FORM === */
+
+.hero .ai-submit-btn {
+  background-color: #25D366;
+  color: #000;
+  font-size: 1.05em;
+  padding: 0.85em 1.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+
+.whatsapp-icon {
+  color: #25D366;
+  margin-right: 0.4em;
+}
+
+/* === FORM LINK === */
+.hero .form-link {
+  margin-top: 0.5em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.hero .form-link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* === POWERED BY TEXT === */
+.hero .powered-by {
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 0.8em;
 }
