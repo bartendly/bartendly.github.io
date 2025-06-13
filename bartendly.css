@@ -5,20 +5,6 @@ body {
     background-color: #f9f9f9;
     color: #222;
   }
-  /*header {
-    background-color: #111;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  header a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 600;
-  }*/
 
   header {
     background-color: #111;
@@ -842,3 +828,116 @@ input::placeholder {
 .city-menu a:hover {
   text-decoration: underline;
 }
+
+/* Hero section */
+/*.hero {
+  padding: 1.5em 1em 0.5em 1em;
+  text-align: center;
+}*/
+
+.hero-title {
+  font-size: 2.2em;
+  margin-bottom: 0.4em;
+}
+
+.hero-subtitle {
+  margin-bottom: 1em;
+  font-size: 1.05em;
+}
+
+/* Smart prompt form */
+.ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  max-width: 600px;
+  margin: 1em auto 0 auto;
+}
+
+.ai-form input[type="text"] {
+  padding: 0.75em;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.ai-submit-btn {
+  background-color: #25D366;
+  color: #000;
+  font-size: 1.05em;
+  padding: 0.85em 1.2em;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero reassurance line */
+.reassurance {
+  font-size: 0.95em;
+  color: #bbb;
+  text-align: center;
+  margin-top: 0.75em;
+}
+
+.reassurance i.fa-whatsapp {
+  color: #25D366;
+  margin-right: 0.4em;
+}
+
+/* Full form fallback link */
+.form-link {
+  margin-top: 0.5em;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.form-link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Powered by tech */
+.powered-by {
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 0.8em;
+}
+
+/* Hero image */
+.hero-image {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5em;
+}
+
+/* WhatsApp icon in footer */
+footer .fab.fa-whatsapp {
+  color: #25D366;
+}
+
+.blog-article {
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: system-ui, sans-serif;
+}
+
+.blog-article h1,
+.blog-article h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-article p {
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .blog-article {
+    padding: 3rem 2rem;
+  }
+}
+
