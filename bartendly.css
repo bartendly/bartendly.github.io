@@ -101,7 +101,7 @@ body {
   /* Increase height on wider screens to show more of the image */
   @media (min-width: 768px) {
     .hero {
-      padding: 8rem 2rem;
+      padding: 6rem 2rem;
     }
   }
   @media (max-width: 768px) {
