@@ -196,7 +196,7 @@ if (aiform && aisuccessMessage) {
   aiform.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const contactValue = aiform.querySelector('input[name="contact"]').value.trim();
+    const contactValue = aiform.querySelector('input[name="ai-contact"]').value.trim();
 
     // Improved patterns
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
