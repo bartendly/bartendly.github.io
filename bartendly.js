@@ -189,6 +189,7 @@ if (aiform && aisuccessMessage) {
   });
 }*/
 
+document.addEventListener('DOMContentLoaded', () => {
 const aiform = document.getElementById('ai-request-form');
 const aisuccessMessage = document.getElementById('ai-success-message');
 
@@ -237,7 +238,7 @@ if (aiform && aisuccessMessage) {
     }
   });
 }
-
+});
 
 
 
