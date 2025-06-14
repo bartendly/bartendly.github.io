@@ -198,8 +198,9 @@ if (aiform && aisuccessMessage) {
 
     const contactValue = aiform.querySelector('input[name="contact"]').value.trim();
 
+    // Improved patterns
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^(\+|\()?[\d]{1,4}(\))?[\d\s\-]{5,}$/;
+    const phonePattern = /^(\+?\(?\d{1,4}\)?[\s\d\-]{5,})$/;
 
     const isEmail = emailPattern.test(contactValue);
     const isPhone = phonePattern.test(contactValue);
@@ -236,6 +237,7 @@ if (aiform && aisuccessMessage) {
     }
   });
 }
+
 
 
 
