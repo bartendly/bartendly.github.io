@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.getElementById('contact-form');
   const successMessage = document.getElementById('success-message');
-
+  if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -137,12 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Oops! Something went wrong while sending your message.');
     }
   });
+}
 
 // AI form
 const aiform = document.getElementById('ai-request-form');
 const aisuccessMessage = document.getElementById('ai-success-message');
 if (aiform && aisuccessMessage) {
-  form.addEventListener('submit', async (e) => {
+  aiform.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // If validation passed, continue to send
@@ -168,7 +169,7 @@ if (aiform && aisuccessMessage) {
   // city toggle
   const toggleBtn = document.getElementById('city-toggle');
   const cityMenu = document.getElementById('city-menu');
-
+  if (toggleBtn && cityMenu) {
   toggleBtn.addEventListener('click', () => {
     const isHidden = cityMenu.hasAttribute('hidden');
     if (isHidden) {
@@ -184,3 +185,4 @@ if (aiform && aisuccessMessage) {
       cityMenu.setAttribute('hidden', '');
     }
   });
+}
