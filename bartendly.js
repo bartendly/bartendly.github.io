@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // If validation passed, continue to send
-    const data = new FormData(form);
+   /* const data = new FormData(form);
     const response = await fetch(form.action, {
       method: 'POST',
       body: data,
@@ -135,12 +135,37 @@ document.addEventListener('DOMContentLoaded', () => {
       successMessage.style.display = 'block';
     } else {
       alert('Oops! Something went wrong while sending your message.');
-    }
+    }*/
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+      
+        if (response.ok) {
+          form.reset();
+          form.style.display = 'none';
+          successMessage.style.display = 'block';
+        } else {
+          alert('Oops! Something went wrong while sending your message.');
+        }
+      } catch (err) {
+        alert("Network error. Please try again later.");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Event Request';
+      }
   });
 }
 
 // AI form
-const aiform = document.getElementById('ai-request-form');
+/*const aiform = document.getElementById('ai-request-form');
 const aisuccessMessage = document.getElementById('ai-success-message');
 if (aiform && aisuccessMessage) {
   aiform.addEventListener('submit', async (e) => {
@@ -160,6 +185,54 @@ if (aiform && aisuccessMessage) {
       aisuccessMessage.style.display = 'block';
     } else {
       alert('Oops! Something went wrong while sending your message.');
+    }
+  });
+}*/
+
+const aiform = document.getElementById('ai-request-form');
+const aisuccessMessage = document.getElementById('ai-success-message');
+
+if (aiform && aisuccessMessage) {
+  aiform.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const contactValue = aiform.querySelector('input[name="contact"]').value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^(\+|\()?[\d]{1,4}(\))?[\d\s\-]{5,}$/;
+
+    const isEmail = emailPattern.test(contactValue);
+    const isPhone = phonePattern.test(contactValue);
+
+    if (!isEmail && !isPhone) {
+      alert('Please enter a valid email or phone number.');
+      return;
+    }
+
+    const submitBtn = aiform.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const data = new FormData(aiform);
+    try {
+      const response = await fetch(aiform.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        aiform.reset();
+        aiform.style.display = 'none';
+        aisuccessMessage.style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong while sending your message.');
+      }
+    } catch (err) {
+      alert('Network error. Please try again later.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get My Bartender';
     }
   });
 }
