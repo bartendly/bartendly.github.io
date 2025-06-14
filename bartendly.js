@@ -138,6 +138,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+// AI form
+const aiform = document.getElementById('ai-request-form');
+const aisuccessMessage = document.getElementById('ai-success-message');
+if (aiform && aisuccessMessage) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // If validation passed, continue to send
+    const data = new FormData(aiform);
+    const response = await fetch(aiform.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      aiform.reset();
+      aiform.style.display = 'none';
+      aisuccessMessage.style.display = 'block';
+    } else {
+      alert('Oops! Something went wrong while sending your message.');
+    }
+  });
+}
+
+
+
   // city toggle
   const toggleBtn = document.getElementById('city-toggle');
   const cityMenu = document.getElementById('city-menu');
