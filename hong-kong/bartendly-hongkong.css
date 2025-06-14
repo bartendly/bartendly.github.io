@@ -3,6 +3,10 @@ body {
     --form-overlay: rgba(0, 0, 0, 0.5);
   }
 
+  .hero {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+
 .hero {
     background: url('/hong-kong/images/hero.jpeg') center/cover no-repeat;
   }
