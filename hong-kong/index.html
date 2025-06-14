@@ -8,7 +8,7 @@
     <meta name="author" content="Bartendly" />
     <meta name="robots" content="index, follow" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!--<meta name="robots" content="noindex, nofollow">-->
+    <!--<meta name="robots" content="noindex, nofollow">--> <!--no index this page-->
     <meta property="og:title" content="Book Bartenders & Cocktail Classes in Hong Kong | Bartendly" />
     <meta property="og:description" content="Hire professional bartenders and mixologists in Hong Kong for parties, events, and cocktail classes. Fast, easy, and commission-free." />
     <meta property="og:image" content="https://www.bartendly.com/hong-kong/images/IMG_5405.webp" />
@@ -36,7 +36,7 @@
       "name": "Bartendly",
       "image": "https://www.bartendly.com/hong-kong/images/IMG_5405.jpeg",
       "description": "Professional bartender and mixologist booking platform in Hong Kong for private and corporate events.",
-      "url": "https://www.bartendly.com",
+      "url": "https://www.bartendly.com/hong-kong/",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Hong Kong",
@@ -61,15 +61,41 @@
     </div>
   </header>
 
-<section class="hero">
-  <h1>Hire Professional Bartenders in Hong Kong for Your Next Event</h1>
-  <p>Bartendly connects you with experienced, high-end bartenders & mixologists for private events, corporate functions, and cocktail experiences in Hong Kong.</p>
-  <a href="#book" class="cta-btn">Request a Bartender</a>
-  <picture>
-    <source srcset="images/IMG_5405.webp" type="image/webp">
-    <img src="images/IMG_5405.jpeg" alt="Bartender in Hong Kong mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
-  </picture>
-</section>
+  <section class="hero">
+    <h1 class="hero-title">Hire a Bartender Instantly in Hong Kong</h1>
+    <p class="hero-subtitle">Tell us what you need — we’ll match you with a top bartender right away.</p>
+
+    <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form">
+      <input type="hidden" name="city" value="Hong Kong">
+      <label for="ai-prompt" class="sr-only">Your Request</label>
+      <input type="text" name="ai-prompt" id="ai-prompt" placeholder="e.g. Bartender for mocktail event at IFC Mall on June 22" required />
+      <label for="ai-name" class="sr-only">Your Name</label>
+      <input type="text" id="ai-name" name="ai-name" placeholder="Your Name" required>
+      <label for="ai-contact" class="sr-only">Your Contact</label>
+      <input type="text" name="ai-contact" id="ai-contact" placeholder="WhatsApp or Email" required>
+      <button type="submit">Get My Bartender</button>
+    </form>
+    <div id="ai-success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
+
+    <p class="reassurance">
+      <i class="fab fa-whatsapp whatsapp-icon"></i> We'll reply via WhatsApp or email — fast, personal, and commission-free.
+    </p>
+
+    <p class="form-link">
+      <a href="#book">Prefer a full form?</a>
+    </p>
+
+    <p class="powered-by">
+      <em>Powered by smart matching technology.</em>
+    </p>
+
+    <picture>
+      <source srcset="images/IMG_5405.webp" type="image/webp">
+      <img src="images/IMG_5405.jpeg" alt="Bartender in Hong Kong mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
+    </picture>
+  </section>
+  </section>
+
 
 <section class="intro">
   <div class="container">
@@ -213,8 +239,11 @@
       <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
         <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
       </a>
+      <a href="https://wa.me/618502493" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp fa-lg whatsapp-icon" aria-hidden="true"></i>
+      </a>
     </div>
-  
+      
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
   
     <div class="cta-footer">
@@ -223,13 +252,12 @@
     </div>
   </footer>
 
-<!-- External libraries -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Bartendly js-->
-<script src="/hong-kong/data.js" defer></script>
-<script src="/bartendly.min.js" defer></script>
-
+ <!-- External libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- Bartendly js-->
+ <script src="/hong-kong/data.js" defer></script>
+ <!--<script src="/bartendly.min.js" defer></script>-->
+ <script src="/bartendly.js" defer></script>
 </body>
 </html>
