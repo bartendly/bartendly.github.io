@@ -47,7 +47,7 @@ body {
     position: relative;
     background: url('images/IMG_5405.jpeg') center 45% / cover no-repeat;
     color: white;
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
   }
 
@@ -660,43 +660,6 @@ input::placeholder {
   color: #666;
 }
 
-/* === Layout and readability enhancements === */
-
-/*@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 1rem 1.5rem 0.5rem; 
-    gap: 0; 
-  }
-
-  header .logo {
-    margin-bottom: 0; 
-  }
-
-  header .logo a {
-    display: block;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    gap: 0.5rem;
-  }
-
-  header nav a {
-    font-size: 1rem;
-    padding: 0.4rem 0.5rem;
-    white-space: nowrap;
-  }
-}*/
 @media (max-width: 600px) {
   header {
     flex-direction: column;
