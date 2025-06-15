@@ -24,7 +24,7 @@
   }*/
 
   body {
-    --hero-overlay: rgba(0, 0, 0, 0.6);
+    --hero-overlay: rgba(0, 0, 0, 0.7);
     --form-overlay: rgba(0, 0, 0, 0.5);
   }
   
