@@ -62,7 +62,18 @@
         <a href="#how-it-works">How it Works</a>
         <a href="#bartenders">Meet the bartenders</a>
       </nav>
-      <button id="city-toggle" aria-label="Choose your city">🌍</button>
+  
+      <!-- Globe icon with helper (clean version) -->
+      <div class="globe-wrapper">
+        <button id="city-toggle" aria-label="Choose your city" class="globe-icon">🌍</button>
+        <div class="globe-helper" aria-hidden="true">
+          <span class="arrow"></span>
+          Choose your city
+        </div>
+      </div>
+      
+  
+      <!-- City menu that shows on click -->
       <div id="city-menu" class="city-menu" hidden>
         <ul>
           <li><a href="/london/">🇬🇧 London</a></li>
@@ -71,6 +82,7 @@
       </div>
     </div>
   </header>
+  
 
 <section class="hero">
   <h1>Elevate Your Event with Professional Bartending Services</h1>
