@@ -172,10 +172,14 @@
         <input id="address" type="text" name="address" placeholder="Event Address (optional)" />
         <label for="participants" class="sr-only">Number of participants</label>
         <input id="participants" type="number" name="participants" placeholder="Number of Participants (optional)" />
-        <label for="client-consent" class="checkbox-container">
+        <!--<label for="client-consent" class="checkbox-container">
           <input type="checkbox" id="client-consent" name="client-consent" checked />
           I agree to be contacted directly by available bartenders.
-        </label>
+        </label>-->
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" checked>
+          <label for="consent">I agree to be contacted directly by available bartenders.</label>
+        </div>
         <button type="submit">Submit Event Request</button>
       </form>
       <div id="success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>

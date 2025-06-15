@@ -26,3 +26,25 @@ body {
       background-image: url('/hong-kong/images/form.webp') !important;
     }
   }
+
+  .form-consent {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+    font-size: 0.9rem;
+    color: #555; /* slightly muted */
+  }
+  
+  .form-consent input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #222; /* optional: to match branding */
+  }
+  
+  .form-consent label {
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+  
