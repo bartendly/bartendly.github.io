@@ -138,3 +138,10 @@
     font-weight: bold;
   }
 }
+
+.ai-disclaimer {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5rem;
+  text-align: center;
+}
