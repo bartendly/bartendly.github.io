@@ -31,7 +31,7 @@
   /* HERO override - full match with !important */
   .hero {
     background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
-    padding: 8rem 2rem !important;
+    padding: 4rem 1rem !important;
   }
   
   @supports (background-image: url("/london/images/hero.webp")) {
