@@ -292,9 +292,66 @@ if (aipromptForm && aipromptSuccess) {
 
   // Optional: close menu if you click outside it
   document.addEventListener('click', (e) => {
+    const clickedLink = e.target.closest('#city-menu a');
+    
+    // If clicked a city link, let it navigate naturally (do nothing)
+    if (clickedLink) return;
+  
+    // If clicked outside toggle and menu, hide the menu
     if (!toggleBtn.contains(e.target) && !cityMenu.contains(e.target)) {
       cityMenu.setAttribute('hidden', '');
     }
+  });  
+
+  document.querySelectorAll('#city-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      cityMenu.setAttribute('hidden', '');
+      // ❗No setTimeout, no preventDefault — let the browser do its job
+    });
+  });
+  
+}
+
+// Globe helper tooltip logic
+const helper = document.querySelector(".globe-helper");
+const globe = document.querySelector(".globe-wrapper");
+const cityToggle = document.getElementById('city-toggle');
+
+if (helper && globe && cityToggle) {
+  // Delayed first-time appearance
+  setTimeout(() => {
+    helper.classList.add("show-once");
+
+    // Reposition if overflow
+    const rect = helper.getBoundingClientRect();
+    const overflowRight = rect.right > window.innerWidth;
+    if (overflowRight) {
+      helper.style.left = 'auto';
+      helper.style.right = '0';
+      helper.style.transform = 'none';
+    }
+
+    // Auto-hide after 3.5s
+    setTimeout(() => {
+      helper.classList.remove("show-once");
+      helper.style.left = '';
+      helper.style.right = '';
+      helper.style.transform = '';
+    }, 3500);
+  }, 2000);
+
+  // Hide helper immediately on click
+  cityToggle.addEventListener('click', () => {
+    helper.classList.remove("show-once");
+    helper.classList.add("hide-tooltip");
+    helper.style.left = '';
+    helper.style.right = '';
+    helper.style.transform = '';
+  
+    // Remove the class after a short delay (e.g., 500ms)
+    setTimeout(() => {
+      helper.classList.remove("hide-tooltip");
+    }, 500);
   });
 }
 
