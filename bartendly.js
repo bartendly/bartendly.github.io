@@ -227,8 +227,7 @@ if (aipromptForm && aipromptSuccess) {
     const minLength = 50;
     const emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
     const phonePattern = /(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/;
-    const datePattern = /\b(\d{1,2}[\/\-\s\.]?\d{1,2}(?:[\/\-\s\.]?\d{2,4})?|\d{1,2}(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*)\b/i;
-
+    const datePattern = /\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;
     const hasEmail = emailPattern.test(userPrompt);
     const hasPhone = phonePattern.test(userPrompt);
     const hasDate = datePattern.test(userPrompt);
