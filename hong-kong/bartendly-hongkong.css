@@ -33,7 +33,7 @@ body {
     margin-top: 0.5em;         /* reduce space above */
     margin-bottom: 1.2em;      /* slightly more space below */
     font-size: 0.92rem;
-    color: #ccc;               /* light gray = readable on black */
+    color: #999;             /* light gray = readable on black */
   }
   
   .form-consent input[type="checkbox"] {
