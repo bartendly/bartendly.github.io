@@ -164,16 +164,18 @@
         <input id="phone" type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
         <label for="email" class="sr-only">Your Email</label>
         <input id="email" type="email" name="email" placeholder="Your Email" />
-        <label for="event" class="sr-only">Event type</label>
-        <input id="event" type="text" name="event" placeholder="Event Type (e.g. birthday, cocktail class)"/>
-        <label for="details" class="sr-only">Tell us more about what you need</label>
-        <textarea id="details" name="details" placeholder="Tell us more about what you need..." rows="5"></textarea>
         <label for="date" class="sr-only">The event date</label>
-        <input id="date" type="text" name="date" placeholder="The event date" />
+        <input id="date" type="text" name="date" placeholder="The event date" required/>
+        <label for="details" class="sr-only">Details about your event</label>
+        <textarea id="details" name="details" placeholder="Details about your event (optional)" rows="2"></textarea> 
         <label for="address" class="sr-only">Event Address</label>
-        <input id="address" type="text" name="address" placeholder="Event Address" />
+        <input id="address" type="text" name="address" placeholder="Event Address (optional)" />
         <label for="participants" class="sr-only">Number of participants</label>
-        <input id="participants" type="number" name="participants" placeholder="Number of Participants" />
+        <input id="participants" type="number" name="participants" placeholder="Number of Participants (optional)" />
+        <div class="form-consent">
+          <input type="checkbox" id="consent" name="consent" checked>
+          <label for="consent">I agree to be contacted directly by available bartenders.</label>
+        </div>
         <button type="submit">Send Request</button>
       </form>
       <div id="success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
