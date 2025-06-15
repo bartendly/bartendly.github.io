@@ -221,7 +221,7 @@ if (aipromptForm && aipromptSuccess) {
   aipromptForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const userPrompt = aipromptForm.querySelector('textarea[name="ai-request"]').value.trim();
+    const userPrompt = aipromptForm.querySelector('input[name="ai-message"]').value.trim();
 
     // Validation rules
     const minLength = 50;
