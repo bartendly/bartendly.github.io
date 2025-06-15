@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('section, .testimonial, .faq-item').forEach((el) => {
       observer.observe(el);
     });
-  });
-
+  
+  
   const bartenders = window.bartenders || [];
   
   const finalList = [...bartenders.sort(() => 0.5 - Math.random())];
@@ -164,32 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
 
-// AI form
-/*const aiform = document.getElementById('ai-request-form');
-const aisuccessMessage = document.getElementById('ai-success-message');
-if (aiform && aisuccessMessage) {
-  aiform.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // If validation passed, continue to send
-    const data = new FormData(aiform);
-    const response = await fetch(aiform.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      aiform.reset();
-      aiform.style.display = 'none';
-      aisuccessMessage.style.display = 'block';
-    } else {
-      alert('Oops! Something went wrong while sending your message.');
-    }
-  });
-}*/
-
-document.addEventListener('DOMContentLoaded', () => {
 const aiform = document.getElementById('ai-request-form');
 const aisuccessMessage = document.getElementById('ai-success-message');
 
@@ -238,8 +212,70 @@ if (aiform && aisuccessMessage) {
     }
   });
 }
-});
 
+// ai prompt (for now only in london)
+const aipromptForm = document.getElementById('ai-prompt-form');
+const aipromptSuccess = document.getElementById('ai-success-message');
+
+if (aipromptForm && aipromptSuccess) {
+  aipromptForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const userPrompt = aipromptForm.querySelector('textarea[name="ai-request"]').value.trim();
+
+    // Validation rules
+    const minLength = 50;
+    const emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+    const phonePattern = /(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/;
+    const datePattern = /\b(\d{1,2}[\/\-\s\.]?\d{1,2}(?:[\/\-\s\.]?\d{2,4})?|\d{1,2}(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*)\b/i;
+
+    const hasEmail = emailPattern.test(userPrompt);
+    const hasPhone = phonePattern.test(userPrompt);
+    const hasDate = datePattern.test(userPrompt);
+
+    if (!hasEmail && !hasPhone) {
+      alert("Please include an email or phone number so we can contact you.");
+      return;
+    }
+
+    if (!hasDate) {
+      alert("Please include a date or approximate date for your event.");
+      return;
+    }
+
+    if (userPrompt.length < minLength) {
+      alert("Please provide a bit more detail about your request.");
+      return;
+    }
+
+    const submitBtn = aipromptForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const data = new FormData(aipromptForm);
+
+    try {
+      const response = await fetch(aipromptForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        aipromptForm.reset();
+        aipromptForm.style.display = 'none';
+        aipromptSuccess.style.display = 'block';
+      } else {
+        alert("Oops! Something went wrong while sending your request.");
+      }
+    } catch (err) {
+      alert("Network error. Please try again later.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get My Bartender';
+    }
+  });
+}
 
 
   // city toggle
@@ -262,3 +298,5 @@ if (aiform && aisuccessMessage) {
     }
   });
 }
+
+});
