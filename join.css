@@ -1,0 +1,110 @@
+/* === Join Page Only === */
+.join-page {
+  background: #f9f9f9;
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.join-hero {
+  background: linear-gradient(to bottom right, #fff, #eee);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.join-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-hero .subhead {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* PROMPT-STYLE FORM */
+#join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#join-form input[type="text"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#join-form button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#join-form button:hover {
+  background-color: #444;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+/* INFO SECTION */
+.join-info {
+  padding: 4rem 1.5rem;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-block {
+  margin-bottom: 3rem;
+}
+
+.info-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-block ul {
+  padding-left: 1.2rem;
+  list-style-type: "→ ";
+}
+
+.info-block ul li {
+  margin-bottom: 0.5rem;
+}
+
+.info-block p {
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f1f1f1;
+  color: #555;
+  font-size: 0.9rem;
+}
