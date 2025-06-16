@@ -42,7 +42,7 @@ body {
   }
 
 
-
+/*
   .hero {
     position: relative;
     background: url('images/IMG_5405.jpeg') center 45% / cover no-repeat;
@@ -51,14 +51,29 @@ body {
     text-align: center;
   }
 
-  /* WebP version for modern browsers */
   @supports (background-image: url("images/IMG_5405.webp")) {
     .hero {
       background-image: url('images/IMG_5405.webp');
       background-position: center 45%;
       background-size: cover;
     }
+  }*/
+
+  .hero {
+    position: relative;
+    background: url('images/hero2.jpeg') center 45% / cover no-repeat;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
   }
+
+  @supports (background-image: url("images/hero2.webp")) {
+    .hero {
+      background-image: url('images/hero2.webp');
+      background-position: center 45%;
+      background-size: cover;
+    }
+
   .hero img {
     position: absolute;
     width: 0;
