@@ -1,0 +1,70 @@
+
+/* join.css – styles spécifiques à la page d'onboarding des bartenders */
+
+.join-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.join-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.join-container p.lead {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.join-benefits {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.join-benefits h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.prompt-style-form {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.prompt-style-form input,
+.prompt-style-form button {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.prompt-style-form button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.prompt-style-form button:hover {
+  background-color: #222;
+}
+
+.success-message {
+  display: none;
+  background: #e0ffe0;
+  color: #064d06;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
