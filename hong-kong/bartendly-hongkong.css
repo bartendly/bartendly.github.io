@@ -5,6 +5,7 @@ body {
 
 .hero {
     background: url('/hong-kong/images/hero2.jpeg') center/cover no-repeat;
+    padding: 3rem 1rem !important;
   }
   
   @supports (background-image: url("/hong-kong/images/hero2.webp")) {
