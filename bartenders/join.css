@@ -31,5 +31,6 @@ body {
 /* Prompt form styling */
 .ai-prompt-form {
   width: 80%;
-  max-width: 80%;
+  max-width: 800px;
+  margin: 0 auto; /* This keeps it centered */
 }
