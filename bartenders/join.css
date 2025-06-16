@@ -24,3 +24,26 @@ body {
   max-width: 900px;
   margin: 0 auto; /* This keeps it centered */
 }
+
+.ai-hints {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  list-style: none;
+}
+
+.ai-hints li {
+  position: relative;
+  margin-bottom: 0.4rem;
+  padding-left: 1.2rem;
+}
+
+.ai-hints li::before {
+  content: "👉";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(2px);
+  font-size: 0.85rem;
+}
