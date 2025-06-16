@@ -27,3 +27,9 @@ body {
     background-image: url('/london/images/form.webp') !important;
   }
 }
+
+/* Prompt form styling */
+.ai-prompt-form {
+  width: 80%;
+  max-width: 80%;
+}
