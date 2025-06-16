@@ -4,12 +4,12 @@ body {
   }
 
 .hero {
-    background: url('/hong-kong/images/hero.jpeg') center/cover no-repeat;
+    background: url('/hong-kong/images/hero2.jpeg') center/cover no-repeat;
   }
   
-  @supports (background-image: url("/hong-kong/images/hero.webp")) {
+  @supports (background-image: url("/hong-kong/images/hero2.webp")) {
     .hero {
-      background-image: url('/hong-kong/images/hero.webp');
+      background-image: url('/hong-kong/images/hero2.webp');
     }
   }
 
