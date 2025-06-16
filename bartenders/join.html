@@ -58,63 +58,100 @@
       }
       </script>
 </head>
-<body class="join-page">
-  <header class="site-header">
+<body>
+
+  <header>
     <div class="logo"><a href="/">Bartendly</a></div>
-    <nav>
-      <a href="/#how-it-works">How it Works</a>
-      <a href="/#bartenders">Meet the Bartenders</a>
-    </nav>
+    <div class="header-right">
+      <nav>
+        <a href="#how-it-works">How it Works</a>
+        <!--<a href="#bartenders">Meet the bartenders</a>-->
+      </nav>
+    </div>
   </header>
 
-  <!-- ✅ HERO -->
-  <section class="join-hero">
-    <div class="hero-content">
-      <h1>Ready to Join the Future of Hospitality?</h1>
-      <p class="subhead">Bartendly helps bartenders get visibility, land private gigs, and collaborate with the best bars. Zero commission. 100% freedom.</p>
+<section class="hero">
+  <h1>Book Elite Bartenders & Cocktail Experts in London</h1>
+  <p>Private parties, corporate events, cocktail classes — Bartendly matches you instantly with top-tier bartenders. No fees, no hassle.</p>
+  <form id="ai-join-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-prompt-form" target="_self">
+    <label for="ai-message" class="sr-only">Describe your request</label>
+    <input type="text" id="ai-message" name="ai-message" placeholder="Tell us who you are, your IG page, where you work, and how to reach you…" required />
+    <button type="submit" class="ai-prompt-submit">Get My Bartender</button>
+  </form>
+  <div id="ai-success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
 
-      <!-- ✅ Prompt-like form -->
-      <form id="join-form" action="https://formspree.io/f/YOUR_ID" method="POST">
-        <label for="join-message" class="sr-only">Your message</label>
-        <input type="text" name="join-message" id="join-message" placeholder="Tell us who you are, your IG page, where you work, and how to reach you…" required/>
-        <button type="submit">Join Now</button>
-        <p id="join-success" class="success-message" hidden>✅ Thanks! We’ll be in touch very soon.</p>
-      </form>
+  <p class="reassurance">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>By submitting, you agree to be contacted by available bartenders via WhatsApp or email.
+  </p>
+
+  <p class="form-link">
+    <a href="#book">Prefer a full form?</a>
+  </p>
+
+  <p class="powered-by">
+    <em>Powered by smart matching technology.</em>
+  </p>
+
+  <picture>
+    <source srcset="/london/images/hero.webp" type="image/webp">
+    <img src="/london/images/hero.jpeg" alt="Bartender in London mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
+  </picture>
+</section>
+
+    <section id="why-bartendly">
+      <h2 class="section-title">Why Join Bartendly?</h2>
+      <div class="why-bartendly">
+        <ul>
+          <li>✨ Get discovered by bars & private clients in your city</li>
+          <li>💼 Land gigs — events, private parties, popups, collabs</li>
+          <li>📣 We amplify your profile: no middlemen, no cuts<</li>
+          <li>🌍 Already live in London & Hong Kong — growing globally</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Who We Are</h2>
+      <div class="about">
+        <p>
+          Bartendly is a collective built by and for independent bartenders. We believe you deserve visibility, freedom, and better tools to grow.
+          Whether you're a rising talent or a seasoned pro, our mission is simple: help you connect with the right people, effortlessly.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">What’s Next</h2>
+      <div class="about">
+        <p>
+          We’re just getting started. New features are coming: profiles, reviews, events calendar, map of top bars, and more. 
+          You have everything to gain — and nothing to lose.
+        </p>
+      </div>
+    </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:martial@bartendly.com">Contact Us</a>
     </div>
-  </section>
-
-  <!-- ✅ INFO SECTION -->
-  <section class="join-info">
-    <div class="info-block">
-      <h2>Why Join Bartendly?</h2>
-      <ul>
-        <li>✨ Get discovered by bars & private clients in your city</li>
-        <li>💼 Land gigs — events, private parties, popups, collabs</li>
-        <li>📣 We amplify your profile: no middlemen, no cuts</li>
-        <li>🌍 Already live in London & Hong Kong — growing globally</li>
-      </ul>
+  
+    <div class="social-links">
+      <a href="https://facebook.com/bartendly" target="_blank" class="facebook" aria-label="Visit us on Facebook">
+        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/bartendly" target="_blank" class="instagram" aria-label="Visit us on Instagram">
+        <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
+        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/34618502493" target="_blank" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp fa-lg whatsapp-icon" aria-hidden="true"></i>
+      </a>
     </div>
-
-    <div class="info-block">
-      <h2>Who We Are</h2>
-      <p>
-        Bartendly is a collective built by and for independent bartenders. We believe you deserve visibility, freedom, and better tools to grow.
-        Whether you're a rising talent or a seasoned pro, our mission is simple: help you connect with the right people, effortlessly.
-      </p>
-    </div>
-
-    <div class="info-block">
-      <h2>What’s Next</h2>
-      <p>
-        We’re just getting started. New features are coming: profiles, reviews, events calendar, map of top bars, and more. 
-        You have everything to gain — and nothing to lose.
-      </p>
-    </div>
-  </section>
-
-  <!-- ✅ FOOTER -->
-  <footer class="site-footer">
+  
     <p>&copy; Bartendly 2025 — Made for the bold side of the bar.</p>
+  
   </footer>
 
 <!-- Bartendly js-->

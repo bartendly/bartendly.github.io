@@ -1,49 +1,67 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("join-form");
-  const input = document.getElementById("join-message");
-  const success = document.getElementById("join-success");
+  
+const aipromptForm = document.getElementById('ai-join-form');
+const aipromptSuccess = document.getElementById('ai-success-message');
 
-  if (!form || !input || !success) return;
-
-  form.addEventListener("submit", async (e) => {
+if (aipromptForm && aipromptSuccess) {
+  aipromptForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const value = input.value.trim();
-    if (value.length < 20) {
-      alert("Please provide a bit more detail.");
+    const userPrompt = aipromptForm.querySelector('input[name="ai-message"]').value.trim();
+
+    // Validation rules
+    const minLength = 40;
+    const emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+    const phonePattern = /(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/;
+     // Pattern pour Instagram (handle ou lien)
+    const instaRegex = /(@[a-zA-Z0-9_.]{2,30})|(instagram\.com\/[a-zA-Z0-9_.]{2,30})/i;
+
+    const hasEmail = emailPattern.test(userPrompt);
+    const hasPhone = phonePattern.test(userPrompt);
+    const hasInsta = instaRegex.test(userPrompt);
+
+    if (!hasEmail && !hasPhone) {
+      alert("Please include an email or phone number so we can contact you.");
       return;
     }
 
-    const contactRegex = /@|\+?\d[\d\s\-]{7,}/;
-    if (!contactRegex.test(value)) {
-      alert("Please include an email or phone so we can contact you.");
+    if (!hasInsta) {
+      alert("Please include you Instagram account.");
       return;
     }
 
-    const data = new FormData(form);
-    const btn = form.querySelector("button");
-    btn.disabled = true;
-    btn.textContent = "Sending...";
+    if (userPrompt.length < minLength) {
+      alert("Please provide a bit more detail about your request.");
+      return;
+    }
+
+    const submitBtn = aipromptForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const data = new FormData(aipromptForm);
 
     try {
-      const res = await fetch(form.action, {
-        method: "POST",
+      const response = await fetch(aipromptForm.action, {
+        method: 'POST',
         body: data,
-        headers: { Accept: "application/json" },
+        headers: { 'Accept': 'application/json' }
       });
 
-      if (res.ok) {
-        form.reset();
-        form.style.display = "none";
-        success.hidden = false;
+      if (response.ok) {
+        aipromptForm.reset();
+        aipromptForm.style.display = 'none';
+        aipromptSuccess.style.display = 'block';
       } else {
-        alert("Error while sending. Try again later.");
+        alert("Oops! Something went wrong while sending your request.");
       }
     } catch (err) {
-      alert("Network error. Please try again.");
+      alert("Network error. Please try again later.");
     } finally {
-      btn.disabled = false;
-      btn.textContent = "Join Now";
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Get My Bartender';
     }
   });
+}
+
 });
