@@ -6,13 +6,13 @@ body {
 /* HERO override - full match with !important */
 .hero {
   background: url('/bartenders/images/hero.jpeg') center 70% / cover no-repeat !important;
-  padding: 3rem 1rem !important;
+  padding: 5rem 1rem !important;
 }
 
 @supports (background-image: url("/bartenders/images/hero.webp")) {
   .hero {
     background-image: url('/bartenders/images/hero.webp') !important;
-    background-position: center 50% !important;
+    background-position: center 40% !important;
     background-size: cover !important;
   }
 }
