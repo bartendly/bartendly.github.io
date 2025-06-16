@@ -1,47 +1,49 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("join-form");
+  const input = document.getElementById("join-message");
+  const success = document.getElementById("join-success");
 
-// join.js – JS spécifique pour la page d'onboarding
+  if (!form || !input || !success) return;
 
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('join-form');
-  const successMessage = document.getElementById('success-message');
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  if (form && successMessage) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    const value = input.value.trim();
+    if (value.length < 20) {
+      alert("Please provide a bit more detail.");
+      return;
+    }
 
-      const input = form.querySelector('input[name="prompt"]').value.trim();
-      if (input.length < 20) {
-        alert("Please provide more details so we can understand your request.");
-        return;
+    const contactRegex = /@|\+?\d[\d\s\-]{7,}/;
+    if (!contactRegex.test(value)) {
+      alert("Please include an email or phone so we can contact you.");
+      return;
+    }
+
+    const data = new FormData(form);
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        form.reset();
+        form.style.display = "none";
+        success.hidden = false;
+      } else {
+        alert("Error while sending. Try again later.");
       }
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
-
-      const data = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        });
-
-        if (response.ok) {
-          form.reset();
-          form.style.display = "none";
-          successMessage.style.display = "block";
-        } else {
-          alert("Oops! Something went wrong. Please try again.");
-        }
-      } catch (error) {
-        alert("Network error. Please try again later.");
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Join Bartendly";
-      }
-    });
-  }
+    } catch (err) {
+      alert("Network error. Please try again.");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Join Now";
+    }
+  });
 });
