@@ -44,16 +44,17 @@ body {
 
   .hero {
     position: relative;
-    background: url('images/hero2.jpeg') center 45% / cover no-repeat;
+    background: url('images/hero3.jpeg') center 45% / cover no-repeat;
     color: white;
     padding: 3rem 2rem;
     text-align: center;
+    background-color: #000; /* 🔧 Fallback solide */
   }
 
-  @supports (background-image: url("images/hero2.webp")) {
+  @supports (background-image: url("images/hero3.webp")) {
     .hero {
-      background-image: url('images/hero2.webp');
-      background-position: center 45%;
+      background-image: url('images/hero3.webp');
+      background-position: center 50%;
       background-size: cover;
     }
   }
@@ -710,9 +711,13 @@ input::placeholder, textarea::placeholder {
 }
 
 @media (max-width: 480px) {
-  .hero {
+  /*.hero {
     padding: 5rem 1rem;
     background-size: 120% auto;
+  }*/
+  .hero {
+    background-size: cover;
+    background-position: center bottom; /* Ou top selon le cadrage */
   }
 
   .hero h1 {
