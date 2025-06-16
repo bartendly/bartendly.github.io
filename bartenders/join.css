@@ -5,28 +5,18 @@ body {
 
 /* HERO override - full match with !important */
 .hero {
-  background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
+  background: url('/bartenders/images/hero.jpeg') center 70% / cover no-repeat !important;
   padding: 3rem 1rem !important;
 }
 
-@supports (background-image: url("/london/images/hero.webp")) {
+@supports (background-image: url("/bartenders/images/hero.webp")) {
   .hero {
-    background-image: url('/london/images/hero.webp') !important;
+    background-image: url('/bartenders/images/hero.webp') !important;
     background-position: center 70% !important;
     background-size: cover !important;
   }
 }
 
-/* FORM override */
-.form-section {
-  background: url('/london/images/form.jpeg') center/cover no-repeat !important;
-}
-
-@supports (background-image: url("/london/images/form.webp")) {
-  .form-section {
-    background-image: url('/london/images/form.webp') !important;
-  }
-}
 
 /* Prompt form styling */
 .ai-prompt-form {
