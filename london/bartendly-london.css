@@ -52,3 +52,26 @@
       background-image: url('/london/images/form.webp') !important;
     }
   }
+
+  .trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 1.4rem 0 1rem 0;
+    font-size: 1rem;
+    color: #f4b840; /* orange or gold badge */
+  }
+  
+  .hero-review {
+    margin-top: 0.8rem;
+    font-style: italic;
+    font-size: 1rem;
+    color: #fff; /* or #333 if fond clair */
+  }
+  .hero-review-author {
+    display: block;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+    color: #aaa;
+  }
+  
