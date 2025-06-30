@@ -120,22 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Please enter a valid email address.');
       return; // STOP here, don't send
     }
-
-    // If validation passed, continue to send
-   /* const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      form.reset();
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    } else {
-      alert('Oops! Something went wrong while sending your message.');
-    }*/
       const submitBtn = form.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
@@ -170,6 +154,23 @@ const aisuccessMessage = document.getElementById('ai-success-message');
 if (aiform && aisuccessMessage) {
   aiform.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const userPrompt = aiform.querySelector('input[name="ai-prompt"]').value.trim();
+
+    // Validation rules
+    const minLength = 30;
+    const datePattern = /\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;
+    const hasDate = datePattern.test(userPrompt);
+
+    if (!hasDate) {
+      alert("Please include a date or approximate date for your event.");
+      return;
+    }
+
+    if (userPrompt.length < minLength) {
+      alert("Please provide a bit more detail about your request.");
+      return;
+    }
 
     const contactValue = aiform.querySelector('input[name="ai-contact"]').value.trim();
 
