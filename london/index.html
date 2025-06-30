@@ -1,6 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+      --hero-overlay: rgba(0, 0, 0, 0.7);
+    }
+    header {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .logo a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+    }
+    header nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      position: relative;
+      background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
+      color: white;
+      padding: 3rem 1rem !important;
+      text-align: center;
+      background-color: #000;
+    }
+    @supports (background-image: url("/london/images/hero.webp")) {
+      .hero {
+        background-image: url('/london/images/hero.webp') !important;
+        background-position: center 70% !important;
+        background-size: cover !important;
+      }
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    .trust-badges {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 1rem 0 0.5rem 0;
+      font-size: 1rem;
+      color: #f4b840;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .ai-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+      max-width: 600px;
+      margin: 1.5rem auto 0;
+      padding: 0 1rem;
+    }
+    .ai-form input[type="text"], .ai-form input[type="email"] {
+      padding: 0.75em;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: #222;
+    }
+    .ai-form button {
+      background-color: #25D366;
+      color: white;
+      font-size: 1.1em;
+      font-weight: 600;
+      padding: 0.85em 1.2em;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .ai-form button:hover {
+      background-color: #1ebe5d;
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: row;
+        align-items: center;
+        padding: 0.7rem 1rem 0.7rem;
+      }
+      .header-right {
+        justify-content: flex-end;
+        width: auto;
+        margin-top: 0;
+        gap: 0.7rem;
+      }
+      header nav {
+        flex-wrap: nowrap;
+        gap: 0.7rem;
+      }
+      .trust-badges { font-size: 0.95rem; gap: 0.5rem; }
+      .ai-form input, .ai-form button { font-size: 1.1rem; height: 44px; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 0.9rem; }
+    }
+    </style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Instantly book a professional bartender for your London event. Weddings, parties, or corporate — fast, trusted & hassle-free. Get a free quote now!">
@@ -15,8 +156,8 @@
     <meta property="og:url" content="https://www.bartendly.com/london/" />
     <meta property="og:type" content="website" />   
     <title>Hire a Private Bartender in London | Events, Weddings & Parties</title>
-    <link rel="stylesheet" href="/bartendly.min.css">
-    <link rel="stylesheet" href="/london/bartendly-london.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://www.bartendly.com/london/" />
     <link rel="preload" as="image" href="/london/images/hero.webp" type="image/webp">
     <link rel="icon" href="https://www.bartendly.com/favicon.ico" type="image/x-icon">
@@ -24,10 +165,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="/bartendly.min.css">
+    <link rel="stylesheet" href="/london/bartendly-london.css">
+   <!-- Flatpickr CSS -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"></noscript>
+
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+    <!-- FontAwesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
  
     <script type="application/ld+json">
       {
@@ -159,9 +309,15 @@
     <em>Powered by smart matching technology.</em>
   </p>
 
-  <picture>
+  <!--<picture>
     <source srcset="/london/images/hero.webp" type="image/webp">
     <img src="/london/images/hero.jpg" alt="Professional bartender mixing cocktails at a London private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
+  </picture>-->
+
+  <picture>
+    <source srcset="/london/images/hero-600.webp 600w, /london/images/hero-900.webp 900w, /london/images/hero.webp 1200w" type="image/webp" sizes="100vw">
+    <source srcset="/london/images/hero-600.jpg 600w, /london/images/hero-900.jpg 900w, /london/images/hero.jpg 1200w" type="image/jpeg" sizes="100vw">
+    <img src="/london/images/hero-900.jpg" alt="Professional bartender mixing cocktails at a London private event" width="1200" height="800" loading="eager" style="width:100%;height:auto;">
   </picture>
 </section>
 
@@ -318,11 +474,9 @@
     </div>
   </footer>
 
-<!-- External libraries -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Bartendly js-->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<!-- Tes JS Bartendly restent en defer aussi -->
 <script src="/london/data.js" defer></script>
 <script src="/bartendly.min.js" defer></script>
 
