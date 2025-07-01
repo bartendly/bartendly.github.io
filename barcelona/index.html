@@ -136,62 +136,77 @@
     }*/
 
     @media (max-width: 700px) {
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    /* Optionnel: padding-bottom pour aérer le bas */
+  }
   .hero-content {
-    padding-top: 8vw;       /* abaisse mais pas trop */
-    margin-bottom: 0.8vh;   /* réduit l'espace en bas */
-    max-width: 99vw;
-    padding-left: 4vw;      /* + air à gauche */
-    padding-right: 4vw;
+    width: 100vw;
+    max-width: none;
+    padding-top: 8vw;        /* Ajuste ici: mets 5vw si c'est encore trop bas */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Important: pas de margin-bottom exagéré */
   }
   .hero-title {
-    font-size: 1.17rem;
-    margin-bottom: 0.33em;
-    padding-left: 1vw;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 0.45em 0;
+    padding: 0 5vw;
+    letter-spacing: -0.5px;
   }
   .hero-subtitle {
-    font-size: 0.97rem;
-    margin-bottom: 0.98em;
-    padding-left: 1vw;
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0 5vw;
   }
   .ai-form {
-    max-width: 410px;      /* évite de dépasser l'écran */
-    width: 100%;
-    margin: 0 auto 0 auto; /* centre la form */
+    width: 90vw;
+    max-width: 410px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
   }
   .ai-form input,
   .ai-form button {
-    font-size: 1em;
-    height: 2.08em;
-    padding: 0.18em 0.7em;    /* padding réduit */
-    margin: 0;
-    width: 100%;
+    width: 90vw;
+    max-width: 410px;
+    font-size: 1.1rem;
+    height: 2.3em;
+    border-radius: 18px;
     box-sizing: border-box;
+    padding: 0.13em 1em;
+    margin: 0 auto;
+    display: block;
+  }
+  .ai-form input::placeholder {
+    color: #888;
+    opacity: 1;
   }
   .badges-bar {
+    display: flex;
     justify-content: center;
-    margin-top: 0.3em;
-    margin-bottom: 1em;
-    font-size: 0.97em;
-    max-width: 99vw;
+    gap: 0.8em;
+    margin: 1em auto 1em auto;
+    max-width: 95vw;
   }
-  main {
-    max-width: 99vw;
-    padding: 1.1rem 5vw 0.7rem 5vw; /* padding horizontal généreux */
-  }
-  .section-title,
-  .faq-item,
-  .about {
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
-  .testimonial {
-    padding-left: 2vw;
-    padding-right: 2vw;
+
+  /* Pour les sections après le hero */
+  main, .section-title, .faq-item, .about, .testimonial {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    box-sizing: border-box;
   }
 }
-
-
-
 
     main {
       max-width: 830px; margin: 0 auto; padding: 2.2rem 1.5rem 0 1.5rem;
