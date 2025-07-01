@@ -136,12 +136,6 @@
       text-shadow:0 1px 7px #0008;
       font-size:1.04em;
     }
-   /* @media (max-width:700px){
-      .hero-content{max-width:99vw;padding:0 2vw;}
-      .hero-title{font-size:1.23rem;}
-      .hero-subtitle{font-size:1.05rem;}
-      .ai-form, .ai-form input, .ai-form button{font-size:1em;}
-    }*/
 
     @media (max-width: 700px) {
   .hero {
@@ -300,13 +294,25 @@
     <div class="hero-content">
       <h1 class="hero-title">Hire a bartender in Barcelona</h1>
       <div class="hero-subtitle">Seamless, local, trusted. Instantly match with Barcelona’s top private event bartenders — in English or Spanish.</div>
-      <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self" autocomplete="off">
+      <!--<form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self" autocomplete="off">
         <input type="hidden" name="city" value="Barcelona">
         <input type="text" name="ai-prompt" placeholder="Describe your event (date, location, guests...)" required />
         <input type="text" name="ai-name" placeholder="Your Name" required>
         <input type="text" name="ai-contact" placeholder="WhatsApp (preferred) or Email" required>
         <button type="submit">Get My Bartender</button>
+      </form>-->
+      <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self">
+        <input type="hidden" name="city" value="Barcelona">
+        <label for="ai-prompt" class="sr-only">Your Request</label>
+        <input type="text" name="ai-prompt" id="ai-prompt" placeholder="Describe your event (date, location, guests...)" required />
+        <label for="ai-name" class="sr-only">Your Name</label>
+        <input type="text" id="ai-name" name="ai-name" placeholder="Your Name" required>
+        <label for="ai-contact" class="sr-only">Your Contact</label>
+        <input type="text" name="ai-contact" id="ai-contact" placeholder="WhatsApp (preferred) or Email" required>
+        <button type="submit">Get My Bartender</button>
       </form>
+      <div id="ai-success-message" class="success-message" aria-live="polite">We’ll reply with proposals from professional bartenders in Barcelona.</div>
+
       <div class="badges-bar">
         <span>⭐ Top Rated</span>
         <span>🏆 Local</span>
