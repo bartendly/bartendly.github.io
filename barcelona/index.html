@@ -136,56 +136,60 @@
     }*/
 
     @media (max-width: 700px) {
-  .hero {
-    justify-content: flex-end;
-    min-height: 100vh;
-  }
   .hero-content {
+    padding-top: 8vw;       /* abaisse mais pas trop */
+    margin-bottom: 0.8vh;   /* réduit l'espace en bas */
     max-width: 99vw;
-    padding: 6vw 6vw 0 6vw;  /* Top 16vw = abaisse bien le bloc, latéral = + d’air */
-    margin-bottom: 2.2vh;
+    padding-left: 4vw;      /* + air à gauche */
+    padding-right: 4vw;
   }
   .hero-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.36em;
+    font-size: 1.17rem;
+    margin-bottom: 0.33em;
+    padding-left: 1vw;
   }
   .hero-subtitle {
-    font-size: 1.02rem;
-    margin-bottom: 1.03em;
-    color: #ffe3cf;
-    font-weight: 500;
-    text-shadow: 0 1px 7px #000b;
+    font-size: 0.97rem;
+    margin-bottom: 0.98em;
+    padding-left: 1vw;
   }
   .ai-form {
-    width: 90%;
-    max-width: 100%;
-    padding: 0; /* ← SUPPRIME le padding horizontal ici ! */
+    max-width: 410px;      /* évite de dépasser l'écran */
+    width: 100%;
+    margin: 0 auto 0 auto; /* centre la form */
   }
   .ai-form input,
   .ai-form button {
+    font-size: 1em;
+    height: 2.08em;
+    padding: 0.18em 0.7em;    /* padding réduit */
+    margin: 0;
     width: 100%;
     box-sizing: border-box;
-    font-size: 1em;
-    padding-left: 0.8em; /* réduit un peu le padding horizontal */
-    padding-right: 0.8em;
-    height: 2.3em; /* moins haut que 1.98em si trop épais ou trop fins */
   }
   .badges-bar {
-    margin-top: 0.4em;
-    margin-bottom: 0.8em;
-    font-size: 1em;
+    justify-content: center;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    font-size: 0.97em;
+    max-width: 99vw;
   }
-
-
   main {
     max-width: 99vw;
-    padding: 1.2rem 6vw 1rem 6vw; /* ← Mets un vrai padding latéral */
+    padding: 1.1rem 5vw 0.7rem 5vw; /* padding horizontal généreux */
   }
-  .section-title {
-    font-size:1.09rem;
-    padding-left: 2vw; /* ou même 4vw pour plus d’air */
+  .section-title,
+  .faq-item,
+  .about {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .testimonial {
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
 }
+
 
 
 
