@@ -142,7 +142,7 @@
   }
   .hero-content {
     max-width: 99vw;
-    padding: 12vw 6vw 0 6vw;  /* Top 16vw = abaisse bien le bloc, latéral = + d’air */
+    padding: 8vw 6vw 0 6vw;  /* Top 16vw = abaisse bien le bloc, latéral = + d’air */
     margin-bottom: 2.2vh;
   }
   .hero-title {
@@ -159,26 +159,31 @@
   .ai-form {
     width: 100%;
     max-width: 100%;
-    padding: 0 4vw; /* ajouter du padding horizontal */
+    padding: 0; /* ← SUPPRIME le padding horizontal ici ! */
   }
-
   .ai-form input,
   .ai-form button {
     width: 100%;
     box-sizing: border-box;
+    font-size: 1em;
+    padding-left: 0.8em; /* réduit un peu le padding horizontal */
+    padding-right: 0.8em;
+    height: 2.3em; /* moins haut que 1.98em si trop épais ou trop fins */
   }
   .badges-bar {
-    font-size: 1.17em;
-    gap: 0.31em;
-    margin: 1.11em auto 0.51em auto;
-    padding: 0 6vw;
-    box-sizing: border-box;
+    margin-top: 0.4em;
+    margin-bottom: 0.8em;
+    font-size: 1em;
   }
 
 
   main {
-    padding: 1.2rem 5vw 1rem 5vw;  /* Plus d’espace à gauche/droite ! */
     max-width: 99vw;
+    padding: 1.2rem 6vw 1rem 6vw; /* ← Mets un vrai padding latéral */
+  }
+  .section-title {
+    font-size:1.09rem;
+    padding-left: 2vw; /* ou même 4vw pour plus d’air */
   }
 }
 
