@@ -9,7 +9,7 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #222;
-      --hero-overlay: rgba(0, 0, 0, 0.7);
+      --hero-overlay: rgba(0, 0, 0, 0.4);
     }
     header {
       background-color: #111;
@@ -42,26 +42,20 @@
       font-weight: 600;
     }
     .hero {
-      position: relative;
-      background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
-      color: white;
-      padding: 3rem 1rem !important;
-      text-align: center;
-      background-color: #000;
-    }
-    @supports (background-image: url("/london/images/hero.webp")) {
-      .hero {
-        background-image: url('/london/images/hero.webp') !important;
-        background-position: center 70% !important;
-        background-size: cover !important;
-      }
-    }
+  position: relative;
+  color: white;
+  padding: 3rem 1rem !important;
+  text-align: center;
+  background-color: #000;
+  min-height: 60vh;
+}
+
     .hero::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0,0,0,0.4);
       z-index: 0;
     }
     .hero > * { position: relative; z-index: 1; }
@@ -113,6 +107,19 @@
     .ai-form button:hover {
       background-color: #1ebe5d;
     }
+
+    .hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero::before { background-color: rgba(0,0,0,0.4);}
+
+
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2rem; }
       .hero p { font-size: 1rem; }
@@ -167,7 +174,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="canonical" href="https://www.bartendly.com/london/" />
-    <link rel="preload" as="image" href="/london/images/hero.webp" type="image/webp">
+    <link rel="preload" as="image" href="/london/images/hero-900.jpg" type="image/jpeg">
     <link rel="icon" href="https://www.bartendly.com/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -296,6 +303,15 @@
 </section>-->
 
 <section id="book" class="hero">
+  <img class="hero-bg"
+    src="/london/images/hero-900.jpg"
+    srcset="/london/images/hero-600.jpg 600w, /london/images/hero-900.jpg 900w, /london/images/hero.jpg 1200w"
+    sizes="100vw"
+    alt="Professional bartender mixing cocktails at a London private event"
+    width="1200" height="800"
+    loading="eager"
+    decoding="async"
+  />
   <h1 class="hero-title">Hire a Bartender in London for Private & Corporate Events</h1>
   <p class="hero-subtitle">Describe your event — we’ll match you with a top London bartender right away.</p>
 
