@@ -50,6 +50,9 @@
     @media (max-width: 600px) {
       .hero-logo { font-size:1.2rem; top: 0.3rem; left: 0.4rem; padding:0.1em 0.6em 0.07em 0.14em;}
     }
+    @media (max-width: 900px) {
+      .hero-logo { font-size:1.3rem; top: 0.3rem; left: 0.4rem; padding:0.1em 0.6em 0.07em 0.14em;}
+    }
     /* HERO CONTENT */
     .hero-content {
       z-index: 2; position: relative;
@@ -117,10 +120,7 @@
     .ai-form button:hover, .ai-form button:focus {
       background: var(--primary-hover); color:#101014;
     }
-  /*  .badges-bar {
-      display: flex; gap: 0.68em; margin: 1.1em auto 0.55em auto; font-size: 1.06em;
-      justify-content: center; width: 100%; max-width: 360px;
-    }*/
+
     .badges-bar {
     display: flex;
     justify-content: center;
@@ -160,7 +160,7 @@
   }
 
 
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
   .hero {
     min-height: 100vh;
     display: flex;
@@ -444,72 +444,9 @@
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
   </footer>
 
-  <script>
-    const aiform = document.getElementById('ai-request-form');
-const aisuccessMessage = document.getElementById('ai-success-message');
+<script>
+const aiform=document.getElementById("ai-request-form"),aisuccessMessage=document.getElementById("ai-success-message");if(aiform&&aisuccessMessage){aiform.addEventListener("submit",async e=>{e.preventDefault();const t=aiform.querySelector('input[name="ai-prompt"]').value.trim(),n=30,o=/\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;if(!o.test(t))return void alert("Please include a date or approximate date for your event.");if(t.length<n)return void alert("Please provide a bit more detail about your request.");const r=aiform.querySelector('input[name="ai-contact"]').value.trim(),c=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,s=/^(\+?\(?\d{1,4}\)?[\s\d\-]{5,})$/,i=c.test(r),l=s.test(r);if(!i&&!l)return void alert("Please enter a valid email or phone number.");const a=aiform.querySelector('button[type="submit"]');a.disabled=!0,a.textContent="Sending...";const u=new FormData(aiform);try{const t=await fetch(aiform.action,{method:"POST",body:u,headers:{Accept:"application/json"}});t.ok?(aiform.reset(),aiform.style.display="none",aisuccessMessage.style.display="block"):alert("Oops! Something went wrong while sending your message.")}catch(t){alert("Network error. Please try again later.")}finally{a.disabled=!1,a.textContent="Get My Bartender"}});}
+</script>
 
-if (aiform && aisuccessMessage) {
-  aiform.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const userPrompt = aiform.querySelector('input[name="ai-prompt"]').value.trim();
-
-    // Validation rules
-    const minLength = 30;
-    const datePattern = /\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;
-    const hasDate = datePattern.test(userPrompt);
-
-    if (!hasDate) {
-      alert("Please include a date or approximate date for your event.");
-      return;
-    }
-
-    if (userPrompt.length < minLength) {
-      alert("Please provide a bit more detail about your request.");
-      return;
-    }
-
-    const contactValue = aiform.querySelector('input[name="ai-contact"]').value.trim();
-
-    // Improved patterns
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^(\+?\(?\d{1,4}\)?[\s\d\-]{5,})$/;
-
-    const isEmail = emailPattern.test(contactValue);
-    const isPhone = phonePattern.test(contactValue);
-
-    if (!isEmail && !isPhone) {
-      alert('Please enter a valid email or phone number.');
-      return;
-    }
-
-    const submitBtn = aiform.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    const data = new FormData(aiform);
-    try {
-      const response = await fetch(aiform.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        aiform.reset();
-        aiform.style.display = 'none';
-        aisuccessMessage.style.display = 'block';
-      } else {
-        alert('Oops! Something went wrong while sending your message.');
-      }
-    } catch (err) {
-      alert('Network error. Please try again later.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Get My Bartender';
-    }
-  });
-}
-  </script>
 </body>
 </html>
