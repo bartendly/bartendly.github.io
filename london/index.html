@@ -1,215 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hire a bartender in London for private parties, corporate events or weddings. Instant quotes, vetted mixologists, no hidden fees.">
+  <meta name="keywords" content="book bartender London, hire mixologist UK, cocktail class Shoreditch, private bartender Notting Hill, Soho cocktail experience, bartender for weddings London, mixology workshop GB, mobile bartender Central London" />
+  <meta name="author" content="Bartendly" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Hire a Bartender in London | Private & Corporate Events | Bartendly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://www.bartendly.com/london/" />
+  <link rel="preload" as="image" href="/london/images/hero-900.webp" type="image/webp">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
-      --hero-overlay: rgba(0, 0, 0, 0.5);
-    }
-    header {
-      background-color: #111;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      position: relative;
-    }
-    .logo a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      position: relative;
-    }
-    header nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .hero {
-      position: relative;
-      background: url('/london/images/hero.jpeg') center 70% / cover no-repeat !important;
-      color: white;
-      padding: 3rem 1rem !important;
-      text-align: center;
-      background-color: #000;
-    }
-    @supports (background-image: url("/london/images/hero.webp")) {
-      .hero {
-        background-image: url('/london/images/hero.webp') !important;
-        background-position: center 70% !important;
-        background-size: cover !important;
-      }
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.4);
-      z-index: 0;
-    }
-    .hero > * { position: relative; z-index: 1; }
-    .hero h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-    .trust-badges {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      margin: 1rem 0 0.5rem 0;
-      font-size: 1rem;
-      color: #f4b840;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-    .ai-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75em;
-      max-width: 600px;
-      margin: 1.5rem auto 0;
-      padding: 0 1rem;
-    }
-    .ai-form input[type="text"], .ai-form input[type="email"] {
-      padding: 0.75em;
-      font-size: 1em;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      background-color: white;
-      color: #222;
-    }
-    .ai-form button {
-      background-color: #25D366;
-      color: white;
-      font-size: 1.1em;
-      font-weight: 600;
-      padding: 0.85em 1.2em;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .ai-form button:hover {
-      background-color: #1ebe5d;
-    }
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1rem; }
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: row;
-        align-items: center;
-        padding: 0.7rem 1rem 0.7rem;
-      }
-      .header-right {
-        justify-content: flex-end;
-        width: auto;
-        margin-top: 0;
-        gap: 0.7rem;
-      }
-      header nav {
-        flex-wrap: nowrap;
-        gap: 0.7rem;
-      }
-      .trust-badges { font-size: 0.95rem; gap: 0.5rem; }
-      .ai-form input, .ai-form button { font-size: 1.1rem; height: 44px; }
-    }
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 1.8rem; }
-      .hero p { font-size: 0.9rem; }
-    }
+:root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;--glass:rgba(16,16,20,0.05);}
+html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;}
+body{min-height:100vh;}
+.hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);padding:0;margin:0;}
+.hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 23%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.97) 100%);}
+.hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
+.hero-logo:active{opacity:.7;}
+.hero-content{z-index:2;position:relative;width:100vw;max-width:610px;margin:0 auto 7vh auto;display:flex;flex-direction:column;align-items:flex-start;text-align:left;background:none;padding:0 2vw;}
+.hero-title{font-size:2.6rem;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 0.55em 0;line-height:1.11;text-shadow:0 3px 14px #000d;color:#fff;letter-spacing:-.7px;text-align:left;}
+.hero-subtitle{font-size:1.23rem;color:#ffe3cf;font-weight:500;margin:-0.66em 0 1.2em 0;text-shadow:0 1px 8px #000c;max-width:500px;text-align:left;}
+.ai-form{width:100%;max-width:560px;display:flex;flex-direction:column;gap:0.8rem;align-items:flex-start;background:none;box-shadow:none;padding:0;margin:0 0 0.5em 0;}
+.ai-form input,.ai-form button{border-radius:44px;font-size:1.10em;border:none;margin:0;outline:none;box-shadow:none;padding:0.46em 1.18em;width:100%;min-width:0;box-sizing:border-box;transition:box-shadow .13s;font-family:'Inter',sans-serif;}
+.ai-form input{background:rgba(255,255,255,0.99);color:#231e18;font-weight:500;border:1.5px solid transparent;box-shadow:0 2px 14px #0002;font-size:1.14em;height:1.98em;letter-spacing:0.01em;}
+.ai-form input::placeholder{color:#ad8d72;opacity:1;font-weight:500;}
+.ai-form input:focus{border:1.5px solid var(--primary);outline:none;box-shadow:0 2px 16px #ff6d2133;}
+.ai-form button{background:var(--primary);color:#fff;font-weight:700;border:none;padding:0.54em 0;font-size:1.16em;height:1.98em;margin:0;box-shadow:0 2px 10px #0001;cursor:pointer;transition:background .14s;letter-spacing:.01em;width:100%;}
+.ai-form button:hover,.ai-form button:focus{background:var(--primary-hover);color:#101014;}
+.badges-bar{display:flex;justify-content:center;gap:0.8em;margin:1em auto 1em auto;max-width:95vw;}
+.badges-bar span{color:var(--primary-hover);background:rgba(12,12,12,0.13);padding:0.14em 0.94em;border-radius:999px;font-weight:600;text-shadow:0 1px 7px #0008;font-size:1.04em;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.success-message{display:none;margin-top:1rem;background:#28a745;color:white;padding:1rem;border-radius:5px;text-align:center;}
+@media (max-width:700px){
+  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
+  .hero-logo{font-size:1.2rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
+  .hero-content{width:100vw;max-width:none;padding-top:36vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  .hero-title{font-size:2rem;font-weight:700;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
+  .hero-subtitle{font-size:1.15rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
+  .ai-form{width:90vw;max-width:410px;margin:0 auto;display:flex;flex-direction:column;gap:0.7em;}
+  .ai-form input,.ai-form button{width:90vw;max-width:410px;font-size:1.1rem;height:2.3em;border-radius:18px;box-sizing:border-box;padding:0.13em 1em;margin:0 auto;display:block;}
+  .ai-form input::placeholder{color:#888;opacity:1;}
+  .badges-bar{display:flex;justify-content:center;gap:0.8em;margin:1em auto 1em auto;max-width:95vw;}
+  main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;padding-right:5vw!important;box-sizing:border-box;}
+}
+@media (min-width:701px) and (max-width:900px){
+  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
+  .hero-logo{font-size:1.3rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
+  .hero-content{width:100vw;max-width:none;padding-top:5vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  .hero-title{font-size:2.2rem;font-weight:750;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
+  .hero-subtitle{font-size:1.25rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
+}
+main{max-width:830px;margin:0 auto;padding:2.2rem 1.5rem 0 1.5rem;}
 
-    .hero {
-      min-height: 60vh;
+    .section-title { text-align: left; font-size: 1.45rem; font-family:'Poppins',sans-serif; color: #ffae3a; margin: 2.2em 0 1.2em 0; font-weight:700; }
+    .how-it-works, .why-bartendly ul { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem;}
+    .how-it-works-step { background: #19191f; padding: 1.1em 1.2em 1.2em 1.1em; border-radius: 15px; max-width: 270px; flex: 1; min-width: 220px;}
+    .how-it-works-step h3 { color: #ffae3a; font-size: 1.03rem; margin-bottom: 0.38em;}
+    .how-it-works-step p { font-size: 0.98rem; color: #f5f5f5;}
+    .why-bartendly ul { list-style: none; padding: 0; margin: 0; flex-direction: column;}
+    .why-bartendly li { margin-bottom: 0.61em; font-size: 1.07em;}
+    .testimonial { background: #19191c; border-radius: 9px; margin: 1.5rem auto 1rem; padding: 1.2rem; max-width: 630px; font-style: italic;}
+    .testimonial blockquote { margin: 0;}
+    .testimonial footer { display: block; margin-top: 0.7em; color: #ffae3a;}
+    .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
+    .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
+    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
+  </style>
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bartendly",
+      "image": "https://www.bartendly.com/london/images/hero.jpeg",
+      "description": "Professional bartender and mixologist booking platform in London for private and corporate events.",
+      "url": "https://www.bartendly.com/london/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "London"
+      },
+      "email": "martial@bartendly.com"
     }
-    @media (max-width: 600px) {
-    .hero {
-      min-height: 50vh;
-    }
-  }
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Hire a bartender in London for private parties, corporate events or weddings. Instant quotes, vetted mixologists, no hidden fees.">
-    <meta name="keywords" content="book bartender London, hire mixologist UK, cocktail class Shoreditch, private bartender Notting Hill, Soho cocktail experience, bartender for weddings London, mixology workshop GB, mobile bartender Central London" />
-    <meta name="author" content="Bartendly" />
-    <meta name="robots" content="index, follow" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <!--<meta name="robots" content="noindex, nofollow">-->
-    <meta property="og:title" content="Book Bartenders & Cocktail Classes in London | Bartendly" />
-    <meta property="og:description" content="Hire a bartender in London for private parties, corporate events or weddings. Instant quotes, vetted mixologists, no hidden fees."/>
-    <meta property="og:image" content="https://www.bartendly.com/london/images/hero.webp" />
-    <meta property="og:url" content="https://www.bartendly.com/london/" />
-    <meta property="og:type" content="website" />   
-    <title>Hire a Bartender in London | Private & Corporate Events | Bartendly</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="canonical" href="https://www.bartendly.com/london/" />
-    <link rel="preload" as="image" href="/london/images/hero.webp" type="image/webp">
-    <link rel="icon" href="https://www.bartendly.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/bartendly.min.css">
-    <link rel="stylesheet" href="/london/bartendly-london.css">
-   <!-- Flatpickr CSS -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"></noscript>
-
-    <!-- Swiper CSS 
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
--->
-
-    <!-- FontAwesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
- 
+    </script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Bartendly",
-        "image": "https://www.bartendly.com/london/images/hero.jpeg",
-        "description": "Professional bartender and mixologist booking platform in London for private and corporate events.",
-        "url": "https://www.bartendly.com/london/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "London",
-          "addressCountry": "GB"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "London"
-        },
-        "email": "martial@bartendly.com"
-      }
-      </script>
-
-      <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -249,210 +131,95 @@
           ]
         }
         </script>
-        
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="/">Bartendly</a></div>
-    <div class="header-right">
-      <nav>
-        <!--<a href="#how-it-works">How it Works</a>-->
-        <!--<a href="#bartenders">Meet the bartenders</a>-->
-      </nav>
-    </div>
-  </header>
-
-<!--<section class="hero">
-  <h1>Private Bartender London – Hire for Events, Weddings & Parties</h1>
-  <p>Private parties, corporate events, cocktail classes — Bartendly matches you instantly with top-tier bartenders. No fees, no hassle.</p>
-  <form id="ai-prompt-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-prompt-form" target="_self">
-    <label for="ai-message" class="sr-only">Describe your request</label>
-    <input type="text" id="ai-message" name="ai-message" placeholder="e.g. Bartender for a rooftop party in Shoreditch on July 20, 50 guests, prefer tequila cocktails... John Doe whatsapp 567345678" required />
-    <button type="submit" class="ai-prompt-submit">Get My Bartender (Instant Match)</button>
-  </form>
-  <div id="ai-success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
-  <div class="trust-badges">
-    <span>✔️ London-based bartenders only</span>
-    <span>⭐ 5-star rated by local clients</span>
-    <span>⏱️ Next-day bookings available</span>
-  </div>
-  <p class="reassurance">
-    <i class="fab fa-whatsapp whatsapp-icon"></i>By submitting, you agree to be contacted by available bartenders via WhatsApp or email.
-  </p>
-  <p class="form-link">
-    <a href="#book">Prefer a full form?</a>
-  </p>
-  <div class="hero-review">
-    <q>We booked a Bartendly bartender for our wedding in Mayfair – seamless from start to finish.</q>
-    <span class="hero-review-author">— Olivia R., London</span>
-  </div>
-  <p class="powered-by">
-    <em>Powered by smart matching technology.</em>
-  </p>
-  <picture>
-    <source srcset="/london/images/hero.webp" type="image/webp">
-    <img src="/london/images/hero.jpeg" alt="Bartender in London mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
-  </picture>
-</section>-->
-
-<section id="book" class="hero">
-  <h1 class="hero-title">Hire a Bartender in London for Private & Corporate Events</h1>
-  <p class="hero-subtitle">Describe your event — we’ll match you with a top London bartender right away.</p>
-
-  <div class="trust-badges">
-    <span>✔️ Only London-based professionals</span>
-    <span>⭐ 5-star rated by clients</span>
-    <span>⏱️ Next-day booking available</span>
-  </div>
-
-  <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self">
-    <input type="hidden" name="city" value="London">
-    <label for="ai-prompt" class="sr-only">Your Request</label>
-    <input type="text" name="ai-prompt" id="ai-prompt" placeholder="e.g. Bartender for birthday in Soho on July 22, 20 guests" required />
-    <label for="ai-name" class="sr-only">Your Name</label>
-    <input type="text" id="ai-name" name="ai-name" placeholder="Your Name" required>
-    <label for="ai-contact" class="sr-only">Your Contact</label>
-    <input type="text" name="ai-contact" id="ai-contact" placeholder="WhatsApp (preferred) or Email" required>
-    <button type="submit">Get My Bartender</button>
-  </form>
-  <div id="ai-success-message" class="success-message" aria-live="polite">We’ll reply with proposals from professional bartenders in London.</div>
-
-  <p class="reassurance">
-    <i class="fab fa-whatsapp whatsapp-icon"></i> We’ll reply even faster by WhatsApp! — personal and commission-free.
-  </p>
-
-  <p class="powered-by">
-    <em>Powered by smart matching technology.</em>
-  </p>
-
-  <!--<picture>
-    <source srcset="/london/images/hero.webp" type="image/webp">
-    <img src="/london/images/hero.jpg" alt="Professional bartender mixing cocktails at a London private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
-  </picture>-->
-
-  <picture>
-    <source srcset="/london/images/hero-600.webp 600w, /london/images/hero-900.webp 900w, /london/images/hero.webp 1200w" type="image/webp" sizes="100vw">
-    <source srcset="/london/images/hero-600.jpg 600w, /london/images/hero-900.jpg 900w, /london/images/hero.jpg 1200w" type="image/jpeg" sizes="100vw">
-    <img src="/london/images/hero-900.jpg" alt="Professional bartender mixing cocktails at a London private event" width="1200" height="800" loading="eager" style="width:100%;height:auto;">
-  </picture>
-</section>
-
-<!--<section class="intro">
-  <div class="container">
-    <p>
-      At Bartendly, we believe every occasion deserves exceptional service. Whether you are planning an intimate gathering, a wedding, or a corporate soirée, our hand-selected bartenders bring expertise, style, and a touch of sophistication to your event.
-    </p>
-  </div>
-</section>-->
-
-<section class="intro">
-  <div class="container">
-    <p>
-      Looking to hire a bartender for a private party, wedding, or corporate event in London? Bartendly connects you with the best local cocktail bartenders — commission-free. <br>
-      <span style="color: #888; font-size: 1em;">
-      Serving Shoreditch, Notting Hill, Mayfair, Soho, Canary Wharf & more.
-      </span>
-    </p>
-  </div>
-</section>
-
-
-  <section id="how-it-works">
-    <h2 class="section-title">How It Works</h2>
-    <div class="how-it-works">
-      <h3>1. Tell Us About Your Event</h3>
-      <p>Share your event details — date, location in London, type of occasion, and any special requests.</p>
-      <h3>2. Receive Proposals</h3>
-      <p>Top bartenders and mixologists in London will respond quickly with tailored offers.</p>
-      <h3>3. Book Directly</h3>
-      <p>Select your favorite and book directly — simple, fast, and transparent.</p>
-    </div>
-  </section>
-
-<!-- START CARROUSSEL -->
-<!--<section id="bartenders" class="bartender-carousel" aria-label="Featured Bartenders from London">
-  <div class="carousel-header">
-    <h2>Meet some of the best bartenders in London</h2>
-  </div>
-  <div class="swiper" id="carousel" role="region" aria-roledescription="carousel" aria-label="Bartender Profiles Carousel" aria-live="polite">
-    <div class="swiper-wrapper">
+  <section class="hero" id="hero">
+    <picture class="hero-bg">
+        <source srcset="/london/images/hero-600.webp 600w, /london/images/hero-900.webp 900w, /london/images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
+        <source srcset="/london/images/hero-600.jpg 600w, /london/images/hero-900.jpg 900w, /london/images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
+        <img src="/london/images/hero-900.jpg"
+             alt="Bartender preparing drinks on a rooftop event in London"
+             width="1200" height="1800"
+             loading="eager"
+             fetchpriority="high" />
+      </picture>
       
-    </div>
-    <button class="swiper-button-prev" type="button" aria-label="Previous bartender" aria-controls="carousel"></button>
-    <button class="swiper-button-next" type="button" aria-label="Next bartender" aria-controls="carousel"></button>
-    <div class="swiper-pagination" aria-hidden="true"></div>
-  </div>
-</section>-->
-
-
-
-<section id="why-bartendly">
-  <h2 class="section-title">Why Choose Bartendly?</h2>
-  <div class="why-bartendly">
-    <ul>
-      <li>✅ Only trusted, pre-vetted professional bartenders</li>
-      <li>🥂 Ideal for both private gatherings and corporate events across London</li>
-      <li>⚡ Fast, hassle-free booking — no surprises</li>
-      <li>📍 Locally based in London, we understand the scene like no one else</li>
-      <li>💸 No commission or platform fees — you pay only for the bartender’s service</li>
-    </ul>
-  </div>
-</section>
-
-  <!--<section id="book" class="form-section">
-    <div class="form-container">
-   <h2 id="formTitle" class="form-title">Book a World-Class Bartender for Your Event</h2>
-    <p class="form-subtitle">No account needed. Connect instantly with top bartenders.</p>
-    <form role="form" aria-labelledby="formTitle" action="https://formspree.io/f/mdkevral" method="POST" id="contact-form">
-       <input type="hidden" name="city" value="London"> 
-       <label for="client_type" class="sr-only">Client type</label>
-       <select id="client_type" name="client_type" aria-label="Select client type">
-          <option value="Private" selected>Private customer</option>
-          <option value="Corporate">Corporate</option>
-        </select>
-        <label for="name" class="sr-only">Name</label>
-        <input id="name" type="text" name="name" placeholder="Your Name" required />
-        <label for="phone" class="sr-only">Your Phone/Whatsapp Number</label>
-        <input id="phone" type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
-        <label for="email" class="sr-only">Your Email</label>
-        <input id="email" type="email" name="email" placeholder="Your Email" />
-        <label for="date" class="sr-only">The event date</label>
-        <input id="date" type="text" name="date" placeholder="The event date" required/>
-        <label for="details" class="sr-only">Details about your event</label>
-        <textarea id="details" name="details" placeholder="Details about your event (optional)" rows="2"></textarea> 
-        <label for="address" class="sr-only">Event Address</label>
-        <input id="address" type="text" name="address" placeholder="Event Address (optional)" />
-        <label for="participants" class="sr-only">Number of participants</label>
-        <input id="participants" type="number" name="participants" placeholder="Number of Participants (optional)" />
-        <div class="form-consent">
-          <input type="checkbox" id="consent" name="consent" checked>
-          <label for="consent">I agree to be contacted directly by available bartenders.</label>
-        </div>
+    <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
+    <div class="hero-content">
+      <h1 class="hero-title">Hire a Bartender in London for Private & Corporate Events</h1>
+      <div class="hero-subtitle">Describe your event — we’ll match you with a top London bartender right away.</div>
+      <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self">
+        <input type="hidden" name="city" value="London">
+        <label for="ai-prompt" class="sr-only">Your Request</label>
+        <input type="text" name="ai-prompt" id="ai-prompt" placeholder="Describe your event (date, location, guests...)" required />
+        <label for="ai-name" class="sr-only">Your Name</label>
+        <input type="text" id="ai-name" name="ai-name" placeholder="Your Name" required>
+        <label for="ai-contact" class="sr-only">Your Contact</label>
+        <input type="text" name="ai-contact" id="ai-contact" placeholder="WhatsApp (preferred) or Email" required>
         <button type="submit">Get My Bartender</button>
       </form>
-      <div id="success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
-    </div>
-  </section>-->
+      <div id="ai-success-message" class="success-message" aria-live="polite">We’ll reply with proposals from professional bartenders in Barcelona.</div>
 
-  <section id="testimonials">
-    <h2 class="section-title">What London Clients Are Saying</h2>
-    <div class="testimonial">
-      <blockquote>
-        “The bartender from Bartendly turned our corporate party in Shoreditch into a five-star experience. Truly brilliant service!”
-        <footer>— James M., London</footer>
-      </blockquote>
-    </div>
-    <div class="testimonial">
-      <blockquote>
-        “Our wedding cocktail bar was a huge hit, thanks to Bartendly! Guests loved the personalized drinks and friendly service.” 
-        <footer>— Sarah & Tom, Hampstead</footer>
-      </blockquote>
+      <div class="badges-bar">
+        <span>⭐ Top Rated</span>
+        <span>🏆 Local</span>
+        <span>⚡ Fast</span>
+      </div>
     </div>
   </section>
+  <main>
+    <section id="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-it-works">
+        <div class="how-it-works-step">
+          <h3>1. Tell Us About Your Event</h3>
+          <p>Give us the date, location, and event details.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>2. Receive Proposals</h3>
+          <p>Top Barcelona bartenders will send you offers instantly.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>3. Book & Enjoy</h3>
+          <p>Book your favorite, pay direct, enjoy your event!</p>
+        </div>
+      </div>
+    </section>
+    <section id="why-bartendly">
+      <h2 class="section-title">Why Bartendly Barcelona?</h2>
+      <div class="why-bartendly">
+        <ul>
+          <li>✅ Only trusted, pre-vetted local bartenders</li>
+          <li>🍸 For private parties, weddings, and corporate events</li>
+          <li>⚡ Ultra-fast, commission-free booking</li>
+          <li>🇬🇧 London-based support</li>
+          <li>💸 Transparent rates — pay your bartender directly</li>
+        </ul>
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2 class="section-title">London Clients Love Bartendly</h2>
+      <div class="testimonial">
+        <blockquote>
+          “The bartender from Bartendly turned our corporate party in Shoreditch into a five-star experience. Truly brilliant service!”
+          <footer>— James M., London</footer>
+        </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          “Our wedding cocktail bar was a huge hit, thanks to Bartendly! Guests loved the personalized drinks and friendly service.” 
+          <footer>— Sarah & Tom, Hampstead</footer>
+        </blockquote>
+      </div>
+    </section>
+    <section id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    
+      <div class="faq-item">
+        <h3>Can I hire a bartender for a corporate event or company offsite in London?</h3>
+        <p>Yes — we regularly provide bartenders for corporate events, brand launches, office parties and offsites anywhere in London.</p>
+      </div>
 
-  <section id="faq">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-item">
       <h3>When should I book my bartender?</h3>
       <p>We recommend booking at least two weeks in advance to secure the best availability.</p>
     </div>
@@ -461,66 +228,47 @@
       <h3>Can I request specific cocktails or a theme?</h3>
       <p>Absolutely. Our bartenders can create bespoke menus tailored to your event.</p>
     </div>
-  
-    <div class="faq-item">
-      <h3>Do I need to provide my own ingredients?</h3>
-      <p>No, our bartenders will bring all necessary ingredients and equipment for your event.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can I hire a bartender for a corporate event in London?</h3>
-      <p>Yes, Bartendly specializes in matching you with professional bartenders for office parties, company milestones, and business events anywhere in London.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Do you offer cocktail bartenders for weddings or private parties?</h3>
-      <p>Absolutely! Our team includes expert mixologists for weddings, birthdays, anniversaries, and all kinds of private celebrations across London.</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 class="section-title">About Bartendly</h2>
-    <div class="about">
-      <p>
-        Bartendly is the fastest way to hire trusted bartenders for private parties, weddings, and corporate events in London. <br>
-        Founded by the team behind @world.of.mixologists (55k+ community), we connect you with London's top cocktail professionals — with transparent pricing and no agency fees.
-      </p>
-    </div>
-  </section>
-  
-
+    
+      <div class="faq-item">
+        <h3>Do you offer cocktail classes or mixology workshops?</h3>
+        <p>Yes, our bartenders host cocktail masterclasses for groups, birthdays, and corporate team-building events.</p>
+      </div>
+    
+      <div class="faq-item">
+        <h3>How fast can I get a bartender for my event?</h3>
+        <p>You’ll typically get offers within minutes — last-minute bookings are welcome!</p>
+      </div>
+    
+      <div class="faq-item">
+        <h3>How does payment work? Any hidden fees?</h3>
+        <p>All prices are quoted upfront, with no hidden fees or commissions. Payment is secure and can be made online or in cash.</p>
+      </div>
+    </section>    
+    <section id="about">
+      <h2 class="section-title">About Bartendly Barcelona</h2>
+      <div class="about">
+        <p>
+          Bartendly is the fastest way to hire trusted bartenders in London — for private events, corporate functions, and weddings. Founded by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>, we connect you with the city's best cocktail pros. 100% local, no agency fees.
+        </p>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="footer-links">
       <a href="mailto:martial@bartendly.com">Contact Us</a>
     </div>
-  
     <div class="social-links">
-      <a href="https://facebook.com/bartendly" target="_blank" class="facebook" aria-label="Visit us on Facebook">
-        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://instagram.com/bartendly" target="_blank" class="instagram" aria-label="Visit us on Instagram">
-        <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
-        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://wa.me/34618502493" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp fa-lg whatsapp-icon" aria-hidden="true"></i>
-      </a>
+      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
+      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
+      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
     </div>
-  
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
-  
-    <div class="cta-footer">
-      <p>Ready to elevate your next event?</p>
-      <a href="#book" class="cta-btn">Get My Bartender</a>
-    </div>
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
-<!--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>-->
-<!-- Tes JS Bartendly restent en defer aussi -->
-<script src="/london/data.js" defer></script>
-<script src="/bartendly.min.js" defer></script>
+<script>
+const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('input[name="ai-prompt"]').value.trim(),minLength=30,datePattern=/\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;if(!datePattern.test(userPrompt)){alert("Please include a date or approximate date for your event.");return;}if(userPrompt.length<minLength){alert("Please provide a bit more detail about your request.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Please enter a valid email or phone number.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Sending...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('Oops! Something went wrong while sending your message.');}}catch(err){alert('Network error. Please try again later.');}finally{submitBtn.disabled=false;submitBtn.textContent='Get My Bartender';}});}
+</script>
 
 </body>
 </html>
