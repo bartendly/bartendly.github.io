@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://www.bartendly.com/barcelona/" />
-  <link rel="preload" as="image" href="/barcelona/images/hero-1200.webp" imagesrcset="/barcelona/images/hero-600.webp 600w, /barcelona/images/hero-900.webp 900w, /barcelona/images/hero-1200.webp 1200w" imagesizes="100vw" />
+  <link rel="preload" as="image" href="/barcelona/images/hero-900.webp" type="image/webp">
   <style>
     :root {
       --primary: #ff6d21;
@@ -308,22 +308,25 @@
 </head>
 <body>
   <section class="hero" id="hero">
-    <picture class="hero-bg">
+    <!--<picture class="hero-bg">
       <source srcset="/barcelona/images/hero-600.webp 600w, /barcelona/images/hero-900.webp 900w, /barcelona/images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
       <source srcset="/barcelona/images/hero-600.jpg 600w, /barcelona/images/hero-900.jpg 900w, /barcelona/images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
       <img src="/barcelona/images/hero-900.jpg" alt="Female bartender on a Barcelona rooftop, Sagrada Familia at sunset" width="1200" height="1800" loading="eager" />
-    </picture>
+    </picture>-->
+    <picture class="hero-bg">
+        <source srcset="/barcelona/images/hero-600.webp 600w, /barcelona/images/hero-900.webp 900w, /barcelona/images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
+        <source srcset="/barcelona/images/hero-600.jpg 600w, /barcelona/images/hero-900.jpg 900w, /barcelona/images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
+        <img src="/barcelona/images/hero-900.jpg"
+             alt="Bartender preparing drinks on a rooftop event in Barcelona"
+             width="1200" height="1800"
+             loading="eager"
+             fetchpriority="high" />
+      </picture>
+      
     <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
     <div class="hero-content">
       <h1 class="hero-title">Hire a bartender in Barcelona</h1>
       <div class="hero-subtitle">Seamless, local, trusted. Instantly match with Barcelona’s top private event bartenders — in English or Spanish.</div>
-      <!--<form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self" autocomplete="off">
-        <input type="hidden" name="city" value="Barcelona">
-        <input type="text" name="ai-prompt" placeholder="Describe your event (date, location, guests...)" required />
-        <input type="text" name="ai-name" placeholder="Your Name" required>
-        <input type="text" name="ai-contact" placeholder="WhatsApp (preferred) or Email" required>
-        <button type="submit">Get My Bartender</button>
-      </form>-->
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form" target="_self">
         <input type="hidden" name="city" value="Barcelona">
         <label for="ai-prompt" class="sr-only">Your Request</label>
