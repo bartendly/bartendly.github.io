@@ -160,7 +160,7 @@
   }
 
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
   .hero {
     min-height: 100vh;
     display: flex;
@@ -232,6 +232,42 @@
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    /* Optionnel: padding-bottom pour aérer le bas */
+  }
+  .hero-content {
+    width: 100vw;
+    max-width: none;
+    padding-top: 5vw;        /* Ajuste ici: mets 5vw si c'est encore trop bas */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Important: pas de margin-bottom exagéré */
+  }
+  .hero-title {
+    font-size: 2.2rem;
+    font-weight: 750;
+    text-align: center;
+    margin: 0 0 0.45em 0;
+    padding: 0 5vw;
+    letter-spacing: -0.5px;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0 5vw;
+  }
+}
+
 
     main {
       max-width: 830px; margin: 0 auto; padding: 2.2rem 1.5rem 0 1.5rem;
