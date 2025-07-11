@@ -90,6 +90,11 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
   .hero-title{font-size:2.2rem;font-weight:750;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
   .hero-subtitle{font-size:1.25rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
 }
+
+.js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
+.fade-in{opacity:1!important;transform:translateY(0)!important;}
+@media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
+
   
   </style>
     <script type="application/ld+json">
@@ -318,6 +323,7 @@ const aiform=document.getElementById('ai-request-form'),aisuccessMessage=documen
 
 <script>
   document.querySelectorAll('.ai-toggle-group').forEach(g=>{let n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`);g.querySelectorAll('.ai-toggle').forEach(b=>b.onclick=()=>{g.querySelectorAll('.ai-toggle').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');h.value=b.getAttribute('data-value');});});
+  document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
 </script>  
 
 </body>
