@@ -23,7 +23,10 @@
 
 <url>
   <loc>https://www.bartendly.com/barcelona/</loc>
-  <lastmod>2025-06-09T00:00:00+00:00</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.bartendly.com/barcelona/" />
+  <xhtml:link rel="alternate" hreflang="es" href="https://www.bartendly.com/barcelona/es/" />
+  <xhtml:link rel="alternate" hreflang="ca" href="https://www.bartendly.com/barcelona/ca/" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bartendly.com/barcelona/" />
 </url>
 
 <url>
