@@ -1,284 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bartendly connects you with top bartenders and mixologists in global cities like London, Hong Kong, and Barcelona. Perfect for upscale events, cocktail classes, and private parties. Fast, commission-free, and verified talent." />
-    <meta name="keywords" content="book bartender online, hire mixologist, cocktail class, private bartender, mixology experience, bartender platform, global bartending, international cocktail events" />
-    <meta name="author" content="Bartendly" />
-    <meta name="robots" content="index, follow" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:title" content="Bartendly | Book Bartenders in London, Hong Kong & More" />
-    <meta property="og:description" content="Hire top bartenders and mixologists for events in your city. Fast, easy, commission-free." />
-    <meta property="og:image" content="https://www.bartendly.com/images/hero3.webp" />
-    <meta property="og:url" content="https://www.bartendly.com" />
-    <meta property="og:type" content="website" />   
-    <title>Hire Bartenders in your city for Events & Parties | Bartendly</title>
-    <link rel="stylesheet" href="bartendly.min.css">
-    <link rel="canonical" href="https://www.bartendly.com/" />
-    <link rel="preload" as="image" href="images/hero3.webp" type="image/webp">
-    <link rel="icon" href="https://www.bartendly.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hire a Bartender in Every Global City | Bartendly</title>
+  <meta name="description" content="Book a professional bartender for private parties, weddings, and corporate events worldwide. Bartendly connects you instantly with vetted local bartenders in Hong Kong, London, Barcelona and more. Seamless, trusted, no agency fees.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://www.bartendly.com/" />
+  <style>
+:root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;}
+html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
+body{overflow-x:hidden;}
+.hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
+.hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 18%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
+/*.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.01) 63%,rgba(16,16,20,0.98) 97%);}*/
+.hero::before {content: "";position: absolute;inset: 0;z-index: 1;background:linear-gradient(180deg, rgba(16,16,20,0.05) 60%, rgba(16,16,20,0.90) 98%), rgba(16,16,20,0.24);}
+.hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
+.hero-logo:active{opacity:.7;}
+.hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:center;background:none;padding:0 2vw;}
+/*
+.city-title{font-size:2.6rem;font-family:'Poppins',sans-serif;font-weight:800;margin:0 0 0.33em 0;line-height:1.11;color:#fff;letter-spacing:-1.2px;text-shadow:0 2.5px 9px #000a;}
+.city-subtitle{font-size:1.17rem;color:#fff;font-weight:500;margin:-0.2em 0 1.4em 0;text-shadow:0 1px 5px #0007;max-width:510px;text-align:center;opacity:.93;}
+*/
+.city-title{font-size:2.6rem;font-family:'Poppins',sans-serif;font-weight:800;margin:0 0 0.33em 0;line-height:1.11;color:#fff;letter-spacing:-1.2px;text-shadow:0 2px 8px #0007;}
+.city-subtitle{font-size:1.17rem;color:#fff;font-weight:500;margin:-0.2em 0 1.4em 0;text-shadow:0 1px 5px #0006;max-width:510px;text-align:center;opacity:1;}
+.city-selector{display:grid;grid-template-columns:1fr 1fr;gap:4vw 4vw;align-items:center;width:94vw;max-width:620px;margin:0.2em auto 1.4em auto;}
+.city-btn{display:flex;align-items:center;justify-content:center;font-size:clamp(1.12em,3.6vw,2.0em);font-weight:800;border-radius:2.2em;padding:1.15em 0;background:rgba(16,13,8,0.77);color:#fff;box-shadow:0 3px 16px #0008; text-decoration:none;border:1.5px solid rgba(255,255,255,0.08);text-align:center;margin:0;transition:all 0.18s cubic-bezier(.42,0,.58,1);backdrop-filter:blur(2.5px);position:relative;overflow:hidden;}
+.city-btn:before{content:"";position:absolute;inset:0;opacity:0.15;background:linear-gradient(115deg,rgba(255,255,255,0.15),rgba(255,141,34,0.09));pointer-events:none;}
+.city-btn:active,.city-btn:focus{background:rgba(18,14,8,0.94);}
+.city-btn:hover:not(.coming-soon){background:var(--primary);color:#fff;box-shadow:0 6px 28px #ffb57e2a;}
+.city-btn.coming-soon{opacity:0.7;pointer-events:none;cursor:not-allowed;}
+.coming-btn-inner{display:flex;flex-direction:column;width:100%;}
+.coming-title{font-weight:800;font-size:1.05em;}
+.coming-cities{font-size:0.87em;font-weight:500;letter-spacing:0.03em;margin-top:0.12em;color:#ffe1be;text-align:center;}
+.city-proof {color: #ffe3be;font-size: 1.01em;margin-bottom: 0.8em;opacity: .95;font-weight: 500;}
+@media (max-width:500px){
+  .hero-content{max-width:91vw;margin:3vh auto 3.1vh auto;padding:0 1vw;}
+  .hero-title{font-size:1.18rem;}
+  .hero-subtitle{font-size:0.99rem;}
+  .main-event-input,.ai-form-mockup .ai-input{font-size:1.03em;padding:0.49em 0.7em 0.49em 0.7em;}
+  .hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
+}
+@media (max-width:700px){
+  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
+  .hero-content{max-width:91vw;/*margin:5vh auto 2.5vh auto;padding:0 1vw;*/ padding-top:6vw;margin:0 auto 2vw auto;}
+  .city-title{font-size:2.05rem;}
+  .city-subtitle{font-size:1.04rem;}
+  .city-selector{gap:7vw 4vw;}
+  .hero-logo{font-size:1.2rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
+}
+@media (min-width:701px) and (max-width:900px){
+  .hero-content{max-width:520px;margin:0 auto 7vh auto;align-items:center;}
+  .city-title{font-size:2.35rem;}
+  .city-subtitle{font-size:1.14rem;}
+  .city-selector{gap:3vw 2vw;}
+  .hero-logo{font-size:1.3rem;}
+}
+@media (min-width:901px){
+  .hero-content{max-width:620px;}
+  .city-title{font-size:3.1rem;}
+  .city-subtitle{font-size:1.29rem;}
+}
+.js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
+.fade-in{opacity:1!important;transform:translateY(0)!important;}
+@media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
+footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}
+.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}
+.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}
+.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
+  
+main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
+@media (min-width:700px){main{max-width:830px;padding:2.2rem 1.5rem 0 1.5rem;}}
+
+    .section-title { text-align: left; font-size: 1.45rem; font-family:'Poppins',sans-serif; color: #ffae3a; margin: 2.2em 0 1.2em 0; font-weight:700; }
+    .how-it-works, .why-bartendly ul { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem;}
+    .how-it-works-step { background: #19191f; padding: 1.1em 1.2em 1.2em 1.1em; border-radius: 15px; max-width: 270px; flex: 1; min-width: 220px;}
+    .how-it-works-step h3 { color: #ffae3a; font-size: 1.03rem; margin-bottom: 0.38em;}
+    .how-it-works-step p { font-size: 0.98rem; color: #f5f5f5;}
+    .why-bartendly ul { list-style: none; padding: 0; margin: 0; flex-direction: column;}
+    .why-bartendly li { margin-bottom: 0.61em; font-size: 1.07em;}
+    .testimonial { background: #19191c; border-radius: 9px; margin: 1.5rem auto 1rem; padding: 1.2rem; max-width: 630px; font-style: italic;}
+    .testimonial blockquote { margin: 0;}
+    .testimonial footer { display: block; margin-top: 0.7em; color: #ffae3a;}
+    .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
+    .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
+    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
+  
+    @media (max-width:700px){
+  main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;padding-right:5vw!important;box-sizing:border-box;}
+}
+  </style>
+<!-- Organization Schema for Bartendly Root -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bartendly",
+      "image": "https://www.bartendly.com/images/hero-900.jpg",
+      "description": "International bartender and mixologist booking platform for private and corporate events. Hong Kong, London, Barcelona and more.",
+      "url": "https://www.bartendly.com/",
+      "email": "martial@bartendly.com",
+      "sameAs": [
+        "https://instagram.com/bartendly",
+        "https://facebook.com/bartendly",
+        "https://linkedin.com/company/bartendly"
+      ]
+    }
+    </script>
+    
+    <!-- FAQPage Schema (root, generic) -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Bartendly",
-        "url": "https://www.bartendly.com",
-        "logo": "https://www.bartendly.com/images/logo.png",
-        "description": "Bartendly connects clients with professional bartenders and mixologists for events in cities like London, Hong Kong, and more.",
-        "email": "martial@bartendly.com",
-        "areaServed": [
-        { "@type": "Place", "name": "London" },
-        { "@type": "Place", "name": "Hong Kong" },
-        { "@type": "Place", "name": "Barcelona" }
-        ],
-        "sameAs": [
-          "https://instagram.com/bartendly",
-          "https://facebook.com/bartendly",
-          "https://linkedin.com/company/bartendly"
-        ]
-      }
-      </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I hire a bartender for a corporate event or company party?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Bartendly provides professional bartenders for business launches, office parties, conferences, and brand events in every active city."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cover private homes, rooftops, villas, or yachts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Bartendly bartenders serve at rooftops, private homes, villas, yachts, hotels, and more—just specify your venue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer cocktail classes or mixology workshops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our bartenders run cocktail masterclasses and team-building workshops for private and corporate groups, anywhere in the world."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I request non-alcoholic or mocktail specialists?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, just mention it in your request—many of our bartenders are also expert mocktail artists and can create alcohol-free experiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can I book a bartender for my event?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, you’ll receive proposals within minutes, sometimes even instantly. Last-minute and urgent requests are welcome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the service really personalized?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes—every Bartendly event is tailored to your needs, from drinks menu to service style. You get direct chat and custom proposals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does payment work? Any hidden fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You pay your bartender directly, or securely via Bartendly in supported cities. No hidden fees, full transparency every step."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="#">Bartendly</a></div>
-    <div class="header-right">
-      <nav>
-        <a href="#how-it-works">How it Works</a>
-        <a href="#bartenders">Meet the bartenders</a>
+  <section class="hero" id="hero">
+    <picture class="hero-bg">
+      <source srcset="images/hero-600.webp 600w, images/hero-900.webp 900w, images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
+      <source srcset="images/hero-600.jpg 600w, images/hero-900.jpg 900w, images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
+      <img src="images/hero-900.jpg"
+           alt="Bartenders in action at rooftop parties, office events in Barcelona, London, Hong Kong"
+           width="1200" height="1800"
+           loading="eager"
+           fetchpriority="high" />
+    </picture>
+    <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
+    <div class="hero-content">
+      <h1 class="city-title">Hire a bartender<br>in every global city</h1>
+      <div class="city-proof">Trusted by event planners, brands, and private clients worldwide.</div>
+      <div class="city-subtitle">Seamless, local, trusted.<br>Book the top bartenders for private & corporate events worldwide.</div>
+      <nav class="city-selector" aria-label="Select your city">
+        <a href="/hong-kong/" class="city-btn" aria-label="Book a bartender in Hong Kong">Hong Kong</a>
+        <a href="/london/" class="city-btn" aria-label="Book a bartender in London">London</a>
+        <a href="/barcelona/" class="city-btn" aria-label="Book a bartender in Barcelona">Barcelona</a>
+        <span class="city-btn coming-soon">
+          <span class="coming-btn-inner">
+            <span class="coming-title">Coming Soon</span>
+            <span class="coming-cities">Singapore · Dubai · Paris</span>
+          </span>
+        </span>
       </nav>
-  
-      <!-- Globe icon with helper (clean version) -->
-      <div class="globe-wrapper">
-        <button id="city-toggle" aria-label="Choose your city" class="globe-icon">🌍</button>
-        <div class="globe-helper" aria-hidden="true">
-          <span class="arrow"></span>
-          Choose your city
+    </div>
+  </section>
+  <main>
+    <section id="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+      <div class="how-it-works">
+        <div class="how-it-works-step">
+          <h3>1. Tell Us About Your Event</h3>
+          <p>Give us the date, city, and details—private or corporate, any style, any size.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>2. Receive Proposals</h3>
+          <p>Top local bartenders in your chosen city will send you personalized offers in minutes.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>3. Book & Enjoy</h3>
+          <p>Choose your favorite bartender, pay direct or via Bartendly, and enjoy your event with zero hassle.</p>
         </div>
       </div>
-      
+    </section>
   
-      <!-- City menu that shows on click -->
-      <div id="city-menu" class="city-menu" hidden>
+    <section id="why-bartendly">
+      <h2 class="section-title">Why Bartendly?</h2>
+      <div class="why-bartendly">
         <ul>
-          <li><a href="/london/">🇬🇧 London</a></li>
-          <li><a href="/hong-kong/">🇭🇰 Hong Kong</a></li>
-          <li>
-            <a href="/barcelona/">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="17" height="10.62" aria-label="Catalonia Flag" style="vertical-align:middle;margin-right:0.25em">
-                <rect width="50" height="30" fill="#fcdd09"/>
-                <rect y="0" width="50" height="6" fill="#da121a"/>
-                <rect y="12" width="50" height="6" fill="#da121a"/>
-                <rect y="24" width="50" height="6" fill="#da121a"/>
-              </svg>
-              Barcelona
-            </a>
-          </li>          
+          <li>✅ Only trusted, pre-vetted local bartenders in every city</li>
+          <li>🍸 Private parties, weddings, rooftop soirées, corporate events & more</li>
+          <li>⚡ 100% personalized offers—every event is unique, no generic packages</li>
+          <li>🌍 Fast-growing global network: Hong Kong, London, Barcelona… more coming soon</li>
+          <li>💸 Transparent pricing—pay your bartender directly or through the platform</li>
+          <li>💬 Direct chat with your bartender, tailored proposals in minutes</li>
         </ul>
       </div>
-    </div>
-  </header>
+    </section>    
   
-
-<section class="hero">
-  <h1>Elevate Your Event with Professional Bartending Services</h1>
-  <p>Bartendly connects you with experienced, high-end bartenders & mixologists for private events, corporate functions, and cocktail experiences in <b>London, Hong Kong, and now Barcelona</b>.</p>
-  <a href="#book" class="cta-btn">Request a Bartender</a>
-  <picture>
-    <source srcset="images/hero3.webp" type="image/webp">
-    <img src="images/hero3.jpeg" alt="Bartender mixing cocktails at a private event" loading="lazy" width="1200" height="800" style="width: 100%; height: auto;">
-  </picture>
-</section>
-
-<section class="intro">
-  <div class="container">
-    <p>
-      At Bartendly, we believe every occasion deserves exceptional service. Whether you are planning an intimate gathering, a wedding, or a corporate soirée, our hand-selected bartenders bring expertise, style, and a touch of sophistication to your event.
-    </p>
-  </div>
-</section>
-
-  <section id="how-it-works">
-    <h2 class="section-title">How It Works</h2>
-    <div class="how-it-works">
-      <h3>1. Tell Us About Your Event</h3>
-      <p>Share your event details — date, location, type of occasion, and any special requests.</p>
-      <h3>2. Receive Proposals</h3>
-      <p>Top bartenders and mixologists will respond quickly with tailored offers.</p>
-      <h3>3. Book Directly</h3>
-      <p>Select your favorite and book directly — simple, fast, and transparent.</p>
-    </div>
-  </section>
-
-<!-- START CARROUSSEL -->
-<section id="bartenders" class="bartender-carousel" aria-label="Featured Bartenders from Hong Kong and London">
-  <div class="carousel-header">
-    <h2>Meet some of the best bartenders in Hong Kong and London</h2>
-  </div>
-
-  <div class="swiper" id="carousel" role="region" aria-roledescription="carousel" aria-label="Bartender Profiles Carousel" aria-live="polite">
-    <div class="swiper-wrapper">
-      <!-- Slides added via JS -->
-    </div>
-
-    <!-- Navigation buttons -->
-    <button class="swiper-button-prev" type="button" aria-label="Previous bartender" aria-controls="carousel"></button>
-    <button class="swiper-button-next" type="button" aria-label="Next bartender" aria-controls="carousel"></button>
-
-    <!-- Optional pagination -->
-    <div class="swiper-pagination" aria-hidden="true"></div>
-  </div>
-
-  <!--<p class="view-all-link">
-    <a href="/bartenders" class="carousel-link" aria-label="View all featured bartenders in Hong Kong">
-      View all featured bartenders →
-    </a>
-  </p>-->
-</section>
-
-
-
-<section id="why-bartendly">
-  <h2 class="section-title">Why Choose Bartendly?</h2>
-  <div class="why-bartendly">
-    <ul>
-      <li>✅ Only trusted, pre-vetted professional bartenders</li>
-      <li>🥂 Ideal for both private gatherings and corporate events across Hong Kong, London & <b>Barcelona</b></li>
-      <li>📍 Locally based in Hong Kong, London <b>and Barcelona</b>, we understand the scene like no one else</li>
-      <li>⚡ Fast, hassle-free booking — no surprises</li>
-    </ul>
-  </div>
-</section>
-
-  <section id="book" class="form-section">
-    <div class="form-container">
-   <h2 id="formTitle" class="form-title">Book a World-Class Bartender for Your Event</h2>
-    <p class="form-subtitle">No account needed. Connect instantly with top bartenders.</p>
-    <form role="form" aria-labelledby="formTitle" action="https://formspree.io/f/mdkevral" method="POST" id="contact-form">
-       <label for="client_type" class="sr-only">Client type</label>
-       <select id="client_type" name="client_type" aria-label="Select client type">
-          <option value="Private" selected>Private customer</option>
-          <option value="Corporate">Corporate</option>
-        </select>
-        <label for="city" class="sr-only">City</label>
-        <select id="city" name="city" aria-label="Select a city" required>
-          <option value="">Select a city</option>
-          <option value="London">London</option>
-          <option value="Hong Kong">Hong Kong</option>
-          <option value="Barcelona">Barcelona</option>
-        </select>
-        <label for="name" class="sr-only">Name</label>
-        <input id="name" type="text" name="name" placeholder="Your Name" required />
-        <label for="phone" class="sr-only">Your Phone/Whatsapp Number</label>
-        <input id="phone" type="tel" name="phone" placeholder="Your Phone/Whatsapp Number" />
-        <label for="email" class="sr-only">Your Email</label>
-        <input id="email" type="email" name="email" placeholder="Your Email" />
-        <label for="date" class="sr-only">The event date</label>
-        <input id="date" type="text" name="date" placeholder="The event date" required/>
-        <label for="details" class="sr-only">Details about your event</label>
-        <textarea id="details" name="details" placeholder="Details about your event (optional)" rows="2"></textarea> 
-        <label for="address" class="sr-only">Event Address</label>
-        <input id="address" type="text" name="address" placeholder="Event Address (optional)" />
-        <label for="participants" class="sr-only">Number of participants</label>
-        <input id="participants" type="number" name="participants" placeholder="Number of Participants (optional)" />
-        <div class="form-consent">
-          <input type="checkbox" id="consent" name="consent" checked>
-          <label for="consent">I agree to be contacted directly by available bartenders.</label>
-        </div>
-        <button type="submit">Send Request</button>
-      </form>
-      <div id="success-message" class="success-message" aria-live="polite">We will come back to you shortly with proposals from professional bartenders.</div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2 class="section-title">About Bartendly</h2>
-    <div class="about">
-      <p><strong>Our Vision:</strong> To make world-class bartending accessible to everyone, everywhere — elevating events with unforgettable cocktail experiences.</p> 
-      <p>Bartendly was founded by a team of seasoned bartenders and IT professionals with a shared passion for hospitality and innovation. Our bartenders have worked in some of the world's most renowned venues, including several of the <em>World’s 50 Best Bars</em>, bringing decades of expertise to every event.</p>
-      <p>Previously, we helped create the global bartending community <strong>World of Mixologists</strong> and the popular Instagram page <a href="https://www.instagram.com/world.of.mixologists/" target="_blank">@world.of.mixologists</a>, connecting cocktail lovers and professionals around the globe.</p>
-      <p>With Bartendly, we aim to bridge the gap between talented bartenders and people seeking exceptional service for private parties, corporate events, and special occasions. Starting in Hong Kong and London, our goal is to expand worldwide — one unforgettable cocktail at a time.</p>
-    </div>
-  </section>
-
-  <section id="testimonials">
-    <h2 class="section-title">What Our Customers Are Saying</h2>
-    <div class="testimonial">
-      <blockquote>
-        “Fantastic cocktails and seamless communication from start to finish. We’ll definitely book again for our next event.”
-        <footer>— Priya S., London</footer>
-      </blockquote>
-    </div>
-    <div class="testimonial">
-      <blockquote>
-        “Professional, elegant, and easy to work with. Highly recommend Bartendly for any private event.”
-        <footer>— Michelle L., Central District, Hong Kong</footer>
-      </blockquote>
-    </div>
-  </section>
-
-  <section id="faq">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>When should I book my bartender?</h3>
-      <p>We recommend booking at least two weeks in advance to secure the best availability.</p>
-    </div>
+    <section id="testimonials">
+      <h2 class="section-title">What People Say</h2>
+      <div class="testimonial">
+        <blockquote>
+            “Bartendly made our wedding reception in Hong Kong unforgettable. The cocktails were superb, and the service was impeccable.”
+            <footer>— Alex T., Hong Kong</footer>
+          </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          “Booked Bartendly for a private villa event in Barcelona—smooth booking, fantastic cocktails, and real professionals.”
+          <footer>— Jorge M., Barcelona</footer>
+        </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          “Great communication and the perfect bartender for our office launch in London. Will use again for sure.”
+          <footer>— Priya S., London</footer>
+        </blockquote>
+      </div>
+    </section>
   
-    <div class="faq-item">
-      <h3>Can I request specific cocktails or a theme?</h3>
-      <p>Absolutely. Our bartenders can create bespoke menus tailored to your event.</p>
-    </div>
+    <section id="faq">
+      <h2 class="section-title">Frequently Asked Questions</h2>
   
-    <div class="faq-item">
-      <h3>Do I need to provide my own ingredients?</h3>
-      <p>No, our bartenders will bring all necessary ingredients and equipment for your event.</p>
-    </div>
-  </section>
-
+      <div class="faq-item">
+        <h3>Can I hire a bartender for a corporate event or company party?</h3>
+        <p>Yes—Bartendly provides professional bartenders for business launches, office parties, conferences, and brand events in every active city.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>Do you cover private homes, rooftops, villas, or yachts?</h3>
+        <p>Absolutely! Bartendly bartenders serve at rooftops, private homes, villas, yachts, hotels, and more—just specify your venue.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>Do you offer cocktail classes or mixology workshops?</h3>
+        <p>Yes, our bartenders run cocktail masterclasses and team-building workshops for private and corporate groups, anywhere in the world.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>Can I request non-alcoholic or mocktail specialists?</h3>
+        <p>Yes, just mention it in your request—many of our bartenders are also expert mocktail artists and can create alcohol-free experiences.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>How quickly can I book a bartender for my event?</h3>
+        <p>Usually, you’ll receive proposals within minutes, sometimes even instantly. Last-minute and urgent requests are welcome.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>Is the service really personalized?</h3>
+        <p>Yes—every Bartendly event is tailored to your needs, from drinks menu to service style. You get direct chat and custom proposals.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>How does payment work? Any hidden fees?</h3>
+        <p>You pay your bartender directly, or securely via Bartendly in supported cities. No hidden fees, full transparency every step.</p>
+      </div>
+    </section>
+  
+    <section id="about">
+      <h2 class="section-title">About Bartendly</h2>
+      <div class="about">
+        <p>
+          Bartendly is the international platform for booking premium bartenders in any city—Hong Kong, London, Barcelona, and more coming soon. 
+          Trusted by global brands, event agencies, and private clients. 100% personalized, ultra-fast, no hidden fees. <br>
+          Powered by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>.
+        </p>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="footer-links">
       <a href="mailto:martial@bartendly.com">Contact Us</a>
     </div>
-  
     <div class="social-links">
-      <a href="https://facebook.com/bartendly" target="_blank" class="facebook" aria-label="Visit us on Facebook">
-        <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://instagram.com/bartendly" target="_blank" class="instagram" aria-label="Visit us on Instagram">
-        <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://linkedin.com/company/bartendly" target="_blank" class="linkedin" aria-label="Visit us on Linkedin">
-        <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
-      </a>
-      <a href="https://wa.me/34618502493" target="_blank" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp fa-lg whatsapp-icon" aria-hidden="true"></i>
-      </a>
+      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
+      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
+      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
     </div>
-  
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
-  
-    <div class="cta-footer">
-      <p>Ready to elevate your next event?</p>
-      <a href="#book" class="cta-btn">Request a Bartender</a>
-    </div>
   </footer>
-
-<!-- External libraries -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<!-- Bartendly js-->
-<script src="data.js" defer></script>
-<script src="bartendly.min.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
+  </script>  
 </body>
 </html>
