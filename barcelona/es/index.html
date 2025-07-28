@@ -12,6 +12,7 @@
   <style>
 :root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;}
 html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
+a { color: #ffae3a}
 .hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
 .hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 23%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.98) 100%);}
@@ -98,6 +99,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
 .fade-in{opacity:1!important;transform:translateY(0)!important;}
 @media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
+.booking-legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
+.legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
  </style>
    <!-- Structured Data -->
    <script type="application/ld+json">
@@ -188,6 +191,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         </div>
         <input type="hidden" name="glassware" required>
         <button type="submit" class="ai-submit">Solicitar presupuesto</button>
+        <div class="booking-legal-disclaimer">
+          Al enviar, aceptas nuestros <a href="/terms" target="_blank">Términos y Aviso Legal</a>.
+        </div>
       </form>
       <div id="ai-success-message" class="success-message" aria-live="polite">Te responderemos con propuestas de bartenders profesionales en Barcelona.</div>
       <div class="badges-bar">
@@ -273,6 +279,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <a href="mailto:martial@bartendly.com">Contacto</a>
     </div>
     <p>© 2025 Bartendly Barcelona — Hecho con ❤️ en Barcelona</p>
+    <div class="legal-disclaimer">
+      Bartendly es solo una plataforma digital. <a href="/terms" target="_blank">Ver términos y aviso legal</a>.
+    </div>
   </footer>
   <script>
 const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30;if(userPrompt.length<minLength){alert("Por favor, describe un poco más tu solicitud.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Introduce un email o teléfono válido.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Enviando...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('¡Ups! Ocurrió un error al enviar tu mensaje.');}}catch(err){alert('Error de red. Intenta más tarde.');}finally{submitBtn.disabled=false;submitBtn.textContent='Solicitar presupuesto';}});}
