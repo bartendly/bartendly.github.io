@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Caruso | Bartendly Hong Kong</title>
+  <meta name="description" content="Hire Marco Caruso, expert Italian mixologist in Hong Kong. Award-winning bartender for private events, parties, and masterclasses. Bartendly profile." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #ffae3a; --primary-dark: #ff6d21; --bg-dark: #101014; --text-light: #fff; --text-gold: #ffae3a; --text-muted: #d7c7b2; }
+    html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
+    body{min-height:100vh;}
+    .hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
+    .hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 18%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
+    .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.98) 100%);}
+    .hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
+    .profile-location{display:flex;align-items:center;font-size:1.11rem;color:var(--text-gold);margin-bottom:0.13em;font-family:'Poppins',sans-serif;}
+    .profile-location svg{margin-right:0.43em;vertical-align:middle;}
+    .profile-name{font-size:2.35rem;font-family:'Poppins',sans-serif;font-weight:800;color:var(--text-light);line-height:1.07;margin:0 0 0.07em 0;text-shadow:0 2px 14px #000a;}
+    .profile-title{font-size:1.11rem;color:var(--text-muted);margin:0 0 0.36em 0;font-weight:500;line-height:1.21;text-shadow:0 1px 7px #0008;}
+    .profile-tagline{color:var(--text-gold);font-size:1.09em;font-family:'Poppins',sans-serif;font-style:italic;margin-bottom:1.2em;margin-top:-0.32em;}
+    .profile-request-btn{display:block;width:100%;max-width:410px;background:var(--primary);color:#231e18;font-size:1.19em;font-weight:800;border:none;border-radius:22px;padding:0.7em 0;margin:0.7em 0 0 0;cursor:pointer;box-shadow:0 1.5px 14px rgba(255,174,58,0.14);text-align:center;transition:background 0.16s;}
+    .profile-request-btn:hover{background:var(--primary-dark);color:#fff;}
+    main{max-width:830px;margin:0 auto;padding:2.2rem 1.5rem 0 1.5rem;}
+    .profile-section{margin:2.2em auto 0 auto;max-width:95vw;background:rgba(22,18,20,0.91);border-radius:20px;box-shadow:0 2px 19px #0002;padding:1.5em 1.5em 1.2em 1.5em;}
+    .profile-section-title{color:var(--text-gold);font-size:1.36rem;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 1em 0;}
+    .profile-section ul{list-style:none;padding:0;margin:0;}
+    .profile-section li{font-size:1.08em;margin-bottom:0.77em;line-height:1.45;}
+    .profile-section li .icon{margin-right:0.52em;color:var(--text-gold);font-size:1.13em;vertical-align:middle;}
+    .profile-gallery{display:flex;gap:1.3em;margin-top:1.2em;overflow-x:auto;}
+    .profile-gallery picture,.profile-gallery img{height:110px;width:auto;border-radius:14px;object-fit:cover;box-shadow:0 1px 8px #0007;}
+    @media (max-width:700px){
+      .hero-content{max-width:91vw;margin:3vh auto 3.1vh auto;padding:0 1vw;}
+      main{max-width:98vw;padding:1.2em 0.8em 0 0.8em;}
+      .profile-section{padding:1.05em 0.75em 1.1em 0.95em;}
+      .profile-name{font-size:2.11rem;}
+      .profile-section-title{font-size:1.17rem;}
+      .profile-gallery img{height:85px;}
+    }
+  </style>
+</head>
+<body>
+  <section class="hero" id="hero">
+    <picture class="hero-bg">
+      <source srcset="hero-600.webp 600w, hero-900.webp 900w, hero-1200.webp 1200w" type="image/webp" sizes="100vw">
+      <source srcset="hero-600.jpg 600w, hero-900.jpg 900w, hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
+      <img src="hero-900.jpg" alt="Marco Caruso, bartender in Hong Kong" width="1200" height="1800" loading="eager" fetchpriority="high" />
+    </picture>
+    <div class="hero-content">
+      <div class="profile-location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#ffae3a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20c-4.418 0-8-4.03-8-9a8 8 0 0116 0c0 4.97-3.582 9-8 9zm0 0v0"/><circle cx="12" cy="11" r="3" /></svg>
+        Hong Kong
+      </div>
+      <div class="profile-name">Marco Caruso</div>
+      <div class="profile-title">
+        Italian mixologist with over 10 years experience in upscale hotel bars and private events across Asia
+      </div>
+      <div class="profile-tagline">
+        Crafting unforgettable experiences, one cocktail at a time
+      </div>
+      <button class="profile-request-btn"><span style="margin-right:0.5em;">🍸</span>Request Marco</button>
+    </div>
+  </section>
+  <main>
+    <section class="profile-section">
+      <div class="profile-section-title">About</div>
+      <ul>
+        <li><span class="icon">⭐</span>10+ years experience bartending through Hong Kong & Asia-Pacific</li>
+        <li><span class="icon">🏅</span>Guest bartender at Salisterra; regular shifts at Quinary</li>
+        <li><span class="icon">🗣️</span>Languages: English, Italian, conversational Cantonese</li>
+      </ul>
+    </section>
+    <section class="profile-section">
+      <div class="profile-section-title">Signature Cocktails</div>
+      <ul>
+        <li><span class="icon">🍸</span>Italian-inspired Negroni twist</li>
+        <li><span class="icon">🍹</span>Gin-based, garden-infused creations</li>
+        <li><span class="icon">🥃</span>Bespoke event menus</li>
+      </ul>
+    </section>
+    <section class="profile-section">
+      <div class="profile-section-title">Services Offered</div>
+      <ul>
+        <li><span class="icon">🎉</span>Private events: weddings, corporate dinners, VIP parties</li>
+        <li><span class="icon">🧑‍🏫</span>Cocktail workshops & masterclasses</li>
+        <li><span class="icon">🚚</span>Pop-up / bar takeover consulting</li>
+        <li><span class="icon">🍾</span>Curated mobile bar setups (equipment included)</li>
+      </ul>
+    </section>
+
+    <!--<section class="profile-section">
+      <div class="profile-section-title">Gallery</div>
+      <div class="profile-gallery">
+        <picture>
+          <source srcset="marco-gallery1-600.webp 600w, marco-gallery1-900.webp 900w, arco-gallery1-1200.webp 1200w" type="image/webp" />
+          <source srcset="marco-gallery1-600.jpg 600w, marco-gallery1-900.jpg 900w, marco-gallery1-1200.jpg 1200w" type="image/jpeg" />
+          <img src="marco-gallery1-900.jpg" alt="Marco pouring a drink" loading="lazy" />
+        </picture>
+        <picture>
+          <source srcset="marco-gallery2-600.webp 600w, /images/marco-gallery2-900.webp 900w, /images/marco-gallery2-1200.webp 1200w" type="image/webp" />
+          <source srcset="marco-gallery2-600.jpg 600w, /images/marco-gallery2-900.jpg 900w, /images/marco-gallery2-1200.jpg 1200w" type="image/jpeg" />
+          <img src="marco-gallery2-900.jpg" alt="Marco at work" loading="lazy" />
+        </picture>
+        <picture>
+          <source srcset="marco-gallery3-600.webp 600w, marco-gallery3-900.webp 900w, marco-gallery3-1200.webp 1200w" type="image/webp" />
+          <source srcset="marco-gallery3-600.jpg 600w, marco-gallery3-900.jpg 900w, marco-gallery3-1200.jpg 1200w" type="image/jpeg" />
+          <img src="marco-gallery3-900.jpg" alt="Signature cocktail" loading="lazy" />
+        </picture>
+      </div>
+    </section>-->
+  </main>
+</body>
+</html>
