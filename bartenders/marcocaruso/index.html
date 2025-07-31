@@ -28,6 +28,7 @@
     .profile-section li .icon{margin-right:0.52em;color:var(--text-gold);font-size:1.13em;vertical-align:middle;}
     .profile-gallery{display:flex;gap:1.3em;margin-top:1.2em;overflow-x:auto;}
     .profile-gallery picture,.profile-gallery img{height:110px;width:auto;border-radius:14px;object-fit:cover;box-shadow:0 1px 8px #0007;}
+    
     @media (max-width:700px){
       .hero-content{bottom:auto;top:10vh;margin-bottom:0;transform:translateX(-50%);}
       .profile-name{font-size:1.43rem;}
@@ -38,6 +39,11 @@
       .profile-request-btn{font-size:1em;}
       .profile-gallery img{height:85px;}
     }
+
+    @media (max-width:500px){
+      .hero-content{max-width:91vw;margin:2.1vh auto 3.1vh auto;padding-top:2.3vh;}
+     }
+
     .hero-content{z-index:2;position:absolute;width:100vw;max-width:91vw;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:left;background:none;bottom:7vh;}
 
   </style>
