@@ -12,7 +12,7 @@
     .hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
     .hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 18%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
     .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.98) 100%);}
-    .hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
+    .hero-content{z-index:2;position:absolute;width:100vw;max-width:91vw;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center;background:none;bottom:7vh;}
     .profile-location{display:flex;align-items:center;font-size:1.11rem;color:var(--text-gold);margin-bottom:0.13em;font-family:'Poppins',sans-serif;}
     .profile-location svg{margin-right:0.43em;vertical-align:middle;}
     .profile-name{font-size:2.35rem;font-family:'Poppins',sans-serif;font-weight:800;color:var(--text-light);line-height:1.07;margin:0 0 0.07em 0;text-shadow:0 2px 14px #000a;}
@@ -39,15 +39,10 @@
       .profile-request-btn{font-size:1em;}
       .profile-gallery img{height:85px;}
     }
-
     @media (max-width:500px){
       /*.hero-content{max-width:91vw;margin:2.1vh auto 3.1vh auto;padding-top:2.3vh;}*/
       .hero-content{max-width:91vw;margin:4.8vh auto 3.1vh auto;padding-top:1.1vh;}
-
      }
-
-    .hero-content{z-index:2;position:absolute;width:100vw;max-width:91vw;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center;background:none;bottom:7vh;}
-
   </style>
 </head>
 <body>
