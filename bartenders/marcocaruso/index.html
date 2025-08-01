@@ -72,11 +72,27 @@
   .ai-toggle{font-size:1.02em;}
 }
 
+/*
 .modal-overlay{position:fixed;z-index:1001;top:0;left:0;width:100vw;height:100vh;background:rgba(10,10,18,0.86);display:flex;align-items:center;justify-content:center;}
 .modal-content{background:#18191c;border-radius:20px;box-shadow:0 5px 36px #0008;padding:2.7em 2.4em 2.3em 2.4em;max-width:500px;width:96vw;position:relative;}
 @media (min-width:900px){.modal-content{max-width:620px;padding:2.9em 3.1em 2.5em 3.1em;}}
 @media (max-width:500px){.modal-content{width:100vw;max-width:100vw;padding:1em 0.25em 1.3em 0.25em;border-radius:0;}}
 .modal-close{position:absolute;top:0.7em;right:1.1em;background:none;border:none;color:#ffae3a;font-size:2.1em;cursor:pointer;z-index:2;}
+*/  
+.modal-overlay{position:fixed;z-index:1001;top:0;left:0;width:100vw;height:100dvh;min-height:100dvh;background:rgba(10,10,18,0.88);display:flex;align-items:center;justify-content:center;}
+.modal-content{background:#18191c;border-radius:20px;box-shadow:0 5px 36px #0008;padding:2.7em 2.4em 2.3em 2.4em;max-width:500px;width:96vw;position:relative;display:flex;flex-direction:column;align-items:center;}
+.modal-close{position:absolute;top:1.1em;right:1.2em;background:none;border:none;color:#ffae3a;font-size:2.1em;cursor:pointer;z-index:2;}
+@media (min-width:900px){.modal-content{max-width:620px;padding:2.9em 3.1em 2.5em 3.1em;}}
+@media (max-width:600px){
+  .modal-content{width:100vw;max-width:100vw;min-height:100dvh;border-radius:0;padding:3.4em 0.2em 1.2em 0.2em;}
+  .modal-close{top:1.2em;right:1.3em;font-size:2.2em;}
+}
+
+
+.profile-gallery{display:flex;gap:1.3em;margin-top:1.2em;overflow-x:auto;}
+.profile-gallery img{height:110px;width:auto;border-radius:14px;object-fit:cover;box-shadow:0 1px 8px #0007;}
+@media (max-width:700px){.profile-gallery img{height:85px;}}
+
   </style>
 </head>
 <body>
@@ -103,30 +119,44 @@
   </section>
   <main>
     <section class="profile-section">
-      <div class="profile-section-title">About</div>
-      <ul>
-        <li><span class="icon">⭐</span>10+ years experience bartending through Hong Kong & Asia-Pacific</li>
-        <li><span class="icon">🏅</span>Guest bartender at Salisterra; regular shifts at Quinary</li>
-        <li><span class="icon">🗣️</span>Languages: English, Italian, conversational Cantonese</li>
-      </ul>
-    </section>
-    <section class="profile-section">
-      <div class="profile-section-title">Signature Cocktails</div>
-      <ul>
-        <li><span class="icon">🍸</span>Italian-inspired Negroni twist</li>
-        <li><span class="icon">🍹</span>Gin-based, garden-infused creations</li>
-        <li><span class="icon">🥃</span>Bespoke event menus</li>
-      </ul>
-    </section>
-    <section class="profile-section">
-      <div class="profile-section-title">Services Offered</div>
-      <ul>
-        <li><span class="icon">🎉</span>Private events: weddings, corporate dinners, VIP parties</li>
-        <li><span class="icon">🧑‍🏫</span>Cocktail workshops & masterclasses</li>
-        <li><span class="icon">🚚</span>Pop-up / bar takeover consulting</li>
-        <li><span class="icon">🔥</span>Flair bartending, flame show, acrobatic performance</li>
-      </ul>
-    </section>
+        <div class="profile-section-title">About Marco</div>
+        <ul>
+          <li><span class="icon">🌍</span>8+ years hospitality experience (Italy & Hong Kong, APAC region)</li>
+          <li><span class="icon">🥈</span>Top 10 Finalist – SIP Global Competition 2025 (Hong Kong & Macau)</li>
+          <li><span class="icon">🍸</span>Guest bartender at leading venues: Bar Bimasena (Jakarta), Barcadia (Jakarta), Bar Bamboo (HK), Spirit Library (Manila), Dot Bar (Saigon)</li>
+          <li><span class="icon">🏆</span>Bartender Retreat by KiNoBi Gin (Kyoto, sponsored by Pernod Ricard)</li>
+          <li><span class="icon">🗣️</span>Languages: Italian, English, Spanish, French</li>
+          <li><span class="icon">👨‍💼</span>Ex-finance professional turned passionate host and hospitality expert</li>
+        </ul>
+      </section>      
+      <section class="profile-section">
+        <div class="profile-section-title">Signature Cocktails</div>
+        <ul>
+          <li><span class="icon">🍊</span>Mandarin Negroni</li>
+          <li><span class="icon">🌱</span>Food-infused, creative upscaling</li>
+          <li><span class="icon">🥃</span>Bespoke event menus, tailored to your occasion</li>
+        </ul>
+      </section>      
+      <section class="profile-section">
+        <div class="profile-section-title">Services Offered</div>
+        <ul>
+          <li><span class="icon">🎉</span>Private events: weddings, parties, corporate, VIP</li>
+          <li><span class="icon">🧑‍🏫</span>Cocktail workshops & masterclasses</li>
+          <li><span class="icon">🚚</span>Consultancy & bar pop-up/takeover</li>
+          <li><span class="icon">🔥</span>Flair bartending, flame shows & acrobatic performance</li>
+        </ul>
+      </section>
+      
+      <section class="profile-section">
+        <div class="profile-section-title">More About Marco</div>
+        <ul>
+          <li><span class="icon">🍳</span>Freelance chef – passionate about food pairing</li>
+          <li><span class="icon">🎮</span>Video game aficionado</li>
+          <li><span class="icon">⚽</span>Napoli & football enthusiast</li>
+          <li><span class="icon">📸</span>Instagram:<a href="https://www.instagram.com/marcarux_hk" style="color:var(--text-gold);text-decoration:none;" target="_blank">@marcarux_hk</a></li>
+        </ul>
+      </section>
+      
 
     <!--<section class="profile-section">
       <div class="profile-section-title">Gallery</div>
@@ -148,6 +178,15 @@
         </picture>
       </div>
     </section>-->
+    <section class="profile-section">
+        <div class="profile-section-title">Gallery</div>
+        <div class="profile-gallery">
+          <img src="marco-gallery1.jpg" alt="Marco pouring a drink" loading="lazy" />
+          <img src="marco-gallery2.jpg" alt="Marco at an event" loading="lazy" />
+          <!-- Ajoute un 3e si vraiment pertinent -->
+        </div>
+      </section>
+      
   </main>
 
   <!-- MODAL (à placer en bas du body) -->
