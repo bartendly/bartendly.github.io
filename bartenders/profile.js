@@ -68,13 +68,13 @@
               ${locationDiv(bartender.locationDisplay || bartender.city || "")}
               ${maybeDiv("profile-name", bartender.name)}
               ${maybeDiv("profile-title", bartender.title)}
-              ${
+              ${maybeDiv("profile-tagline", bartender.tagline)}
+          </div>
+           ${
             bartender.directBooking
               ? `<button class="profile-request-btn" id="open-request-modal"><span style="margin-right:0.5em;">🍸</span>Request ${bartender.name.split(' ')[0]}</button>`
               : ''
             }
-              ${maybeDiv("profile-tagline", bartender.tagline)}
-          </div>
         </div>
       </section>
       <main>
