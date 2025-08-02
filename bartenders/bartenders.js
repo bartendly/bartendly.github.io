@@ -40,7 +40,9 @@ window.bartenders = [
       instagram: "https://www.instagram.com/marcarux_hk", // for social links/buttons
       // fields for list display
       shortDescription: "Award-winning Italian bartender in Hong Kong, specialist in creative and bespoke events.",
-      languages: ["Italian", "English", "Spanish", "French"]
+      languages: ["Italian", "English", "Spanish", "French"],
+      directBooking: true,   // If true, show "Book Now" and enable instant booking
+      showGallery: true      // If true, display the gallery section
       // Add more as needed, e.g. priceRange, availability, verified, etc.
     },
     {
@@ -60,7 +62,7 @@ window.bartenders = [
           { icon: "🇮🇹", text: "Born in Sicily, trained across Italy and the UK" },
           { icon: "🏆", text: "Multiple cocktail competition finalist & guest shift specialist" },
           { icon: "🌍", text: "Experience in 5-star venues and acclaimed bars (London, Palermo, Florence)" },
-          { icon: "🗣️", text: "Languages: Italian, English" },
+          { icon: "🗣️", text: "Languages: Italian, English, Spanish" },
           { icon: "📚", text: "Specialist in bespoke recipes, menu creation & showmanship" }
         ],
         signatureCocktails: [
@@ -82,7 +84,9 @@ window.bartenders = [
         ],
         instagram: "https://www.instagram.com/peppe_quartararo",
         shortDescription: "Senior bartender at London’s legendary Nightjar – expert in creative cocktails, guest shifts, and bespoke events.",
-        languages: ["Italian", "English", "Spanish"]
+        languages: ["Italian", "English", "Spanish"],
+        directBooking: true,   // If true, show "Book Now" and enable instant booking
+        showGallery: false     // If true, display the gallery section
       },
       
   ];
