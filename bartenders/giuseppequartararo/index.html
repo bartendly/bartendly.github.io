@@ -24,7 +24,7 @@
   const bartender = data.find(b => b.slug === slug);
 
   if (bartender && bartender.name) {
-  document.title = `Bartendly profile page of ${bartender.name} | Bartendly`;
+  document.title = `${bartender.name} profile | Bartendly`;
   }
 
 
@@ -137,7 +137,7 @@
             By submitting, you agree to our <a href="/terms" target="_blank">Terms & Disclaimer</a>.
           </div>
         </form>
-        <div id="ai-success-message" class="success-message" aria-live="polite">We’ll reply with proposals from professional bartenders.</div>
+        <div id="ai-success-message" class="success-message" aria-live="polite">Thank you! ${bartender.name} will reply to your request as soon as possible.</div>
       </div>
     </div>
     `;
