@@ -23,6 +23,11 @@
   const data = window.bartenders || [];
   const bartender = data.find(b => b.slug === slug);
 
+  if (bartender && bartender.name) {
+  document.title = `Bartendly profile page of ${bartender.name} | Bartendly`;
+  }
+
+
   // Defensive: show error if not found
   const root = document.getElementById('profile-root');
   if (!bartender) {
@@ -48,6 +53,15 @@
     return val ? `<div class="${cls}">${val}</div>` : '';
   }
 
+  function locationDiv(val) {
+  if (!val) return '';
+  return `<div class="profile-location">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#ffae3a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20c-4.418 0-8-4.03-8-9a8 8 0 0116 0c0 4.97-3.582 9-8 9zm0 0v0"/><circle cx="12" cy="11" r="3" /></svg>
+    ${val}
+  </div>`;
+}
+
+
   // Hero image sources (relative path)
   function heroSource(type) {
     return `hero-600.${type} 600w, hero-900.${type} 900w, hero-1200.${type} 1200w`;
@@ -65,10 +79,12 @@
         <img src="${heroImg('jpg', true)}" alt="${bartender.name}" width="1200" height="1800" loading="eager" fetchpriority="high" />
       </picture>
       <div class="hero-content">
-        ${maybeDiv("profile-location", (bartender.locationDisplay||bartender.city||""))}
-        ${maybeDiv("profile-name", bartender.name)}
-        ${maybeDiv("profile-title", bartender.title)}
-        ${maybeDiv("profile-tagline", bartender.tagline)}
+        <div class="hero-content-bg">
+            ${locationDiv(bartender.locationDisplay || bartender.city || "")}
+            ${maybeDiv("profile-name", bartender.name)}
+            ${maybeDiv("profile-title", bartender.title)}
+            ${maybeDiv("profile-tagline", bartender.tagline)}
+        </div>
         ${
           bartender.directBooking
             ? `<button class="profile-request-btn" id="direct-booking-btn"><span style="margin-right:0.5em;">⚡️</span>Book Now</button>`
