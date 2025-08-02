@@ -72,7 +72,7 @@
           </div>
            ${
             bartender.directBooking
-              ? `<button class="profile-request-btn" id="open-request-modal"><span style="margin-right:0.5em;">🍸</span>Request ${bartender.name.split(' ')[0]}</button>`
+              ? `<button class="profile-request-btn" id="direct-booking-btn"><span style="margin-right:0.5em;">🍸</span>Request ${bartender.name.split(' ')[0]}</button>`
               : ''
             }
         </div>
@@ -168,4 +168,5 @@
         });
       });
     }
+    document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');if('IntersectionObserver'in window){let o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}}),{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e));}});
   })();
