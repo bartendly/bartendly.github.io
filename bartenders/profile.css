@@ -22,7 +22,7 @@ main{max-width:830px;margin:0 auto;padding:2.2rem 1.5rem 0 1.5rem;}
 .profile-gallery{display:flex;gap:1.3em;margin-top:1.2em;overflow-x:auto;}
 .profile-gallery picture,.profile-gallery img{height:110px;width:auto;border-radius:14px;object-fit:cover;box-shadow:0 1px 8px #0007;}
 @media (max-width:700px){
-  .hero-content{bottom:auto;top:45vh;margin-bottom:0;transform:translateX(-50%);}
+  .hero-content{bottom:auto;top:40vh;margin-bottom:0;transform:translateX(-50%);}
   .profile-name{font-size:1.43rem;}
   main{max-width:98vw;padding:1.2em 0.8em 0 0.8em;}
   .profile-section{padding:1.05em 0.75em 1.1em 0.95em;}
@@ -75,4 +75,4 @@ footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.
 .back-btn:hover { background: #18191c; color: #fff; }
 @media (max-width:700px) { .back-btn { top: 10px; left: 7px; width: 39px; height: 39px; font-size: 1.7em; } }
 .hero-content-bg { background: rgba(14,14,18,0.68); border-radius: 18px; padding: 1.3em 1.5em 0.5em 1.5em; margin: 0 auto; box-shadow: 0 6px 24px 0 rgba(8,8,8,0.09); display: inline-block; max-width: 92vw; backdrop-filter: blur(2px); }
-@media (max-width:700px) { .hero-content-bg { padding: 0.8em 0.9em 0.7em 0.9em; border-radius: 13px; max-width: 99vw; } }
+@media (max-width:700px) { .hero-content-bg { padding: 0.8em 0.9em 0.4em 0.9em; border-radius: 13px; max-width: 99vw; } }
