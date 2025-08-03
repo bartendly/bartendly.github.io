@@ -74,5 +74,5 @@ footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.
 .back-btn { position: fixed; top: 20px; left: 14px; z-index: 40; background: rgba(16,16,20,0.91); color: #ffae3a; border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 2px 8px #0004; cursor: pointer; transition: background 0.14s; }
 .back-btn:hover { background: #18191c; color: #fff; }
 @media (max-width:700px) { .back-btn { top: 10px; left: 7px; width: 39px; height: 39px; font-size: 1.7em; } }
-.hero-content-bg { background: rgba(14,14,18,0.68); border-radius: 18px; padding: 1.3em 1.5em 0.5em 1.5em; margin: 0 auto; box-shadow: 0 6px 24px 0 rgba(8,8,8,0.09); display: inline-block; max-width: 92vw; backdrop-filter: blur(2px); }
+.hero-content-bg { background: rgba(14,14,18,0.70); border-radius: 18px; padding: 1.3em 1.5em 0.5em 1.5em; margin: 0 auto; box-shadow: 0 6px 24px 0 rgba(8,8,8,0.09); display: inline-block; max-width: 92vw; backdrop-filter: blur(2px); }
 @media (max-width:700px) { .hero-content-bg { padding: 0.8em 0.9em 0.3em 0.9em; border-radius: 13px; max-width: 99vw; } }
