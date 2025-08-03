@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join as a Bartender | Bartendly</title>
+  <meta name="description" content="Join Bartendly as a premium event bartender. Get bookings, grow your profile, and connect with top clients. Apply now!" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#ff6d21; --primary-hover:#ffae3a; --bg-dark:#101014; --text-light:#fff; }
+    html,body { margin:0; padding:0; background:var(--bg-dark); color:var(--text-light); font-family:'Inter','Poppins',sans-serif; min-height:100vh; }
+    a { color: var(--primary-hover); text-decoration: none; }
+    .hero { min-height:100vh; width:100vw; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-start; align-items:stretch; background:var(--bg-dark);}
+    .hero-bg, .hero picture, .hero img { position:absolute; inset:0; width:100vw; height:100vh; object-fit:cover; object-position:center 22%; z-index:0; background:#18191c; pointer-events:none; user-select:none; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(180deg,rgba(16,16,20,0.05) 60%,rgba(16,16,20,0.97) 100%);}
+    .hero-content { z-index:2; position:relative; width:100vw; max-width:99vw; margin:0 auto; display:flex; flex-direction:column; align-items:center; text-align:left; background:none; padding:0 2vw; margin-top:60vh;}
+    .join-form-container { background:rgba(14,14,18,0.83); border-radius:19px; padding:2em 2.5em 1.3em 2.5em; margin:0 auto 1.7em auto; box-shadow:0 6px 24px 0 rgba(8,8,8,0.10); max-width:700px; width:100%; display:flex; flex-direction:column; gap:0.6em; }
+    .form-row { display: flex; align-items: center; gap: 1.1em; margin-bottom: 0.8em; }
+    .form-label { min-width:138px; color:#ffae3a; font-size:1.04em; font-weight:600; display:flex; align-items:center; gap:0.48em;}
+    .label-icon { font-size:1.13em; }
+    .form-input, .form-textarea { flex:1; border-radius:13px; border:none; font-size:1.05em; padding:0.48em 0.95em; background:rgba(255,255,255,0.96); color:#18181c; box-shadow:0 1px 9px #0002; }
+    .form-input:focus, .form-textarea:focus { outline:2px solid var(--primary-hover); }
+    .form-textarea { min-height:120px; resize:vertical; }
+    .checkbox-block { background:none; margin:0.34em 0 0 0; }
+    /*.checkbox-block label { color:#f5e9db; font-size:1.05em; font-weight:400; margin-bottom:0.1em; display:flex; align-items:flex-start;}*/
+    .checkbox-block label {color: #f5e9db;font-size: 1.05em;font-weight: 400;margin-bottom: 0.1em;display: block;line-height: 1.52;}
+    .checkbox-block input[type="checkbox"] { width:1.2em; height:1.2em; margin-right:0.75em; accent-color: var(--primary-hover);}
+    .join-btn { background:var(--primary); color:#fff; font-weight:700; border:none; border-radius:15px; font-size:1.16em; padding:0.72em 0; margin-top:0.27em; box-shadow:0 1.5px 10px rgba(255,141,34,0.13); transition:background 0.15s,color 0.15s; width:100%; letter-spacing:0.01em; min-height:2.05em; cursor:pointer;}
+    .join-btn:hover, .join-btn:focus { background:var(--primary-hover); color:#231e18;}
+    .booking-legal-disclaimer { margin:0.85em 0 0.45em 0; color:#ffe9bb; font-size:0.97em; text-align:left;}
+    .booking-legal-disclaimer a { color:var(--primary-hover); text-decoration:underline; }
+    .success-message { display:none; margin-top:1.10rem; background:#28a745; color:white; padding:1.09rem; border-radius:7px; text-align:center; font-size:1.07em; }
+    @media (max-width:900px) {
+      .hero-content { margin-top:15vh; }
+      .join-form-container { max-width:99vw; padding:1.2em 0.6em 0.95em 0.6em; }
+      .form-label { min-width:86px; font-size:0.98em; }
+    }
+    @media (max-width:700px) {
+      .hero-content { margin-top:7vh; }
+      .form-label { min-width:60px; font-size:0.95em; }
+    }
+    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
+    
+    .join-title { font-family:'Poppins',sans-serif; font-size:2.2rem; font-weight:700; text-align:center; margin-bottom:0.25em; color:#fff; letter-spacing:-1px; text-shadow:0 2px 18px #10101460;}
+    .join-subtitle { font-family:'Inter',sans-serif; font-size:1.17rem; color:#ffae3a; text-align:center; margin-bottom:1.2em; font-weight:400; line-height:1.25; max-width:590px;}
+
+    .section-block { background:rgba(16,16,20,0.91); border-radius:16px; box-shadow:0 2px 14px 0 rgba(8,8,8,0.09); margin:2.1em auto 1.5em auto; padding:2.1em 2.3em 2em 2.3em; max-width:650px; }
+.section-title { font-family:'Poppins',sans-serif; font-size:1.35rem; color:#ffae3a; font-weight:600; margin-bottom:0.6em; margin-top:0;}
+.section-block ul { margin:0.45em 0 0.8em 1.2em; color:#ffe5ba; font-size:1.08em; }
+.section-block li { margin-bottom:0.38em; }
+.section-block p { color:#ffe8c5; font-size:1.06em; margin-bottom:0.68em; }
+.faq-block { margin-top:2.5em; margin-bottom:1.2em;}
+.faq-item { margin-bottom:1.15em; }
+.faq-q { color:#ffae3a; font-weight:600; font-size:1.1em; margin-bottom:0.14em; }
+.faq-a { color:#f7eddc; font-size:1.06em; }
+
+.back-btn { position: fixed; top: 20px; left: 14px; z-index: 40; background: rgba(16,16,20,0.91); color: #ffae3a; border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 2px 8px #0004; cursor: pointer; transition: background 0.14s; }
+.back-btn:hover { background: #18191c; color: #fff; }
+@media (max-width:700px) { .back-btn { top: 10px; left: 7px; width: 39px; height: 39px; font-size: 1.7em; } }
+
+.js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
+.fade-in{opacity:1!important;transform:translateY(0)!important;}
+@media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
+  </style>
+</head>
+<body>
+  <button id="back-btn" class="back-btn" aria-label="Back"></button>  
+  <section class="hero" id="hero">
+    <picture class="hero-bg">
+      <source srcset="hero-600.webp 600w, hero-900.webp 900w, hero-1200.webp 1200w" type="image/webp" sizes="100vw">
+      <source srcset="hero-600.jpg 600w, hero-900.jpg 900w, hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
+      <img src="hero-900.jpg" alt="Join Bartendly as a premium bartender" width="1200" height="1800" loading="eager" fetchpriority="high" />
+    </picture>
+    <div class="hero-content">
+      <div class="join-title">Bartender, Join the Future of Hospitality!</div>
+      <div class="join-subtitle">Apply once. Get bookings, build your brand, and connect with the world’s best clients.</div>  
+      <form id="join-form" action="https://formspree.io/f/mdkdlpdn" method="POST" class="join-form-container" target="_self" autocomplete="off">
+      <!--<form id="join-form" class="join-form-container" autocomplete="off">-->
+        <div class="form-row">
+          <div class="form-label"><span class="label-icon">👤</span>Name</div>
+          <input type="text" id="join-name" name="name" class="form-input" required maxlength="44" placeholder="Your full name" />
+        </div>
+        <div class="form-row">
+          <div class="form-label"><span class="label-icon">📱</span>Contact</div>
+          <input type="text" id="join-contact" name="contact" class="form-input" required maxlength="60" placeholder="WhatsApp (preferred) and/or email" />
+        </div>
+        <div class="form-row">
+          <div class="form-label"><span class="label-icon">📸</span>Instagram</div>
+          <input type="text" id="join-instagram" name="instagram" class="form-input" maxlength="50" placeholder="@yourhandle (optional)" />
+        </div>
+        <div class="form-row">
+          <div class="form-label"><span class="label-icon">📝</span>Bio / Info</div>
+          <textarea id="join-bio" name="bio" class="form-textarea" required maxlength="1200" placeholder="Write your profile as you want it to appear. You can include:
+- Experience (e.g. 8+ years in top bars in Rome & Warsaw)
+- Signature Cocktails (e.g. Smoky Negroni, Tiki Sour)
+- Awards (Winner, City Mixology Cup 2023)
+- Services offered (private events, pop-ups, masterclasses)
+- More about you (languages, passions, etc.)
+"></textarea>
+        </div>
+        <div class="checkbox-block">
+            <label><input type="checkbox" name="truth" required />I confirm I am a professional bartender and all info is accurate.</label>
+          </div>
+        <div class="checkbox-block">
+            <label><input type="checkbox" name="platform" required />I understand Bartendly is a digital platform only, not an event organizer, and I am legally responsible for my services. I have read and agree to the <a href="/terms" target="_blank" style="color:#ffae3a; text-decoration:underline;">Terms &amp; Conditions</a>.</label>
+        </div>
+        <div class="checkbox-block">
+          <label><input type="checkbox" name="consent" required />I allow Bartendly to use my profile info/photos and contact me about gigs.</label>
+        </div>
+        <button type="submit" class="join-btn">Join Bartendly</button>
+        <div id="join-success" class="success-message" aria-live="polite">Thank you! Your application was received.<br>Bartendly will review it and contact you soon via WhatsApp or email.</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="section-title">Why Join Bartendly?</div>
+    <ul>
+      <li>Get discovered by real clients, not just agencies.</li>
+      <li>Promote your unique style and story.</li>
+      <li>Choose your gigs, set your rates, work local or global.</li>
+      <li>Be part of a premium, respected network—no scams, no spam.</li>
+    </ul>
+  </section>
+  <section class="section-block">
+    <div class="section-title">How It Works</div>
+    <ol style="color:#ffe5ba; font-size:1.08em; margin-left:1.3em; margin-bottom:1.2em;">
+      <li>Apply (2 minutes): Complete the form above.</li>
+      <li>Get reviewed: Our team checks every profile for quality and authenticity.</li>
+      <li>Go live: Approved bartenders are featured on Bartendly, with your photo, story, and skills.</li>
+      <li>Get requests: Clients can book or request you directly. You’re always in control.</li>
+      <li>Earn, grow, connect: More jobs, more visibility, more opportunities.</li>
+    </ol>
+  </section>
+  <section class="section-block">
+    <div class="section-title">What We Expect / Your Responsibilities</div>
+    <ul>
+      <li><b>Professionalism:</b> Respect clients, guests, co-workers, and the Bartendly brand.</li>
+      <li><b>Independence:</b> You’re a freelancer—responsible for your actions, equipment, and taxes.</li>
+      <li><b>No discrimination:</b> Zero tolerance for harassment or unprofessional behavior.</li>
+      <li><b>Preparedness:</b> Arrive with your own bartender tools—ready to create great experiences.</li>
+    </ul>
+  </section>
+  <section class="section-block">
+    <div class="section-title">The Future with Bartendly</div>
+    <ul>
+      <li>We’re scaling fast—more cities, more brands, more premium events.</li>
+      <li>Bartendly Academy, brand collabs, and global ambassador programs coming soon.</li>
+      <li>Pitch your own events, masterclasses, or collabs: Bartendly is for creators, not just gig workers.</li>
+    </ul>
+  </section>
+  <section class="section-block faq-block">
+    <div class="section-title">FAQ</div>
+    <div class="faq-item">
+      <div class="faq-q">Who can join?</div>
+      <div class="faq-a">Professional bartenders with proven experience, a passion for hospitality, and the right to work in their region.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it free?</div>
+      <div class="faq-a">Joining and being listed is free. Premium features (profile boosts, extra photos, event creation, etc.) may require a subscription in the future.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I choose my gigs?</div>
+      <div class="faq-a">Absolutely. You accept only the jobs you want, when you want. No penalties for declining.</div>
+    </div>
+  </section>
+  <section id="about" class="section-block">
+    <div class="section-title">About Bartendly</div>
+    <div class="about">
+      <p>
+        Bartendly is the world’s first premium, curated platform for booking professional bartenders for private and corporate events. Founded by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank">@world.of.mixologists</a>, Bartendly connects clients and brands with the best cocktail talent across the globe—always local, always trusted, always high quality.
+      </p>
+      <p>
+        We’re on a mission to elevate the art of hospitality—one event, one bartender, one city at a time.
+      </p>
+    </div>
+  </section>  
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:martial@bartendly.com">Contact Us</a>
+    </div>
+    <div class="social-links">
+      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
+      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
+      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 Bartendly. All rights reserved.</p>
+    <div class="legal-disclaimer">
+      Bartendly is a digital platform only. <a href="/terms" target="_blank">See terms & disclaimer</a>.
+    </div>
+  </footer>
+<script>
+  const joinForm=document.getElementById('join-form'),joinSuccess=document.getElementById('join-success');if(joinForm&&joinSuccess){joinForm.addEventListener('submit',async e=>{e.preventDefault();const c=joinForm.querySelector('[name="contact"]').value.trim(),em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(c),isP=ph.test(c);if(!isE&&!isP){alert("Please enter a valid WhatsApp number or email address.");return;}for(const cb of joinForm.querySelectorAll('input[type="checkbox"][required]'))if(!cb.checked){alert("Please accept all conditions to join Bartendly.");return;}const btn=joinForm.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';const data=new FormData(joinForm);try{const r=await fetch(joinForm.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(r.ok){joinForm.reset();joinForm.style.display='none';joinSuccess.style.display='block';}else{alert('Oops! Something went wrong while sending your application.');}}catch(e){alert('Network error. Please try again later.');}finally{btn.disabled=false;btn.textContent='Join Bartendly';}});}
+  let b=document.getElementById('back-btn');b&&(b.innerHTML="&#8592;",b.onclick=()=>window.history.length>1?window.history.back():window.location.href='/bartenders/');
+  document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
+</script>  
+</body>
+</html>
