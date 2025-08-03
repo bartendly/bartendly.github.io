@@ -77,7 +77,12 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
     .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
     footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
-  
+    .footer-join-link { text-align:right; margin-top:1.1em; }
+    .footer-join-link a { color:#fff; font-weight:600; background:#ff6d21; border-radius:13px; padding:0.42em 1.2em; text-decoration:none; transition:background 0.15s, color 0.13s; font-size:1.01em; }
+    .footer-join-link a span { color:#ffae3a; }
+    .footer-join-link a:hover, .footer-join-link a:focus { background:#ffae3a; color:#18181c; }
+    @media (max-width:700px) { .footer-join-link { text-align:center; margin:1.2em 0 0 0; } .footer-join-link a { font-size:0.99em; padding:0.42em 0.8em; } }
+
     @media (max-width:700px){
   .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
   .hero-logo{font-size:1.2rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
@@ -183,7 +188,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         <label for="ai-contact" class="sr-only">Tu contacto</label>
         <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferido) o email + tu nombre" required autocomplete="off" />
         <!-- Toggle: Glassware provided? -->
-        <label for="glassware" class="ai-label">¿Necesitas que Bartendly proporcione cristalería?</label>
+        <label for="glassware" class="ai-label">¿Necesitas que Bartendly proporcione cristalería (vasos, copas, etc.)?</label>
         <div class="ai-toggle-group" data-name="glassware" id="glassware">
           <button type="button" class="ai-toggle" data-value="Sí">Sí</button>
           <button type="button" class="ai-toggle" data-value="No">No</button>
@@ -282,6 +287,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     <div class="legal-disclaimer">
       Bartendly es solo una plataforma digital. <a href="/terms" target="_blank">Ver términos y aviso legal</a>.
     </div>
+    <div class="footer-join-link">
+      <a href="/bartenders/join">¿Eres bartender? <span>Únete a Bartendly</span></a>
+    </div>    
   </footer>
   <script>
 const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30;if(userPrompt.length<minLength){alert("Por favor, describe un poco más tu solicitud.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Introduce un email o teléfono válido.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Enviando...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('¡Ups! Ocurrió un error al enviar tu mensaje.');}}catch(err){alert('Error de red. Intenta más tarde.');}finally{submitBtn.disabled=false;submitBtn.textContent='Solicitar presupuesto';}});}
