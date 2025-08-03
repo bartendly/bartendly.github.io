@@ -20,7 +20,7 @@
     .label-icon { font-size:1.13em; }
     .form-input, .form-textarea { flex:1; border-radius:13px; border:none; font-size:1.05em; padding:0.48em 0.95em; background:rgba(255,255,255,0.96); color:#18181c; box-shadow:0 1px 9px #0002; }
     .form-input:focus, .form-textarea:focus { outline:2px solid var(--primary-hover); }
-    .form-textarea { min-height:120px; resize:vertical; }
+    .form-textarea { min-height:140px; resize:vertical; }
     .checkbox-block { background:none; margin:0.34em 0 0 0; }
     /*.checkbox-block label { color:#f5e9db; font-size:1.05em; font-weight:400; margin-bottom:0.1em; display:flex; align-items:flex-start;}*/
     .checkbox-block label {color: #f5e9db;font-size: 1.05em;font-weight: 400;margin-bottom: 0.1em;display: block;line-height: 1.52;}
@@ -94,6 +94,10 @@
           <div class="form-label"><span class="label-icon">👤</span>Name</div>
           <input type="text" id="join-name" name="name" class="form-input" required maxlength="44" placeholder="Your full name" />
         </div>
+        <div class="form-row">
+            <div class="form-label"><span class="label-icon">🌍</span>City</div>
+            <input type="text" id="join-city" name="city" class="form-input" required maxlength="48" placeholder="Where are you based?" />
+        </div>          
         <div class="form-row">
           <div class="form-label"><span class="label-icon">📱</span>Contact</div>
           <input type="text" id="join-contact" name="contact" class="form-input" required maxlength="60" placeholder="WhatsApp (preferred) and/or email" />
