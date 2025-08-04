@@ -88,6 +88,42 @@ window.bartenders = [
         directBooking: true,   // If true, show "Book Now" and enable instant booking
         showGallery: false     // If true, display the gallery section
       },
+      {
+        slug: "lucianopaura",
+        name: "Luciano Paura",
+        city: "Barcelona",
+        locationDisplay: "Barcelona / Badalona",
+        photo: "hero-900.jpg",
+        title: "Argentinian bartender based in Barcelona, rooftop specialist with a passion for hospitality and travel.",
+        tagline: "Mixing good vibes and unforgettable cocktails, wherever life takes me.",
+        experience: [
+          { icon: "🏨", text: "Bartender – Hotel Marina Rooftop, Badalona (Barcelona)" },
+          { icon: "🍸", text: "Extensive experience in rooftop, hotel & beach bar service (Spain, Mexico, Italy)" },
+          { icon: "🇦🇷", text: "Born in Argentina, lived and worked in Spain, Italy & Mexico" },
+          { icon: "🌎", text: "Cocktail events from Barcelona to Tulum & Rome" },
+          { icon: "🗣️", text: "Languages: Spanish, Italian, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Latin American & Mediterranean classics – with a twist" },
+          { icon: "🍊", text: "Citrus-forward & refreshing rooftop signatures" },
+          { icon: "🥃", text: "Bespoke creations for private events" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private parties, weddings, birthdays, corporate events" },
+          { icon: "🧑‍🏫", text: "Cocktail masterclasses & tasting experiences" },
+          { icon: "🍸", text: "Signature rooftop service & consulting" }
+        ],
+        more: [
+          { icon: "🌊", text: "Loves the sea, travel, and family adventures" },
+          { icon: "⚽", text: "Football and mate enthusiast" },
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/luciano.paura" target="_blank">@luciano.paura</a>' }
+        ],
+        instagram: "https://www.instagram.com/luciano.paura",
+        shortDescription: "Rooftop bartender in Barcelona & Badalona, Argentinian roots, expert in lively events and Mediterranean hospitality.",
+        languages: ["Spanish", "Italian", "English"],
+        directBooking: true,
+        showGallery: false
+      },
       
   ];
   
