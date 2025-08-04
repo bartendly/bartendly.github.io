@@ -26,11 +26,11 @@
     .back-btn { position: fixed; top: 20px; left: 14px; z-index: 40; background: rgba(16,16,20,0.91); color: #ffae3a; border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 2px 8px #0004; cursor: pointer; transition: background 0.14s; }
     .back-btn:hover { background: #18191c; color: #fff; }
     @media (max-width:700px) { .back-btn { top: 10px; left: 7px; width: 39px; height: 39px; font-size: 1.7em; } }
-    .join-bartender-cta { text-align:center; margin:2.2em 0 0.7em 0; font-size:1.10em; }
-    .join-bartender-cta span { color:#ffae3a; font-weight:500; }
-    .join-link { margin-left:0.55em; color:#fff; background:#ff6d21; padding:0.37em 1em; border-radius:13px; text-decoration:none; font-weight:600; font-size:1em; transition:background 0.16s, color 0.14s; }
+    .join-bartender-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; text-align:center; margin:2.2em 0 0.7em 0; font-size:1.10em; gap:0.6em; }
+    .join-bartender-cta span { color:#ffae3a; font-weight:500; margin-right:0.2em; white-space:nowrap; }
+    .join-link { color:#fff; background:#ff6d21; padding:0.37em 1em; border-radius:13px; text-decoration:none; font-weight:600; font-size:1em; transition:background 0.16s, color 0.14s; margin-left:0.15em; white-space:nowrap; }
     .join-link:hover, .join-link:focus { background:#ffae3a; color:#18181c; }
-    @media (max-width:700px) { .join-bartender-cta { font-size:1em; margin:1.2em 0 0.3em 0; } .join-link { font-size:0.99em; padding:0.37em 0.8em; } }
+    @media (max-width:700px) { .join-bartender-cta { font-size:1em; margin:1.2em 0 0.3em 0; gap:0.3em; } .join-link { font-size:0.99em; padding:0.37em 0.8em; } }
   </style>
 </head>
 <body>
