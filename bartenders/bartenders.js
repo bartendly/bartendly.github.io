@@ -124,6 +124,74 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },
+      {
+        slug: "alessandrotodini",
+        name: "Alessandro Todini",
+        city: "London",
+        locationDisplay: "London",
+        photo: "hero-900.jpg",
+        gallery: [
+           "alessandro-gallery1.jpg", "alessandro-gallery2.jpg", "alessandro-gallery3.jpg"
+        ],
+        title: "Italian bartender with 11+ years of London hospitality experience – from kitchen to cocktails.",
+        tagline: "For you, the perfect cocktail. For me, a Piña Colada on a Cuban beach.",
+        experience: [
+          { icon: "🇮🇹", text: "Born in Italy, moved to London 11+ years ago" },
+          { icon: "🧑‍🍳", text: "Started in kitchen, floor, then bar" },
+          { icon: "🍸", text: "Front of house & cocktail bar expertise" },
+          { icon: "🏆", text: "Participated in many cocktail competitions & events" },
+          { icon: "🗣️", text: "Languages: Italian, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🍍", text: "Piña Colada – ultimate beach classic" },
+          { icon: "🍸", text: "Custom drink to make your time special" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private parties, corporate events, birthdays" },
+          { icon: "🍸", text: "Bespoke cocktail creation" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/alextodini" target="_blank">@alextodini</a>' }
+        ],
+        instagram: "https://instagram.com/alextodini",
+        shortDescription: "London-based Italian bartender with 11+ years' experience, ready to create the perfect cocktail for your event.",
+        languages: ["Italian", "English"],
+        directBooking: false,
+        showGallery: true
+      },
+      {
+        slug: "bilaltekec",
+        name: "Bilal Tekec",
+        city: "London",
+        locationDisplay: "London",
+        photo: "hero-900.jpg", 
+        gallery: [
+          // "bilal-gallery1.jpg", 
+        ],
+        title: "Bar Manager at Chiave Shoreditch, London.",
+        tagline: "Mixing expertise and hospitality at the heart of Shoreditch.",
+        experience: [
+          { icon: "🏙️", text: "Bar Manager – Chiave, Shoreditch" },
+          { icon: "🍸", text: "Extensive experience in London’s bar scene" },
+          { icon: "🗣️", text: "Languages: English, Turkish" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Creative house cocktails" },
+          { icon: "🍸", text: "Classic & modern signature serves" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events, corporate, VIP parties" },
+          { icon: "🍸", text: "Menu design & cocktail consultancy" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/bilalridvant" target="_blank">@bilalridvant</a>' }
+        ],
+        instagram: "https://instagram.com/bilalridvant",
+        shortDescription: "Bar Manager at Chiave Shoreditch – creative cocktails & hospitality for private and corporate events.",
+        languages: ["English", "Turkish"],
+        directBooking: false,
+        showGallery: false
+      },
       
   ];
   
