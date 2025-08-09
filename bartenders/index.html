@@ -97,7 +97,10 @@
     document.addEventListener('DOMContentLoaded', renderBartenders);
     
     const navIcon = document.getElementById('nav-icon');
-if (window.history.length > 1) {
+const isFromBartendly = document.referrer && document.referrer.includes('bartendly.com');
+
+if (isFromBartendly && window.history.length > 1) {
+
   // Show back arrow
   navIcon.innerHTML = `<button class="back-btn" aria-label="Back">&#8592;</button>`;
   const backBtn = navIcon.querySelector('.back-btn');
