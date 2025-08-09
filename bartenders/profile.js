@@ -144,7 +144,7 @@
         };
       } else {
         // Show Bartendly logo
-        navIcon.innerHTML = `<a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>`;
+        navIcon.innerHTML = `<a href="https://www.bartendly.com/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>`;
       }
     }
     
