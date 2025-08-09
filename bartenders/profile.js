@@ -130,13 +130,18 @@
   
     // Interactions
     // Back button
-    const backBtn = document.getElementById('back-btn');
-    if (backBtn) {
-      backBtn.innerHTML = "&#8592;";
-      backBtn.onclick = () => window.history.length > 1
-        ? window.history.back()
-        : window.location.href = '/bartenders/';
-    }
+    const navIcon = document.getElementById('nav-icon');
+    if (window.history.length > 1) {
+      // Show back arrow
+      navIcon.innerHTML = `<button class="back-btn" aria-label="Back">&#8592;</button>`;
+      const backBtn = navIcon.querySelector('.back-btn');
+      backBtn.onclick = function () {
+        window.history.back();
+      };
+    } else {
+      // Show Bartendly logo
+      navIcon.innerHTML = `<a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>`;
+    }    
     // Modal interactions (only if directBooking)
     if (bartender.directBooking) {
       let o = document.getElementById('direct-booking-btn'),
