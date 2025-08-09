@@ -136,17 +136,23 @@
       const isFromBartendly = document.referrer && document.referrer.includes('bartendly.com');
     
       if (isFromBartendly && window.history.length > 1) {
-        // Show back arrow
         navIcon.innerHTML = `<button class="back-btn" aria-label="Back">&#8592;</button>`;
         const backBtn = navIcon.querySelector('.back-btn');
-        backBtn.onclick = function () {
-          window.history.back();
-        };
+        backBtn.onclick = function () { window.history.back(); };
       } else {
-        // Show Bartendly logo
         navIcon.innerHTML = `<a href="https://www.bartendly.com/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>`;
+        const logo = navIcon.querySelector('.hero-logo');
+        if (logo) {
+          // Capture phase so we run BEFORE any other click handlers on the page.
+          logo.addEventListener('click', function (e) {
+            e.stopPropagation();            // don't let other handlers eat the click
+            // no preventDefault on purpose — let the link work naturally
+            // but also force navigation in case someone prevented default elsewhere:
+            window.location.assign('https://www.bartendly.com/');
+          }, true);
+        }
       }
-    }
+    }    
     
     // Modal interactions (only if directBooking)
     if (bartender.directBooking) {
