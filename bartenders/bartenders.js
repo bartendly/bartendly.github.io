@@ -192,6 +192,38 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
+      {
+        slug: "lorenzobarra",
+        name: "Lorenzo Barra",
+        city: "London",
+        locationDisplay: "London",
+        photo: "hero-900.jpg",            // put in /bartenders/lorenzobarra/
+        gallery: [ /* "lorenzo-gallery1.jpg" */ ],
+        title: "Italian bartender in London — Nightjar alumnus; Archive & Myth experience.",
+        tagline: "Creative classics with a story behind every serve.",
+        experience: [
+          { icon: "🦅", text: "Former Nightjar, London (alumnus)" },
+          { icon: "📜", text: "Experience at Archive & Myth" },
+          { icon: "🍸", text: "Hotel/cocktail bar service & events" },
+          { icon: "🗣️", text: "Languages: Italian, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Refined twists on classics" },
+          { icon: "🍊", text: "Citrus-forward, balanced serves" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private parties & corporate events" },
+          { icon: "🧑‍🏫", text: "Masterclasses & tasting experiences" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/cockteliere_matto" target="_blank">@cockteliere_matto</a>' }
+        ],
+        instagram: "https://instagram.com/cockteliere_matto",
+        shortDescription: "London-based Italian bartender, Nightjar alumnus. Creative cocktails for private & corporate events.",
+        languages: ["Italian", "English"],
+        directBooking: false,
+        showGallery: false
+      },
       
   ];
   
