@@ -224,6 +224,42 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
+      {
+        slug: "devenrajput",
+        name: "Deven Rajput",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg", // place in /bartenders/devenrajput/
+        gallery: [],
+        title: "Whisky & Cocktail Specialist — 12 years hospitality experience",
+        tagline: "From Mumbai to Macau to Hong Kong — whisky, cocktails, and world-class hospitality.",
+        experience: [
+          { icon: "🇮🇳", text: "Started in Mumbai, India" },
+          { icon: "🏨", text: "Galaxy Hotel / Casino Resort (Macallan Bar & Lounge, Macau, China)" },
+          { icon: "🥃", text: "Currently at Whisky & Words, Hong Kong" },
+          { icon: "🌍", text: "Guest shifts in Macau, Manila, Hong Kong, Saint Petersburg" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Manhattan" },
+          { icon: "🥃", text: "Old Fashioned" },
+          { icon: "🍊", text: "Negroni" },
+          { icon: "🍸", text: "Twists on forgotten classics" }
+        ],
+        services: [
+          { icon: "🥃", text: "Whisky masterclasses" },
+          { icon: "💡", text: "Consultancy for bars & pop-up bars" },
+          { icon: "🎪", text: "International/local whisky festival hosting" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/chill_with_mixing_rules" target="_blank">@chill_with_mixing_rules</a>' },
+          { icon: "🥃", text: "Whisky & Bourbon lover" }
+        ],
+        instagram: "https://www.instagram.com/chill_with_mixing_rules",
+        shortDescription: "Hong Kong-based whisky & cocktail expert with 12 years hospitality experience. Masterclasses, consultancy, and refined classics.",
+        languages: ["English", "Hindi"],
+        directBooking: false,
+        showGallery: false
+      },
       
   ];
   
