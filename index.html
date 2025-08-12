@@ -93,6 +93,30 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 }
 .legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
 
+.hero-topnav{position:absolute;top:.8rem;right:1.4rem;z-index:10;display:flex;gap:.6rem}
+.hero-topnav a{color:#ffae3a;text-decoration:none;font-weight:600;background:rgba(16,13,8,.55);padding:.35em .7em;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+.hero-topnav a:hover{background:#ff6d21;color:#fff}
+@media(max-width:700px){.hero-topnav{right:.8rem;gap:.4rem}.hero-topnav a{padding:.3em .55em;font-size:.92em}}
+
+
+/* TO BE MOVED*/
+.btly-wrap { position:relative; margin:1.5rem auto; max-width:1200px; }
+.btly-track { display:grid; grid-auto-flow:column; grid-auto-columns:80%; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:.25rem 0 1rem; }
+@media (min-width:900px) { .btly-track { grid-auto-columns:calc((100% - 2rem) / 3); overflow-x:auto; } }
+.btly-card { position:relative; border-radius:20px; overflow:hidden; background:var(--bg-dark); height:58vh; max-height:520px; min-height:380px; scroll-snap-align:center; cursor:pointer; }
+.btly-card picture, .btly-card img { width:100%; height:100%; object-fit:cover; display:block; }
+.btly-overlay { position:absolute; inset:auto 0 0 0; padding:14px 16px; background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.9) 100%); color:var(--text-light); font-family:'Poppins',sans-serif; }
+.btly-name { font-size:1.1rem; font-weight:700; line-height:1.1; margin:0 0 4px 0; }
+.btly-meta { font-size:.9rem; opacity:.9; }
+.btly-arrow { display:none; position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.35); color:var(--text-light); font-size:0; line-height:0; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(4px); }
+.btly-arrow:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+.btly-arrow svg { width:22px; height:22px; }
+.btly-arrow--prev { left:-10px; }
+.btly-arrow--next { right:-10px; }
+@media (min-width:900px) { .btly-arrow { display:inline-flex; } }
+.btly-card { scroll-snap-stop: always; }
+
+
   </style>
 <!-- Organization Schema for Bartendly Root -->
 <script type="application/ld+json">
@@ -190,6 +214,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
            fetchpriority="high" />
     </picture>
     <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
+    <nav class="hero-topnav" aria-label="Top navigation">
+      <a href="/bartenders/">Our Bartenders</a>
+    </nav>
     <div class="hero-content">
       <h1 class="city-title">Hire a bartender<br>in every global city</h1>
       <div class="city-proof">Trusted by event planners, brands, and private clients worldwide.</div>
@@ -239,6 +266,10 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         </ul>
       </div>
     </section>    
+
+     <section id="bartendly-carousel" class="btly-mount" data-city="all">
+      <h2 class="section-title">Meet the bartenders</h2>
+    </section>
   
     <section id="testimonials">
       <h2 class="section-title">What People Say</h2>
@@ -333,5 +364,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
   <script>
     document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
   </script>  
+
+  <!-- put scripts just before </body> -->
+  <script src="/bartenders/bartenders.js"></script>
+  <script src="/assets/js/bartendly-carousel.js"></script>
 </body>
 </html>
