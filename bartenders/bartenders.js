@@ -260,6 +260,65 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
+      {
+        slug: "upendragurung",
+        name: "Upendra Gurung",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg", // put in /bartenders/upendragurung/
+        gallery: [],
+        title: "Bartender — Creative Cocktails & Mocktails",
+        tagline: "3 years of experience in the beverage industry, crafting new variations of cocktails and mocktails.",
+        experience: [
+          { icon: "🍹", text: "3 years in the beverage industry" },
+          { icon: "✨", text: "Focus on creative twists and variations" }
+        ],
+        signatureCocktails: [
+          { icon: "🍸", text: "Innovative cocktail creations" },
+          { icon: "🥤", text: "Signature mocktails" }
+        ],
+        services: [
+          { icon: "🍸", text: "Cocktail bartending for events" },
+          { icon: "🥤", text: "Mocktail design & service" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/upengurung" target="_blank">@_upengurung_</a>' }
+        ],
+        instagram: "https://www.instagram.com/upengurung",
+        shortDescription: "Hong Kong bartender with 3 years of experience, known for creating unique cocktail and mocktail variations.",
+        languages: ["English"],
+        directBooking: false,
+        showGallery: false
+      },
+      {
+        slug: "sanjograna",
+        name: "Sanjog Rana",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg", // put in /bartenders/sanjograna/
+        gallery: [],
+        title: "Bartender",
+        tagline: "2 years of bartending experience in Hong Kong.",
+        experience: [
+          { icon: "🍸", text: "2 years bartending in Hong Kong" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Classic cocktails" },
+          { icon: "✨", text: "Creative twists" }
+        ],
+        services: [
+          { icon: "🍸", text: "Cocktail service for events" },
+          { icon: "🍹", text: "Mixology expertise" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/sanjjog_rana" target="_blank">@sanjjog_rana</a>' }
+        ],
+        instagram: "https://www.instagram.com/sanjjog_rana",
+        shortDescription: "Hong Kong-based bartender with 2 years of experience and a passion for cocktails.",
+        languages: ["English"],
+        directBooking: false,
+        showGallery: false
+      },
       
   ];
   
