@@ -290,7 +290,7 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
-      {
+      /*{
         slug: "sanjograna",
         name: "Sanjog Rana",
         city: "Hong Kong",
@@ -318,7 +318,7 @@ window.bartenders = [
         languages: ["English"],
         directBooking: false,
         showGallery: false
-      },
+      },*/
       
   ];
   
