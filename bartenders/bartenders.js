@@ -319,6 +319,43 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },*/
+      {
+        slug: "manmohansinghsandu",
+        name: "Manmohan Singh Sandu",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg", // place in /bartenders/manmohansinghsandu/
+        gallery: [
+          "manmohan-gallery1.jpg",
+          "manmohan-gallery2.jpg",
+          "manmohan-gallery3.jpg"
+        ],
+        title: "20-year hospitality veteran blending art, hospitality & chemistry",
+        tagline: "Vibe conductor: precision, creativity, and genuine human connection.",
+        experience: [
+          { icon: "🕰️", text: "20+ years crafting hospitality experiences" },
+          { icon: "🎭", text: "Operates at the intersection of art, hospitality, and chemistry" },
+          { icon: "🧪", text: "Meticulous technique, creative execution, guest-first mindset" },
+          { icon: "🗣️", text: "Languages: English" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Refined twists on timeless classics" },
+          { icon: "🍸", text: "Balanced, story-driven serves" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events: corporate, VIP, celebrations" },
+          { icon: "🧑‍🏫", text: "Cocktail masterclasses & tasting experiences" },
+          { icon: "💡", text: "Consultancy & menu design" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/Manu_19th" target="_blank">@Manu_19th</a>' }
+        ],
+        instagram: "https://instagram.com/Manu_19th",
+        shortDescription: "Hong Kong-based hospitality veteran (20+ yrs) crafting creative, precise, guest-centered cocktail experiences.",
+        languages: ["English"],
+        directBooking: false,
+        showGallery: true,
+      },
       
   ];
   
