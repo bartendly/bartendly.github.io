@@ -356,6 +356,39 @@ window.bartenders = [
         directBooking: false,
         showGallery: true,
       },
+      {
+        slug: "alimuhammadusman",
+        name: "Ali Muhammad Usman",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg", // à placer dans /bartenders/alimuhammadusman/
+        gallery: [],
+        title: "Hong Kong-based bartender with 5+ years’ experience in high-energy venues",
+        tagline: "Mixing drinks, creating moments, and elevating guest experiences.",
+        experience: [
+          { icon: "⏳", text: "5+ years bartending in Hong Kong" },
+          { icon: "⚡", text: "Fast-paced bar environment expertise" },
+          { icon: "🍸", text: "Strong skills in cocktail mixing & service" },
+          { icon: "🗣️", text: "Languages: English, Urdu" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Refreshing tropical cocktails" },
+          { icon: "🥃", text: "Classic whisky-based serves" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private parties, birthdays, corporate events" },
+          { icon: "🧑‍🏫", text: "Cocktail classes & guest engagement" },
+          { icon: "🍸", text: "Bespoke drink menu design" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/thinkbigdawgg" target="_blank">@thinkbigdawgg</a>' }
+        ],
+        instagram: "https://instagram.com/thinkbigdawgg",
+        shortDescription: "Hong Kong bartender with 5+ years’ experience, skilled in cocktails, service, and guest experiences.",
+        languages: ["English", "Urdu"],
+        directBooking: false,
+        showGallery: false
+      },
       
   ];
   
