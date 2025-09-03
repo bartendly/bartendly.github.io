@@ -389,6 +389,41 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
+      {
+        slug: "amelietrivulce",
+        name: "Amelie Trivulce",
+        city: "Barcelona",
+        locationDisplay: "Barcelona",
+        photo: "hero-900.jpg", // place in /bartenders/amelietrivulce/
+        gallery: [],
+        title: "Bar Manager & Instructor with 12+ years of international hospitality experience",
+        tagline: "High-volume operations, Asian-inspired signature cocktails, and bartender training expertise.",
+        experience: [
+          { icon: "⏳", text: "12+ years managing and serving in high-volume bars (up to 2000 guests)" },
+          { icon: "🏗️", text: "Opened and created cocktail program at KEANU Izakaya Bar (Bar Manager, Barcelona)" },
+          { icon: "🎓", text: "Instructor at European Bartender School (Barcelona, Mallorca, Phuket, Kos); trained 500+ students" },
+          { icon: "🏨", text: "Hotel Café Royal (Assistant Bar Manager, London) & Mercure London Bridge (Head Bartender)" },
+          { icon: "🗺️", text: "Managed up to 4 venues simultaneously across Barcelona, London & Paris" },
+          { icon: "🗣️", text: "Languages: French (native), English (fluent), Spanish (advanced), German (basic)" }
+        ],
+        signatureCocktails: [
+          { icon: "🍸", text: "Asian-inspired author cocktails" },
+          { icon: "🍊", text: "Creative twists on classics" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private & corporate events, high-volume operations" },
+          { icon: "🧑‍🏫", text: "Team training, masterclasses, and bartender education" },
+          { icon: "🧪", text: "Menu creation, bar consulting, and openings" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/amelie.trivulce" target="_blank">@amelie.trivulce</a> • <a href="https://instagram.com/keanubarbarcelona" target="_blank">@keanubarbarcelona</a>' }
+        ],
+        instagram: "https://instagram.com/amelie.trivulce",
+        shortDescription: "Barcelona-based Bar Manager & Instructor with 12+ years experience in high-volume venues and creative cocktail programs.",
+        languages: ["French", "English", "Spanish", "German (basic)"],
+        directBooking: true,
+        showGallery: false
+      },
       
   ];
   
