@@ -416,7 +416,7 @@ window.bartenders = [
           { icon: "🧪", text: "Menu creation, bar consulting, and openings" }
         ],
         more: [
-          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/amelie.trivulce" target="_blank">@amelie.trivulce</a> • <a href="https://instagram.com/keanubarbarcelona" target="_blank">@keanubarbarcelona</a>' }
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/amelie.trivulce" target="_blank">@amelie.trivulce</a>' }
         ],
         instagram: "https://instagram.com/amelie.trivulce",
         shortDescription: "Barcelona-based Bar Manager & Instructor with 12+ years experience in high-volume venues and creative cocktail programs.",
