@@ -460,6 +460,41 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },
-        
+      {
+        slug: "jackpollard",
+        name: "Jack Pollard",
+        city: "London",
+        locationDisplay: "London",
+        photo: "hero-900.jpg", // place in /bartenders/jackpollard/
+        gallery: [],
+        title: "Energetic London bartender with 7+ years’ experience in cocktail bars, pubs & fine dining",
+        tagline: "Balancing creativity, professionalism, and unforgettable guest experiences.",
+        experience: [
+          { icon: "⏳", text: "7+ years bartending in London across cocktail bars, gastro pubs & fine dining" },
+          { icon: "🥂", text: "Built award-nominated cocktail programs" },
+          { icon: "👨‍💼", text: "Experience managing and motivating teams under pressure" },
+          { icon: "🍸", text: "Expert in high-volume party settings & refined service environments" },
+          { icon: "🗣️", text: "Languages: English" }
+        ],
+        signatureCocktails: [
+          { icon: "🍊", text: "Seasonal twists on classics" },
+          { icon: "🥃", text: "Whisky-forward creations" },
+          { icon: "🍹", text: "Playful, crowd-pleasing cocktails" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private parties, weddings, corporate & VIP events" },
+          { icon: "🧑‍🏫", text: "Cocktail workshops & menu design" },
+          { icon: "👨‍👩‍👧‍👦", text: "Team leadership & consultancy" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/pollytonic__" target="_blank">@pollytonic__</a>' }
+        ],
+        instagram: "https://instagram.com/pollytonic__",
+        shortDescription: "London-based bartender with 7+ years’ experience — award-nominated cocktail programs, team leadership, and guest-focused service.",
+        languages: ["English"],
+        directBooking: false,
+        showGallery: false
+      },
+         
   ];
   
