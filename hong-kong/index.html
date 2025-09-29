@@ -125,6 +125,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .btly-arrow--next { right:-10px; }
 @media (min-width:900px) { .btly-arrow { display:inline-flex; } }
 .btly-card { scroll-snap-stop: always; }
+
+.ai-toggle[aria-pressed="true"] {background: rgba(255,255,255,0.21); color:#fff; font-weight:700; border-color:#fff; box-shadow:0 2px 10px #ff6d2112;}
+
   
   </style>
     <script type="application/ld+json">
@@ -215,14 +218,26 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         <!-- Contact (transparent) -->
         <label for="ai-contact" class="sr-only">Your contact information</label>
         <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferred) or Email + contact name" required autocomplete="off" />
-         <!-- Toggle: Glassware provided? -->
+         
+        <!-- Toggle: Glassware provided? 
          <label for="glassware" class="ai-label">Do you need 🍸 Glassware & 🧊 ice?</label>
          <div class="ai-toggle-group" data-name="glassware" id="glassware">
            <button type="button" class="ai-toggle" data-value="Yes">Yes</button>
            <button type="button" class="ai-toggle" data-value="No">No</button>
            <button type="button" class="ai-toggle" data-value="Not sure">Not sure</button>
          </div>
-         <input type="hidden" name="glassware" required>
+         <input type="hidden" name="glassware" required> -->
+
+         <!-- Multi-select: What should we supply? -->
+        <label for="supplies" class="ai-label">What should we supply?</label>
+        <div class="ai-toggle-group" data-name="supplies" data-multi="true" id="supplies" role="group" aria-label="Supplies needed">
+          <button type="button" class="ai-toggle" data-value="Alcohol" aria-pressed="false">Alcohol</button>
+          <button type="button" class="ai-toggle" data-value="Glassware" aria-pressed="false">Glassware</button>
+          <button type="button" class="ai-toggle" data-value="Ice" aria-pressed="false">Ice</button>
+          <button type="button" class="ai-toggle" data-value="Not sure" aria-pressed="false">Not sure</button>
+        </div>
+        <input type="hidden" name="supplies" required>
+
         <button type="submit" class="ai-submit">Get a Quote</button>
         <div class="booking-legal-disclaimer">
           By submitting, you agree to our <a href="/terms" target="_blank">Terms & Disclaimer</a>.
@@ -368,10 +383,13 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30,datePattern=/\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;/*if(!datePattern.test(userPrompt)){alert("Please include a date or approximate date for your event.");return;}*/if(userPrompt.length<minLength){alert("Please provide a bit more detail about your request.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Please enter a valid email or phone number.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Sending...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('Oops! Something went wrong while sending your message.');}}catch(err){alert('Network error. Please try again later.');}finally{submitBtn.disabled=false;submitBtn.textContent='Get My Bartender';}});}
 </script>
 
-<script>
+<!--<script>
   document.querySelectorAll('.ai-toggle-group').forEach(g=>{let n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`);g.querySelectorAll('.ai-toggle').forEach(b=>b.onclick=()=>{g.querySelectorAll('.ai-toggle').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');h.value=b.getAttribute('data-value');});});
   document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
-</script>  
+</script> -->
+
+<script>document.querySelectorAll('.ai-toggle-group').forEach(g=>{const n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`),m=g.getAttribute('data-multi')==='true',ns=[...g.querySelectorAll('.ai-toggle')].find(b=>(b.getAttribute('data-value')||'').toLowerCase()==='not sure'),u=()=>{const s=[...g.querySelectorAll('.ai-toggle.selected')].map(b=>b.getAttribute('data-value'));h.value=s.join(',');h.hasAttribute('required')&&h.setCustomValidity(h.value?'':'Please select at least one option.')};g.querySelectorAll('.ai-toggle').forEach(b=>b.addEventListener('click',()=>{if(m){const isNS=(b.getAttribute('data-value')||'').toLowerCase()==='not sure';if(isNS){g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}else{ns&&(ns.classList.remove('selected'),ns.setAttribute('aria-pressed','false'));const on=!b.classList.contains('selected');b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on?'true':'false')}}else{g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}u()}));u()});</script>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target)}}),{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e))});</script>
 
 <script src="/bartenders/bartenders.js"></script>
 <script src="/assets/js/bartendly-carousel.js"></script>
