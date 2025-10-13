@@ -495,6 +495,40 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
-         
+      {
+        slug: "sergiopardo",
+        name: "Sergio Pardo",
+        city: "Barcelona",
+        locationDisplay: "Barcelona",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Barcelona-based mixologist with over 10 years of experience in cocktail creation and events",
+        tagline: "Crafting signature recipes served across more than 10 venues.",
+        experience: [
+          { icon: "⏳", text: "10+ years of professional bartending experience" },
+          { icon: "🍸", text: "Author of original cocktail menus featured in 10+ venues" },
+          { icon: "🎉", text: "Extensive experience in weddings & large corporate events" },
+          { icon: "📍", text: "Based in Barcelona, available for collaborations & events" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Original author-style cocktails" },
+          { icon: "🍊", text: "Mediterranean-inspired creations" },
+          { icon: "🥂", text: "Custom menus for special occasions" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private weddings, corporate & large-scale events" },
+          { icon: "🍸", text: "Cocktail menu design & consulting" },
+          { icon: "🧑‍🏫", text: "Workshops and team-building experiences" }
+        ],
+        more: [
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/sergiopardo94" target="_blank">@sergiopardo94</a>' }
+        ],
+        instagram: "https://www.instagram.com/sergiopardo94",
+        shortDescription: "Barcelona mixologist with 10+ years’ experience, known for signature menus and large-scale event expertise.",
+        languages: ["Spanish"],
+        directBooking: true,
+        showGallery: false
+      },
+        
   ];
   
