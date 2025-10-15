@@ -425,40 +425,41 @@ window.bartenders = [
         showGallery: false
       },
       {
-        slug: "carlayee",
-        name: "Carla Yee",
-        city: "Hong Kong",
-        locationDisplay: "Hong Kong",
-        photo: "hero-900.jpg", // place in /bartenders/carlayee/
-        gallery: [],
-        title: "Australian-Eurasian bartender & cocktail waitress with 4+ years’ experience in Melbourne and Hong Kong",
-        tagline: "From forensic science to hospitality — bringing energy, elegance, and unforgettable service.",
-        experience: [
-          { icon: "🌏", text: "Bartending & cocktail waitressing in Melbourne (Australia) and Hong Kong" },
-          { icon: "🏨", text: "Albion Hotel & The Comedy Club, Melbourne" },
-          { icon: "🍸", text: "Private events at Life On Base (jungle party venue), Hong Kong" },
-          { icon: "🏆", text: "Cocktail waitressing at Asia’s #1 Bar Leone, Central HK (ranked #2 worldwide)" },
-          { icon: "🗣️", text: "Languages: English" },
-          { icon: "🔬", text: "Former forensic scientist turned hospitality professional" }
-        ],
-        signatureCocktails: [
-          { icon: "🍹", text: "Tropical favorites: Piña Colada, Midori Splice, Malibu Sunrise" },
-          { icon: "🍊", text: "Aperol Spritz" },
-          { icon: "🥂", text: "Classic mixes: Mimosa, Screwdriver, G&T variations" },
-          { icon: "🍨", text: "Baileys & butterscotch smoothie" }
-        ],
-        services: [
-          { icon: "🍸", text: "Cocktail bartending & waitressing for private, corporate, or VIP events" },
-          { icon: "📸", text: "Freelance photography for events" }
-        ],
-        more: [
-          { icon: "📸", text: 'Instagram: <a href="https://instagram.com/carlamy333" target="_blank">@carlamy333</a>' }
-        ],
-        instagram: "https://instagram.com/carlamy333",
-        shortDescription: "Hong Kong–based Australian-Eurasian bartender & cocktail waitress with 4+ years’ experience in Melbourne & Hong Kong.",
-        languages: ["English"],
-        directBooking: true,
-        showGallery: false
+          slug: "carlayee",
+          name: "Carla Yee",
+          city: "Hong Kong",
+          locationDisplay: "Hong Kong",
+          photo: "hero-900.jpg", // updated portrait provided by Carla
+          gallery: [],
+          title: "Australian-Eurasian bartender & cocktail waitress with 5+ years’ experience in Melbourne and Hong Kong",
+          tagline: "From forensic science to world-class hospitality — bringing energy, elegance, and unforgettable service.",
+          experience: [
+            { icon: "🌏", text: "Bartending & cocktail waitressing in Melbourne (Australia) and Hong Kong" },
+            { icon: "🏨", text: "Albion Hotel & The Comedy Club, Melbourne" },
+            { icon: "🍸", text: "Private events at Life On Base (jungle party venue), Hong Kong" },
+            { icon: "🏆", text: "Cocktail waitressing at Bar Leone, Central HK — ranked #1 in the world & Hong Kong, Asia" },
+            { icon: "👁️", text: "Currently waitressing at Eye Bar, TST (Hong Kong)" },
+            { icon: "🗣️", text: "Languages: English" },
+            { icon: "🔬", text: "Former forensic scientist turned hospitality professional" }
+          ],
+          signatureCocktails: [
+            { icon: "🍹", text: "Tropical favorites: Piña Colada, Midori Splice, Malibu Sunrise" },
+            { icon: "🍊", text: "Aperol Spritz" },
+            { icon: "🥂", text: "Classic mixes: Mimosa, Screwdriver, Gin & Tonic variations" },
+            { icon: "🍨", text: "Baileys & butterscotch smoothie" }
+          ],
+          services: [
+            { icon: "🍸", text: "Cocktail bartending & waitressing for private, corporate, or VIP events" },
+            { icon: "📸", text: "Freelance photography for events" }
+          ],
+          more: [
+            { icon: "📸", text: 'Instagram: <a href="https://instagram.com/carlamy333" target="_blank">@carlamy333</a>' }
+          ],
+          instagram: "https://instagram.com/carlamy333",
+          shortDescription: "Australian-Eurasian bartender & cocktail waitress in Hong Kong, now at the world’s #1 Bar Leone and Eye Bar TST.",
+          languages: ["English"],
+          directBooking: true,
+          showGallery: false      
       },
       {
         slug: "jackpollard",
