@@ -437,7 +437,7 @@ window.bartenders = [
             { icon: "🌏", text: "Bartending & cocktail waitressing in Melbourne (Australia) and Hong Kong" },
             { icon: "🏨", text: "Albion Hotel & The Comedy Club, Melbourne" },
             { icon: "🍸", text: "Private events at Life On Base (jungle party venue), Hong Kong" },
-            { icon: "🏆", text: "Cocktail waitressing at Bar Leone, Central HK — ranked #1 in the world & Hong Kong, Asia" },
+            { icon: "🏆", text: "Cocktail waitressing at Bar Leone, Central HK — ranked #1 in the world in 2025 & Hong Kong, Asia" },
             { icon: "👁️", text: "Currently waitressing at Eye Bar, TST (Hong Kong)" },
             { icon: "🗣️", text: "Languages: English" },
             { icon: "🔬", text: "Former forensic scientist turned hospitality professional" }
