@@ -2,124 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Terms & Disclaimer | Bartendly</title>
-  <meta name="robots" content="noindex, follow" />
+  <title>Terms & Conditions | Bartendly</title>
+  <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    body { background:#101014; color:#fff; font-family:'Inter','Poppins',sans-serif; margin:0; padding:0; min-height:100vh; }
-    .terms-logo { position:absolute; top:0.8rem; left:1.4rem; z-index:10; color:#fff; font-family:'Poppins',sans-serif; font-size:2rem; font-weight:700; letter-spacing:-.5px; text-shadow:0 2px 10px #0007; background:transparent; border-radius:0 0 16px 0; padding:0.15em 0.8em 0.1em 0.3em; margin:0; text-decoration:none; line-height:1.05; display:block; transition:opacity .18s; }
-    .terms-logo:active { opacity:.7; }
-    .terms-container { max-width:900px; margin:0 auto; padding:5.2rem 1.5rem 3rem 1.5rem; }
-    @media (max-width:700px) {
-      .terms-logo { font-size:1.2rem; top:0.3rem; left:0.7rem; padding:0.1em 0.6em 0.07em 0.14em; }
-      .terms-container { padding:3.7rem 0.6rem 2.5rem 0.6rem; }
+    :root { --bg:#101014; --fg:#ffffff; --muted:#f1f1f1; --brand:#ff6d21; --rule:#2a2a2f; }
+    *{box-sizing:border-box}
+    body{background:var(--bg);color:var(--fg);font-family:'Inter','Poppins',sans-serif;margin:0;min-height:100vh}
+    a{color:var(--brand)}
+    .terms-logo{position:absolute;top:.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:.15em .8em .1em .3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s}
+    .terms-logo:active{opacity:.7}
+    .terms-container{max-width:920px;margin:0 auto;padding:5.2rem 1.5rem 3.5rem}
+    @media (max-width:700px){
+      .terms-logo{font-size:1.2rem;top:.3rem;left:.7rem;padding:.1em .6em .07em .14em}
+      .terms-container{padding:3.7rem .9rem 2.8rem}
     }
-    .terms-title { font-size:2.13rem; font-weight:700; color:#fff; letter-spacing:-0.5px; margin-bottom:0.18em; margin-top:0.1em; font-family:'Poppins',sans-serif; }
-    .terms-updated { font-size:1rem; color:#ff6d21; opacity:0.85; margin-bottom:2.2em; font-weight:500; }
-    .terms-section { margin-bottom:2.5em; }
-    .terms-section-title { font-size:1.17rem; font-weight:600; color:#ff6d21; margin-bottom:0.7em; margin-top:0.15em; }
-    .terms-section p, .terms-section ul { margin:0.18em 0 0.88em 0; font-size:1.05rem; color:#f1f1f1; line-height:1.65; }
-    .terms-section ul { padding-left:1.4em; margin-bottom:1.1em; }
-    .terms-link { color:#ff6d21; text-decoration:underline; }
-    .back-home { display:block; margin:2em auto 0 auto; text-align:center; color:#ff6d21; text-decoration:none; font-size:1.07rem; opacity:0.93; padding:0.5em 0; }
+    .terms-title{font-size:2.13rem;font-weight:700;letter-spacing:-.5px;margin:.1em 0 .18em;font-family:'Poppins',sans-serif}
+    .terms-updated{font-size:1rem;color:var(--brand);opacity:.95;margin-bottom:2.1em;font-weight:600}
+    .hr{height:1px;background:var(--rule);border:0;margin:1.1em 0 1.6em}
+    .toc{margin:0 0 2.2em 0}
+    .toc a{display:inline-block;margin:.25em 1em .25em 0;font-size:.98rem;text-decoration:none;border-bottom:1px dotted var(--brand)}
+    .terms-section{margin-bottom:2.45em}
+    .terms-section-title{font-size:1.17rem;font-weight:600;color:var(--brand);margin:.15em 0 .7em}
+    .terms-section p,.terms-section ul{margin:.18em 0 .88em 0;font-size:1.05rem;color:var(--muted);line-height:1.7}
+    .terms-section ul{padding-left:1.3em;margin-bottom:1.05em}
+    .terms-note{font-size:.98rem;color:#d7d7d7}
+    .terms-table{width:100%;border-collapse:collapse;margin:.6em 0 1.2em}
+    .terms-table th,.terms-table td{text-align:left;padding:.75em .8em;border:1px solid var(--rule);vertical-align:top}
+    .terms-table th{background:#15151b;color:#fff;font-weight:600}
+    .back-home{display:block;margin:2.2em auto 0;text-align:center;color:var(--brand);text-decoration:none;font-size:1.07rem;opacity:.93;padding:.5em 0}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
   </style>
 </head>
 <body>
   <a href="/" class="terms-logo" aria-label="Bartendly home">Bartendly</a>
+
   <div class="terms-container">
-    <div class="terms-title">Terms & Disclaimer</div>
-    <div class="terms-updated">Updated: August 2025</div>
+    <h1 class="terms-title">Terms & Conditions</h1>
+    <div class="terms-updated">Updated: October 2025</div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">1. Platform Role</div>
-      <p>
-        Bartendly is a digital platform that connects clients and independent bartenders for private and corporate events. Bartendly does not organize, supervise, employ, or directly provide bartending services. All bookings, agreements, and responsibilities are strictly between the client and the selected bartender.
-      </p>
-      <p>
-        Bartendly may act as a billing and payment agent on behalf of independent bartenders. By using the platform, clients and bartenders authorize Bartendly to issue invoices and collect payments for services rendered, while the legal responsibility for the service remains with the bartender.
-      </p>
+    <div class="toc" aria-label="On this page">
+      <a href="#role">Platform Role</a>
+      <a href="#definitions">Definitions</a>
+      <a href="#quotes">Quotes, Booking & Payments</a>
+      <a href="#private">Private Clients (Deposit & Refunds)</a>
+      <a href="#corporate">Corporate Clients (Payment & Refunds)</a>
+      <a href="#responsibilities">Client Responsibilities</a>
+      <a href="#liability">Liability & Insurance</a>
+      <a href="#replacement">Replacement & Complaints</a>
+      <a href="#bartenders">Bartender Terms</a>
+      <a href="#privacy">Privacy & Data</a>
+      <a href="#prohibited">Prohibited Use</a>
+      <a href="#force-majeure">Force Majeure</a>
+      <a href="#law">Governing Law</a>
+      <a href="#imprint">Legal Entity & Imprint</a>
+      <a href="#changes">Changes</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">2. Liability Disclaimer</div>
-      <p>
-        Bartendly acts solely as an intermediary. Bartendly is not responsible or liable for any incidents, accidents, injuries, damages, losses, or disputes that may occur before, during, or after any event. All legal, financial, and practical responsibility for the event and the services provided remains with the client and the selected bartender.
-      </p>
+    <hr class="hr"/>
+
+    <div id="role" class="terms-section">
+      <div class="terms-section-title">1) Platform Role</div>
+      <p><b>Bartendly</b> is a platform connecting clients with independent bartenders for private and corporate events. Bartendly does not organize, supervise, employ, or directly provide bartending services. The service relationship for performance at the event exists between the client and the independent bartender(s).</p>
+      <p>Bartendly may act as a <b>billing and payment agent</b> on behalf of independent bartenders. By using the platform, clients and bartenders authorize Bartendly to issue invoices and collect payments. This agency role does not change the independent status of bartenders.</p>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">3. Payment & Service Quality</div>
-      <p>
-        All payments for bartending services are processed securely via the Bartendly platform. Bartendly carefully selects and onboards independent bartenders and aims to ensure a high standard of service. In case of any issue with your booking or event, please contact Bartendly promptly, and we will make every reasonable effort to assist or resolve the situation.
-      </p>
-      <p>
-        Please note that Bartendly acts as an intermediary, and the final service contract is between the client and the bartender. Bartendly cannot be held liable for no-shows, cancellations, or dissatisfaction with the bartender's performance, but may, at its discretion, facilitate refunds or replacement bookings where possible.
-      </p>
-    </div>
-
-    <div class="terms-section">
-      <div class="terms-section-title">4. Customer & Event Organizer Responsibilities</div>
+    <div id="definitions" class="terms-section">
+      <div class="terms-section-title">2) Definitions</div>
       <ul>
-        <li>You are responsible for ensuring your event complies with all applicable laws, including alcohol service and licensing regulations.</li>
-        <li>You are responsible for communicating your requirements, preferences, and expectations clearly to the bartender before the event.</li>
-        <li>All event logistics (venue access, supplies, payment for additional services) are the responsibility of the client and/or event organizer.</li>
-        <li>Bartendly does not provide event insurance. Clients and event organizers are encouraged to arrange their own insurance if needed.</li>
+        <li><b>Client:</b> the person or company booking bartending services.</li>
+        <li><b>Bartender:</b> an independent professional providing bartending services via Bartendly.</li>
+        <li><b>Booking:</b> a confirmed engagement for a specific date, time, and location.</li>
+        <li><b>Deposit:</b> 50% of the total price (private) or as specified for corporate bookings.</li>
       </ul>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">5. Privacy & Data Protection</div>
-      <p>
-        Bartendly collects only the information necessary to process bookings and connect clients with bartenders. We do not sell or share personal data with third parties except as required to provide our service or comply with the law.
-      </p>
-      <p>
-        Bartendly processes personal data in accordance with the General Data Protection Regulation (EU) 2016/679 (“GDPR”). Clients and bartenders have the right to access, correct, or delete their personal data at any time by contacting us. For full information, see our <a href="/privacy" class="terms-link">Privacy Policy</a>.
-      </p>
+    <div id="quotes" class="terms-section">
+      <div class="terms-section-title">3) Quotes, Booking & Payments (General)</div>
+      <p><b>Custom (“sur mesure”) pricing.</b> Every quote is tailored to the client’s needs, considering bartender rates, menu design, supplier costs (e.g., ice, glassware, logistics), and transportation where applicable.</p>
+      <p><b>Payment methods:</b> card (Stripe) and bank transfer (Wise / DBS Hong Kong). Prices include Bartendly’s <b>15% coordination fee</b> and payment processor fees unless specified otherwise.</p>
+      <p class="terms-note">By confirming a booking or making any payment, the client accepts these Terms and the refund policies in the relevant section below.</p>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">6. Bartender Terms & Responsibilities</div>
+    <div id="private" class="terms-section">
+      <div class="terms-section-title">4) Private Clients — Deposit, Balance & Refunds</div>
+    
+      <p><b>Deposit:</b> a <b>50% deposit</b> of the total event price is required to confirm any private booking.  
+      This deposit secures the date and allows Bartendly to begin coordination work, including staff scheduling, supplier booking, and event preparation.</p>
+    
+      <p><b>Refund policy:</b> this 50% deposit is <b>non-refundable once the booking has been confirmed</b>, as it covers the administrative and preparatory work started immediately after confirmation.  
+      However, if a private client cancels within <b>48 hours of booking confirmation</b> and more than 14 calendar days before the event, Bartendly may, at its discretion, refund part of the deposit <b>minus its 15% coordination fee and payment processor fees</b>.</p>
+    
+      <p><b>Balance:</b> the remaining 50% must be paid <b>no later than 7 calendar days before the event</b>.  
+      Once paid, this balance becomes <b>non-refundable</b> as it is used to compensate bartenders and confirmed suppliers.  
+      In some local cases, the post-event balance may be settled directly with the bartender; any such arrangement must be agreed in writing with Bartendly.</p>
+    
+      <table class="terms-table" aria-label="Private Payment & Refund Overview">
+        <thead>
+          <tr><th>Stage</th><th>What the client pays</th><th>Refund policy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Booking confirmation</td>
+            <td>50% deposit of total price</td>
+            <td>Non-refundable once confirmed (covers pre-event commitments and admin).  
+            Partial refund possible only within 48h of confirmation and more than 14 days before the event, minus fees.</td>
+          </tr>
+          <tr>
+            <td>≤ 7 calendar days before event</td>
+            <td>Remaining 50% balance</td>
+            <td>Not refundable once paid (used to compensate bartenders and suppliers).</td>
+          </tr>
+          <tr>
+            <td>Bartendly or bartender cancellation</td>
+            <td>—</td>
+            <td>100% refund if no suitable replacement can be provided.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
+
+    <div id="corporate" class="terms-section">
+      <div class="terms-section-title">5) Corporate Clients — Payment & Refunds</div>
+    
+      <p><b>Payment:</b> by default, corporate bookings require <b>100% upfront payment</b> to confirm the event (unless different terms are agreed in writing for approved partners).</p>
+    
+      <p><b>Refund policy (calendar days):</b></p>
       <ul>
-        <li><b>Legal Status:</b> All bartenders act as independent professionals, not employees, partners, or agents of Bartendly. Bartenders are solely responsible for their own taxes, permits, licenses, and compliance with any local, regional, or national regulations.</li>
-        <li><b>Responsibility:</b> By joining Bartendly, you agree that you are fully and solely responsible for your services and conduct at all events, including any incidents, accidents, injuries, damages, or losses that occur.</li>
-        <li><b>Required Equipment:</b> Bartenders must bring and use all standard professional tools required for their services (e.g., shakers, jiggers, strainers, barspoons, pourers, etc.). You are expected to arrive fully equipped and ready to serve as agreed with the client.</li>
-        <li><b>Professional Conduct & Non-Discrimination:</b> Bartenders are expected to act professionally and respectfully at all times, with zero tolerance for discrimination, harassment, aggression, or inappropriate behavior towards clients, guests, or other staff. Bartendly reserves the right to suspend or remove any bartender for unprofessional conduct or violation of these terms.</li>
-        <li><b>Truthful Profile & Communication:</b> All information submitted to Bartendly must be accurate and up to date. By joining, you certify that your profile is truthful and that you will communicate honestly with clients and Bartendly staff at all times.</li>
-        <li><b>Confidentiality:</b> Bartenders must respect client privacy and event confidentiality. Personal and event details may not be shared with third parties except as required for the fulfillment of services.</li>
-        <li><b>Photos & Promotion:</b> By joining, you grant Bartendly the right to display your profile, photos, and service information on the Bartendly website, app, and marketing materials.</li>
-        <li><b>Insurance:</b> Bartendly does not provide liability or personal insurance for bartenders. You are responsible for arranging your own insurance coverage if required by law or client preference.</li>
-        <li><b>Removal & Suspension:</b> Bartendly reserves the right to remove or suspend any bartender profile at any time, at its sole discretion, for violation of these terms or for complaints of unprofessional conduct.</li>
+        <li><b>≥ 14 days before event:</b> refund of total amount <b>minus</b> Bartendly’s 15% platform fee and payment processor fees.</li>
+        <li><b>14–7 days before event:</b> <b>50% refund</b> of total amount <b>minus</b> Bartendly’s 15% platform fee and payment processor fees.</li>
+        <li><b>&lt; 7 days before event:</b> <b>no refund</b> (bartenders and suppliers already confirmed).</li>
+      </ul>
+    
+      <p><b>Bartendly or bartender cancellation:</b> Bartendly will make every reasonable effort to provide an equivalent replacement at no additional cost.  
+      If no suitable replacement can be arranged, <b>100% of all payments received will be refunded.</b></p>
+    </div>
+    
+    <div id="responsibilities" class="terms-section">
+      <div class="terms-section-title">6) Client Responsibilities</div>
+      <ul>
+        <li>Ensure compliance with applicable laws and alcohol service regulations at the venue.</li>
+        <li>Provide safe working conditions, venue access, timelines, and necessary supplies as agreed.</li>
+        <li>Communicate requirements, preferences, and constraints clearly prior to the event.</li>
+        <li>Obtain any permissions, licenses, or insurance required for the event.</li>
       </ul>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">7. Changes to Terms</div>
-      <p>
-        Bartendly reserves the right to modify these Terms & Disclaimer at any time. Any changes will be posted on this page with the updated date.
-      </p>
+    <div id="liability" class="terms-section">
+      <div class="terms-section-title">7) Liability & Insurance</div>
+      <p>Bartendly acts solely as an intermediary and is <b>not responsible or liable</b> for incidents, accidents, injuries, damages, losses, delays, or dissatisfaction occurring before, during, or after an event. Responsibility lies with the client and the independent bartender(s).</p>
+      <p>Bartendly does <b>not</b> provide event or liability insurance. Clients are encouraged to arrange appropriate coverage for the venue, guests, and equipment.</p>
     </div>
 
-    <div class="terms-section">
-      <div class="terms-section-title">8. Prohibited Use</div>
-      <p>
-        Users may not use Bartendly to engage in illegal, abusive, fraudulent, or misleading activities. This includes, but is not limited to, impersonation, fake bookings, use of false information, harassment of bartenders or clients, or violation of applicable alcohol or licensing laws. Bartendly reserves the right to suspend or ban any user at its sole discretion.
-      </p>
+    <div id="replacement" class="terms-section">
+      <div class="terms-section-title">8) Replacement & Complaints</div>
+      <p>If a confirmed bartender becomes unavailable, Bartendly will attempt to replace them with an equivalent professional at no extra cost to the client. If a replacement is not possible, payments received will be refunded as stated in sections 4 and 5.</p>
+      <p>Any issue must be reported to <a href="mailto:billing@bartendly.com">billing@bartendly.com</a> within <b>48 hours</b> after the event. Bartendly will review the case and facilitate communication to help reach a fair resolution or goodwill remedy where appropriate.</p>
     </div>
 
-    <!--<div class="terms-section">
-      <div class="terms-section-title">9. Legal Entity</div>
-      <p>
-        Bartendly is operated by <b>Bartendly OÜ</b>, a company registered in Estonia under number <b>[Your Company Reg Number]</b>, with its registered office at <b>[Company Address]</b>. VAT: <b>[VAT Number]</b> (if applicable).
-      </p>
-    </div>-->
-
-    <div class="terms-section">
-      <div class="terms-section-title">10. Contact</div>
-      <p>
-        For questions, requests, or complaints, please email <a href="mailto:martial@bartendly.com" class="terms-link">martial@bartendly.com</a>
-      </p>
+    <div id="bartenders" class="terms-section">
+      <div class="terms-section-title">9) Bartender Terms & Responsibilities</div>
+      <ul>
+        <li><b>Independent status:</b> bartenders are not employees, partners, or agents of Bartendly; they are responsible for their own taxes, permits, and compliance.</li>
+        <li><b>Conduct & equipment:</b> arrive on time with adequate professional tools; maintain professional behavior; zero tolerance for harassment or discrimination.</li>
+        <li><b>Profiles & confidentiality:</b> information submitted must be truthful; respect client privacy and confidentiality.</li>
+        <li><b>Payouts:</b> payments are typically made after event completion; a 3% transaction fee may apply to non-subscribed bartenders; payouts via Wise/Revolut unless otherwise agreed.</li>
+        <li><b>Suspension/removal:</b> Bartendly may suspend or remove profiles for unprofessional conduct or breach of these terms.</li>
+      </ul>
     </div>
+
+    <div id="privacy" class="terms-section">
+      <div class="terms-section-title">10) Privacy & Data Protection</div>
+      <p>Bartendly collects only the information required to process bookings and connect clients with bartenders and processes personal data in accordance with GDPR. See our <a href="/privacy">Privacy Policy</a> for details on data rights and handling.</p>
+    </div>
+
+    <div id="prohibited" class="terms-section">
+      <div class="terms-section-title">11) Prohibited Use</div>
+      <p>Users must not use the platform for illegal, abusive, fraudulent, or misleading activity including impersonation, fake bookings, harassment, or violations of alcohol and licensing laws. Bartendly may suspend or ban accounts at its sole discretion.</p>
+    </div>
+
+    <div id="force-majeure" class="terms-section">
+      <div class="terms-section-title">12) Force Majeure</div>
+      <p>Neither Bartendly nor bartenders shall be liable for failures or delays due to causes beyond reasonable control, including but not limited to natural disasters, public restrictions, strikes, illness, or transport disruption.</p>
+    </div>
+
+    <div id="law" class="terms-section">
+      <div class="terms-section-title">13) Governing Law & Jurisdiction</div>
+      <p>These Terms are governed by the laws of Estonia. Any dispute shall be submitted to the exclusive jurisdiction of the courts of Harju County, Tallinn, Estonia.</p>
+    </div>
+
+    <div id="imprint" class="terms-section">
+      <div class="terms-section-title">14) Legal Entity & Imprint</div>
+      <p><b>Operator:</b> Bartendly OÜ (<span class="mono">Reg. No. 17343247</span>)<br/>
+         <b>Registered address:</b> Tornimäe tn 5, Kesklinna District, 10145 Tallinn, Harju County, Estonia<br/>
+         <b>VAT:</b> Not registered (VAT not applicable)</p>
+    </div>
+
+    <div id="changes" class="terms-section">
+      <div class="terms-section-title">15) Changes to Terms</div>
+      <p>Bartendly may modify these Terms at any time. Updates will be posted on this page with the new effective date. Continued use of the platform after changes constitutes acceptance of the updated Terms.</p>
+    </div>
+
+    <div id="contact" class="terms-section">
+      <div class="terms-section-title">16) Contact</div>
+      <p>Questions, requests, or complaints: <a href="mailto:billing@bartendly.com">billing@bartendly.com</a></p>
+      <p class="terms-note">By confirming a booking or making any payment, the client accepts these Terms & Conditions and acknowledges the refund policies described herein. This page expands on the Booking Terms Summary PDF sent with invoices and does not contradict it.</p>
+    </div>
+
+    <a class="back-home" href="/">← Back to home</a>
   </div>
 </body>
 </html>
