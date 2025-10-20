@@ -109,7 +109,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .booking-legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
 .legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
 
-.hero-topnav{position:absolute;top:3.2rem;right:3rem;z-index:10;display:flex;gap:.6rem}
+.hero-topnav{position:absolute;top:3.6rem;right:2.9rem;z-index:10;display:flex;gap:.6rem}
 .hero-topnav a{color:#ffae3a;text-decoration:none;font-weight:600;background:rgba(16,13,8,.55);padding:.35em .7em;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
 .hero-topnav a:hover{background:#ff6d21;color:#fff}
 @media(max-width:700px){.hero-topnav{right:.8rem;gap:.4rem}.hero-topnav a{padding:.3em .55em;font-size:.92em}}
@@ -365,7 +365,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <a href="/bartenders/join">Bartender? <span>Join Bartendly</span></a>
     </div>    
   </footer>
-  
+
   <script>document.querySelectorAll('.ai-toggle-group').forEach(g=>{const n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`),m=g.getAttribute('data-multi')==='true',ns=[...g.querySelectorAll('.ai-toggle')].find(b=>(b.getAttribute('data-value')||'').toLowerCase()==='not sure'),u=()=>{const s=[...g.querySelectorAll('.ai-toggle.selected')].map(b=>b.getAttribute('data-value'));h.value=s.join(',');h.hasAttribute('required')&&h.setCustomValidity(h.value?'':'Please select at least one option.')};g.querySelectorAll('.ai-toggle').forEach(b=>b.addEventListener('click',()=>{if(m){const isNS=(b.getAttribute('data-value')||'').toLowerCase()==='not sure';if(isNS){g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}else{ns&&(ns.classList.remove('selected'),ns.setAttribute('aria-pressed','false'));const on=!b.classList.contains('selected');b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on?'true':'false')}}else{g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}u()}));u()});</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target)}}),{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e))});</script>
   
