@@ -35,7 +35,7 @@ window.bartenders = [
         { icon: "🍳", text: "Freelance chef – passionate about food pairing" },
         { icon: "🎮", text: "Video game aficionado" },
         { icon: "⚽", text: "Napoli & football enthusiast" },
-        { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/marcarux_hk" target="_blank">@marcarux_hk</a>' }
+        //{ icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/marcarux_hk" target="_blank">@marcarux_hk</a>' }
       ],
       instagram: "https://www.instagram.com/marcarux_hk", // for social links/buttons
       // fields for list display
@@ -116,7 +116,7 @@ window.bartenders = [
         more: [
           { icon: "🌊", text: "Loves the sea, travel, and family adventures" },
           { icon: "⚽", text: "Football and mate enthusiast" },
-          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/luciano.paura" target="_blank">@luciano.paura</a>' }
+          //{ icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/luciano.paura" target="_blank">@luciano.paura</a>' }
         ],
         instagram: "https://www.instagram.com/luciano.paura",
         shortDescription: "Rooftop bartender in Barcelona & Badalona, Argentinian roots, expert in lively events and Mediterranean hospitality.",
@@ -150,9 +150,9 @@ window.bartenders = [
           { icon: "🎉", text: "Private parties, corporate events, birthdays" },
           { icon: "🍸", text: "Bespoke cocktail creation" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/alextodini" target="_blank">@alextodini</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/alextodini",
         shortDescription: "London-based Italian bartender with 11+ years' experience, ready to create the perfect cocktail for your event.",
         languages: ["Italian", "English"],
@@ -183,9 +183,9 @@ window.bartenders = [
           { icon: "🎉", text: "Private events, corporate, VIP parties" },
           { icon: "🍸", text: "Menu design & cocktail consultancy" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/bilalridvant" target="_blank">@bilalridvant</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/bilalridvant",
         shortDescription: "Bar Manager at Chiave Shoreditch – creative cocktails & hospitality for private and corporate events.",
         languages: ["English", "Turkish"],
@@ -215,9 +215,9 @@ window.bartenders = [
           { icon: "🎉", text: "Private parties & corporate events" },
           { icon: "🧑‍🏫", text: "Masterclasses & tasting experiences" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/cockteliere_matto" target="_blank">@cockteliere_matto</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/cockteliere_matto",
         shortDescription: "London-based Italian bartender, Nightjar alumnus. Creative cocktails for private & corporate events.",
         languages: ["Italian", "English"],
@@ -250,10 +250,10 @@ window.bartenders = [
           { icon: "💡", text: "Consultancy for bars & pop-up bars" },
           { icon: "🎪", text: "International/local whisky festival hosting" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/chill_with_mixing_rules" target="_blank">@chill_with_mixing_rules</a>' },
           { icon: "🥃", text: "Whisky & Bourbon lover" }
-        ],
+        ],*/
         instagram: "https://www.instagram.com/chill_with_mixing_rules",
         shortDescription: "Hong Kong-based whisky & cocktail expert with 12 years hospitality experience. Masterclasses, consultancy, and refined classics.",
         languages: ["English", "Hindi"],
@@ -281,9 +281,9 @@ window.bartenders = [
           { icon: "🍸", text: "Cocktail bartending for events" },
           { icon: "🥤", text: "Mocktail design & service" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/upengurung" target="_blank">@_upengurung_</a>' }
-        ],
+        ],*/
         instagram: "https://www.instagram.com/upengurung",
         shortDescription: "Hong Kong bartender with 3 years of experience, known for creating unique cocktail and mocktail variations.",
         languages: ["English"],
@@ -347,9 +347,9 @@ window.bartenders = [
           { icon: "🧑‍🏫", text: "Cocktail masterclasses & tasting experiences" },
           { icon: "💡", text: "Consultancy & menu design" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/Manu_19th" target="_blank">@Manu_19th</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/Manu_19th",
         shortDescription: "Hong Kong-based hospitality veteran (20+ yrs) crafting creative, precise, guest-centered cocktail experiences.",
         languages: ["English"],
@@ -380,9 +380,9 @@ window.bartenders = [
           { icon: "🧑‍🏫", text: "Cocktail classes & guest engagement" },
           { icon: "🍸", text: "Bespoke drink menu design" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/thinkbigdawgg" target="_blank">@thinkbigdawgg</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/thinkbigdawgg",
         shortDescription: "Hong Kong bartender with 5+ years’ experience, skilled in cocktails, service, and guest experiences.",
         languages: ["English", "Urdu"],
@@ -415,9 +415,9 @@ window.bartenders = [
           { icon: "🧑‍🏫", text: "Team training, masterclasses, and bartender education" },
           { icon: "🧪", text: "Menu creation, bar consulting, and openings" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/amelie.trivulce" target="_blank">@amelie.trivulce</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/amelie.trivulce",
         shortDescription: "Barcelona-based Bar Manager & Instructor with 12+ years experience in high-volume venues and creative cocktail programs.",
         languages: ["French", "English", "Spanish", "German (basic)"],
@@ -452,9 +452,9 @@ window.bartenders = [
             { icon: "🍸", text: "Cocktail bartending & waitressing for private, corporate, or VIP events" },
             { icon: "📸", text: "Freelance photography for events" }
           ],
-          more: [
+         /*more: [
             { icon: "📸", text: 'Instagram: <a href="https://instagram.com/carlamy333" target="_blank">@carlamy333</a>' }
-          ],
+          ],*/
           instagram: "https://instagram.com/carlamy333",
           shortDescription: "Australian-Eurasian bartender & cocktail waitress in Hong Kong, now at the world’s #1 Bar Leone and Eye Bar TST.",
           languages: ["English"],
@@ -487,9 +487,9 @@ window.bartenders = [
           { icon: "🧑‍🏫", text: "Cocktail workshops & menu design" },
           { icon: "👨‍👩‍👧‍👦", text: "Team leadership & consultancy" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://instagram.com/pollytonic__" target="_blank">@pollytonic__</a>' }
-        ],
+        ],*/
         instagram: "https://instagram.com/pollytonic__",
         shortDescription: "London-based bartender with 7+ years’ experience — award-nominated cocktail programs, team leadership, and guest-focused service.",
         languages: ["English"],
@@ -521,9 +521,9 @@ window.bartenders = [
           { icon: "🍸", text: "Cocktail menu design & consulting" },
           { icon: "🧑‍🏫", text: "Workshops and team-building experiences" }
         ],
-        more: [
+        /*more: [
           { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/sergiopardo94" target="_blank">@sergiopardo94</a>' }
-        ],
+        ],*/
         instagram: "https://www.instagram.com/sergiopardo94",
         shortDescription: "Barcelona mixologist with 10+ years’ experience, known for signature menus and large-scale event expertise.",
         languages: ["Spanish"],
@@ -560,9 +560,9 @@ window.bartenders = [
         ],
         more: [
           { icon: "💬", text: "Known for her warmth, creativity & contagious hospitality" },
-          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/" target="_blank">@almudenacastro</a>' }
+          //{ icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/" target="_blank">@almudenacastro</a>' }
         ],
-        instagram: "",
+        instagram: "almudenacastro",
         shortDescription: "Award-winning Andalusian bartender at Dr. Stravinsky, blending innovation, elegance, and hospitality with a smile.",
         languages: ["Spanish", "English"],
         directBooking: true,
