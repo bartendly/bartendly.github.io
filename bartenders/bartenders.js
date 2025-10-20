@@ -530,6 +530,44 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },
+
+      {
+        slug: "almudenacastro",
+        name: "Almudena Castro",
+        city: "Barcelona",
+        locationDisplay: "Barcelona",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Andalusian-born bartender blending technique, creativity, and pure dedication in Barcelona’s cocktail scene",
+        tagline: "“Shaking spirits, not egos.” 🍸",
+        experience: [
+          { icon: "🌍", text: "From Andalusia to Madrid to Barcelona — a journey through Spain’s top bars" },
+          { icon: "🏨", text: "Five-star experience at ME Ibiza (Meliá Group) and Hotel Palacio de Santa Paula (Marriott)" },
+          { icon: "🍸", text: "Created bespoke cocktail menus and managed luxury events & high-end service" },
+          { icon: "👩‍🔬", text: "Internship with 100%Barman / 100%Chef – innovation and gastronomy" },
+          { icon: "🌟", text: "Currently at Dr. Stravinsky, Barcelona – world-acclaimed cocktail bar" },
+          { icon: "🏆", text: "Winner – MONIN Spain 2024, 2nd Place – Art of Italicus Competition" }
+        ],
+        signatureCocktails: [
+          { icon: "🍹", text: "Technique-driven and creatively balanced signature cocktails" },
+          { icon: "🌸", text: "Elegant, aromatic blends inspired by Mediterranean roots" },
+          { icon: "🔥", text: "Modern classics reimagined with flair and precision" }
+        ],
+        services: [
+          { icon: "🎉", text: "Guest shifts & brand events" },
+          { icon: "🧑‍🏫", text: "Workshops, tastings & cocktail training" },
+          { icon: "🍸", text: "Private events & consultancy" }
+        ],
+        more: [
+          { icon: "💬", text: "Known for her warmth, creativity & contagious hospitality" },
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/" target="_blank">@almudenacastro</a>' }
+        ],
+        instagram: "",
+        shortDescription: "Award-winning Andalusian bartender at Dr. Stravinsky, blending innovation, elegance, and hospitality with a smile.",
+        languages: ["Spanish", "English"],
+        directBooking: true,
+        showGallery: false
+      },
         
   ];
   
