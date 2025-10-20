@@ -72,8 +72,8 @@
       btn.innerHTML = svg;
       return btn;
     };
-    const prev = mkArrow('prev','Previous','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
-    const next = mkArrow('next','Next','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>');
+    const prev = mkArrow('prev','Previous','<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>');
+    const next = mkArrow('next','Next','<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>');
   
     wrap.appendChild(prev); wrap.appendChild(next);
     mount.appendChild(wrap);
