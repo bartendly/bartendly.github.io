@@ -109,7 +109,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .booking-legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
 .legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
 
-.hero-topnav{position:absolute;top:2.4rem;right:1.4rem;z-index:10;display:flex;gap:.6rem}
+.hero-topnav{position:absolute;top:3.2rem;right:3rem;z-index:10;display:flex;gap:.6rem}
 .hero-topnav a{color:#ffae3a;text-decoration:none;font-weight:600;background:rgba(16,13,8,.55);padding:.35em .7em;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
 .hero-topnav a:hover{background:#ff6d21;color:#fff}
 @media(max-width:700px){.hero-topnav{right:.8rem;gap:.4rem}.hero-topnav a{padding:.3em .55em;font-size:.92em}}
@@ -210,27 +210,33 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     <div class="hero-content">
       <h1 class="hero-title">Hire a bartender in Barcelona</h1>
       <div class="hero-subtitle">Seamless, local, trusted. Instantly match with Barcelona’s top private event bartenders — in English or Spanish.</div>
+
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form-mockup" target="_self">
         <input type="hidden" name="city" value="Barcelona">
         <label for="ai-prompt" class="sr-only">Your Request</label>
         <textarea name="ai-prompt" id="ai-prompt" class="main-event-input" rows="2" required
-        placeholder='Describe your event — e.g. “Afterwork rooftop drinks, Thu 10 Oct, 15 people, Eixample, 6–9pm”'></textarea>      
+        placeholder='📅Sat 12 Dec   👥30 guests   📍Eixample rooftop   ⏰7–11pm  Corporate event with a cocktails bar'></textarea>     
         <!-- Contact (transparent) -->
         <label for="ai-contact" class="sr-only">Your contact information</label>
         <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferred) or Email + contact name" required autocomplete="off" />
-         <!-- Toggle: Glassware provided? -->
-         <label for="glassware" class="ai-label">Will you need Bartendly to provide glassware?</label>
-         <div class="ai-toggle-group" data-name="glassware" id="glassware">
-           <button type="button" class="ai-toggle" data-value="Yes">Yes</button>
-           <button type="button" class="ai-toggle" data-value="No">No</button>
-           <button type="button" class="ai-toggle" data-value="Not sure">Not sure</button>
-         </div>
-         <input type="hidden" name="glassware" required>
+         
+         <!-- Multi-select: What should we supply? -->
+        <label for="supplies" class="ai-label">What should we supply?</label>
+        <div class="ai-toggle-group" data-name="supplies" data-multi="true" id="supplies" role="group" aria-label="Supplies needed">
+          <button type="button" class="ai-toggle" data-value="Alcohol" aria-pressed="false">🍾 Alcohol</button>
+          <button type="button" class="ai-toggle" data-value="Glassware" aria-pressed="false">🍸 Glassware</button>
+          <button type="button" class="ai-toggle" data-value="Ice" aria-pressed="false">🧊 Ice</button>
+          <button type="button" class="ai-toggle" data-value="Not sure" aria-pressed="false">❓ Not sure</button>
+        </div>
+        <input type="hidden" name="supplies" required>
+
         <button type="submit" class="ai-submit">Get a Quote</button>
         <div class="booking-legal-disclaimer">
           By submitting, you agree to our <a href="/terms" target="_blank">Terms & Disclaimer</a>.
         </div>
       </form>
+
+
       <div id="ai-success-message" class="success-message" aria-live="polite">We’ll reply with proposals from professional bartenders in Barcelona.</div>
 
       <div class="badges-bar">
