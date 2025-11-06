@@ -568,6 +568,38 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },
-        
+      {
+        slug: "kaylieleung",
+        name: "Kaylie Leung",
+        city: "Hong Kong",
+        locationDisplay: "Hong Kong",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Hong Kong–based bartender and beverage professional with 4 years in the industry",
+        tagline: "Crafting classic serves with precision and personality.",
+        experience: [
+          { icon: "🍸", text: "4 years in the beverage industry, including 1.5 years behind the bar" },
+          { icon: "🏢", text: "Full-time beverage supplier with hands-on mixology background" },
+          { icon: "🥃", text: "Passionate about refined classics like the Old Fashioned and Boulevardier" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Old Fashioned" },
+          { icon: "🍊", text: "Boulevardier" },
+          { icon: "🍹", text: "Tailor-made menus for any occasion" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events: weddings, parties, corporate, VIP" },
+          { icon: "🍸", text: "Tailormade cocktail menus & beverage consulting" }
+        ],
+        more: [
+          { icon: "📍", text: "Based in Hong Kong — available for collaborations and private events" }
+        ],
+        shortDescription: "Hong Kong bartender & beverage professional specializing in elegant classics and tailor-made menus.",
+        languages: ["English", "Cantonese"],
+        directBooking: false,
+        showGallery: false
+      },
+      
+       
   ];
   
