@@ -136,6 +136,10 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .whatsapp-alt a{color:#ffae3a;font-weight:600;text-decoration:none;}
 .whatsapp-alt a:hover,.whatsapp-alt a:focus{text-decoration:underline;}
 
+.hero-topnav-whatsapp{display:inline-flex;align-items:center;justify-content:center;padding:0.32em 0.36em;margin-left:0.15rem;border-radius:10px;min-width:auto;line-height:0;}
+.hero-topnav-whatsapp svg{width:18px;height:18px;display:block;fill:#ffffff;}
+@media(max-width:700px){.hero-topnav-whatsapp{padding:0.28em 0.32em;}.hero-topnav-whatsapp svg{width:17px;height:17px;}}
+
 
  </style>
    <!-- Structured Data -->
@@ -204,6 +208,17 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
     <nav class="hero-topnav" aria-label="Top navigation">
       <a href="/bartenders/?city=barcelona">Our Bartenders</a>
+      <a
+      href="https://wa.me/34618502493?text=Hi%20Bartendly%2C%20I%27d%20like%20a%20quote%20for%20a%20bartender%20in%20Barcelona"
+      class="hero-topnav-whatsapp"
+      aria-label="Request a quote on WhatsApp"
+      target="_blank"
+      rel="noopener"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16 3C9.383 3 4 8.383 4 15c0 2.117.555 4.055 1.52 5.766L4 29l8.418-1.488C13.996 28.49 14.978 28.6 16 28.6 22.617 28.6 28 23.217 28 16.6 28 9.983 22.617 4.6 16 4.6zm0 2.4c5.27 0 9.6 4.33 9.6 9.6S21.27 24.6 16 24.6c-.86 0-1.707-.118-2.514-.35l-.54-.154-4.988.882.873-4.87-.176-.5C8.24 18.1 7.8 16.58 7.8 15c0-5.27 4.33-9.6 8.2-9.6zm5.012 10.92c-.274-.137-1.62-.8-1.872-.89-.252-.093-.435-.137-.617.137-.183.273-.708.89-.867 1.074-.16.183-.32.206-.594.068-.274-.137-1.156-.426-2.2-1.36-.813-.725-1.362-1.62-1.522-1.893-.16-.273-.017-.42.12-.557.124-.123.274-.32.412-.48.137-.16.183-.274.274-.457.091-.183.045-.343-.023-.48-.068-.137-.617-1.486-.846-2.038-.223-.537-.452-.465-.617-.473l-.526-.01c-.183 0-.48.068-.732.343-.252.273-.961.938-.961 2.287 0 1.35.985 2.655 1.123 2.838.137.183 1.94 2.96 4.7 4.143.657.283 1.17.452 1.57.579.66.21 1.262.18 1.737.109.53-.079 1.62-.662 1.851-1.302.228-.64.228-1.188.16-1.302-.068-.114-.251-.183-.526-.32z"></path>
+      </svg>
+    </a>
     </nav>
     <!-- LANGUAGE SWITCHER -->
     <nav class="lang-switch" aria-label="Language switcher">
