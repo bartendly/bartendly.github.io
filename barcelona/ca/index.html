@@ -3,160 +3,195 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lloga un Bartender a Barcelona | Esdeveniments Privats i Empreses | Bartendly</title>
-  <meta name="description" content="Reserva un bartender professional a Barcelona per festes privades, esdeveniments d’empresa o tallers de cocteleria. Ràpid, local i sense comissions." />
+  <title>Lloga un bartender a Barcelona | Esdeveniments Privats i Corporatius | Bartendly</title>
+  <meta name="description" content="Reserva un bartender a Barcelona per a festes privades, esdeveniments corporatius o classes de còctels. Matching ràpid, professionals locals, sense comissions amagades." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://www.bartendly.com/barcelona/ca/" />
+  <!-- hreflang alternates -->
+  <link rel="alternate" hreflang="en" href="https://www.bartendly.com/barcelona/" />
+  <link rel="alternate" hreflang="es" href="https://www.bartendly.com/barcelona/es/" />
+  <link rel="alternate" hreflang="ca" href="https://www.bartendly.com/barcelona/ca/" />
   <link rel="preload" as="image" href="/barcelona/images/hero-900.webp" type="image/webp">
+
   <style>
-:root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;}
-html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
-a { color: #ffae3a}
-.hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
-.hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 23%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.98) 100%);}
-.hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
-.hero-logo:active{opacity:.7;}
-/* Language Switcher */
-.lang-switch{position:absolute;top:1.1rem;right:1.7rem;z-index:11;display:flex;gap:0.26em;}
-.lang-switch a{color:#fff;font-family:'Poppins',sans-serif;font-size:1.07em;padding:0.08em 0.77em 0.07em 0.77em;background:rgba(16,16,20,0.66);border-radius:13px;text-decoration:none;margin:0 0.09em;transition:background 0.14s, color 0.14s;font-weight:700;opacity:0.85;}
-.lang-switch a.selected,.lang-switch a:hover{background:var(--primary);color:#231e18;opacity:1;}
-.hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
-.ai-form-mockup{width:100%;max-width:91vw;display:flex;flex-direction:column;gap:0.52em;align-items:center;background:none;margin:0 auto;}
-.hero-title{font-size:1.23rem;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 0.42em 0;line-height:1.12;text-shadow:0 3px 14px #000d;color:#fff;letter-spacing:-.7px;text-align:left;}
-.hero-subtitle{font-size:1.04rem;color:#ffe3cf;font-weight:500;margin:-0.38em 0 1em 0;text-shadow:0 1px 8px #000c;max-width:500px;text-align:left;}
-.main-event-input,.ai-form-mockup .ai-input{background:rgba(255,255,255,0.90);color:#231e18;font-weight:600;border-radius:16px;padding:0.5em 1em 0.5em 1em;font-size:1.08em;line-height:1.17;border:1.2px solid transparent;box-shadow:0 2px 12px #0002;margin-bottom:0.09em;outline:none;width:100%;max-width:100vw;resize:vertical;box-sizing:border-box;transition:border 0.16s;}
-.main-event-input:focus,.ai-form-mockup .ai-input:focus{border:1.2px solid var(--primary);}
-.main-event-input::placeholder,.ai-form-mockup .ai-input::placeholder{color:#684727;opacity:0.96;font-weight:400;font-size:0.96em;}
-.ai-form-mockup .ai-input{background:rgba(255,255,255,0.90);}
-.ai-label{font-size:1em;font-weight:500;color:#fff;margin-bottom:0.10em;margin-top:0.07em;}
-.ai-toggle-group{display:flex;gap:0.23em;margin-bottom:0.03em;width:100%;}
-.ai-toggle{flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.11);border-radius:12px;color:#fff;padding:0.33em 0;font-size:1.06em;font-weight:500;cursor:pointer;transition:background 0.14s,border 0.14s,color 0.14s,font-weight 0.15s;outline:none;text-align:center;margin:0;min-width:0;min-height:1.45em;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);box-shadow:0 1px 6px #0002;}
-.ai-toggle.selected,.ai-toggle:active{background:rgba(255,255,255,0.21);color:#fff;font-weight:700;border-color:#fff;box-shadow:0 2px 10px #ff6d2112;}
-.ai-submit{background:var(--primary);color:#fff;font-weight:800;border:none;border-radius:14px;font-size:1.14em;padding:0.5em 0;margin-top:0.18em;box-shadow:0 1.5px 10px rgba(255,141,34,0.13);transition:background 0.15s,color 0.15s;width:100%;letter-spacing:0.01em;min-height:2em;}
-.ai-submit:hover,.ai-submit:focus{background:var(--primary-hover);color:#231e18;}
-.success-message{display:none;margin-top:1.1rem;background:#28a745;color:white;padding:1.1rem;border-radius:5px;text-align:center;font-size:1.01em;}
-.badges-bar{display:flex;justify-content:center;gap:0.6em;margin:1em auto 1em auto;max-width:95vw;}
-.badges-bar span{color:var(--primary-hover);background:rgba(12,12,12,0.13);padding:0.13em 0.82em;border-radius:999px;font-weight:600;text-shadow:0 1px 7px #0008;font-size:1.01em;}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-@media (max-width:500px){
-  .hero-content{max-width:91vw;margin:3vh auto 3.1vh auto;padding:0 1vw;}
-  .hero-title{font-size:1.18rem;}
-  .hero-subtitle{font-size:0.99rem;}
-  .main-event-input,.ai-form-mockup .ai-input{font-size:1.03em;padding:0.49em 0.7em 0.49em 0.7em;}
-  .ai-toggle{font-size:0.98em;}
-  .hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
-}
-@media (min-width:700px){
-  .hero-content{max-width:520px;margin:0 auto 7vh auto;align-items:center;}
-  .ai-form-mockup{max-width:520px;margin:0 auto;align-items:center;}
-  .main-event-input,.ai-form-mockup .ai-input{max-width:690px;font-size:1.10em;padding:0.83em 2.1em;}
-  .ai-toggle{font-size:1.02em;}
-  .hero-title{font-size:2.2rem;}
-  .hero-subtitle{font-size:1.12rem;}
-  .hero-bg, .hero picture, .hero img { object-position: center 10%; }
-}
-@media (min-width:1100px){
-  .hero-content{max-width:820px;}
-  .main-event-input,.ai-form-mockup .ai-input{max-width:900px;font-size:1.13em;}
-}
-main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
-@media (min-width:700px){main{max-width:830px;padding:2.2rem 1.5rem 0 1.5rem;}}
-
-    .section-title { text-align: left; font-size: 1.45rem; font-family:'Poppins',sans-serif; color: #ffae3a; margin: 2.2em 0 1.2em 0; font-weight:700; }
-    .how-it-works, .why-bartendly ul { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem;}
-    .how-it-works-step { background: #19191f; padding: 1.1em 1.2em 1.2em 1.1em; border-radius: 15px; max-width: 270px; flex: 1; min-width: 220px;}
-    .how-it-works-step h3 { color: #ffae3a; font-size: 1.03rem; margin-bottom: 0.38em;}
-    .how-it-works-step p { font-size: 0.98rem; color: #f5f5f5;}
-    .why-bartendly ul { list-style: none; padding: 0; margin: 0; flex-direction: column;}
-    .why-bartendly li { margin-bottom: 0.61em; font-size: 1.07em;}
-    .testimonial { background: #19191c; border-radius: 9px; margin: 1.5rem auto 1rem; padding: 1.2rem; max-width: 630px; font-style: italic;}
-    .testimonial blockquote { margin: 0;}
-    .testimonial footer { display: block; margin-top: 0.7em; color: #ffae3a;}
-    .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
-    .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
-    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
-    .footer-join-link { text-align:right; margin-top:1.1em; }
-    .footer-join-link a { color:#fff; font-weight:600; background:#ff6d21; border-radius:13px; padding:0.42em 1.2em; text-decoration:none; transition:background 0.15s, color 0.13s; font-size:1.01em; }
-    .footer-join-link a span { color:#ffae3a; }
-    .footer-join-link a:hover, .footer-join-link a:focus { background:#ffae3a; color:#18181c; }
-    @media (max-width:700px) { .footer-join-link { text-align:center; margin:1.2em 0 0 0; } .footer-join-link a { font-size:0.99em; padding:0.42em 0.8em; } }
-
-    @media (max-width:700px){
-  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
-  .hero-logo{font-size:1.2rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
-  .hero-content{width:100vw;max-width:none;padding-top:30vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
-  .ai-form-mockup{width:90vw;max-width:410px;margin:0 auto;align-items:center;}
-  .hero-title{font-size:2rem;font-weight:700;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
-  .hero-subtitle{font-size:1.15rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
-  .badges-bar{display:flex;justify-content:center;gap:0.8em;margin:1em auto 1em auto;max-width:95vw;}
-  main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;padding-right:5vw!important;box-sizing:border-box;}
-}
-@media (min-width:701px) and (max-width:900px){
-  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
-  .hero-logo{font-size:1.3rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
-  .hero-content{width:100vw;max-width:none;padding-top:5vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
-  .hero-title{font-size:2.2rem;font-weight:750;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
-  .hero-subtitle{font-size:1.25rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
-}
-
-.js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
-.fade-in{opacity:1!important;transform:translateY(0)!important;}
-@media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
-.booking-legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
-.legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
- </style>
-   <!-- Structured Data -->
-   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Bartendly Barcelona",
-      "image": "https://www.bartendly.com/barcelona/images/hero.webp",
-      "description": "Plataforma professional per reservar bartenders a Barcelona per a esdeveniments privats i corporatius.",
-      "url": "https://www.bartendly.com/barcelona/ca/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Barcelona",
-        "addressCountry": "ES"
-      },
-      "areaServed": { "@type": "Place", "name": "Barcelona" },
-      "email": "martial@bartendly.com"
+    :root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;}
+    html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
+    a { color: #ffae3a}
+    .hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
+    .hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 23%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
+    .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.0) 60%,rgba(16,16,20,0.98) 100%);}
+    .hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
+    .hero-logo:active{opacity:.7;}
+    /* Language Switcher */
+    .lang-switch{position:absolute;top:1.1rem;right:1.7rem;z-index:11;display:flex;gap:0.26em;}
+    .lang-switch a{color:#fff;font-family:'Poppins',sans-serif;font-size:1.07em;padding:0.08em 0.77em 0.07em 0.77em;background:rgba(16,16,20,0.66);border-radius:13px;text-decoration:none;margin:0 0.09em;transition:background 0.14s, color 0.14s;font-weight:700;opacity:0.85;}
+    .lang-switch a.selected,.lang-switch a:hover{background:var(--primary);color:#231e18;opacity:1;}
+    .hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
+    .ai-form-mockup{width:100%;max-width:91vw;display:flex;flex-direction:column;gap:0.52em;align-items:center;background:none;margin:0 auto;}
+    .hero-title{font-size:1.23rem;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 0.42em 0;line-height:1.12;text-shadow:0 3px 14px #000d;color:#fff;letter-spacing:-.7px;text-align:left;}
+    .hero-subtitle{font-size:1.04rem;color:#ffe3cf;font-weight:500;margin:-0.38em 0 1em 0;text-shadow:0 1px 8px #000c;max-width:500px;text-align:left;}
+    .main-event-input,.ai-form-mockup .ai-input{background:rgba(255,255,255,0.90);color:#231e18;font-weight:600;border-radius:16px;padding:0.5em 1em 0.5em 1em;font-size:1.08em;line-height:1.17;border:1.2px solid transparent;box-shadow:0 2px 12px #0002;margin-bottom:0.09em;outline:none;width:100%;max-width:100vw;resize:vertical;box-sizing:border-box;transition:border 0.16s;}
+    .main-event-input:focus,.ai-form-mockup .ai-input:focus{border:1.2px solid var(--primary);}
+    .main-event-input::placeholder,.ai-form-mockup .ai-input::placeholder{color:#684727;opacity:0.96;font-weight:400;font-size:0.96em;}
+    .ai-form-mockup .ai-input{background:rgba(255,255,255,0.90);}
+    .ai-label{font-size:1em;font-weight:500;color:#fff;margin-bottom:0.10em;margin-top:0.07em;}
+    .ai-toggle-group{display:flex;gap:0.23em;margin-bottom:0.03em;width:100%;}
+    .ai-toggle{flex:1;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.11);border-radius:12px;color:#fff;padding:0.33em 0;font-size:1.06em;font-weight:500;cursor:pointer;transition:background 0.14s,border 0.14s,color 0.14s,font-weight 0.15s;outline:none;text-align:center;margin:0;min-width:0;min-height:1.45em;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);box-shadow:0 1px 6px #0002;}
+    .ai-toggle.selected,.ai-toggle:active{background:rgba(255,255,255,0.21);color:#fff;font-weight:700;border-color:#fff;box-shadow:0 2px 10px #ff6d2112;}
+    .ai-submit{background:var(--primary);color:#fff;font-weight:800;border:none;border-radius:14px;font-size:1.14em;padding:0.5em 0;margin-top:0.18em;box-shadow:0 1.5px 10px rgba(255,141,34,0.13);transition:background 0.15s,color 0.15s;width:100%;letter-spacing:0.01em;min-height:2em;}
+    .ai-submit:hover,.ai-submit:focus{background:var(--primary-hover);color:#231e18;}
+    .success-message{display:none;margin-top:1.1rem;background:#28a745;color:white;padding:1.1rem;border-radius:5px;text-align:center;font-size:1.01em;}
+    .badges-bar{display:flex;justify-content:center;gap:0.6em;margin:1em auto 1em auto;max-width:95vw;}
+    .badges-bar span{color:var(--primary-hover);background:rgba(12,12,12,0.13);padding:0.13em 0.82em;border-radius:999px;font-weight:600;text-shadow:0 1px 7px #0008;font-size:1.01em;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    @media (max-width:500px){
+      .hero-content{max-width:91vw;margin:3vh auto 3.1vh auto;padding:0 1vw;}
+      .hero-title{font-size:1.18rem;}
+      .hero-subtitle{font-size:0.99rem;}
+      .main-event-input,.ai-form-mockup .ai-input{font-size:1.03em;padding:0.49em 0.7em 0.49em 0.7em;}
+      .ai-toggle{font-size:0.98em;}
+      .hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
     }
-    </script>
-    <script type="application/ld+json">
+    @media (min-width:700px){
+      .hero-content{max-width:520px;margin:0 auto 7vh auto;align-items:center;}
+      .ai-form-mockup{max-width:520px;margin:0 auto;align-items:center;}
+      .main-event-input,.ai-form-mockup .ai-input{max-width:690px;font-size:1.10em;padding:0.83em 2.1em;}
+      .ai-toggle{font-size:1.02em;}
+      .hero-title{font-size:2.2rem;}
+      .hero-subtitle{font-size:1.12rem;}
+      .hero-bg, .hero picture, .hero img { object-position: center 10%; }
+    }
+    @media (min-width:1100px){
+      .hero-content{max-width:820px;}
+      .main-event-input,.ai-form-mockup .ai-input{max-width:900px;font-size:1.13em;}
+      /*TEST*/
+      .hero-bg,.hero picture,.hero img{object-position:40% 10%;}
+    }
+    main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
+    @media (min-width:700px){main{max-width:830px;padding:2.2rem 1.5rem 0 1.5rem;}}
+    
+        .section-title { text-align: left; font-size: 1.45rem; font-family:'Poppins',sans-serif; color: #ffae3a; margin: 2.2em 0 1.2em 0; font-weight:700; }
+        .how-it-works, .why-bartendly ul { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem;}
+        .how-it-works-step { background: #19191f; padding: 1.1em 1.2em 1.2em 1.1em; border-radius: 15px; max-width: 270px; flex: 1; min-width: 220px;}
+        .how-it-works-step h3 { color: #ffae3a; font-size: 1.03rem; margin-bottom: 0.38em;}
+        .how-it-works-step p { font-size: 0.98rem; color: #f5f5f5;}
+        .why-bartendly ul { list-style: none; padding: 0; margin: 0; flex-direction: column;}
+        .why-bartendly li { margin-bottom: 0.61em; font-size: 1.07em;}
+        .testimonial { background: #19191c; border-radius: 9px; margin: 1.5rem auto 1rem; padding: 1.2rem; max-width: 630px; font-style: italic;}
+        .testimonial blockquote { margin: 0;}
+        .testimonial footer { display: block; margin-top: 0.7em; color: #ffae3a;}
+        .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
+        .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
+        footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
+        .footer-join-link { text-align:right; margin-top:1.1em; }
+        .footer-join-link a { color:#fff; font-weight:600; background:#ff6d21; border-radius:13px; padding:0.42em 1.2em; text-decoration:none; transition:background 0.15s, color 0.13s; font-size:1.01em; }
+        .footer-join-link a span { color:#ffae3a; }
+        .footer-join-link a:hover, .footer-join-link a:focus { background:#ffae3a; color:#18181c; }
+        @media (max-width:700px) { .footer-join-link { text-align:center; margin:1.2em 0 0 0; } .footer-join-link a { font-size:0.99em; padding:0.42em 0.8em; } }
+    
+        @media (max-width:700px){
+      .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
+      .hero-logo{font-size:1.2rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
+      .hero-content{width:100vw;max-width:none;padding-top:30vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+      .ai-form-mockup{width:90vw;max-width:410px;margin:0 auto;align-items:center;}
+      .hero-title{font-size:2rem;font-weight:700;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
+      .hero-subtitle{font-size:1.15rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
+      .badges-bar{display:flex;justify-content:center;gap:0.8em;margin:1em auto 1em auto;max-width:95vw;}
+      main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;padding-right:5vw!important;box-sizing:border-box;}
+    }
+    @media (min-width:701px) and (max-width:900px){
+      .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
+      .hero-logo{font-size:1.3rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
+      .hero-content{width:100vw;max-width:none;padding-top:5vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+      .hero-title{font-size:2.2rem;font-weight:750;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
+      .hero-subtitle{font-size:1.25rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
+    }
+    
+    .js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
+    .fade-in{opacity:1!important;transform:translateY(0)!important;}
+    @media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
+    .booking-legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
+    .legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
+    
+    .hero-topnav{position:absolute;top:3.4rem;right:1.6rem;z-index:10;display:flex;gap:.6rem}
+    .hero-topnav a{color:#ffae3a;text-decoration:none;font-weight:600;background:rgba(16,13,8,.55);padding:.35em .7em;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
+    .hero-topnav a:hover{background:#ff6d21;color:#fff}
+    @media(max-width:700px){.hero-topnav{right:1.6rem;gap:.4rem}.hero-topnav a{padding:.3em .55em;font-size:.92em}}
+    
+    .btly-wrap { position:relative; margin:1.5rem auto; max-width:1200px; }
+    .btly-track { display:grid; grid-auto-flow:column; grid-auto-columns:80%; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:.25rem 0 1rem; }
+    @media (min-width:900px) { .btly-track { grid-auto-columns:calc((100% - 2rem) / 3); overflow-x:auto; } }
+    .btly-card { position:relative; border-radius:20px; overflow:hidden; background:var(--bg-dark); height:58vh; max-height:520px; min-height:380px; scroll-snap-align:center; cursor:pointer; }
+    .btly-card picture, .btly-card img { width:100%; height:100%; object-fit:cover; display:block; }
+    .btly-overlay { position:absolute; inset:auto 0 0 0; padding:14px 16px; background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.9) 100%); color:var(--text-light); font-family:'Poppins',sans-serif; }
+    .btly-name { font-size:1.1rem; font-weight:700; line-height:1.1; margin:0 0 4px 0; }
+    .btly-meta { font-size:.9rem; opacity:.9; }
+    .btly-arrow { display:none; position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.35); color:var(--primary); font-size:0; line-height:0; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(4px); }
+    .btly-arrow:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
+    .btly-arrow svg { width:22px; height:22px; }
+    .btly-arrow--prev { left:-10px; }
+    .btly-arrow--next { right:-10px; }
+    @media (min-width:900px) { .btly-arrow { display:inline-flex; } }
+    .btly-card { scroll-snap-stop: always; }
+    
+    .ai-toggle[aria-pressed="true"] {background: rgba(255,255,255,0.21); color:#fff; font-weight:700; border-color:#fff; box-shadow:0 2px 10px #ff6d2112;}
+    
+    
+     </style>
+
+  <!-- Dades estructurades (amb la coma correcta i text en català) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bartendly Barcelona",
+    "image": "https://www.bartendly.com/barcelona/images/hero.webp",
+    "description": "Plataforma professional per reservar bartenders a Barcelona per a esdeveniments privats i corporatius.",
+    "url": "https://www.bartendly.com/barcelona/ca/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "areaServed": { "@type": "Place", "name": "Barcelona" },
+    "email": "martial@bartendly.com",
+    "telephone": "+34618502493"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
       {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Puc contractar un bartender per a un esdeveniment d’empresa a Barcelona?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí, Bartendly et connecta amb bartenders professionals per a festes d’empresa, esdeveniments corporatius i celebracions de negoci a Barcelona."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Oferiu bartenders per a bodes o festes privades?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "I tant! El nostre equip inclou mixòlegs experts per a bodes, aniversaris, celebracions i tot tipus de festes privades a Barcelona."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Com funciona Bartendly?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Només cal que ens expliquis els detalls del teu esdeveniment i et connectem ràpidament amb els millors bartenders locals. Sense comissions ni costos ocults."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "Puc contractar un bartender per a un esdeveniment corporatiu a Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Bartendly et posa en contacte amb bartenders professionals per a festes d’oficina, actes d’empresa i fites corporatives arreu de Barcelona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Oferiu bartenders de còctels per a casaments o festes privades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per descomptat! Comptem amb mixòlegs experts per a casaments, aniversaris i tot tipus de celebracions privades a Barcelona."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Com funciona Bartendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Explica’ns el teu esdeveniment i et connectem al moment amb bartenders locals top — sense comissions ni càrrecs ocults."
+        }
       }
-    </script>
+    ]
+  }
+  </script>
 </head>
 <body>
   <section class="hero" id="hero">
@@ -164,137 +199,249 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <source srcset="/barcelona/images/hero-600.webp 600w, /barcelona/images/hero-900.webp 900w, /barcelona/images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
       <source srcset="/barcelona/images/hero-600.jpg 600w, /barcelona/images/hero-900.jpg 900w, /barcelona/images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
       <img src="/barcelona/images/hero-900.jpg"
-           alt="Bartender preparant còctels en un esdeveniment a Barcelona"
+           alt="Bartender preparant còctels en un esdeveniment a l’últim pis a Barcelona"
            width="1200" height="1800"
            loading="eager"
            fetchpriority="high" />
     </picture>
-    <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
-    <!-- LANGUAGE SWITCHER -->
-    <nav class="lang-switch" aria-label="Canvi d'idioma">
+
+    <a href="/" class="hero-logo" aria-label="Inici Bartendly">Bartendly</a>
+
+    <nav class="hero-topnav" aria-label="Navegació superior">
+      <a href="/bartenders/?city=barcelona">Els nostres bartenders</a>
+    </nav>
+
+    <!-- Canvi d’idioma -->
+    <nav class="lang-switch" aria-label="Selector d’idioma">
       <a href="/barcelona/" lang="en">EN</a>
       <a href="/barcelona/es/" lang="es">ES</a>
       <a href="/barcelona/ca/" class="selected" lang="ca" aria-current="page">CA</a>
     </nav>
+
     <div class="hero-content">
       <h1 class="hero-title">Lloga un bartender a Barcelona</h1>
-      <div class="hero-subtitle">Fàcil, local i de confiança. Troba de seguida bartenders per a esdeveniments privats o d’empresa — en català, castellà o anglès.</div>
+      <div class="hero-subtitle">Fàcil, local i de confiança. Connecta al moment amb bartenders top per a esdeveniments privats a Barcelona — en català, castellà o anglès.</div>
+
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form-mockup" target="_self">
         <input type="hidden" name="city" value="Barcelona">
         <label for="ai-prompt" class="sr-only">La teva sol·licitud</label>
         <textarea name="ai-prompt" id="ai-prompt" class="main-event-input" rows="2" required
-        placeholder='Descriu el teu esdeveniment — Ex: “Aniversari 40, Dissabte 24 d’Agost, 25 convidats, Eixample, 19–23h”'></textarea>
-        <!-- Contact (transparent) -->
-        <label for="ai-contact" class="sr-only">Contacte</label>
-        <input type="text" id="ai-contact" name="ai-contact" class="ai-input" inputmode="email" required autocomplete="off" placeholder="WhatsApp (preferit) o email + nom" />
-        <!-- Toggle: Glassware provided? -->
-        <label for="glassware" class="ai-label">Necessites que Bartendly proporcioni cristalleria?</label>
-        <div class="ai-toggle-group" data-name="glassware" id="glassware">
-          <button type="button" class="ai-toggle" data-value="Sí">Sí</button>
-          <button type="button" class="ai-toggle" data-value="No">No</button>
-          <button type="button" class="ai-toggle" data-value="No ho sé">No ho sé</button>
+          placeholder="📅 Ds 12 des  👥 30 persones  📍 Eixample  ⏰ 19–23 h  Esdeveniment corporatiu amb barra de còctels"></textarea>
+
+        <label for="ai-contact" class="sr-only">Les teves dades de contacte</label>
+        <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferit) o email + nom de contacte" required autocomplete="off" />
+
+        <label for="supplies" class="ai-label">Què hem d’aportar?</label>
+        <div class="ai-toggle-group" data-name="supplies" data-multi="true" id="supplies" role="group" aria-label="Subministraments necessaris">
+          <button type="button" class="ai-toggle" data-value="Alcohol" aria-pressed="false">🍾 Alcohol</button>
+          <button type="button" class="ai-toggle" data-value="Cristalleria" aria-pressed="false">🍸 Cristalleria</button>
+          <button type="button" class="ai-toggle" data-value="Gel" aria-pressed="false">🧊 Gel</button>
+          <button type="button" class="ai-toggle" data-value="No ho sé" aria-pressed="false">❓ No ho sé</button>
         </div>
-        <input type="hidden" name="glassware" required>
-        <button type="submit" class="ai-submit">Sol·licita pressupost</button>
+        <input type="hidden" name="supplies" required>
+
+        <button type="submit" class="ai-submit">Obtenir pressupost</button>
         <div class="booking-legal-disclaimer">
-          En enviar, acceptes els nostres <a href="/terms" target="_blank">Termes i Avís Legal</a>.
+          En enviar, acceptes els nostres <a href="/terms" target="_blank">Termes i avís legal</a>.
         </div>
       </form>
-      <div id="ai-success-message" class="success-message" aria-live="polite">Et respondrem amb propostes de bartenders professionals de Barcelona.</div>
+
+      <div id="ai-success-message" class="success-message" aria-live="polite">Et respondrem amb propostes de bartenders professionals a Barcelona.</div>
+
       <div class="badges-bar">
-        <span>⭐ Millor valorat</span>
-        <span>🏆 Local</span>
-        <span>⚡ Ràpid</span>
+        <span>⭐ Molt ben valorats</span>
+        <span>🏆 Locals</span>
+        <span>⚡ Ràpids</span>
       </div>
     </div>
   </section>
+
   <main>
     <section id="how-it-works">
-      <h2 class="section-title">Com funciona Bartendly?</h2>
+      <h2 class="section-title">Com funciona</h2>
       <div class="how-it-works">
-        <div class="how-it-works-step"><h3>1. Explica’ns el teu esdeveniment</h3><p>Descriu la teva festa, data i el que vols (bartender, còctels, taller...)</p></div>
-        <div class="how-it-works-step"><h3>2. Rep ofertes</h3><p>En pocs minuts rebràs ofertes directes de bartenders verificats a prop teu.</p></div>
-        <div class="how-it-works-step"><h3>3. Tria i reserva</h3><p>Selecciona la millor opció, parla directament amb el bartender i paga sense intermediaris.</p></div>
+        <div class="how-it-works-step">
+          <h3>1. Explica’ns l’esdeveniment</h3>
+          <p>Indica data, ubicació i detalls.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>2. Rep propostes</h3>
+          <p>Bartenders top de Barcelona t’enviaran ofertes al moment.</p>
+        </div>
+        <div class="how-it-works-step">
+          <h3>3. Reserva i gaudeix</h3>
+          <p>Tria el teu favorit, paga de manera segura i gaudeix de la festa.</p>
+        </div>
       </div>
     </section>
+
     <section id="why-bartendly">
-      <h2 class="section-title">Per què Bartendly Barcelona?</h2>
+      <h2 class="section-title">Per què Bartendly Barcelona</h2>
       <div class="why-bartendly">
         <ul>
-          <li>✅ Només bartenders locals de confiança i verificats</li>
-          <li>🍸 Per a festes privades, bodes i esdeveniments d’empresa</li>
-          <li>⚡ Reserva ràpida, sense comissions</li>
-          <li> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="17" height="10.62" aria-label="Catalonia Flag" style="vertical-align:middle;margin-right:0.25em">
-            <rect width="50" height="30" fill="#fcdd09"/>
-            <rect y="0" width="50" height="6" fill="#da121a"/>
-            <rect y="12" width="50" height="6" fill="#da121a"/>
-            <rect y="24" width="50" height="6" fill="#da121a"/>
-          </svg> Suport local a Barcelona</li>
-          <li>💸 Tarifes transparents — pagament directe al bartender</li>
+          <li>✅ Només bartenders locals de confiança i prèviament verificats</li>
+          <li>🍸 Per a festes privades, casaments, terrats i llançaments corporatius</li>
+          <li>🎨 Propostes 100% a mida — res de paquets estàndard</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="17" height="10.62" aria-label="Bandera de Catalunya" style="vertical-align:middle;margin-right:0.25em">
+              <rect width="50" height="30" fill="#fcdd09"/>
+              <rect y="0" width="50" height="6" fill="#da121a"/>
+              <rect y="12" width="50" height="6" fill="#da121a"/>
+              <rect y="24" width="50" height="6" fill="#da121a"/>
+            </svg>
+            Suport amb base a Barcelona
+          </li>
+          <li>💸 Preu transparent — reserva i paga amb seguretat amb Bartendly.</li>
         </ul>
       </div>
     </section>
+
+    <section id="bartendly-carousel" class="btly-mount" data-city="barcelona">
+      <h2 class="section-title">Coneix els bartenders</h2>
+    </section>
+
     <section id="testimonials">
+      <h2 class="section-title">Barcelona confia en Bartendly</h2>
       <div class="testimonial">
-        <blockquote>“Va ser súper fàcil reservar i el bartender va encantar a tots els convidats. Servei perfecte per al nostre esdeveniment d’empresa.”<footer>— Marta, Barcelona</footer></blockquote>
+        <blockquote>
+          “L’equip de Bartendly va fer inoblidable la nostra festa d’empresa a l’Eixample. Repetirem!”<footer>— Laura G., Barcelona</footer>
+        </blockquote>
       </div>
       <div class="testimonial">
-        <blockquote>“Excel·lent experiència i tracte directe amb el bartender. Repetirem segur!”<footer>— Lluís, Eixample</footer></blockquote>
+        <blockquote>
+          “Còctels excel·lents i tracte proper — el nostre casament al terrat va ser un èxit!”<footer>— en Pau i la Sofia, Barcelona</footer>
+        </blockquote>
       </div>
     </section>
+
     <section id="faq">
       <h2 class="section-title">Preguntes freqüents</h2>
+
       <div class="faq-item">
-        <h3>Puc contractar un bartender per a un esdeveniment d’empresa?</h3>
-        <p>Sí — treballem amb empreses per a festes corporatives, llançaments, celebracions i esdeveniments de teambuilding a Barcelona.</p>
+        <h3>Puc contractar un bartender per a un esdeveniment corporatiu o offsite a Barcelona?</h3>
+        <p>Sí. Cobrim llançaments de marca, festes d’oficina i offsites a qualsevol punt de Barcelona.</p>
       </div>
+
       <div class="faq-item">
-        <h3>Puc reservar un bartender per a una vila, àtic o iot?</h3>
-        <p>Per descomptat! Els bartenders serveixen a viles, àtics, domicilis privats i qualsevol espai.</p>
+        <h3>Puc reservar per a una vila, un terrat o un iot?</h3>
+        <p>És clar! Treballem a viles, domicilis privats, terrats, iots i el venue que triïs.</p>
       </div>
+
       <div class="faq-item">
-        <h3>Oferiu tallers de còctels?</h3>
-        <p>Sí, organitzem masterclass per a grups, aniversaris i team building d’empresa.</p>
+        <h3>Oferiu classes de còctels o tallers de mixologia?</h3>
+        <p>Sí, organitzem masterclasses per a grups, aniversaris i team building.</p>
       </div>
+
       <div class="faq-item">
-        <h3>Quant trigaré a rebre ofertes?</h3>
-        <p>Normalment en pocs minuts — acceptem reserves d’última hora.</p>
+        <h3>Amb quina rapidesa puc aconseguir un bartender?</h3>
+        <p>Habitualment reps ofertes en minuts — també acceptem reserves d’última hora.</p>
       </div>
+
       <div class="faq-item">
-        <h3>Puc triar bartender que parli català, castellà o anglès?</h3>
-        <p>Molts bartenders parlen diversos idiomes. Indica-ho a la teva sol·licitud.</p>
+        <h3>Puc triar bartender catalanoparlant, hispanoparlant o anglòfon?</h3>
+        <p>Sí. La majoria parla català, castellà i anglès. Indica la teva preferència a la sol·licitud.</p>
       </div>
+
       <div class="faq-item">
-        <h3>Com funciona el pagament? Hi ha comissions?</h3>
-        <p>Tots els preus s’indiquen per avançat, sense comissions ni extres. El pagament és directe i segur.</p>
+        <h3>Com funciona el pagament? Hi ha càrrecs ocults?</h3>
+        <p>
+          Pagaràs de forma segura a través de Bartendly — targeta, Apple Pay o transferència bancària.
+          Es requereix un dipòsit del 50% per confirmar la reserva i la resta abans de l’esdeveniment.
+          Sense càrrecs ocults: transparència total a cada pas.
+        </p>
       </div>
     </section>
+
     <section id="about">
       <h2 class="section-title">Sobre Bartendly Barcelona</h2>
       <div class="about">
         <p>
-          Bartendly és la manera més ràpida i professional de contractar bartenders a Barcelona — per a esdeveniments privats, empreses i bodes. Fundat per l’equip de <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>. 100% local, sense agències ni comissions.
+          Bartendly és la manera més ràpida de contractar bartenders de confiança a Barcelona — per a esdeveniments privats, actes corporatius i casaments.
+          Fundada per l’equip al darrere de <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>, et connectem amb els millors professionals del còctel de la ciutat. 100% local, sense agències.
         </p>
       </div>
     </section>
   </main>
+
   <footer>
     <div class="footer-links">
-      <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" rel="noopener">Instagram</a>
       <a href="mailto:martial@bartendly.com">Contacte</a>
     </div>
-    <p>© 2025 Bartendly Barcelona — Fet amb ❤️ a Barcelona</p>
+    <div class="social-links">
+      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
+      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
+      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
+      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 Bartendly. Tots els drets reservats.</p>
     <div class="legal-disclaimer">
-      Bartendly és només una plataforma digital. <a href="/terms" target="_blank">Consulta els termes i l’avís legal</a>.
+      Bartendly és només una plataforma digital. <a href="/terms" target="_blank">Veure termes i avís legal</a>.
     </div>
     <div class="footer-join-link">
       <a href="/bartenders/join">Ets bartender? <span>Uneix-te a Bartendly</span></a>
-    </div>    
+    </div>
   </footer>
+
+  <!-- ⬇️ mateixos <script> de la versió EN, amb textos en CA ⬇️ -->
   <script>
-const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30;if(userPrompt.length<minLength){alert("Si us plau, explica’ns una mica més el teu esdeveniment.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Introdueix un correu electrònic o telèfon vàlid.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Enviant...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('Error en enviar la sol·licitud.');}}catch(err){alert('Error de xarxa. Torna-ho a intentar més tard.');}finally{submitBtn.disabled=false;submitBtn.textContent='Sol·licita pressupost';}});}
-document.querySelectorAll('.ai-toggle-group').forEach(g=>{let n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`);g.querySelectorAll('.ai-toggle').forEach(b=>b.onclick=()=>{g.querySelectorAll('.ai-toggle').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');h.value=b.getAttribute('data-value');});});
-document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
+    const aiform=document.getElementById('ai-request-form'),
+          aisuccessMessage=document.getElementById('ai-success-message');
+    if(aiform&&aisuccessMessage){
+      aiform.addEventListener('submit',async e=>{
+        e.preventDefault();
+        const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),
+              minLength=30;
+        if(userPrompt.length<minLength){alert("Si us plau, afegeix una mica més de detall.");return;}
+        const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),
+              emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,
+              phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,
+              isEmail=emailPattern.test(contactValue),
+              isPhone=phonePattern.test(contactValue);
+        if(!isEmail&&!isPhone){alert('Introdueix un email o telèfon vàlid.');return;}
+        const submitBtn=aiform.querySelector('button[type="submit"]');
+        submitBtn.disabled=true; submitBtn.textContent='Enviant...';
+        const data=new FormData(aiform);
+        try{
+          const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
+          if(response.ok){ aiform.reset(); aiform.style.display='none'; aisuccessMessage.style.display='block'; }
+          else{ alert('Ups, alguna cosa ha fallat en enviar el missatge.'); }
+        }catch(err){ alert('Error de xarxa. Torna-ho a provar més tard.'); }
+        finally{ submitBtn.disabled=false; submitBtn.textContent='Obtenir pressupost'; }
+      });
+    }
   </script>
+
+  <script>
+    document.querySelectorAll('.ai-toggle-group').forEach(g=>{
+      const n=g.getAttribute('data-name'),
+            h=document.querySelector(`input[name="${n}"]`),
+            m=g.getAttribute('data-multi')==='true',
+            ns=[...g.querySelectorAll('.ai-toggle')].find(b=>(b.getAttribute('data-value')||'').toLowerCase()==='no ho sé'),
+            u=()=>{const s=[...g.querySelectorAll('.ai-toggle.selected')].map(b=>b.getAttribute('data-value')); h.value=s.join(','); h.hasAttribute('required')&&h.setCustomValidity(h.value?'':'Selecciona com a mínim una opció.')};
+      g.querySelectorAll('.ai-toggle').forEach(b=>b.addEventListener('click',()=>{
+        if(m){
+          const isNS=(b.getAttribute('data-value')||'').toLowerCase()==='no ho sé';
+          if(isNS){ g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')}); b.classList.add('selected'); b.setAttribute('aria-pressed','true'); }
+          else{ ns&&(ns.classList.remove('selected'),ns.setAttribute('aria-pressed','false')); const on=!b.classList.contains('selected'); b.classList.toggle('selected',on); b.setAttribute('aria-pressed',on?'true':'false'); }
+        }else{
+          g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});
+          b.classList.add('selected'); b.setAttribute('aria-pressed','true');
+        }
+        u();
+      }));
+      u();
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.body.classList.add('js-animate');
+      const o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target)}}),{threshold:.15});
+      document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e))
+    });
+  </script>
+
+  <script src="/bartenders/bartenders.js"></script>
+  <script src="/assets/js/bartendly-carousel.js"></script>
 </body>
 </html>
