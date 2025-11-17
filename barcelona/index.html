@@ -132,6 +132,10 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 
 .ai-toggle[aria-pressed="true"] {background: rgba(255,255,255,0.21); color:#fff; font-weight:700; border-color:#fff; box-shadow:0 2px 10px #ff6d2112;}
 
+.whatsapp-alt{margin-top:0.35rem;font-size:0.88rem;color:#ccc;text-align:center;}
+.whatsapp-alt a{color:#ffae3a;font-weight:600;text-decoration:none;}
+.whatsapp-alt a:hover,.whatsapp-alt a:focus{text-decoration:underline;}
+
 
  </style>
    <!-- Structured Data -->
@@ -149,7 +153,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         "addressCountry": "ES"
       },
       "areaServed": { "@type": "Place", "name": "Barcelona" },
-      "email": "martial@bartendly.com"
+      "email": "martial@bartendly.com",
       "telephone": "+34618502493"
     }
     </script>
@@ -233,6 +237,12 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         <button type="submit" class="ai-submit">Get a Quote</button>
         <div class="booking-legal-disclaimer">
           By submitting, you agree to our <a href="/terms" target="_blank">Terms & Disclaimer</a>.
+        </div>
+        <div class="whatsapp-alt">
+          Prefer WhatsApp?
+          <a href="https://wa.me/34618502493?text=Hi%20Bartendly%2C%20I%27d%20like%20a%20quote%20for%20a%20bartender%20in%20Barcelona" target="_blank" rel="noopener">
+            Request a quote instantly
+          </a>
         </div>
       </form>
 
@@ -367,7 +377,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
   </footer>
   
   <script>
-    const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30,datePattern=/\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;/*if(!datePattern.test(userPrompt)){alert("Please include a date or approximate date for your event.");return;}*/if(userPrompt.length<minLength){alert("Please provide a bit more detail about your request.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Please enter a valid email or phone number.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Sending...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('Oops! Something went wrong while sending your message.');}}catch(err){alert('Network error. Please try again later.');}finally{submitBtn.disabled=false;submitBtn.textContent='Get My Bartender';}});}
+    const aiform=document.getElementById('ai-request-form'),aisuccessMessage=document.getElementById('ai-success-message');if(aiform&&aisuccessMessage){aiform.addEventListener('submit',async e=>{e.preventDefault();const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),minLength=30,datePattern=/\b(\d{1,2}[\/\-\. ]\d{1,2}([\/\-\. ]\d{2,4})?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}|\d{1,2}\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?|\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4})\b/i;/*if(!datePattern.test(userPrompt)){alert("Please include a date or approximate date for your event.");return;}*/if(userPrompt.length<minLength){alert("Please provide a bit more detail about your request.");return;}const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isEmail=emailPattern.test(contactValue),isPhone=phonePattern.test(contactValue);if(!isEmail&&!isPhone){alert('Please enter a valid email or phone number.');return;}const submitBtn=aiform.querySelector('button[type="submit"]');submitBtn.disabled=true;submitBtn.textContent='Sending...';const data=new FormData(aiform);try{const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(response.ok){aiform.reset();aiform.style.display='none';aisuccessMessage.style.display='block';}else{alert('Oops! Something went wrong while sending your message.');}}catch(err){alert('Network error. Please try again later.');}finally{submitBtn.disabled=false;submitBtn.textContent='Get a Quote';}});}
   </script>
   <script>document.querySelectorAll('.ai-toggle-group').forEach(g=>{const n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`),m=g.getAttribute('data-multi')==='true',ns=[...g.querySelectorAll('.ai-toggle')].find(b=>(b.getAttribute('data-value')||'').toLowerCase()==='not sure'),u=()=>{const s=[...g.querySelectorAll('.ai-toggle.selected')].map(b=>b.getAttribute('data-value'));h.value=s.join(',');h.hasAttribute('required')&&h.setCustomValidity(h.value?'':'Please select at least one option.')};g.querySelectorAll('.ai-toggle').forEach(b=>b.addEventListener('click',()=>{if(m){const isNS=(b.getAttribute('data-value')||'').toLowerCase()==='not sure';if(isNS){g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}else{ns&&(ns.classList.remove('selected'),ns.setAttribute('aria-pressed','false'));const on=!b.classList.contains('selected');b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on?'true':'false')}}else{g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}u()}));u()});</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target)}}),{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e))});</script>
