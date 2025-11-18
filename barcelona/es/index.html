@@ -411,36 +411,8 @@
     </div>
   </footer>
 
-  <!-- ⬇️ pega aquí los MISMOS <script> de la versión EN,
-       pero cambia los textos de los botones/alerts a ES ⬇️ -->
-  <script>
-    // Mismos validadores; solo textos en ES
-    const aiform=document.getElementById('ai-request-form'),
-          aisuccessMessage=document.getElementById('ai-success-message');
-    if(aiform&&aisuccessMessage){
-      aiform.addEventListener('submit',async e=>{
-        e.preventDefault();
-        const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),
-              minLength=30;
-        if(userPrompt.length<minLength){alert("Por favor, añade un poco más de detalle.");return;}
-        const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),
-              emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,
-              phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,
-              isEmail=emailPattern.test(contactValue),
-              isPhone=phonePattern.test(contactValue);
-        if(!isEmail&&!isPhone){alert('Introduce un email o teléfono válido.');return;}
-        const submitBtn=aiform.querySelector('button[type="submit"]');
-        submitBtn.disabled=true; submitBtn.textContent='Enviando...';
-        const data=new FormData(aiform);
-        try{
-          const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
-          if(response.ok){ aiform.reset(); aiform.style.display='none'; aisuccessMessage.style.display='block'; }
-          else{ alert('Ups, algo ha fallado al enviar tu mensaje.'); }
-        }catch(err){ alert('Error de red. Inténtalo de nuevo más tarde.'); }
-        finally{ submitBtn.disabled=false; submitBtn.textContent='Obtener presupuesto'; }
-      });
-    }
-  </script>
+  <script>(function(){const f=document.getElementById("ai-request-form"),m=document.getElementById("ai-success-message");if(!f||!m)return;f.addEventListener("submit",async function(e){e.preventDefault();const p=f.querySelector('[name="ai-prompt"]').value.trim(),l=30;if(p.length<l){alert("Por favor, proporciona un poco más de detalle sobre tu solicitud.");return;}const c=f.querySelector('input[name="ai-contact"]'),v=c?c.value.trim():"",em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(v),isP=ph.test(v);if(!isE&&!isP){alert("Introduce un correo electrónico o número de teléfono válido.");return;}const b=f.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent="Enviando...";}const d=new FormData(f);try{const r=await fetch(f.action,{method:"POST",body:d,headers:{Accept:"application/json"}});if(r.ok){try{const u=new URL(window.location.href);u.searchParams.set("sent","1");window.history.replaceState({}, "", u.toString());}catch(_){ }f.reset();f.style.display="none";m.style.display="block";}else alert("Ha ocurrido un error al enviar el formulario.");}catch(_){alert("Error de red. Por favor, inténtalo de nuevo.");}finally{if(b){b.disabled=false;b.textContent="Obtener presupuesto";}}});})();</script>
+
 
   <!-- Toggle multiselección: mismos textos pero ya adaptados arriba -->
   <script>
