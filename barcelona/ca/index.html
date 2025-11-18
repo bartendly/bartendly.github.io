@@ -411,34 +411,7 @@
     </div>
   </footer>
 
-  <!-- ⬇️ mateixos <script> de la versió EN, amb textos en CA ⬇️ -->
-  <script>
-    const aiform=document.getElementById('ai-request-form'),
-          aisuccessMessage=document.getElementById('ai-success-message');
-    if(aiform&&aisuccessMessage){
-      aiform.addEventListener('submit',async e=>{
-        e.preventDefault();
-        const userPrompt=aiform.querySelector('[name="ai-prompt"]').value.trim(),
-              minLength=30;
-        if(userPrompt.length<minLength){alert("Si us plau, afegeix una mica més de detall.");return;}
-        const contactValue=aiform.querySelector('input[name="ai-contact"]').value.trim(),
-              emailPattern=/[^\s@]+@[^\s@]+\.[^\s@]+/,
-              phonePattern=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,
-              isEmail=emailPattern.test(contactValue),
-              isPhone=phonePattern.test(contactValue);
-        if(!isEmail&&!isPhone){alert('Introdueix un email o telèfon vàlid.');return;}
-        const submitBtn=aiform.querySelector('button[type="submit"]');
-        submitBtn.disabled=true; submitBtn.textContent='Enviant...';
-        const data=new FormData(aiform);
-        try{
-          const response=await fetch(aiform.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});
-          if(response.ok){ aiform.reset(); aiform.style.display='none'; aisuccessMessage.style.display='block'; }
-          else{ alert('Ups, alguna cosa ha fallat en enviar el missatge.'); }
-        }catch(err){ alert('Error de xarxa. Torna-ho a provar més tard.'); }
-        finally{ submitBtn.disabled=false; submitBtn.textContent='Obtenir pressupost'; }
-      });
-    }
-  </script>
+  <script>(function(){const f=document.getElementById("ai-request-form"),m=document.getElementById("ai-success-message");if(!f||!m)return;f.addEventListener("submit",async function(e){e.preventDefault();const p=f.querySelector('[name="ai-prompt"]').value.trim(),l=30;if(p.length<l){alert("Si us plau, dóna una mica més de detall sobre la teva sol·licitud.");return;}const c=f.querySelector('input[name="ai-contact"]'),v=c?c.value.trim():"",em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(v),isP=ph.test(v);if(!isE&&!isP){alert("Introdueix un correu electrònic o un número de telèfon vàlid.");return;}const b=f.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent="Enviant...";}const d=new FormData(f);try{const r=await fetch(f.action,{method:"POST",body:d,headers:{Accept:"application/json"}});if(r.ok){try{const u=new URL(window.location.href);u.searchParams.set("sent","1");window.history.replaceState({}, "", u.toString());}catch(_){ }f.reset();f.style.display="none";m.style.display="block";}else alert("S'ha produït un error en enviar el formulari.");}catch(_){alert("Error de xarxa. Torna-ho a provar.");}finally{if(b){b.disabled=false;b.textContent="Obtenir pressupost";}}});})();</script>
 
   <script>
     document.querySelectorAll('.ai-toggle-group').forEach(g=>{
