@@ -599,7 +599,42 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
-      
+      {
+        slug: "audreyhands",
+        name: "Audrey Hands",
+        city: "Mexico City",
+        locationDisplay: "Mexico City (CDMX)",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Franco-British hospitality leader, educator & former Global Brand Ambassador with 20+ years international experience",
+        tagline: "From behind the bar to global strategy — shaping culture through hospitality.",
+        experience: [
+          { icon: "🌍", text: "20+ years experience across UK, Italy, Australia, Canada & Mexico" },
+          { icon: "🍸", text: "Bartender, educator & hospitality strategist with background in bars, restaurants & hotels" },
+          { icon: "🏛️", text: "Degree in Latin Languages – King’s College London" },
+          { icon: "🌟", text: "Global Brand Ambassador for Havana Club International (2016–2023)" },
+          { icon: "💼", text: "Creative consultant for alcohol brands & hospitality venues since 2023" },
+          { icon: "🎭", text: "Creator & organizer of AFTERMISIA — one of Mexico City’s key industry after-hours events" },
+          { icon: "🗣️", text: "Languages: English, French, Spanish, Portuguese, Italian" }
+        ],
+        signatureCocktails: [],
+        services: [
+          { icon: "🧑‍🏫", text: "Hospitality education & brand advocacy" },
+          { icon: "🎨", text: "Creative consultancy for bars, brands & concepts" },
+          { icon: "🍸", text: "Event curation & experiential design" },
+          { icon: "🏢", text: "Strategy & guest experience development" }
+        ],
+        more: [
+          { icon: "🌙", text: "Founder of Aftermisia, Mexico City’s iconic industry gathering" },
+          { icon: "📚", text: "Specialties: hospitality culture, education & brand storytelling" },
+          { icon: "📸", text: 'Instagram: <a href="https://www.instagram.com/audrey.hands" target="_blank">@audrey.hands</a>' }
+        ],
+        instagram: "https://www.instagram.com/audrey.hands",
+        shortDescription: "CDMX-based hospitality leader, ex-Havana Club global ambassador and creative consultant with 20+ years international experience.",
+        languages: ["English", "French", "Spanish", "Portuguese", "Italian"],
+        directBooking: false,
+        showGallery: false
+      },
        
   ];
   
