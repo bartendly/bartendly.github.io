@@ -133,13 +133,14 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .hero-topnav-whatsapp:hover,.hero-topnav-whatsapp:focus{background:#ff6d21;border-color:#ffae3a;}
 @media(max-width:700px){.hero-topnav-whatsapp{padding:0.26em 0.34em;margin-left:0.2rem;}.hero-topnav-whatsapp svg{width:22px;height:22px;}}
  
-.whatsapp-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:9999;display:none;align-items:center;gap:10px;padding:14px 16px;border-radius:999px;text-decoration:none;font-weight:700;line-height:1;letter-spacing:.2px;background:#20c05c;color:#0b0b0b;box-shadow:0 10px 24px rgba(0,0,0,.28);transform:translateZ(0);transition:transform .16s ease,box-shadow .16s ease,opacity .16s ease}
+.whatsapp-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:9999;display:none;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;text-decoration:none;font-weight:800;line-height:1;letter-spacing:.2px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(31,143,74,.9);box-shadow:0 10px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:translateZ(0);transition:transform .16s ease,box-shadow .16s ease,opacity .16s ease}
 @media (hover:none) and (pointer:coarse){.whatsapp-float{display:inline-flex}}
 .whatsapp-float:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.34)}
-.whatsapp-float:focus-visible{outline:3px solid rgba(255,255,255,.8);outline-offset:3px}
-.whatsapp-float__icon{width:22px;height:22px;display:inline-flex}
-.whatsapp-float__icon svg{width:22px;height:22px;fill:currentColor}
+.whatsapp-float:active{transform:translateY(0);opacity:.95}
+.whatsapp-float:focus-visible{outline:3px solid rgba(255,255,255,.85);outline-offset:3px}
 .whatsapp-float__label{font-size:15px}
+.whatsapp-float__icon{width:22px;height:22px;display:inline-flex;color:#1f8f4a}
+.whatsapp-float__icon svg{width:22px;height:22px;fill:currentColor}
 @media (prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
 
   </style>
@@ -220,7 +221,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     <nav class="hero-topnav" aria-label="Top navigation">
       <a href="/bartenders/?city=hong kong">Bartenders</a>
       <a
-      href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20get%20a%20quote%20for%20a%20bartender%20in%20Hong%20Kong.%0A%0AIf%20helpful%2C%20here%20are%20some%20details%3A%0A%E2%80%A2%20Date%20%26%20time%3A%20____%0A%E2%80%A2%20Location%20%2F%20area%3A%20____%0A%E2%80%A2%20Guests%3A%20____%0A%E2%80%A2%20Type%20of%20event%3A%20____%0A%E2%80%A2%20Alcohol%20%2F%20ice%20%2F%20glassware%20provided%3F%20____%0A%E2%80%A2%20(Optional)%20budget%20range%3A%20____"
+      href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20get%20a%20quote%20for%20a%20bartender%20in%20Hong%20Kong.%0A%0AIf%20helpful%2C%20a%20few%20details%3A%0A%E2%80%A2%20Date%20%26%20time%3F%0A%E2%80%A2%20Location%20%2F%20area%3F%0A%E2%80%A2%20Number%20of%20guests%3F%0A%E2%80%A2%20Type%20of%20event%3F%0A%E2%80%A2%20Alcohol%20%2F%20ice%20%2F%20glassware%20provided%3F%0A%E2%80%A2%20(Optional)%20budget%20range%3F"
       target="_blank"
       class="hero-topnav-whatsapp"
       rel="noopener"
@@ -242,7 +243,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         placeholder='📅 Sat 12 Oct   👥 45 guests   📍 Central rooftop   ⏰ 7–11pm  Birthday with a gin & tonic bar'></textarea>     
         <!-- Contact (transparent) -->
         <label for="ai-contact" class="sr-only">Your contact information</label>
-        <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferred) or Email + contact name" required autocomplete="off" />
+        <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (fastest) or Email + contact name" required autocomplete="off" />
          
          <!-- Multi-select: What should we supply? -->
         <label for="supplies" class="ai-label">What should we supply?</label>
@@ -419,25 +420,21 @@ const aiform=document.getElementById('ai-request-form'),aisuccessMessage=documen
 <!-- Floating WhatsApp button (HK only) -->
 <script>document.querySelector('[data-whatsapp-float]')&&/WhatsApp/i.test(navigator.userAgent)&&(document.querySelector('[data-whatsapp-float]').style.display='none');</script>
 
-
 <a
-  href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20get%20a%20quote%20for%20a%20bartender%20in%20Hong%20Kong.%0A%0AIf%20helpful%2C%20here%20are%20some%20details%3A%0A%E2%80%A2%20Date%20%26%20time%3A%20____%0A%E2%80%A2%20Location%20%2F%20area%3A%20____%0A%E2%80%A2%20Guests%3A%20____%0A%E2%80%A2%20Type%20of%20event%3A%20____%0A%E2%80%A2%20Alcohol%20%2F%20ice%20%2F%20glassware%20provided%3F%20____%0A%E2%80%A2%20(Optional)%20budget%20range%3A%20____"
   class="whatsapp-float"
+  href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20get%20a%20quote%20for%20a%20bartender%20in%20Hong%20Kong.%0A%0AIf%20helpful%2C%20a%20few%20details%3A%0A%E2%80%A2%20Date%20%26%20time%3F%0A%E2%80%A2%20Location%20%2F%20area%3F%0A%E2%80%A2%20Number%20of%20guests%3F%0A%E2%80%A2%20Type%20of%20event%3F%0A%E2%80%A2%20Alcohol%20%2F%20ice%20%2F%20glassware%20provided%3F%0A%E2%80%A2%20(Optional)%20budget%20range%3F"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Chat with Bartendly on WhatsApp"
-  data-whatsapp-float
+  aria-label="Chat with us on WhatsApp"
 >
+  <span class="whatsapp-float__label">Chat with us</span>
   <span class="whatsapp-float__icon" aria-hidden="true">
-    <!-- Simple WhatsApp-like icon (SVG) -->
     <svg viewBox="0 0 32 32" focusable="false" role="img">
       <path d="M16 3C9.4 3 4 8.1 4 14.4c0 2.3.8 4.6 2.3 6.5L5 29l8.3-1.9c1.7.6 3.4.9 5.2.9 6.6 0 12-5.1 12-11.4S22.6 3 16 3zm0 21.7c-1.7 0-3.3-.3-4.8-1l-.5-.2-4.9 1.1 1-4.6-.3-.5c-1.3-1.7-2-3.7-2-5.9C4.5 9.5 9.1 5 16 5s11.5 4.5 11.5 9.4S22.9 24.7 16 24.7z"/>
       <path d="M22.3 18.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.8.2-.9 1-1.1 1.2-.4.2-.7 0c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.6-1.8-1.8-2.1s0-.5.2-.7c.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.8-1.8-1.1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/>
     </svg>
   </span>
-  <span class="whatsapp-float__label">Chat with us</span>
 </a>
-
 
 </body>
 </html>
