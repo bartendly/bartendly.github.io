@@ -635,6 +635,46 @@ window.bartenders = [
         directBooking: false,
         showGallery: false
       },
+
+      {
+        slug: "iacopodefalco", 
+        name: "Iacopo De Falco",
+        city: "London",
+        locationDisplay: "London, UK",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Senior mixologist with 10+ years experience in luxury hotels, corporate events and international brand activations",
+        tagline: "Elevated cocktails and flawless service for premium events",
+        experience: [
+          { icon: "🍸", text: "10+ years experience in high-end bars, luxury hotels and private events" },
+          { icon: "🏨", text: "Former Head Bartender & Bar Manager at The London EDITION, Sanderson Hotel, Hoxton Holborn" },
+          { icon: "🏎️", text: "Corporate & brand activations including Formula 1 (Aston Martin) and VIP events" },
+          { icon: "🌍", text: "International event experience: UK, Monaco, Abu Dhabi, Las Vegas, Belgium" },
+          { icon: "🎓", text: "European Bartender School graduate (A Grade – 95%)" },
+          { icon: "🗣️", text: "Languages: Italian, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Classic cocktails with a refined, modern twist" },
+          { icon: "🍊", text: "Bespoke signature cocktails tailored to each event" },
+          { icon: "🍸", text: "Premium spirit-forward and elegant cocktail menus" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events: birthdays, weddings, high-end home parties" },
+          { icon: "🏢", text: "Corporate events, office parties & brand activations" },
+          { icon: "🧑‍🏫", text: "Cocktail masterclasses & interactive experiences" },
+          { icon: "✨", text: "Luxury & VIP event bartending" }
+        ],
+        more: [
+          { icon: "👨‍💼", text: "Strong background in event coordination and team leadership" },
+          { icon: "🍽️", text: "Experienced in pairing cocktails with food and event concepts" }
+        ],
+        instagram: "", // not mandatory for senior profiles
+        shortDescription: "London-based senior mixologist specialising in premium private and corporate events.",
+        languages: ["Italian", "English"],
+        directBooking: true,
+        showGallery: false
+      },
+      
        
   ];
   
