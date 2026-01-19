@@ -133,8 +133,9 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .hero-topnav-whatsapp:hover,.hero-topnav-whatsapp:focus{background:#ff6d21;border-color:#ffae3a;}
 @media(max-width:700px){.hero-topnav-whatsapp{padding:0.26em 0.34em;margin-left:0.2rem;}.hero-topnav-whatsapp svg{width:22px;height:22px;}}
  
-.whatsapp-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:9999;display:none;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;text-decoration:none;font-weight:800;line-height:1;letter-spacing:.2px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(31,143,74,.9);box-shadow:0 10px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:translateZ(0);transition:transform .16s ease,box-shadow .16s ease,opacity .16s ease}
+.whatsapp-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:9999;display:none;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;text-decoration:none;font-weight:800;line-height:1;letter-spacing:.2px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(31,143,74,.9);box-shadow:0 10px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:translateZ(0);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,transform .22s ease,box-shadow .16s ease}
 @media (hover:none) and (pointer:coarse){.whatsapp-float{display:inline-flex}}
+.whatsapp-float.is-visible{opacity:1;visibility:visible;pointer-events:auto}
 .whatsapp-float:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.34)}
 .whatsapp-float:active{transform:translateY(0);opacity:.95}
 .whatsapp-float:focus-visible{outline:3px solid rgba(255,255,255,.85);outline-offset:3px}
@@ -417,16 +418,18 @@ const aiform=document.getElementById('ai-request-form'),aisuccessMessage=documen
 <script src="/assets/js/bartendly-carousel.js"></script>
 
 
-<!-- Floating WhatsApp button (HK only) -->
-<script>document.querySelector('[data-whatsapp-float]')&&/WhatsApp/i.test(navigator.userAgent)&&(document.querySelector('[data-whatsapp-float]').style.display='none');</script>
-
-<a
-  class="whatsapp-float"
+<!-- Floating WhatsApp button (HK only) 
+<script>document.querySelector('[data-whatsapp-float]')&&/WhatsApp/i.test(navigator.userAgent)&&(document.querySelector('[data-whatsapp-float]').style.display='none');</script>-->
+<script>
+  (()=>{const b=document.querySelector('[data-whatsapp-float]');if(!b)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){b.remove();return;}window.setTimeout(()=>{b.classList.add('is-visible');},3800);})();
+</script>
+  
+<a class="whatsapp-float" data-whatsapp-float
   href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20get%20a%20quote%20for%20a%20bartender%20in%20Hong%20Kong.%0A%0AIf%20helpful%2C%20a%20few%20details%3A%0A%E2%80%A2%20Date%20%26%20time%3F%0A%E2%80%A2%20Location%20%2F%20area%3F%0A%E2%80%A2%20Number%20of%20guests%3F%0A%E2%80%A2%20Type%20of%20event%3F%0A%E2%80%A2%20Alcohol%20%2F%20ice%20%2F%20glassware%20provided%3F%0A%E2%80%A2%20(Optional)%20budget%20range%3F"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Chat with us on WhatsApp"
->
+  aria-label="Chat with us on WhatsApp">
+
   <span class="whatsapp-float__label">Chat with us</span>
   <span class="whatsapp-float__icon" aria-hidden="true">
     <svg viewBox="0 0 32 32" focusable="false" role="img">
