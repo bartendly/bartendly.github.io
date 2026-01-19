@@ -120,7 +120,10 @@
             <label><input type="checkbox" name="I-am-Bartender" required />I confirm I am a professional bartender and all info is accurate.</label>
           </div>
         <div class="checkbox-block">
-            <label><input type="checkbox" name="agree-terms-conditions" required />I understand Bartendly is a digital platform only, not an event organizer, and I am legally responsible for my services. I have read and agree to the <a href="/terms" target="_blank" style="color:#ffae3a; text-decoration:underline;">Terms &amp; Conditions</a>.</label>
+          <label>
+            <input type="checkbox" name="agree-bartender-conditions" required />
+            I confirm I am an independent professional (not an employee of Bartendly). I understand Bartendly is not an event organizer and I remain legally responsible for my services. I have read and agree to the <a href="/bartenders/bartender-conditions" target="_blank" style="color:#ffae3a; text-decoration:underline;">Bartender Professional Conditions (Annex A)</a>.
+          </label>
         </div>
         <div class="checkbox-block">
           <label><input type="checkbox" name="consent-use-of-data" required />I allow Bartendly to use my profile info/photos and contact me about gigs.</label>
@@ -205,8 +208,12 @@
     </div>
     <p>&copy; 2025 Bartendly. All rights reserved.</p>
     <div class="legal-disclaimer">
-      Bartendly is a digital platform only. <a href="/terms" target="_blank">See terms & disclaimer</a>.
-    </div>
+      For bartenders:
+      <a href="/bartenders/bartender-conditions" target="_blank">Bartender Professional Conditions (Annex A)</a>.
+      &nbsp;|&nbsp;
+      For clients:
+      <a href="/terms" target="_blank">Service Terms</a>.
+    </div>    
   </footer>
 <script>
   const joinForm=document.getElementById('join-form'),joinSuccess=document.getElementById('join-success');if(joinForm&&joinSuccess){joinForm.addEventListener('submit',async e=>{e.preventDefault();const c=joinForm.querySelector('[name="contact"]').value.trim(),em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(c),isP=ph.test(c);if(!isE&&!isP){alert("Please enter a valid WhatsApp number or email address.");return;}for(const cb of joinForm.querySelectorAll('input[type="checkbox"][required]'))if(!cb.checked){alert("Please accept all conditions to join Bartendly.");return;}const btn=joinForm.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending...';const data=new FormData(joinForm);try{const r=await fetch(joinForm.action,{method:'POST',body:data,headers:{'Accept':'application/json'}});if(r.ok){joinForm.reset();joinForm.style.display='none';joinSuccess.style.display='block';}else{alert('Oops! Something went wrong while sending your application.');}}catch(e){alert('Network error. Please try again later.');}finally{btn.disabled=false;btn.textContent='Join Bartendly';}});}
