@@ -30,6 +30,13 @@
 </url>
 
 <url>
+  <loc>https://www.bartendly.com/madrid/</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.bartendly.com/madrid/" />
+  <xhtml:link rel="alternate" hreflang="es" href="https://www.bartendly.com/madrid/es/" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bartendly.com/madrid/" />
+</url>
+
+<url>
   <loc>https://www.bartendly.com/london/blog/why-london-bartenders-stand-out.html</loc>
 </url>
 <url>
