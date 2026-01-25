@@ -221,27 +221,27 @@ main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;pad
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form-mockup" target="_self">
         <input type="hidden" name="city" value="Hong Kong">
 
+         <!-- Event type (single select) -->
+         <label class="ai-label">Event type <span style="opacity:.75;font-weight:500">(optional)</span></label>
+         <div class="ai-toggle-group" data-name="event_type" data-multi="false" id="event-type" role="group" aria-label="Event type">
+           <button type="button" class="ai-toggle" data-value="Corporate event" aria-pressed="false">Corporate</button>
+           <button type="button" class="ai-toggle" data-value="Trade show / expo stand" aria-pressed="false">Trade show</button>
+           <button type="button" class="ai-toggle" data-value="Brand activation" aria-pressed="false">Brand</button>
+           <button type="button" class="ai-toggle" data-value="VIP reception" aria-pressed="false">VIP reception</button>
+         </div>
+         <input type="hidden" name="event_type">
+
         <label for="ai-prompt" class="sr-only">Your Request</label>
         <textarea name="ai-prompt" id="ai-prompt" class="main-event-input" rows="3" required placeholder="📅 Fri 21 Mar   👥 80 guests 👤 2 Bartenders 📍 HKCEC (Wan Chai)   ⏰ 4–9pm  Brand booth cocktails + champagne service"></textarea>
 
         <label for="ai-contact" class="sr-only">Your contact information</label>
         <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (fastest) or Email + contact name" required autocomplete="off" />
 
-        <label for="event_type" class="ai-label">Event type</label>
-        <div class="ai-toggle-group" data-name="event_type" data-multi="false" id="event_type" role="group" aria-label="Event type">
-          <button type="button" class="ai-toggle" data-value="Corporate" aria-pressed="false">🏢 Corporate</button>
-          <button type="button" class="ai-toggle" data-value="Brand activation" aria-pressed="false">✨ Brand</button>
-          <button type="button" class="ai-toggle" data-value="Trade show / Expo" aria-pressed="false">🎪 Expo</button>
-          <button type="button" class="ai-toggle" data-value="Premium private" aria-pressed="false">🥂 Private</button>
-          <button type="button" class="ai-toggle" data-value="Workshop" aria-pressed="false">🧑‍🏫 Workshop</button>
-        </div>
-        <input type="hidden" name="event_type" required>
-
-        <button type="submit" class="ai-submit">Get a Quote</button>
+        <button type="submit" class="ai-submit">Request Staffing</button>
 
         <div class="booking-legal-disclaimer">
-          By submitting, you agree to our <a href="/terms" target="_blank">Terms & Disclaimer</a>.
-          <span class="fineprint">We confirm staffing with an invoice + deposit. Alcohol is supplied by the venue or client.</span>
+          By submitting, you agree to our <a href="/terms" target="_blank">Terms & Conditions</a>.
+          <p class="fineprint">Bartendly coordinates staffing. Alcohol is supplied by the venue or client.</p>
         </div>
       </form>
 
