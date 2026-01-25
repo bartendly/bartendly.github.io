@@ -674,7 +674,44 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },
-      
+      {
+        slug: "javiercastellon",
+        name: "Javier Castellón",
+        city: "Madrid",
+        locationDisplay: "Madrid, Spain",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Cuban Head Bartender in Madrid with 7+ years experience in award-winning cocktail bars and signature mixology",
+        tagline: "From Havana roots to world-class Madrid cocktails",
+        experience: [
+          { icon: "🍸", text: "7+ years professional bartending experience, specialising in modern cocktail craft" },
+          { icon: "🏆", text: "Head Bartender at Devils Cut Madrid — award-winning cocktail destination" },
+          { icon: "🌍", text: "Devils Cut ranked among Top 500 Bars worldwide and recognised internationally (2025)" },
+          { icon: "🥇", text: "Best Cocktail Bar of Spain – FIBAR Awards 2025" },
+          { icon: "⭐", text: "Best New International Cocktail Bar 2025 – Tales of the Cocktail" },
+          { icon: "🗣️", text: "Languages: Spanish, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🍋", text: "TōKuba — signature cocktail featured at La Casa del Daiquiri (Difford’s Guide)" },
+          { icon: "🍸", text: "Elegant rum-forward classics inspired by Cuban heritage" },
+          { icon: "✨", text: "Bespoke cocktail creations tailored to premium events" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events: birthdays, weddings, high-end home parties" },
+          { icon: "🏢", text: "Corporate receptions, brand activations and VIP gatherings" },
+          { icon: "🧑‍🏫", text: "Cocktail masterclasses and interactive tastings" },
+          { icon: "🍹", text: "Signature menu design and luxury mixology experiences" }
+        ],
+        more: [
+          { icon: "🇨🇺", text: "Cuban bartender bringing authentic rum culture and hospitality" },
+          { icon: "📍", text: "Based in Madrid, available for international guest shifts and events" }
+        ],
+        instagram: "https://www.instagram.com/jcastellon08",
+        shortDescription: "Award-winning Cuban Head Bartender in Madrid, specialist in signature cocktails and premium events.",
+        languages: ["Spanish", "English"],
+        directBooking: true,
+        showGallery: false
+      },  
        
   ];
   
