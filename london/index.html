@@ -204,12 +204,6 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     </a>
     </nav>
 
-    <!-- LANGUAGE SWITCHER -->
-    <nav class="lang-switch" aria-label="Language switcher">
-      <a href="/london/" class="selected" lang="en" aria-current="page">EN</a>
-      <!--<a href="/london/es/" lang="es">ES</a>-->
-    </nav>
-
     <div class="hero-content">
       <h1 class="hero-title">Bartender Staffing in London</h1>
       <div class="hero-subtitle">Corporate receptions, brand activations, agencies and premium private events — vetted professionals, handled end-to-end.</div>
@@ -217,16 +211,15 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form-mockup" target="_self">
         <input type="hidden" name="city" value="London">
 
-        <!-- Event type (single select) -->
-        <label class="ai-label">Event type <span style="opacity:.75;font-weight:500">(optional)</span></label>
-        <div class="ai-toggle-group" data-name="event_type" data-multi="false" id="event-type" role="group" aria-label="Event type">
-          <button type="button" class="ai-toggle" data-value="Corporate event" aria-pressed="false">🏢 Corporate</button>
-          <button type="button" class="ai-toggle" data-value="Brand activation" aria-pressed="false">✨ Brand</button>
-          <button type="button" class="ai-toggle" data-value="Agency / production" aria-pressed="false">🎬 Agency</button>
-          <button type="button" class="ai-toggle" data-value="Trade show / conference" aria-pressed="false">🎟️ Conference</button>
-          <button type="button" class="ai-toggle" data-value="Premium private reception" aria-pressed="false">🎩 Private</button>
-        </div>
-        <input type="hidden" name="event_type">
+         <!-- Event type (single select) -->
+         <label class="ai-label">Event type <span style="opacity:.75;font-weight:500">(optional)</span></label>
+         <div class="ai-toggle-group" data-name="event_type" data-multi="false" id="event-type" role="group" aria-label="Event type">
+           <button type="button" class="ai-toggle" data-value="Corporate event" aria-pressed="false">Corporate</button>
+           <button type="button" class="ai-toggle" data-value="Trade show / expo stand" aria-pressed="false">Trade show</button>
+           <button type="button" class="ai-toggle" data-value="Brand activation" aria-pressed="false">Brand</button>
+           <button type="button" class="ai-toggle" data-value="VIP reception" aria-pressed="false">VIP reception</button>
+         </div>
+         <input type="hidden" name="event_type">
 
         <label for="ai-prompt" class="sr-only">Your Request</label>
         <textarea name="ai-prompt" id="ai-prompt" class="main-event-input" rows="3" required
@@ -238,7 +231,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 
         <button type="submit" class="ai-submit">Request Staffing</button>
         <div class="booking-legal-disclaimer">
-          Confirmed by invoice + deposit. Bartendly coordinates professional bartender staffing. Alcohol supplied by the venue or client. <a href="/terms" target="_blank">Terms & Conditions</a>.
+          By submitting, you agree to our <a href="/terms" target="_blank">Terms & Conditions</a>.
+          <p class="fineprint">Bartendly coordinates staffing. Alcohol is supplied by the venue or client.</p>
         </div>
                 
       </form>
