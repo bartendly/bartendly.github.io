@@ -6,7 +6,6 @@
 
   <title>Join Bartendly | Bartender Gigs, Events & Visibility (HK • Barcelona • Madrid • London)</title>
   <meta name="description" content="Join Bartendly as a bartender. Get access to event opportunities, jobs, visibility, and a global hospitality network — starting with Hong Kong, Barcelona, Madrid and London. Apply in 2 minutes." />
-  <meta name="robots" content="index,follow" />
 
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://www.bartendly.com/bartenders/join/" />
@@ -26,35 +25,44 @@
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:var(--primary-hover);text-decoration:none}
 a:hover{text-decoration:underline}
-main{padding-top:68px}
-.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.78rem 1rem;background:rgba(16,16,20,.70);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-.brand{font-family:Poppins,Inter,sans-serif;font-weight:700;letter-spacing:-.5px;color:#fff;text-decoration:none;font-size:1.22rem}
+main{padding-top:66px}
+
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.72rem 1rem;background:rgba(16,16,20,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.brand{font-family:Poppins,Inter,sans-serif;font-weight:700;letter-spacing:-.5px;color:#fff;text-decoration:none;font-size:1.18rem}
 .toplinks{display:flex;gap:.5rem;align-items:center}
-.toplink{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 .65rem;border-radius:12px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.20);color:var(--primary-hover);font-weight:800;text-decoration:none;line-height:1}
+.toplink{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 .7rem;border-radius:12px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.20);color:var(--primary-hover);font-weight:900;text-decoration:none;line-height:1}
 .toplink:hover{background:rgba(255,109,33,.15);text-decoration:none}
 .toplink--primary{background:var(--primary);border-color:rgba(255,255,255,.08);color:#fff}
 .toplink--primary:hover{background:var(--primary-hover);color:#231e18}
 .toplink--wa{border-color:rgba(31,143,74,.9);color:#bfffd9}
 .toplink--wa:hover{background:rgba(31,143,74,.15);text-decoration:none}
-.hero{min-height:100vh;position:relative;overflow:hidden}
-.hero-bg,.hero-bg img,.hero-bg picture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,20,.18) 20%,rgba(16,16,20,.70) 58%,rgba(16,16,20,.98) 100%);z-index:1}
-.hero-inner{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:1.7rem 1.05rem 2.2rem}
-.kicker{display:inline-flex;gap:.5rem;align-items:center;color:#231e18;background:rgba(255,174,58,.96);padding:.35rem .7rem;border-radius:999px;font-weight:900;font-size:.92rem;box-shadow:0 10px 24px rgba(0,0,0,.18)}
-h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter-spacing:-1px;margin:.85rem 0 .55rem}
-.sub{max-width:760px;color:#ffe3cf;font-size:1.08rem;line-height:1.45;margin:0 0 .75rem}
-.sub2{max-width:760px;color:rgba(255,255,255,.92);opacity:.94;line-height:1.45;margin:0 0 .85rem}
-.trustline{margin:.05rem 0 .9rem;color:rgba(255,255,255,.92);opacity:.92}
-.hero-cta-row{display:flex;gap:.55rem;flex-wrap:wrap;margin:.55rem 0 1rem}
-.hero-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.72rem 1rem;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22);color:#fff;font-weight:900;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+
+.hero{min-height:100svh;position:relative;overflow:hidden}
+.hero-bg,.hero-bg img,.hero-bg picture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,20,.10) 0%,rgba(16,16,20,.35) 42%,rgba(16,16,20,.92) 100%);z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:980px;margin:0 auto;min-height:calc(100svh - 66px);padding:1.05rem 1.05rem 1.15rem;display:flex;flex-direction:column;gap:.65rem}
+.hero-top{max-width:820px}
+.kicker{display:inline-flex;gap:.5rem;align-items:center;color:#231e18;background:rgba(255,174,58,.96);padding:.34rem .7rem;border-radius:999px;font-weight:900;font-size:.92rem;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+h1{font-family:Poppins,Inter,sans-serif;font-size:2.15rem;line-height:1.05;letter-spacing:-1px;margin:.65rem 0 .45rem}
+.sub{max-width:760px;color:#ffe3cf;font-size:1.06rem;line-height:1.45;margin:0 0 .2rem}
+.sub2{max-width:760px;color:rgba(255,255,255,.92);opacity:.94;line-height:1.45;margin:0}
+.trustline{margin:.15rem 0 0;color:rgba(255,255,255,.92);opacity:.92}
+
+.hero-cta-row{margin-top:auto;display:flex;gap:.55rem;flex-wrap:wrap;padding-top:.25rem}
+.hero-cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.78rem 1.05rem;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.22);color:#fff;font-weight:950;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.18)}
 .hero-cta:hover{background:rgba(255,109,33,.12);text-decoration:none}
 .hero-cta--primary{background:var(--primary);border-color:rgba(255,255,255,.08)}
 .hero-cta--primary:hover{background:var(--primary-hover);color:#231e18}
-.benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:1.05rem 0 1.05rem}
-.benefit{background:rgba(20,20,26,.78);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:.9rem .95rem;box-shadow:0 6px 18px rgba(0,0,0,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.b-title{font-weight:900;color:var(--primary-hover);margin:0 0 .25rem}
+
+.section{max-width:980px;margin:0 auto;padding:1.35rem 1.05rem}
+.section h2{font-family:Poppins,Inter,sans-serif;color:var(--primary-hover);margin:0 0 .85rem;font-size:1.55rem;letter-spacing:-.3px}
+
+.benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;margin:0}
+.benefit{background:rgba(20,20,26,.92);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:.95rem 1rem;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+.b-title{font-weight:950;color:var(--primary-hover);margin:0 0 .25rem}
 .b-text{color:rgba(255,255,255,.92);line-height:1.4}
-.form-wrap{margin-top:1.05rem;background:rgba(10,10,14,.72);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:1.05rem 1rem 1rem;box-shadow:var(--shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+.form-wrap{background:rgba(10,10,14,.88);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:1.05rem 1rem 1rem;box-shadow:var(--shadow)}
 .form-title{margin:.1rem 0 .25rem;font-family:Poppins,Inter,sans-serif;font-size:1.35rem}
 .form-hint{margin:0 0 .75rem;color:rgba(255,255,255,.88);line-height:1.4}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
@@ -66,29 +74,28 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter
 .checks{margin:.85rem 0 .75rem;display:flex;flex-direction:column;gap:.6rem}
 .check{display:flex;gap:.6rem;align-items:flex-start;color:rgba(255,255,255,.92);line-height:1.35}
 .check input{width:18px;height:18px;margin-top:2px;accent-color:var(--primary-hover)}
-.cta{width:100%;border:none;border-radius:14px;background:var(--primary);color:#fff;font-weight:950;font-size:1.15rem;padding:.85rem 1rem;cursor:pointer;box-shadow:0 10px 22px rgba(255,109,33,.18);transition:transform .12s ease,background .14s ease,color .14s ease}
+.cta{width:100%;border:none;border-radius:14px;background:var(--primary);color:#fff;font-weight:950;font-size:1.15rem;padding:.9rem 1rem;cursor:pointer;box-shadow:0 10px 22px rgba(255,109,33,.18);transition:transform .12s ease,background .14s ease,color .14s ease}
 .cta:hover{background:var(--primary-hover);color:#231e18}
 .cta:active{transform:translateY(1px)}
 .micro{margin:.65rem 0 0;color:rgba(255,255,255,.80);font-size:.95rem;line-height:1.35}
-.success{margin-top:.9rem;background:#28a745;color:#fff;border-radius:12px;padding:.95rem 1rem;font-weight:800}
-.below{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:1rem}
-.secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.55rem .85rem;border-radius:12px;border:1px solid rgba(255,255,255,.10);background:rgba(0,0,0,.18);color:#fff;font-weight:850;text-decoration:none}
-.secondary:hover{background:rgba(255,109,33,.12);text-decoration:none}
-.section{max-width:980px;margin:0 auto;padding:1.45rem 1.05rem}
-.section h2{font-family:Poppins,Inter,sans-serif;color:var(--primary-hover);margin:0 0 .85rem;font-size:1.55rem;letter-spacing:-.3px}
+.success{margin-top:.9rem;background:#28a745;color:#fff;border-radius:12px;padding:.95rem 1rem;font-weight:900}
+
 .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}
 .step{background:var(--card);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:1rem}
 .s-title{font-weight:950;color:#fff;margin:0 0 .3rem}
 .s-text{color:rgba(255,255,255,.88);line-height:1.4}
+
 .section--faq{padding-top:0}
 .faq{background:var(--card);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:.85rem 1rem;margin:.6rem 0}
 .faq summary{cursor:pointer;font-weight:900;color:#fff}
 .faq p{margin:.55rem 0 0;color:rgba(255,255,255,.88);line-height:1.45}
+
 .footer{background:#16161a;color:#eee;text-align:center;padding:1.15rem 1rem 1.05rem}
 .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:.25rem;margin:.25rem 0}
 .footer-links a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:0 .6rem;border-radius:10px;color:var(--primary-hover);text-decoration:none}
 .footer-links a:hover{background:rgba(255,174,58,.08)}
 .footer p{margin:.4rem 0 0;color:rgba(255,255,255,.85)}
+
 .whatsapp-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:9999;display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;text-decoration:none;font-weight:900;line-height:1;letter-spacing:.2px;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(31,143,74,.9);box-shadow:0 10px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:translateZ(0);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,transform .22s ease,box-shadow .16s ease}
 .whatsapp-float.is-visible{opacity:1;visibility:visible;pointer-events:auto}
 .whatsapp-float:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.34);text-decoration:none}
@@ -97,22 +104,19 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter
 .whatsapp-float__label{font-size:15px}
 .whatsapp-float__icon{width:22px;height:22px;display:inline-flex;color:#1f8f4a}
 .whatsapp-float__icon svg{width:22px;height:22px;fill:currentColor}
+
 @media(max-width:820px){
-  h1{font-size:2.0rem}
+  h1{font-size:2.02rem}
   .benefits{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
-  .hero-bg,.hero-bg img,.hero-bg picture{object-position:center 48%}
+  .hero-bg,.hero-bg img{object-position:center 24%}
+  .hero-inner{padding-top:1.25rem}
 }
 @media(prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important}
   .whatsapp-float{transition:none}
 }
-@media(max-width:820px){
-  .hero-inner{padding-top:11rem}
-  .hero-bg,.hero-bg img{object-position:center 0%}
-}
-
   </style>
 
   <script type="application/ld+json">
@@ -120,7 +124,7 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter
   </script>
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who should join Bartendly?","acceptedAnswer":{"@type":"Answer","text":"Professional bartenders and mixologists who want more visibility, access to event opportunities, and a global network. We focus on quality and real hospitality experience."}},{"@type":"Question","name":"Is joining free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Creating your bartender profile and being listed is free. Optional premium features may exist later, but joining the network is free."}},{"@type":"Question","name":"Do you guarantee gigs?","acceptedAnswer":{"@type":"Answer","text":"No. Bartendly increases your visibility and access to opportunities. Gigs depend on demand in your city and availability. You always choose what you accept."}},{"@type":"Question","name":"Is Bartendly an agency or employer?","acceptedAnswer":{"@type":"Answer","text":"No. Bartendly is a platform that connects clients, bars and bartenders. Bartenders are independent professionals and remain responsible for their services."}},{"@type":"Question","name":"Where is Bartendly active?","acceptedAnswer":{"@type":"Answer","text":"Worldwide. Early focus: Hong Kong, Barcelona, Madrid and London — expanding fast into more cities (next: Singapore, Dubai, Miami)."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who should join Bartendly?","acceptedAnswer":{"@type":"Answer","text":"Professional bartenders and mixologists who want more visibility, access to event opportunities, and a global network. We focus on quality and real hospitality experience."}},{"@type":"Question","name":"Is joining free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Creating your bartender profile and being listed is free."}},{"@type":"Question","name":"Do you guarantee gigs?","acceptedAnswer":{"@type":"Answer","text":"No. Bartendly increases your visibility and access to opportunities. You choose what you accept."}},{"@type":"Question","name":"Is Bartendly an agency or employer?","acceptedAnswer":{"@type":"Answer","text":"No. Bartendly is a platform. Bartenders are independent professionals and remain responsible for their services."}},{"@type":"Question","name":"Where is Bartendly active?","acceptedAnswer":{"@type":"Answer","text":"Worldwide. Early focus: Hong Kong, Barcelona, Madrid and London — expanding fast into more cities (next: Singapore, Dubai, Miami)."}}]}
   </script>
 </head>
 
@@ -143,135 +147,77 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter
       </picture>
 
       <div class="hero-inner">
-        <div class="kicker">Bartenders • Events • Jobs • Visibility</div>
-        <h1>Join Bartendly</h1>
-
-        <p class="sub">
-          Apply once. Get access to <strong>event opportunities</strong>, <strong>bartender jobs</strong>, <strong>visibility</strong> and a <strong>worldwide</strong> hospitality network — with early focus on <strong>Hong Kong</strong>, <strong>Barcelona</strong>, <strong>Madrid</strong> and <strong>London</strong>.
-        </p>
-
-        <p class="sub2">
-          Worldwide app (events + jobs + network). Expanding fast into more cities — next: <strong>Singapore</strong>, <strong>Dubai</strong>, <strong>Miami</strong>.
-        </p>
-
-        <div class="trustline">
-          Built by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" rel="noopener">@world.of.mixologists</a>.
+        <div class="hero-top">
+          <div class="kicker">Bartenders • Events • Jobs • Visibility</div>
+          <h1>Join Bartendly</h1>
+          <p class="sub">Apply once. Get access to <strong>event opportunities</strong>, <strong>bartender jobs</strong>, <strong>visibility</strong> and a <strong>worldwide</strong> hospitality network — with early focus on <strong>Hong Kong</strong>, <strong>Barcelona</strong>, <strong>Madrid</strong> and <strong>London</strong>.</p>
+          <p class="sub2">Worldwide app (events + jobs + network). Expanding fast — next: <strong>Singapore</strong>, <strong>Dubai</strong>, <strong>Miami</strong>.</p>
+          <div class="trustline">Built by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" rel="noopener">@world.of.mixologists</a>.</div>
         </div>
 
         <div class="hero-cta-row">
           <a class="hero-cta hero-cta--primary" href="#apply" data-scroll>Apply in 2 minutes</a>
           <a class="hero-cta" href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%27m%20a%20bartender%20and%20I%27d%20like%20to%20join.%0A%0ACity%3A%20%0AInstagram%3A%20%0AExperience%3A%20" target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
+      </div>
+    </section>
 
-        <div class="benefits" role="list">
-          <div class="benefit" role="listitem">
-            <div class="b-title">More opportunities</div>
-            <div class="b-text">Private & corporate events, brand activations, and staffing requests when available in your city.</div>
-          </div>
-          <div class="benefit" role="listitem">
-            <div class="b-title">More visibility</div>
-            <div class="b-text">A clean profile clients and bars can discover — beyond DMs and agency lists.</div>
-          </div>
-          <div class="benefit" role="listitem">
-            <div class="b-title">Worldwide app access</div>
-            <div class="b-text">Curated bar events, guest shifts, job opportunities and professional connections.</div>
-          </div>
-          <div class="benefit" role="listitem">
-            <div class="b-title">You stay in control</div>
-            <div class="b-text">You choose gigs. You accept only what fits your schedule, style and rate.</div>
-          </div>
-        </div>
+    <section class="section" aria-label="Benefits">
+      <h2>Why join</h2>
+      <div class="benefits" role="list">
+        <div class="benefit" role="listitem"><div class="b-title">More opportunities</div><div class="b-text">Private & corporate events, brand activations, and staffing requests when available in your city.</div></div>
+        <div class="benefit" role="listitem"><div class="b-title">More visibility</div><div class="b-text">A clean profile clients and bars can discover — beyond DMs and agency lists.</div></div>
+        <div class="benefit" role="listitem"><div class="b-title">Worldwide app access</div><div class="b-text">Curated bar events, guest shifts, job opportunities and professional connections.</div></div>
+        <div class="benefit" role="listitem"><div class="b-title">You stay in control</div><div class="b-text">You choose gigs. You accept only what fits your schedule, style and rate.</div></div>
+      </div>
+    </section>
 
-        <div class="form-wrap" id="apply">
-          <h2 class="form-title">Apply in 2 minutes</h2>
-          <p class="form-hint">We review profiles for quality and authenticity. Once approved, we publish your profile and can reach out when opportunities match.</p>
+    <section class="section" aria-label="Apply">
+      <div class="form-wrap" id="apply">
+        <h2 class="form-title">Apply in 2 minutes</h2>
+        <p class="form-hint">We review profiles for quality and authenticity. Once approved, we publish your profile and can reach out when opportunities match.</p>
 
-          <form id="join-form" action="https://formspree.io/f/mdkdlpdn" method="POST" autocomplete="off">
-            <div class="grid">
-              <label class="field">
-                <span>Name</span>
-                <input type="text" name="name" required maxlength="44" placeholder="Full name" />
-              </label>
-
-              <label class="field">
-                <span>City</span>
-                <input type="text" name="city" required maxlength="48" placeholder="Hong Kong, Barcelona, Madrid, London…" />
-              </label>
-
-              <label class="field">
-                <span>WhatsApp</span>
-                <input type="text" name="contact" required maxlength="60" placeholder="+XX XXXXXXXX (full number)" />
-              </label>
-
-              <label class="field">
-                <span>Instagram</span>
-                <input type="text" name="instagram" required maxlength="50" placeholder="@yourhandle" />
-              </label>
-
-              <label class="field field--full">
-                <span>Bio / Info</span>
-                <textarea name="bio" required maxlength="1200" rows="7" placeholder="Write your profile as you want it to appear:
+        <form id="join-form" action="https://formspree.io/f/mdkdlpdn" method="POST" autocomplete="off">
+          <div class="grid">
+            <label class="field"><span>Name</span><input type="text" name="name" required maxlength="44" placeholder="Full name" /></label>
+            <label class="field"><span>City</span><input type="text" name="city" required maxlength="48" placeholder="Hong Kong, Barcelona, Madrid, London…" /></label>
+            <label class="field"><span>WhatsApp</span><input type="text" name="contact" required maxlength="60" placeholder="+XX XXXXXXXX (full number)" /></label>
+            <label class="field"><span>Instagram</span><input type="text" name="instagram" required maxlength="50" placeholder="@yourhandle" /></label>
+            <label class="field field--full"><span>Bio / Info</span><textarea name="bio" required maxlength="1200" rows="7" placeholder="Write your profile as you want it to appear:
 • Experience (venues, roles, years)
 • Signature style / cocktails
 • Awards (optional)
 • Services you offer (events, guest shifts, masterclasses)
-• Languages"></textarea>
-              </label>
-            </div>
+• Languages"></textarea></label>
+          </div>
 
-            <div class="checks">
-              <label class="check">
-                <input type="checkbox" name="confirm-pro" required />
-                <span>I confirm I’m a professional bartender and the info is accurate.</span>
-              </label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="confirm-pro" required /><span>I confirm I’m a professional bartender and the info is accurate.</span></label>
+            <label class="check"><input type="checkbox" name="agree-conditions" required /><span>I’m an independent professional (not an employee of Bartendly). Bartendly is not an event organizer. I agree to the <a href="/bartenders/bartender-conditions" target="_blank" rel="noopener">Bartender Professional Conditions</a>.</span></label>
+            <label class="check"><input type="checkbox" name="consent" required /><span>I allow Bartendly to publish my profile info and contact me about opportunities.</span></label>
+          </div>
 
-              <label class="check">
-                <input type="checkbox" name="agree-conditions" required />
-                <span>I’m an independent professional (not an employee of Bartendly). Bartendly is not an event organizer. I agree to the <a href="/bartenders/bartender-conditions" target="_blank" rel="noopener">Bartender Professional Conditions</a>.</span>
-              </label>
+          <button type="submit" class="cta">Join Bartendly</button>
+          <p class="micro">Tip: the more specific your bio is (venues + role + style), the faster we can publish it.</p>
+        </form>
 
-              <label class="check">
-                <input type="checkbox" name="consent" required />
-                <span>I allow Bartendly to publish my profile info and contact me about opportunities.</span>
-              </label>
-            </div>
-
-            <button type="submit" class="cta">Join Bartendly</button>
-            <p class="micro">Tip: the more specific your bio is (venues + role + style), the faster we can publish it.</p>
-          </form>
-
-          <div id="join-success" class="success" aria-live="polite" hidden>✅ Application received. We’ll contact you via WhatsApp/email after review.</div>
-        </div>
-
-        <div class="below">
-          <a class="secondary" href="https://app.bartendly.com" target="_blank" rel="noopener">Open app.bartendly.com</a>
-          <a class="secondary" href="/bartenders/" aria-label="Explore bartenders">Explore Bartenders</a>
-        </div>
+        <div id="join-success" class="success" aria-live="polite" hidden>✅ Application received. We’ll contact you via WhatsApp after review.</div>
       </div>
     </section>
 
     <section class="section">
       <h2>How it works</h2>
       <div class="steps">
-        <div class="step">
-          <div class="s-title">1) Apply</div>
-          <div class="s-text">Send your details once. No account creation needed.</div>
-        </div>
-        <div class="step">
-          <div class="s-title">2) Review</div>
-          <div class="s-text">We verify quality and publish the best profiles (curated, not spammy).</div>
-        </div>
-        <div class="step">
-          <div class="s-title">3) Opportunities</div>
-          <div class="s-text">When a client/bar request matches your city and availability, we contact you.</div>
-        </div>
+        <div class="step"><div class="s-title">1) Apply</div><div class="s-text">Send your details once. No account creation needed.</div></div>
+        <div class="step"><div class="s-title">2) Review</div><div class="s-text">We verify quality and publish the best profiles (curated, not spammy).</div></div>
+        <div class="step"><div class="s-title">3) Opportunities</div><div class="s-text">When a client/bar request matches your city and availability, we contact you.</div></div>
       </div>
     </section>
 
     <section class="section section--faq">
       <h2>FAQ</h2>
       <details class="faq"><summary>Do you guarantee gigs?</summary><p>No. Bartendly improves your visibility and access to opportunities. Demand varies by city and season. You always choose what you accept.</p></details>
-      <details class="faq"><summary>Is it free?</summary><p>Yes. Joining and being listed is free. Optional premium features may come later, but joining is free.</p></details>
+      <details class="faq"><summary>Is it free?</summary><p>Yes. Joining and being listed is free.</p></details>
       <details class="faq"><summary>Is Bartendly an agency?</summary><p>No. Bartendly is a platform. You remain an independent professional and responsible for your services.</p></details>
       <details class="faq"><summary>Which cities are a priority?</summary><p>Worldwide. Early focus: Hong Kong, Barcelona, Madrid and London — expanding fast into more cities (next: Singapore, Dubai, Miami).</p></details>
     </section>
@@ -295,9 +241,8 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.2rem;line-height:1.05;letter
     <span class="whatsapp-float__label">WhatsApp</span>
   </a>
 
- 
   <script>
-(function(){const f=document.getElementById('join-form'),s=document.getElementById('join-success');if(!f||!s)return;const isEmail=v=>/[^\s@]+@[^\s@]+\.[^\s@]+/.test(v),isPhone=v=>/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/.test(v);const wa=document.querySelector('[data-wa-float]');const showWA=()=>{if(!wa)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){wa.remove();return;}wa.classList.add('is-visible');};window.setTimeout(showWA,2800);f.addEventListener('submit',async function(e){e.preventDefault();const contact=(f.querySelector('[name="contact"]')?.value||'').trim();if(!isEmail(contact)&&!isPhone(contact)){alert('Please enter a valid WhatsApp number or email address.');return;}for(const cb of f.querySelectorAll('input[type="checkbox"][required]')){if(!cb.checked){alert('Please accept all conditions to join Bartendly.');return;}}const btn=f.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Sending...';}const data=new FormData(f);try{const r=await fetch(f.action,{method:'POST',body:data,headers:{Accept:'application/json'}});if(r.ok){try{const u=new URL(window.location.href);u.searchParams.set('applied','1');window.history.replaceState({},'',u.toString());}catch(_){ }f.reset();f.style.display='none';s.hidden=false;}else{alert('Oops! Something went wrong while sending your application.');}}catch(_){alert('Network error. Please try again later.');}finally{if(btn){btn.disabled=false;btn.textContent='Join Bartendly';}}});})();
+(function(){const f=document.getElementById('join-form'),s=document.getElementById('join-success');if(!f||!s)return;const isPhone=v=>/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/.test(v);const wa=document.querySelector('[data-wa-float]');const showWA=()=>{if(!wa)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){wa.remove();return;}wa.classList.add('is-visible');};window.setTimeout(showWA,2200);const smooth=(a)=>{const id=a.getAttribute('href');if(!id||id.charAt(0)!=='#')return;const el=document.querySelector(id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'start'});};document.querySelectorAll('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();smooth(a);}));f.addEventListener('submit',async function(e){e.preventDefault();const contact=(f.querySelector('[name="contact"]')?.value||'').trim();if(!isPhone(contact)){alert('Please enter a valid WhatsApp number (with country code).');return;}for(const cb of f.querySelectorAll('input[type="checkbox"][required]')){if(!cb.checked){alert('Please accept all conditions to join Bartendly.');return;}}const btn=f.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Sending...';}const data=new FormData(f);try{const r=await fetch(f.action,{method:'POST',body:data,headers:{Accept:'application/json'}});if(r.ok){f.reset();f.style.display='none';s.hidden=false;}else{alert('Oops! Something went wrong while sending your application.');}}catch(_){alert('Network error. Please try again later.');}finally{if(btn){btn.disabled=false;btn.textContent='Join Bartendly';}}});})();
   </script>
 </body>
 </html>
