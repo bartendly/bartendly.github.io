@@ -117,6 +117,18 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.15rem;line-height:1.05;lette
   *{scroll-behavior:auto!important}
   .whatsapp-float{transition:none}
 }
+
+.hero-copy{margin-top:clamp(18px,12vh,140px)}
+@media(min-width:821px){.hero-copy{margin-top:24px}}
+
+/*
+.hero-copy{margin-top:clamp(24px,15vh,170px)}
+@media(min-width:821px){.hero-copy{margin-top:24px}}
+
+*/
+
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,20,.08) 0%,rgba(16,16,20,.28) 32%,rgba(16,16,20,.92) 100%);z-index:1}
+
   </style>
 
   <script type="application/ld+json">
@@ -149,10 +161,13 @@ h1{font-family:Poppins,Inter,sans-serif;font-size:2.15rem;line-height:1.05;lette
       <div class="hero-inner">
         <div class="hero-top">
           <div class="kicker">Bartenders • Events • Jobs • Visibility</div>
-          <h1>Join Bartendly</h1>
-          <p class="sub">Apply once. Get access to <strong>event opportunities</strong>, <strong>bartender jobs</strong>, <strong>visibility</strong> and a <strong>worldwide</strong> hospitality network — with early focus on <strong>Hong Kong</strong>, <strong>Barcelona</strong>, <strong>Madrid</strong> and <strong>London</strong>.</p>
-          <p class="sub2">Worldwide app (events + jobs + network). Expanding fast — next: <strong>Singapore</strong>, <strong>Dubai</strong>, <strong>Miami</strong>.</p>
-          <div class="trustline">Built by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" rel="noopener">@world.of.mixologists</a>.</div>
+          
+          <div class="hero-copy">
+            <h1>Join Bartendly</h1>
+            <p class="sub">Apply once. Get access to <strong>event opportunities</strong>, <strong>bartender jobs</strong>, <strong>visibility</strong> and a <strong>worldwide</strong> hospitality network — with early focus on <strong>Hong Kong</strong>, <strong>Barcelona</strong>, <strong>Madrid</strong> and <strong>London</strong>.</p>
+            <p class="sub2">Worldwide app (events + jobs + network). Expanding fast — next: <strong>Singapore</strong>, <strong>Dubai</strong>, <strong>Miami</strong>.</p>
+            <div class="trustline">Built by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" rel="noopener">@world.of.mixologists</a>.</div>
+          </div>
         </div>
 
         <div class="hero-cta-row">
