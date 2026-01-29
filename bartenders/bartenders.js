@@ -712,6 +712,44 @@ window.bartenders = [
         directBooking: true,
         showGallery: false
       },  
+      {
+        slug: "leonardoalcantara",
+        name: "Leonardo Alcantara",
+        city: "Madrid",
+        locationDisplay: "Madrid, Spain",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Brazilian mixologist with 10+ years experience in high-end weddings and luxury events, now based in Madrid",
+        tagline: "Tropical creativity, classic mastery, and flawless event execution",
+        experience: [
+          { icon: "🍸", text: "10+ years professional experience in classic cocktails, mixology and premium event bartending" },
+          { icon: "💍", text: "Specialist in weddings and high-detail celebrations (1,000+ events delivered)" },
+          { icon: "🏆", text: "Former team member at Shakers Bar — leading luxury bar catering company in Brazil" },
+          { icon: "🌎", text: "Extensive experience with corporate events, VIP clients and international audiences" },
+          { icon: "🧪", text: "Known for creating exclusive syrups and bespoke ingredients for signature cocktails" },
+          { icon: "🗣️", text: "Languages: Portuguese, Spanish, English" }
+        ],
+        signatureCocktails: [
+          { icon: "🍍", text: "Tropical-inspired cocktails using fresh fruits and vibrant Brazilian flavours" },
+          { icon: "🥃", text: "World-class classics: Negroni, Old Fashioned, Daiquiri, Margarita" },
+          { icon: "✨", text: "Custom signature menus designed for each wedding or private event" }
+        ],
+        services: [
+          { icon: "🎉", text: "Private events: birthdays, home parties, celebrations" },
+          { icon: "💍", text: "Weddings: full cocktail service, signature drinks, premium guest experience" },
+          { icon: "🏢", text: "Corporate events, receptions and brand activations" },
+          { icon: "🧑‍🏫", text: "Cocktail workshops and knowledge-sharing sessions" }
+        ],
+        more: [
+          { icon: "🚚", text: "Strong operational background: bar setup, logistics and team coordination" },
+          { icon: "🌍", text: "Recently relocated from São Paulo to Madrid to grow internationally and collaborate globally" }
+        ],
+        instagram: "https://www.instagram.com/bartender_leo",
+        shortDescription: "Brazilian wedding & luxury event specialist in Madrid, combining tropical creativity with world-class classics.",
+        languages: ["Portuguese", "Spanish", "English"],
+        directBooking: true,
+        showGallery: true
+      },      
        
   ];
   
