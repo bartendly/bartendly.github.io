@@ -163,6 +163,26 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .pricing-hint{margin:10px 0 0 0;opacity:0.80;font-size:0.95rem;line-height:1.35;}
 .ai-optional{opacity:.75;font-weight:500;}
 
+.hero::before{content:"";position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(
+      circle at 50% 62%,
+      rgba(0,0,0,0.57) 0%,
+      rgba(0,0,0,0.42) 38%,
+      rgba(0,0,0,0.16) 62%,
+      rgba(0,0,0,0.00) 78%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(16,16,20,0.08) 0%,
+      rgba(16,16,20,0.20) 38%,
+      rgba(16,16,20,0.80) 78%,
+      rgba(16,16,20,0.95) 100%
+    );
+}
+.hero-title{text-shadow: 0 6px 26px rgba(0,0,0,0.92);}
+.hero-subtitle{text-shadow: 0 4px 18px rgba(0,0,0,0.85);}
+
  </style>
 
   <!-- Structured Data -->
