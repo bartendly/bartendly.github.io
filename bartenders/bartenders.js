@@ -750,6 +750,44 @@ window.bartenders = [
         directBooking: true,
         showGallery: true
       },      
-       
+      {
+        slug: "angelosparvoli",
+        name: "Angelo Sparvoli",
+        city: "London",
+        locationDisplay: "London · Available Worldwide",
+        photo: "hero-900.jpg",
+        gallery: [],
+        title: "Senior bartender and private hospitality specialist with over 10 years of experience in luxury hotels, UHNW residences, and global events",
+        tagline: "Discreet, refined cocktail service for exceptional occasions",
+        experience: [
+          { icon: "🏨", text: "Former Head Bartender at The American Bar, The Savoy (London)" },
+          { icon: "🌍", text: "10+ years in high-end hospitality, private residences, and international events" },
+          { icon: "💎", text: "Extensive experience with UHNW clients, luxury brands, and concierge-led events" },
+          { icon: "🍸", text: "Cocktail menu development, bar consultancy & brand-sensitive activations" },
+          { icon: "🏆", text: "Part of the award-winning team at The Savoy during World's Best Bar titles (2017–2018)" }
+        ],
+        signatureCocktails: [
+          { icon: "🥃", text: "Refined classics with luxury spirits" },
+          { icon: "🍸", text: "Elegant, minimalist signature cocktails" },
+          { icon: "✨", text: "Bespoke menus tailored to client, brand, or residence" }
+        ],
+        services: [
+          { icon: "🎩", text: "Private residences & UHNW events" },
+          { icon: "🏢", text: "Corporate events & executive hospitality" },
+          { icon: "🚀", text: "Luxury brand activations & VIP experiences" },
+          { icon: "🧠", text: "Cocktail consultancy & menu development" }
+        ],
+        more: [
+          { icon: "🏅", text: "Order of Merit for Excellence in Hospitality (2025)" },
+          { icon: "🥇", text: "Tio Pepe Challenge UK Winner (2023)" },
+          { icon: "🌐", text: "Founder of Angelo Sparvoli Private Hospitality" }
+        ],
+        instagram: "https://www.instagram.com/angelo_sparvoli",
+        shortDescription: "Former Savoy Head Bartender specialising in UHNW private events, luxury brands, and discreet premium cocktail service.",
+        languages: ["English", "Italian"],
+        directBooking: false,
+        showGallery: false
+      },
+      
   ];
   
