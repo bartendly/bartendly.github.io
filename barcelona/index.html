@@ -19,9 +19,15 @@ a { color: #ffae3a}
 .hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
 .hero-logo:active{opacity:.7;}
 /* Language Switcher */
-.lang-switch{position:absolute;top:1.1rem;right:1.7rem;z-index:11;display:flex;gap:0.26em;}
+/*.lang-switch{position:absolute;top:1.1rem;right:1.7rem;z-index:11;display:flex;gap:0.26em;}
 .lang-switch a{color:#fff;font-family:'Poppins',sans-serif;font-size:1.07em;padding:0.08em 0.77em 0.07em 0.77em;background:rgba(16,16,20,0.66);border-radius:13px;text-decoration:none;margin:0 0.09em;transition:background 0.14s, color 0.14s;font-weight:700;opacity:0.85;}
 .lang-switch a.selected,.lang-switch a:hover{background:var(--primary);color:#231e18;opacity:1;}
+*/
+.lang-switch {position: absolute;top: 1.1rem;right: 1.6rem;z-index: 11;display: flex;gap: .4em;font-family: 'Poppins', sans-serif;}
+.lang-switch a {background: none;padding: 0;border-radius: 0;font-size: 0.95em;font-weight: 600;color: rgba(255,255,255,0.7);text-decoration: none;}
+.lang-switch a.selected {color: #fff;font-weight: 800;}
+.lang-switch a:hover {color: var(--primary-hover);}
+
 .hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
 .ai-form-mockup{width:100%;max-width:91vw;display:flex;flex-direction:column;gap:0.52em;align-items:center;background:none;margin:0 auto;}
 .hero-title{font-size:1.23rem;font-family:'Poppins',sans-serif;font-weight:700;margin:0 0 0.42em 0;line-height:1.12;text-shadow:0 3px 14px #000d;color:#fff;letter-spacing:-.7px;text-align:left;}
@@ -151,6 +157,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .whatsapp-float__icon{width:22px;height:22px;display:inline-flex;color:#1f8f4a}
 .whatsapp-float__icon svg{width:22px;height:22px;fill:currentColor}
 @media (prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
+.whatsapp-float {background: rgba(16,16,20,0.55);border: 1px solid rgba(255,255,255,0.15);}
+.whatsapp-float__icon {color: #25D366;}
 
 .network-note{margin:-0.6em 0 0.9em 0;color:#cfcfcf;font-size:0.98rem;line-height:1.35;max-width:720px;}
 
@@ -227,8 +235,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     </picture>
     <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
 
-    <nav class="hero-topnav" aria-label="Top navigation">
-      <!--<a href="/bartenders/?city=barcelona">Team</a>-->
+    <!--<nav class="hero-topnav" aria-label="Top navigation">
       <a
       href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20request%20bartender%20staffing%20in%20Barcelona.%0A%0AIf%20helpful%2C%20a%20few%20details%3A%0A%E2%80%A2%20Event%20type%20(corporate%20%2F%20trade%20show%20%2F%20brand%20activation)%0A%E2%80%A2%20Dates%20%26%20hours%0A%E2%80%A2%20Venue%20%2F%20area%0A%E2%80%A2%20How%20many%20bartenders%0A%E2%80%A2%20Guests%20estimate%0A%E2%80%A2%20Dress%20code%20(if%20any)%0A%E2%80%A2%20Bar%20setup%20notes%20(if%20any)%0A%E2%80%A2%20Contact%20name%20%2B%20company"
       class="hero-topnav-whatsapp"
@@ -241,15 +248,17 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
         <path fill="#fff" d="M22.3 18.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.8.2-.2.2-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.4.1-.1.2-.3.3-.4.1-.1.1-.3 0-.5-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.3 3.1 1.5 3.3c.2.2 2.5 3.7 6 5.1.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5 0-.2-.3-.3-.6-.5z"/>
       </svg>
     </a>
-    </nav>
+    </nav>-->
 
     <!-- LANGUAGE SWITCHER -->
     <nav class="lang-switch" aria-label="Language switcher">
       <a href="/barcelona/" class="selected" lang="en" aria-current="page">EN</a>
+      <span>·</span>
       <a href="/barcelona/es/" lang="es">ES</a>
+      <span>·</span>
       <a href="/barcelona/ca/" lang="ca">CA</a>
     </nav>
-
+    
     <div class="hero-content">
       <h1 class="hero-title">Professional Bartender Staffing in Barcelona</h1>
       <div class="hero-subtitle">Bartender staffing in Barcelona for corporate events, trade shows and brands.</div>        
