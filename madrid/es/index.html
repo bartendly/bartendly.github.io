@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal de Bartenders en Madrid | Eventos Corporativos, Ferias IFEMA y Marcas | Bartendly</title>
-  <meta name="description" content="Personal profesional de bartenders en Madrid para eventos corporativos, ferias IFEMA y activaciones de marca. Equipos fiables, proceso claro, facturación y confirmación con depósito." />
+  <title>Staffing de Bartenders en Madrid | Ferias IFEMA, Eventos Corporativos y de Marca | Bartendly</title>
+  <meta name="description" content="Staffing profesional de bartenders en Madrid para ferias en IFEMA, hospitalidad corporativa y eventos de marca. Equipos fiables, cobertura multi-día, precios claros y confirmación rápida." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://www.bartendly.com/madrid/es/" />
@@ -153,11 +153,18 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 
 .network-note{margin:-0.6em 0 0.9em 0;color:#cfcfcf;font-size:0.98rem;line-height:1.35;max-width:720px;}
 
+.event-banner {position: sticky;top: 0;z-index: 999;display: flex;align-items: center;justify-content: center;gap: 0.6rem;padding: 0.55rem 0.9rem;background: rgba(16,16,20,0.82);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);border-bottom: 1px solid rgba(255,255,255,0.08);}
+.event-banner__text {font-weight: 800;color: #ffffff;text-shadow: 0 2px 10px rgba(0,0,0,0.35);}
+.event-banner__text strong {color: var(--primary-hover);}
+.event-banner__cta {display: inline-flex;align-items: center;justify-content: center;padding: 0.38em 0.75em;border-radius: 12px;background: var(--primary);color: #ffffff;font-weight: 900;text-decoration: none;border: 1px solid rgba(255,255,255,0.08);white-space: nowrap;}
+.event-banner__cta:hover{background: var(--primary-hover);color: #231e18;}
+.event-banner__text--mobile {display: none;}
+@media (max-width: 700px) {.event-banner {padding: 0.38rem 0.65rem;gap: 0.45rem;}.event-banner__text--desktop {display: none;}.event-banner__text--mobile {display: inline;}.event-banner__text {font-size: 0.92rem;line-height: 1.15;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}.event-banner__cta {padding: 0.32em 0.6em;border-radius: 10px;font-size: 0.92rem;}}
  </style>
 
   <!-- Structured Data -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Bartendly Madrid","image":"https://www.bartendly.com/madrid/images/hero-900.webp","description":"Coordinación profesional de personal de bartenders en Madrid para eventos corporativos, ferias IFEMA y activaciones de marca.","url":"https://www.bartendly.com/madrid/es/","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"areaServed":{"@type":"Place","name":"Madrid"},"email":"martial@bartendly.com","telephone":"+34618502493"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Ofrecéis personal de bartenders para eventos corporativos en Madrid?","acceptedAnswer":{"@type":"Answer","text":"Sí. Bartendly coordina bartenders profesionales independientes para hospitalidad corporativa, recepciones, conferencias y eventos de clientes en todo Madrid."}},{"@type":"Question","name":"¿Podéis cubrir ferias IFEMA y stands en Madrid?","acceptedAnswer":{"@type":"Answer","text":"Sí. Apoyamos stands y ferias de varios días en Madrid (incluido IFEMA) con equipos de bartenders fiables. Comparte fechas, horarios, requisitos del recinto y necesidades de personal."}},{"@type":"Question","name":"¿Cómo funciona Bartendly?","acceptedAnswer":{"@type":"Answer","text":"Envía el briefing de tu evento, recibe una propuesta de personal a precio fijo y confirma el equipo con factura y depósito."}},{"@type":"Question","name":"¿Suministráis alcohol para eventos?","acceptedAnswer":{"@type":"Answer","text":"No. Bartendly coordina únicamente el personal. El alcohol suele ser proporcionado por el recinto o el cliente, o por proveedores locales con licencia si es necesario."}},{"@type":"Question","name":"¿Trabajáis con agencias y marcas en Madrid?","acceptedAnswer":{"@type":"Answer","text":"Sí. Colaboramos regularmente con agencias, marcas y venues para ofrecer personal profesional de bartenders con alcance claro, precio fijo y coordinación fiable."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Bartendly Madrid","image":"https://www.bartendly.com/madrid/images/hero-900.webp","description":"Coordinación profesional de staffing de bartenders en Madrid para eventos corporativos, ferias en IFEMA y activaciones de marca.","url":"https://www.bartendly.com/madrid/es/","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"areaServed":{"@type":"Place","name":"Madrid"},"email":"martial@bartendly.com","telephone":"+34618502493"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Dais servicio de staffing para ferias en IFEMA Madrid?","acceptedAnswer":{"@type":"Answer","text":"Sí. Bartendly coordina staffing profesional de bartenders para ferias en IFEMA Madrid, incluyendo stands multi-día y hospitalidad para expositores."}},{"@type":"Question","name":"¿Podéis cubrir exposiciones de varios días?","acceptedAnswer":{"@type":"Answer","text":"Sí. Estamos especializados en staffing multi-día con equipos consistentes durante todos los días del evento."}}]}</script>
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17739320947"></script>
@@ -170,6 +177,15 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 
 </head>
 <body>
+  <div class="event-banner" role="region" aria-label="Próximas ferias en Madrid">
+    <span class="event-banner__text">
+      Próximas ferias en <strong>IFEMA Madrid</strong> — staffing de bartenders para expositores disponible
+    </span>
+    <a href="#madrid-trade-fairs" class="event-banner__cta">
+      Ferias
+    </a>
+  </div>
+
   <section class="hero" id="hero">
     <picture class="hero-bg" id="heroPicture">
         <source id="heroWebp" type="image/webp" sizes="100vw"
@@ -178,19 +194,19 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
           srcset="/madrid/images/hero-1-600.jpg 600w, /madrid/images/hero-1-900.jpg 900w, /madrid/images/hero-1-1200.jpg 1200w">
         <img id="heroImg"
           src="/madrid/images/hero-1-900.jpg"
-          alt="Personal de bartenders para eventos profesionales en Madrid"
+          alt="Staffing de bartenders para eventos profesionales en Madrid"
           width="1200" height="1800"
           loading="eager"
           fetchpriority="high" />
       </picture>
+
     <a href="/" class="hero-logo" aria-label="Inicio de Bartendly">Bartendly</a>
 
     <nav class="hero-topnav" aria-label="Navegación superior">
-      <!--<a href="/bartenders/?city=madrid">Equipo</a>-->
       <a
-      href="https://wa.me/34618502493?text=Hola%20Bartendly%20%E2%80%94%20me%20gustar%C3%ADa%20solicitar%20personal%20de%20bartenders%20en%20Madrid.%0A%0ASi%20ayuda%2C%20algunos%20detalles%3A%0A%E2%80%A2%20Tipo%20de%20evento%20(corporativo%20%2F%20feria%20%2F%20activaci%C3%B3n%20de%20marca)%0A%E2%80%A2%20Fechas%20y%20horarios%0A%E2%80%A2%20Venue%20%2F%20zona%0A%E2%80%A2%20Cu%C3%A1ntos%20bartenders%0A%E2%80%A2%20Estimaci%C3%B3n%20de%20invitados%0A%E2%80%A2%20C%C3%B3digo%20de%20vestimenta%20(si%20aplica)%0A%E2%80%A2%20Notas%20sobre%20montaje%20de%20barra%20(si%20aplica)%0A%E2%80%A2%20Nombre%20de%20contacto%20%2B%20empresa"
+      href="https://wa.me/34618502493?text=Hola%20Bartendly%20%E2%80%94%20quiero%20solicitar%20staffing%20de%20bartenders%20en%20Madrid.%0A%0ASi%20te%20ayuda%2C%20algunos%20detalles%3A%0A%E2%80%A2%20Tipo%20de%20evento%20(corporativo%20%2F%20feria%20%2F%20activaci%C3%B3n%20de%20marca)%0A%E2%80%A2%20Fechas%20y%20horarios%0A%E2%80%A2%20Lugar%20%2F%20zona%0A%E2%80%A2%20N%C2%BA%20de%20bartenders%0A%E2%80%A2%20Estimaci%C3%B3n%20de%20asistentes%0A%E2%80%A2%20Dress%20code%20(si%20hay)%0A%E2%80%A2%20Notas%20de%20montaje%20de%20barra%20(si%20hay)%0A%E2%80%A2%20Nombre%20de%20contacto%20%2B%20empresa"
       class="hero-topnav-whatsapp"
-      aria-label="Solicitar personal por WhatsApp"
+      aria-label="Solicitar staffing por WhatsApp"
       target="_blank"
       rel="noopener"
     >
@@ -208,45 +224,44 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     </nav>
 
     <div class="hero-content">
-      <h1 class="hero-title">Personal profesional de bartenders en Madrid</h1>
-      <div class="hero-subtitle">Personal de bartenders en Madrid para eventos corporativos, ferias IFEMA y marcas.</div>        
-        
+      <h1 class="hero-title">Staffing profesional de bartenders en Madrid</h1>
+      <div class="hero-subtitle">Staffing profesional de bartenders en Madrid para ferias en IFEMA, hospitalidad corporativa y eventos de marca.</div>
+
       <form id="ai-request-form" action="https://formspree.io/f/mdkevral" method="POST" class="ai-form-mockup" target="_self">
         <input type="hidden" name="city" value="Madrid">
 
         <!-- Event type (single select) -->
         <label class="ai-label">Tipo de evento <span style="opacity:.75;font-weight:500">(opcional)</span></label>
         <div class="ai-toggle-group" data-name="event_type" data-multi="false" id="event-type" role="group" aria-label="Tipo de evento">
-          <button type="button" class="ai-toggle" data-value="Corporate event" aria-pressed="false">Corporativo</button>
-          <button type="button" class="ai-toggle" data-value="Trade show / expo stand" aria-pressed="false">Feria</button>
-          <button type="button" class="ai-toggle" data-value="Brand activation" aria-pressed="false">Marca</button>
-          <button type="button" class="ai-toggle" data-value="VIP reception" aria-pressed="false">Recepción VIP</button>
+          <button type="button" class="ai-toggle" data-value="Evento corporativo" aria-pressed="false">Corporativo</button>
+          <button type="button" class="ai-toggle" data-value="Feria / stand en expo" aria-pressed="false">Feria</button>
+          <button type="button" class="ai-toggle" data-value="Activación de marca" aria-pressed="false">Marca</button>
+          <button type="button" class="ai-toggle" data-value="Recepción VIP" aria-pressed="false">Recepción VIP</button>
         </div>
         <input type="hidden" name="event_type">
 
         <label for="ai-prompt" class="sr-only">Tu solicitud</label>
         <textarea name="ai-prompt" id="ai-prompt" class="main-event-input" rows="3" required
-        placeholder="📅 Fecha  ⏰ Hora  📍 Venue  👥 Invitados  👤 Bartenders  🍸 Estilo de servicio (cócteles / champán / taller)"></textarea>
+        placeholder="📅 Fecha  ⏰ Horario  📍 Lugar  👥 Asistentes  👤 Bartenders  🍸 Servicio (cócteles / champagne / taller)"></textarea>
 
         <!-- Contact (transparent) -->
         <label for="ai-contact" class="sr-only">Tu información de contacto</label>
         <input type="text" name="ai-contact" id="ai-contact" class="ai-input" placeholder="WhatsApp (preferido) o Email + nombre de contacto" required autocomplete="off" />
 
-        <button type="submit" class="ai-submit">Solicitar personal</button>
+        <button type="submit" class="ai-submit">Solicitar staffing</button>
         <div class="booking-legal-disclaimer">
           Al enviar, aceptas nuestros <a href="/terms" target="_blank">Términos y Condiciones</a>.
-          <p class="fineprint">Bartendly coordina el personal. El alcohol lo aporta el venue o el cliente.</p>
+          <p class="fineprint">Bartendly coordina el staffing. El alcohol lo aporta el venue o el cliente.</p>
         </div>
-                
       </form>
 
-      <div id="ai-success-message" class="success-message" aria-live="polite">Gracias — hemos recibido tu briefing. Te responderemos con un plan de personal y presupuesto.</div>
+      <div id="ai-success-message" class="success-message" aria-live="polite">Gracias — hemos recibido tu solicitud. Te responderemos con un plan de staffing y un presupuesto.</div>
 
       <div class="badges-bar">
-        <span>🏢 Listo para eventos corporativos</span>
-        <span>🎪 Ferias y activaciones de marca</span>
+        <span>🏢 Listo para corporate</span>
+        <span>🎪 Ferias y activaciones</span>
         <span>⚡ Confirmación rápida</span>
-      </div>      
+      </div>
     </div>
   </section>
 
@@ -255,18 +270,44 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <h2 class="section-title">Cómo funciona</h2>
       <div class="how-it-works">
         <div class="how-it-works-step">
-          <h3>1. Envía un briefing del evento</h3>
-          <p>Fecha(s), horarios, venue/zona, tamaño del equipo, código de vestimenta, montaje de barra y persona de contacto.</p>
+          <h3>1. Envíanos el brief del evento</h3>
+          <p>Fecha(s), horarios, venue/zona, tamaño del equipo, dress code, montaje de barra y persona de contacto.</p>
         </div>
         <div class="how-it-works-step">
-          <h3>2. Recibe un plan de personal + presupuesto</h3>
-          <p>Asignamos el equipo adecuado para tu alcance y confirmamos disponibilidad antes de que te comprometas.</p>
+          <h3>2. Recibe un plan de staffing + presupuesto</h3>
+          <p>Asignamos el equipo adecuado a tu alcance y confirmamos disponibilidad antes de que te comprometas.</p>
         </div>
         <div class="how-it-works-step">
           <h3>3. Confirma con factura + depósito</h3>
-          <p>El depósito asegura el personal. Un único punto de contacto hasta la ejecución.</p>
+          <p>El depósito asegura el equipo. Un único punto de contacto hasta la ejecución.</p>
         </div>
       </div>
+    </section>
+
+    <section id="madrid-trade-fairs" aria-labelledby="madrid-trade-fairs-title">
+      <h2 id="madrid-trade-fairs-title" class="section-title">Staffing de bartenders para ferias en IFEMA Madrid</h2>
+
+      <p>
+        Bartendly ofrece <strong>staffing profesional de bartenders</strong> para expositores y marcas
+        que participan en las principales ferias de <strong>IFEMA MADRID</strong>.
+        Damos soporte a la hospitalidad en stand, servicio VIP a clientes y eventos corporativos alrededor de las ferias.
+      </p>
+
+      <ul>
+        <li><strong>SIMA Madrid</strong> – Feria inmobiliaria e inversión (<strong>20–23 mayo</strong>)</li>
+        <li><strong>Estampa</strong> – Feria de arte contemporáneo (<strong>24–27 septiembre</strong>)</li>
+        <li><strong>Fruit Attraction</strong> – Feria internacional de fruta y verdura (<strong>6–8 octubre</strong>)</li>
+      </ul>
+
+      <p>
+        Estos eventos atraen a expositores internacionales y público profesional y suelen requerir
+        bartenders con experiencia y buen nivel de inglés para hospitalidad de expositor y activaciones de marca.
+      </p>
+
+      <p>
+        <strong>Solo staffing:</strong> el alcohol, cristalería, hielo y equipamiento de barra normalmente los gestiona
+        el expositor o el recinto.
+      </p>
     </section>
 
     <section id="why-bartendly">
@@ -276,36 +317,31 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
           <li>✅ Diseñado para eventos corporativos, agencias, marcas y ferias — donde la fiabilidad importa</li>
           <li>🍸 Bartenders con experiencia para recepciones, stands, lanzamientos, momentos VIP y hospitalidad</li>
           <li>🧩 Flujo operativo claro: briefing, puntualidad, roles, horarios y coordinación</li>
-          <li>📍 Coordinación en Madrid (inglés / español)</li>
-          <li>🧾 Condiciones profesionales: confirmación con factura + depósito (no caos de “DM a un bartender”)</li>
+          <li>📍 Coordinación basada en Madrid (inglés / español)</li>
+          <li>🧾 Condiciones profesionales: confirmación por factura + depósito (sin el caos de “DM a un bartender”)</li>
         </ul>
       </div>
     </section>
 
     <section id="service-areas">
-      <h2 class="section-title">Servicios de personal de bartenders en Madrid</h2>
+      <h2 class="section-title">Servicios de staffing en Madrid</h2>
       <p>
-        Coordinamos personal de bartenders en Madrid para eventos corporativos, ferias IFEMA, exposiciones, activaciones de marca,
-        eventos en hoteles y formatos profesionales de hospitalidad de varios días. Nuestra coordinación cubre venues de ciudad, grandes
+        Coordinamos staffing de bartenders en Madrid para eventos corporativos, ferias en IFEMA, exposiciones,
+        activaciones de marca, eventos en hoteles y formatos profesionales multi-día. Cubrimos venues en la ciudad,
         recintos feriales, hoteles, espacios de conferencias y ubicaciones privadas en Madrid y alrededores.
       </p>
-    </section>    
+    </section>
 
-    <!--<section id="bartendly-carousel" class="btly-mount" data-city="madrid">
-      <h2 class="section-title">Bartenders coordinados para eventos en Madrid</h2>
-      <p class="network-note">Los perfiles se muestran como referencia. Bartendly coordina el personal según disponibilidad y requisitos del evento. Los bartenders operan como profesionales independientes.</p>
-    </section>-->
-    
     <section id="testimonials">
-      <h2 class="section-title">Los clientes confían en Bartendly</h2>
+      <h2 class="section-title">Clientes confían en Bartendly</h2>
       <div class="testimonial">
         <blockquote>
-          “Comunicación sólida, ejecución impecable y un equipo profesional para nuestro stand en IFEMA. Todo funcionó a tiempo.”<footer>— Responsable de Expo, Madrid</footer>
+          “Comunicación excelente, ejecución limpia y un equipo profesional para nuestro stand en IFEMA. Todo fue puntual.”<footer>— Responsable de Expo, Madrid</footer>
         </blockquote>
       </div>
       <div class="testimonial">
         <blockquote>
-          “Necesitábamos bartenders bilingües y estándares estrictos de hospitalidad — Bartendly cumplió de forma fiable desde el briefing hasta el cierre.”<footer>— Equipo de Evento Corporativo, Madrid</footer>
+          “Necesitábamos bartenders bilingües y estándares estrictos de hospitalidad — Bartendly cumplió de briefing a cierre.”<footer>— Equipo de Evento Corporativo, Madrid</footer>
         </blockquote>
       </div>
     </section>
@@ -314,28 +350,38 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <h2 class="section-title">Preguntas frecuentes</h2>
 
       <div class="faq-item">
-        <h3>¿Ofrecéis personal de bartenders para eventos corporativos en Madrid?</h3>
-        <p>Sí — hospitalidad corporativa, recepciones, conferencias, offsites y eventos de clientes en todo Madrid.</p>
+        <h3>¿Dais servicio para ferias en IFEMA Madrid y exposiciones multi-día?</h3>
+        <p>Sí. Coordinamos staffing de bartenders para ferias en IFEMA Madrid, incluyendo stands multi-día, hospitalidad de marca y recepciones de expositores.</p>
       </div>
 
       <div class="faq-item">
-        <h3>¿Podéis cubrir ferias IFEMA y stands?</h3>
-        <p>Sí — stands y ferias de varios días en Madrid, incluido IFEMA. Comparte fechas, horarios, código de vestimenta y tamaño del equipo.</p>
+        <h3>¿Podéis cubrir toda la duración de una feria?</h3>
+        <p>Sí. Estamos especializados en staffing multi-día con equipos consistentes durante todos los días, alineados con los horarios de feria y el plan del expositor.</p>
       </div>
 
       <div class="faq-item">
-        <h3>¿Proporcionáis alcohol?</h3>
-        <p>El personal es nuestro servicio principal. El alcohol y el material de barra suelen ser proporcionados por el venue o el cliente. Si hace falta, podemos recomendar proveedores terceros con licencia.</p>
+        <h3>¿Ofrecéis staffing para eventos corporativos en Madrid?</h3>
+        <p>Sí — hospitalidad corporativa, recepciones, conferencias, offsites y eventos de clientes en Madrid.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Podéis cubrir stands y hospitalidad en ferias?</h3>
+        <p>Sí — stands y ferias multi-día en Madrid, incluyendo IFEMA. Comparte fechas, horarios, dress code y tamaño de equipo.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Aportáis alcohol?</h3>
+        <p>Nuestro servicio principal es el staffing. El alcohol y los suministros suelen ser responsabilidad del venue o del cliente. Si hace falta, podemos recomendar proveedores terceros con licencia.</p>
       </div>
 
       <div class="faq-item">
         <h3>¿Cómo funciona el pago?</h3>
-        <p>Confirmamos el personal con una factura y un depósito. El resto del importe vence antes del evento. Las condiciones dependen del alcance y el plazo de contratación.</p>
+        <p>Confirmamos el staffing con una factura y un depósito. El resto se abona antes del evento. Las condiciones dependen del alcance y del plazo.</p>
       </div>
 
       <div class="faq-item">
         <h3>¿Aceptáis eventos privados?</h3>
-        <p>Sí, de forma selectiva — para recepciones privadas premium, bien organizadas y con alcance claro, estándares del venue y confirmación anticipada. Las fiestas informales pequeñas en casa no son nuestro foco.</p>
+        <p>Sí, de forma selectiva — recepciones privadas premium con alcance claro, venue adecuado y confirmación por adelantado. Las house parties informales pequeñas no son nuestro foco.</p>
       </div>
     </section>
 
@@ -343,8 +389,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <h2 class="section-title">Sobre Bartendly Madrid</h2>
       <div class="about">
         <p>
-          Bartendly coordina personal de bartenders en Madrid para eventos corporativos, ferias IFEMA y activaciones de marca. Fundado por el equipo detrás de
-          <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>, combinamos experiencia en hospitalidad con herramientas operativas — para que los equipos profesionales ejecuten de forma fiable.
+          Bartendly coordina staffing de bartenders en Madrid para eventos corporativos, ferias en IFEMA y activaciones de marca. Fundado por el equipo detrás de
+          <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>, combinamos experiencia en hospitalidad con herramientas operativas — para que los equipos profesionales ejecuten con fiabilidad.
         </p>
       </div>
     </section>
@@ -352,7 +398,7 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 
   <footer>
     <div class="footer-links">
-      <a href="mailto:martial@bartendly.com">Contáctanos</a>
+      <a href="mailto:martial@bartendly.com">Contacto</a>
     </div>
     <div class="social-links">
       <a href="https://facebook.com/bartendly" target="_blank">FB</a>
@@ -362,30 +408,31 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     </div>
     <p>&copy; 2026 Bartendly. Todos los derechos reservados.</p>
     <div class="legal-disclaimer">
-      Bartendly coordina personal de bartenders. Los bartenders operan como profesionales independientes. Bartendly no actúa como organizador de eventos y no vende ni suministra alcohol. <a href="/terms" target="_blank">Ver términos y disclaimer</a>.
-    </div>    
+      Bartendly coordina el staffing de bartenders. Los bartenders actúan como profesionales independientes. Bartendly no opera como organizador del evento y no vende ni suministra alcohol. <a href="/terms" target="_blank">Ver términos y disclaimer</a>.
+    </div>
     <div class="footer-join-link">
-      <a href="/bartenders/join">¿Bartender? <span>Únete a Bartendly</span></a>
+      <a href="/bartenders/join">¿Eres bartender? <span>Únete a Bartendly</span></a>
     </div>
   </footer>
 
-<script>(function(){const f=document.getElementById("ai-request-form"),m=document.getElementById("ai-success-message");if(!f||!m)return;f.addEventListener("submit",async function(e){e.preventDefault();const p=f.querySelector('[name="ai-prompt"]').value.trim(),l=30;if(p.length<l){alert("Por favor, añade un poco más de detalle sobre tu solicitud.");return;}const c=f.querySelector('input[name="ai-contact"]'),v=c?c.value.trim():"",em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(v),isP=ph.test(v);if(!isE&&!isP){alert("Por favor, introduce un email o número de teléfono válido.");return;}const b=f.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent="Enviando...";}const d=new FormData(f);try{const r=await fetch(f.action,{method:"POST",body:d,headers:{Accept:"application/json"}});if(r.ok){try{const u=new URL(window.location.href);u.searchParams.set("sent","1");window.history.replaceState({}, "", u.toString());}catch(_){ }f.reset();f.style.display="none";m.style.display="block";}else alert("¡Ups! Algo ha ido mal al enviar tu mensaje.");}catch(_){alert("Error de red. Por favor, inténtalo de nuevo más tarde.");}finally{if(b){b.disabled=false;b.textContent="Solicitar personal";}}});})();</script>
+<script>(function(){const f=document.getElementById("ai-request-form"),m=document.getElementById("ai-success-message");if(!f||!m)return;f.addEventListener("submit",async function(e){e.preventDefault();const p=f.querySelector('[name="ai-prompt"]').value.trim(),l=30;if(p.length<l){alert("Por favor, añade un poco más de detalle sobre tu solicitud.");return;}const c=f.querySelector('input[name="ai-contact"]'),v=c?c.value.trim():"",em=/[^\s@]+@[^\s@]+\.[^\s@]+/,ph=/(\+?\(?\d{1,4}\)?[\s\d\-]{5,})/,isE=em.test(v),isP=ph.test(v);if(!isE&&!isP){alert("Por favor, introduce un email o un número de teléfono válido.");return;}const b=f.querySelector('button[type="submit"]');if(b){b.disabled=true;b.textContent="Enviando...";}const d=new FormData(f);try{const r=await fetch(f.action,{method:"POST",body:d,headers:{Accept:"application/json"}});if(r.ok){try{const u=new URL(window.location.href);u.searchParams.set("sent","1");window.history.replaceState({}, "", u.toString());}catch(_){ }f.reset();f.style.display="none";m.style.display="block";}else alert("Ups. Ha ocurrido un error al enviar tu mensaje.");}catch(_){alert("Error de red. Por favor, inténtalo de nuevo más tarde.");}finally{if(b){b.disabled=false;b.textContent="Solicitar staffing";}}});})();</script>
 
 <script>document.querySelectorAll('.ai-toggle-group').forEach(g=>{const n=g.getAttribute('data-name'),h=document.querySelector(`input[name="${n}"]`),m=g.getAttribute('data-multi')==='true',ns=[...g.querySelectorAll('.ai-toggle')].find(b=>(b.getAttribute('data-value')||'').toLowerCase()==='not sure'),u=()=>{const s=[...g.querySelectorAll('.ai-toggle.selected')].map(b=>b.getAttribute('data-value'));h.value=s.join(',');h.hasAttribute('required')&&h.setCustomValidity(h.value?'':'Please select at least one option.')};g.querySelectorAll('.ai-toggle').forEach(b=>b.addEventListener('click',()=>{if(m){const isNS=(b.getAttribute('data-value')||'').toLowerCase()==='not sure';if(isNS){g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}else{ns&&(ns.classList.remove('selected'),ns.setAttribute('aria-pressed','false'));const on=!b.classList.contains('selected');b.classList.toggle('selected',on);b.setAttribute('aria-pressed',on?'true':'false')}}else{g.querySelectorAll('.ai-toggle').forEach(x=>{x.classList.remove('selected');x.setAttribute('aria-pressed','false')});b.classList.add('selected');b.setAttribute('aria-pressed','true')}u()}));u()});</script>
+
   <script>document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target)}}),{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>o.observe(e))});</script>
 
   <script src="/bartenders/bartenders.js"></script>
   <script src="/assets/js/bartendly-carousel.js"></script>
 
   <script>document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-whatsapp-float]');if(!b)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){b.remove();return;}window.setTimeout(()=>{b.classList.add('is-visible');},3800);});</script>
-  
+
   <script>(()=>{const p="/madrid/images/",k="btly_madrid_hero",d=864e5,v=(JSON.parse(localStorage.getItem(k)||"null")||{});const i=v.i&&Date.now()-v.t<d?v.i:((x=Math.random()<.5?1:2),localStorage.setItem(k,JSON.stringify({i:x,t:Date.now()})),x);document.querySelector("picture.hero-bg source[type='image/webp']").srcset=`${p}hero-${i}-600.webp 600w, ${p}hero-${i}-900.webp 900w, ${p}hero-${i}-1200.webp 1200w`;document.querySelector("picture.hero-bg source[type='image/jpeg']").srcset=`${p}hero-${i}-600.jpg 600w, ${p}hero-${i}-900.jpg 900w, ${p}hero-${i}-1200.jpg 1200w`;document.querySelector("picture.hero-bg img").src=`${p}hero-${i}-900.jpg`;})();</script>
 
 <a class="whatsapp-float" data-whatsapp-float
-  href="https://wa.me/34618502493?text=Hola%20Bartendly%20%E2%80%94%20me%20gustar%C3%ADa%20solicitar%20personal%20de%20bartenders%20en%20Madrid.%0A%0ASi%20ayuda%2C%20algunos%20detalles%3A%0A%E2%80%A2%20Tipo%20de%20evento%20(corporativo%20%2F%20feria%20%2F%20activaci%C3%B3n%20de%20marca)%0A%E2%80%A2%20Fechas%20y%20horarios%0A%E2%80%A2%20Venue%20%2F%20zona%0A%E2%80%A2%20Cu%C3%A1ntos%20bartenders%0A%E2%80%A2%20Estimaci%C3%B3n%20de%20invitados%0A%E2%80%A2%20C%C3%B3digo%20de%20vestimenta%20(si%20aplica)%0A%E2%80%A2%20Notas%20sobre%20montaje%20de%20barra%20(si%20aplica)%0A%E2%80%A2%20Nombre%20de%20contacto%20%2B%20empresa"
+  href="https://wa.me/34618502493?text=Hola%20Bartendly%20%E2%80%94%20quiero%20solicitar%20staffing%20de%20bartenders%20en%20Madrid.%0A%0ASi%20te%20ayuda%2C%20algunos%20detalles%3A%0A%E2%80%A2%20Tipo%20de%20evento%20(corporativo%20%2F%20feria%20%2F%20activaci%C3%B3n%20de%20marca)%0A%E2%80%A2%20Fechas%20y%20horarios%0A%E2%80%A2%20Lugar%20%2F%20zona%0A%E2%80%A2%20N%C2%BA%20de%20bartenders%0A%E2%80%A2%20Estimaci%C3%B3n%20de%20asistentes%0A%E2%80%A2%20Dress%20code%20(si%20hay)%0A%E2%80%A2%20Notas%20de%20montaje%20de%20barra%20(si%20hay)%0A%E2%80%A2%20Nombre%20de%20contacto%20%2B%20empresa"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Chatea con nosotros en WhatsApp">
+  aria-label="Chatea con nosotros por WhatsApp">
   <span class="whatsapp-float__label">Chatea con nosotros</span>
   <span class="whatsapp-float__icon" aria-hidden="true">
     <svg viewBox="0 0 32 32" focusable="false" role="img">
