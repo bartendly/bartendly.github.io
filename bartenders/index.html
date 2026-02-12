@@ -39,24 +39,33 @@
     @media (max-width:700px) { .hero-logo { font-size: 1.2rem; top: 0.3rem; left: 0.4rem; padding: 0.1em 0.6em 0.07em 0.14em; } }
     @media (min-width:701px) and (max-width:900px) { .hero-logo { font-size: 1.3rem; top: 0.3rem; left: 0.4rem; padding: 0.1em 0.6em 0.07em 0.14em; } }
 
-    .join-top{position:fixed;top:18px;right:14px;z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:.45em;min-height:44px;padding:.55em .95em;border-radius:999px;background:rgba(255,109,33,.92);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);text-decoration:none;transition:transform .12s ease,background .14s ease,color .14s ease}
+    /*.join-top{position:fixed;top:18px;right:14px;z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:.45em;min-height:44px;padding:.55em .95em;border-radius:999px;background:rgba(255,109,33,.92);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.12);text-decoration:none;transition:transform .12s ease,background .14s ease,color .14s ease}
     .join-top:hover{background:rgba(255,174,58,.95);color:#231e18;transform:translateY(-1px);text-decoration:none}
     .join-top:active{transform:translateY(0);opacity:.95}
     .join-top small{font-weight:700;opacity:.92}
     @media (max-width:700px){
       .join-top{top:10px;right:10px;padding:.52em .72em;min-height:40px;font-size:.98em}
       .join-top small{display:none}
-    }
+    }*/
+
+    .join-inline{margin:0.2em auto 1.4em auto;text-align:center;font-size:0.98rem;color:#cfc7bd;}
+    .join-inline span{opacity:.9}
+    .join-inline a{color:var(--primary-hover);font-weight:700;padding:0.25em 0.55em;border-radius:10px;}
+    .join-inline a:hover,
+    .join-inline a:focus{background:rgba(255,174,58,0.10);}
 
  </style>
 </head>
 <body>
-  <a class="join-top" href="/bartenders/join/" aria-label="Are you a bartender? Join Bartendly">
+  <!--<a class="join-top" href="/bartenders/join/" aria-label="Are you a bartender? Join Bartendly">
     Bartender? Join Bartendly
-  </a>
+  </a>-->
   <div id="nav-icon"></div>
   <div class="container">
     <h1>Meet the Bartenders</h1>
+    <p class="join-inline">
+      <span>Bartender?</span> <a href="/bartenders/join">Join Bartendly</a>
+    </p>    
     <div id="bartender-list" class="bartender-list"></div>
     <div id="no-bartenders" style="display:none;text-align:center;color:#ffae3a;font-size:1.1em;margin-top:3em;">
         No bartenders found for this city.<br>
