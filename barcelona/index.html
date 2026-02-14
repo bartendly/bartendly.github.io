@@ -593,7 +593,10 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
   <script src="/bartenders/bartenders.js"></script>
   <script src="/assets/js/bartendly-carousel.js"></script>
 
-  <script>document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-whatsapp-float]');if(!b)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){b.remove();return;}window.setTimeout(()=>{b.classList.add('is-visible');},3800);});</script>
+  <!--<script>document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-whatsapp-float]');if(!b)return;const inWA=/WhatsApp/i.test(navigator.userAgent);if(inWA){b.remove();return;}window.setTimeout(()=>{b.classList.add('is-visible');},3800);});</script>-->
+  <script>document.addEventListener('DOMContentLoaded',()=>{const b=document.querySelector('[data-whatsapp-float]'),h=document.querySelector('.hero');if(!b||!h)return;/WhatsApp/i.test(navigator.userAgent)&&(b.remove());const s=()=>b.classList.add('is-visible'),d=()=>b.classList.remove('is-visible');if('IntersectionObserver'in window){const o=new IntersectionObserver(e=>{e[0].isIntersecting?d():s()},{threshold:.02});o.observe(h)}else{const r=()=>{window.scrollY>120&&(s(),window.removeEventListener('scroll',r))};window.addEventListener('scroll',r,{passive:!0})}});</script>
+
+
 
 <a class="whatsapp-float" data-whatsapp-float
   href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%E2%80%99d%20like%20to%20request%20bartender%20staffing%20in%20Barcelona.%0A%0AIf%20helpful%2C%20a%20few%20details%3A%0A%E2%80%A2%20Event%20type%20(corporate%20%2F%20trade%20show%20%2F%20brand%20activation)%0A%E2%80%A2%20Dates%20%26%20hours%0A%E2%80%A2%20Venue%20%2F%20area%0A%E2%80%A2%20How%20many%20bartenders%0A%E2%80%A2%20Guests%20estimate%0A%E2%80%A2%20Dress%20code%20(if%20any)%0A%E2%80%A2%20Bar%20setup%20notes%20(if%20any)%0A%E2%80%A2%20Contact%20name%20%2B%20company"
