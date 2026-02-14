@@ -98,7 +98,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
     @media (max-width:700px){
   .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
   .hero-logo{font-size:1.2rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
-  .hero-content{width:100vw;max-width:none;padding-top:30vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  /*.hero-content{width:100vw;max-width:none;padding-top:30vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}*/
+  .hero-content{width:100vw;max-width:none;padding-top:22vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
   .ai-form-mockup{width:90vw;max-width:410px;margin:0 auto;align-items:center;}
   .hero-title{font-size:2rem;font-weight:700;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
   .hero-subtitle{font-size:1.15rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
@@ -108,7 +109,8 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 @media (min-width:701px) and (max-width:900px){
   .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
   .hero-logo{font-size:1.3rem;top:0.3rem;left:0.4rem;padding:0.1em 0.6em 0.07em 0.14em;}
-  .hero-content{width:100vw;max-width:none;padding-top:5vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+  /*.hero-content{width:100vw;max-width:none;padding-top:5vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}*/
+  .hero-content{width:100vw;max-width:none;padding-top:10vw;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
   .hero-title{font-size:2.2rem;font-weight:750;text-align:center;margin:0 0 0.45em 0;padding:0 5vw;letter-spacing:-0.5px;}
   .hero-subtitle{font-size:1.25rem;text-align:center;margin-bottom:1em;padding:0 5vw;}
 }
@@ -190,69 +192,15 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 @media (max-width: 700px) {.event-banner {padding: 0.38rem 0.65rem;gap: 0.45rem;}.event-banner__text--desktop {display: none;}.event-banner__text--mobile {display: inline;}.event-banner__text {font-size: 0.92rem;line-height: 1.15;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}.event-banner__cta {padding: 0.32em 0.6em;border-radius: 10px;font-size: 0.92rem;}}
 
  
-.quick-contact-cta{
-  background: rgba(255,255,255,0.08);
-  padding: 1.05em 1.1em;
-  border-radius: 16px;
-  margin: 0.9em 0 1.1em 0;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.10);
-}
-.quick-contact-cta__kicker{
-  margin:0 0 .55em 0;
-  font-size:1.02em;
-  color: var(--primary-hover);
-  font-weight:800;
-}
-.quick-contact-cta__buttons{
-  display:flex;
-  gap:.65em;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-.quick-cta-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:.58em 1.1em;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:.98em;
-  white-space:nowrap;
-  transition: transform .15s, background .15s, color .15s, border-color .15s;
-}
-
-.quick-cta-btn--primary{
-  background: var(--primary);
-  color:#fff;
-  border:1px solid rgba(255,255,255,0.10);
-}
-.quick-cta-btn--primary:hover{
-  background: var(--primary-hover);
-  color:#231e18;
-  transform: translateY(-1px);
-}
-
-.quick-cta-btn--secondary{
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.92);
-  border:1px solid rgba(255,255,255,0.22);
-}
-.quick-cta-btn--secondary:hover{
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.34);
-  transform: translateY(-1px);
-}
-
-.quick-contact-cta__note{
-  margin:.75em 0 0 0;
-  color: rgba(255,255,255,0.70);
-  font-size: .92em;
-  line-height: 1.25;
-}
+.quick-contact-cta{background: rgba(255,255,255,0.08);padding: 1.05em 1.1em;border-radius: 16px;margin: 0.9em 0 1.1em 0;text-align: center;backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);border: 1px solid rgba(255,255,255,0.10);}
+.quick-contact-cta__kicker{margin:0 0 .55em 0;font-size:1.02em;color: var(--primary-hover);font-weight:800;}
+.quick-contact-cta__buttons{display:flex;gap:.65em;flex-wrap:wrap;justify-content:center;}
+.quick-cta-btn{display:inline-flex;align-items:center;justify-content:center;padding:.58em 1.1em;border-radius:12px;text-decoration:none;font-weight:800;font-size:.98em;white-space:nowrap;transition: transform .15s, background .15s, color .15s, border-color .15s;}
+.quick-cta-btn--primary{background: var(--primary);color:#fff;border:1px solid rgba(255,255,255,0.10);}
+.quick-cta-btn--primary:hover{background: var(--primary-hover);color:#231e18;transform: translateY(-1px);}
+.quick-cta-btn--secondary{background: rgba(255,255,255,0.06);color: rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,0.22);}
+.quick-cta-btn--secondary:hover{background: rgba(255,255,255,0.10);border-color: rgba(255,255,255,0.34);transform: translateY(-1px);}
+.quick-contact-cta__note{margin:.75em 0 0 0;color: rgba(255,255,255,0.70);font-size: .92em;line-height: 1.25;}
 
 .venues-grid{background:#19191f;padding:1.1em 1.2em;border-radius:15px;max-width:630px;margin:0 auto;}
 .venue-list{list-style:none;padding:0;margin:1em 0;}
@@ -262,45 +210,12 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .header-quote-link{color: rgba(255,255,255,0.80);text-decoration: underline;text-underline-offset: 3px;font-weight: 700;padding: .15em .3em;}
 .header-quote-link:hover{ color:#fff; }
 
-.services-grid{
-  background:#19191f;
-  padding:1.1em 1.2em;
-  border-radius:15px;
-  max-width:630px;
-  margin:0 auto;
-}
-
-.services-intro{
-  margin:0 0 .9em 0;
-  color:rgba(255,255,255,0.85);
-}
-
-.services-list{
-  list-style:none;
-  padding:0;
-  margin:0 0 .9em 0;
-}
-
-.services-list li{
-  margin-bottom:.7em;
-  padding-left:1.35em;
-  position:relative;
-  font-size:1.02em;
-}
-
-.services-list li::before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  color:var(--primary-hover);
-  font-weight:900;
-}
-
-.services-note{
-  margin:0;
-  font-size:.92em;
-  color:rgba(255,255,255,0.65);
-}
+.services-grid{background:#19191f;padding:1.1em 1.2em;border-radius:15px;max-width:630px;margin:0 auto;}
+.services-intro{margin:0 0 .9em 0;color:rgba(255,255,255,0.85);}
+.services-list{list-style:none;padding:0;margin:0 0 .9em 0;}
+.services-list li{margin-bottom:.7em;padding-left:1.35em;position:relative;font-size:1.02em;}
+.services-list li::before{content:"✓";position:absolute;left:0;color:var(--primary-hover);font-weight:900;}
+.services-note{margin:0;font-size:.92em;color:rgba(255,255,255,0.65);}
 
  </style>
 
@@ -393,7 +308,6 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
           <a class="quick-cta-btn quick-cta-btn--secondary" href="mailto:martial@bartendly.com?subject=Bartender%20Staffing%20Barcelona%20%E2%80%94%20Quote%20Request">
             ✉️ Email
           </a>
-
           <!--<a class="quick-cta-btn" href="tel:+34618502493">
             📞 Call
           </a>-->
