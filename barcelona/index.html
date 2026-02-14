@@ -20,14 +20,16 @@ a { color: #ffae3a}
 .hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
 .hero-logo:active{opacity:.7;}
 /* Language Switcher */
-/*.lang-switch{position:absolute;top:1.1rem;right:1.7rem;z-index:11;display:flex;gap:0.26em;}
-.lang-switch a{color:#fff;font-family:'Poppins',sans-serif;font-size:1.07em;padding:0.08em 0.77em 0.07em 0.77em;background:rgba(16,16,20,0.66);border-radius:13px;text-decoration:none;margin:0 0.09em;transition:background 0.14s, color 0.14s;font-weight:700;opacity:0.85;}
-.lang-switch a.selected,.lang-switch a:hover{background:var(--primary);color:#231e18;opacity:1;}
-*/
-.lang-switch {position: absolute;top: 1.1rem;right: 1.6rem;z-index: 11;display: flex;gap: .4em;font-family: 'Poppins', sans-serif;}
+/*.lang-switch {position: absolute;top: 1.1rem;right: 1.6rem;z-index: 11;display: flex;gap: .4em;font-family: 'Poppins', sans-serif;}
 .lang-switch a {background: none;padding: 0;border-radius: 0;font-size: 0.95em;font-weight: 600;color: rgba(255,255,255,0.7);text-decoration: none;}
 .lang-switch a.selected {color: #fff;font-weight: 800;}
-.lang-switch a:hover {color: var(--primary-hover);}
+.lang-switch a:hover {color: var(--primary-hover);}*/
+
+.lang-switch{position:absolute;top:.8rem;right:1.6rem;z-index:11;display:flex;align-items:center;gap:.4em;font-family:'Poppins',sans-serif;line-height:1.05;}
+.lang-switch a{background:none;padding:0;border-radius:0;font-size:.95em;font-weight:600;color:rgba(255,255,255,.7);text-decoration:none;line-height:1.05;}
+.lang-switch a.selected{color:#fff;font-weight:800;}
+.lang-switch a:hover{color:var(--primary-hover);}
+
 
 .hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:left;background:none;padding:0 2vw;}
 .ai-form-mockup{width:100%;max-width:91vw;display:flex;flex-direction:column;gap:0.52em;align-items:center;background:none;margin:0 auto;}
@@ -53,7 +55,8 @@ a { color: #ffae3a}
   .hero-subtitle{font-size:0.99rem;}
   .main-event-input,.ai-form-mockup .ai-input{font-size:1.03em;padding:0.49em 0.7em 0.49em 0.7em;}
   .ai-toggle{font-size:0.98em;}
-  .hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
+  /*.hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}*/
+  .hero-logo{font-size:1rem;top:0.8rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
 }
 @media (min-width:700px){
   .hero-content{max-width:520px;margin:0 auto 7vh auto;align-items:center;}
@@ -213,22 +216,37 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  padding:.58em 1.1em;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:.98em;
+  white-space:nowrap;
+  transition: transform .15s, background .15s, color .15s, border-color .15s;
+}
+
+.quick-cta-btn--primary{
   background: var(--primary);
   color:#fff;
-  padding: .58em 1.1em;
-  border-radius: 12px;
-  text-decoration:none;
-  font-weight: 800;
-  font-size: .98em;
-  transition: background .15s, color .15s, transform .15s;
-  white-space: nowrap;
-  border: 1px solid rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.10);
 }
-.quick-cta-btn:hover{
+.quick-cta-btn--primary:hover{
   background: var(--primary-hover);
   color:#231e18;
   transform: translateY(-1px);
 }
+
+.quick-cta-btn--secondary{
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  border:1px solid rgba(255,255,255,0.22);
+}
+.quick-cta-btn--secondary:hover{
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.34);
+  transform: translateY(-1px);
+}
+
 .quick-contact-cta__note{
   margin:.75em 0 0 0;
   color: rgba(255,255,255,0.70);
@@ -241,17 +259,49 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
 .venue-list li{margin-bottom:.55em;font-size:1.04em;padding-left:1.35em;position:relative;}
 .venue-list li::before{content:"📍";position:absolute;left:0;top:0;}
 
-.header-quote{
-  color:#fff !important;
-  font-weight:800;
-  padding:.18em .65em;
-  border-radius:10px;
-  background: rgba(255,109,33,0.28);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-.header-quote:hover{background: var(--primary); color:#fff !important;}
+.header-quote-link{color: rgba(255,255,255,0.80);text-decoration: underline;text-underline-offset: 3px;font-weight: 700;padding: .15em .3em;}
+.header-quote-link:hover{ color:#fff; }
 
- 
+.services-grid{
+  background:#19191f;
+  padding:1.1em 1.2em;
+  border-radius:15px;
+  max-width:630px;
+  margin:0 auto;
+}
+
+.services-intro{
+  margin:0 0 .9em 0;
+  color:rgba(255,255,255,0.85);
+}
+
+.services-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 .9em 0;
+}
+
+.services-list li{
+  margin-bottom:.7em;
+  padding-left:1.35em;
+  position:relative;
+  font-size:1.02em;
+}
+
+.services-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--primary-hover);
+  font-weight:900;
+}
+
+.services-note{
+  margin:0;
+  font-size:.92em;
+  color:rgba(255,255,255,0.65);
+}
+
  </style>
 
   <!-- Structured Data -->
@@ -337,15 +387,15 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       <div class="quick-contact-cta" aria-label="Quick contact options">
         <p class="quick-contact-cta__kicker">Need staffing fast?</p>
         <div class="quick-contact-cta__buttons">
-          <a class="quick-cta-btn" href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%20need%20bartender%20staffing%20in%20Barcelona" target="_blank" rel="noopener">
+          <a class="quick-cta-btn quick-cta-btn--primary" href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%20need%20bartender%20staffing%20in%20Barcelona" target="_blank" rel="noopener">
             💬 WhatsApp
           </a>
-          <a class="quick-cta-btn" href="mailto:martial@bartendly.com?subject=Bartender%20Staffing%20Barcelona%20%E2%80%94%20Quote%20Request">
+          <a class="uick-cta-btn quick-cta-btn--secondary" href="mailto:martial@bartendly.com?subject=Bartender%20Staffing%20Barcelona%20%E2%80%94%20Quote%20Request">
             ✉️ Email
           </a>
-          <a class="quick-cta-btn" href="tel:+34618502493">
+          <!--<a class="quick-cta-btn" href="tel:+34618502493">
             📞 Call
-          </a>
+          </a>-->
         </div>
         <p class="quick-contact-cta__note">Or use the brief below — we reply within 24h (faster during peak weeks).</p>
       </div>      
@@ -466,14 +516,56 @@ main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
       </div>
     </section>
 
-    <section id="service-areas">
+    <!--<section id="service-areas">
       <h2 class="section-title">Bartender Staffing Services in Barcelona</h2>
       <p>
         We coordinate bartender staffing in Barcelona for corporate events, trade shows, exhibitions, brand activations,
         hotel events and multi-day professional hospitality formats. Our coordination covers city venues, major exhibition
         centers, hotels, conference spaces and private locations across Barcelona and surrounding areas.
       </p>
-    </section>    
+    </section>--> 
+    
+    <section id="services">
+      <h2 class="section-title">Bartender Staffing Services</h2>
+    
+      <div class="services-grid">
+        <p class="services-intro">
+          We provide professional bartender staffing for corporate environments, trade shows and brand-led events — delivered by experienced, event-ready teams.
+        </p>
+    
+        <ul class="services-list">
+          <li>
+            <strong>Corporate event bartenders</strong><br>
+            Receptions, client hospitality, conferences, internal events and executive gatherings.
+          </li>
+          <li>
+            <strong>Trade show & expo stand staffing</strong><br>
+            Bartenders trained for exhibitor stands, VIP areas and high-traffic environments.
+          </li>
+          <li>
+            <strong>Brand activations & launches</strong><br>
+            Product storytelling, brand-aligned service style and guest engagement.
+          </li>
+          <li>
+            <strong>Cocktail & drinks service</strong><br>
+            Cocktails, champagne, wine, beer or simple mixed drinks — adapted to your setup.
+          </li>
+          <li>
+            <strong>Flexible team sizing</strong><br>
+            From one bartender to full teams, including barbacks or supervisors if required.
+          </li>
+          <li>
+            <strong>Corporate-ready execution</strong><br>
+            Punctual setup, dress code compliance, clear scope, EU invoicing.
+          </li>
+        </ul>
+    
+        <p class="services-note">
+          Same services — delivered across Barcelona’s main venues, hotels and off-site locations.
+        </p>
+      </div>
+    </section>
+    
 
     <section id="bartendly-carousel" class="btly-mount" data-city="barcelona">
       <h2 class="section-title">Bartenders coordinated for events in Barcelona</h2>
