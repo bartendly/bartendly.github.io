@@ -1,459 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bartender Staffing for Trade Fairs & Corporate Events | Bartendly</title>
-  <meta name="description" content="Bartender staffing for trade fairs, corporate & premium events worldwide. Vetted local teams for exhibitions, brand activations, hotels and VIP events. Fast coordination." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="canonical" href="https://www.bartendly.com/" />
-  <style>
-:root{--primary:#ff6d21;--primary-hover:#ffae3a;--bg-dark:#101014;--text-light:#fff;}
-html,body{margin:0;padding:0;background:var(--bg-dark);color:var(--text-light);font-family:'Inter','Poppins',sans-serif;min-height:100vh;}
-body{overflow-x:hidden;}
-a { color: #ffae3a}
-.hero{min-height:100vh;width:100vw;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:var(--bg-dark);}
-.hero-bg,.hero picture,.hero img{position:absolute;inset:0;width:100vw;height:100vh;object-fit:cover;object-position:center 18%;z-index:0;background:#18191c;pointer-events:none;user-select:none;}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(16,16,20,0.01) 63%,rgba(16,16,20,0.98) 97%);}
-/*.hero::before {content: "";position: absolute;inset: 0;z-index: 1;background:linear-gradient(180deg, rgba(16,16,20,0.05) 60%, rgba(16,16,20,0.90) 98%), rgba(16,16,20,0.24);}*/
-.hero-logo{position:absolute;top:0.8rem;left:1.4rem;z-index:10;color:#fff;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-.5px;text-shadow:0 2px 10px #0007;background:transparent;border-radius:0 0 16px 0;padding:0.15em 0.8em 0.1em 0.3em;margin:0;text-decoration:none;line-height:1.05;display:block;transition:opacity .18s;}
-.hero-logo:active{opacity:.7;}
-.hero-content{z-index:2;position:relative;width:100vw;max-width:91vw;margin:0.03em auto 4vh auto;display:flex;flex-direction:column;align-items:center;text-align:center;background:none;padding:0 2vw;}
-.city-title{font-size:2.6rem;font-family:'Poppins',sans-serif;font-weight:800;margin:0 0 0.33em 0;line-height:1.11;color:#fff;letter-spacing:-1.2px;text-shadow:0 2px 8px #0007;}
-.city-subtitle{font-size:1.17rem;color:#fff;font-weight:500;margin:-0.2em 0 1.4em 0;text-shadow:0 1px 5px #0006;max-width:510px;text-align:center;opacity:1;}
-.city-selector{display:grid;grid-template-columns:1fr 1fr;gap:4vw 4vw;align-items:center;width:94vw;max-width:620px;margin:0.2em auto 1.4em auto;}
-.city-btn{display:flex;align-items:center;justify-content:center;font-size:clamp(1.12em,3.6vw,2.0em);font-weight:800;border-radius:2.2em;padding:1.15em 0;background:rgba(16,13,8,0.77);color:#fff;box-shadow:0 3px 16px #0008; text-decoration:none;border:1.5px solid rgba(255,255,255,0.08);text-align:center;margin:0;transition:all 0.18s cubic-bezier(.42,0,.58,1);backdrop-filter:blur(2.5px);position:relative;overflow:hidden;}
-.city-btn:before{content:"";position:absolute;inset:0;opacity:0.15;background:linear-gradient(115deg,rgba(255,255,255,0.15),rgba(255,141,34,0.09));pointer-events:none;}
-.city-btn:active,.city-btn:focus{background:rgba(18,14,8,0.94);}
-.city-btn:hover:not(.coming-soon){background:var(--primary);color:#fff;box-shadow:0 6px 28px #ffb57e2a;}
-.city-btn.coming-soon{opacity:0.7;pointer-events:none;cursor:not-allowed;}
-.coming-btn-inner{display:flex;flex-direction:column;width:100%;}
-.coming-title{font-weight:800;font-size:1.05em;}
-.coming-cities{font-size:0.87em;font-weight:500;letter-spacing:0.03em;margin-top:0.12em;color:#ffe1be;text-align:center;}
-.city-proof {color: #ffe3be;font-size: 1.01em;margin-bottom: 0.8em;opacity: .95;font-weight: 500;}
-@media (max-width:500px){
-  .hero-content{max-width:91vw;margin:3vh auto 3.1vh auto;padding:0 1vw;}
-  .hero-title{font-size:1.18rem;}
-  .hero-subtitle{font-size:0.99rem;}
-  .main-event-input,.ai-form-mockup .ai-input{font-size:1.03em;padding:0.49em 0.7em 0.49em 0.7em;}
-  .hero-logo{font-size:1rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
-}
-@media (max-width:700px){
-  .hero{min-height:100vh;display:flex;align-items:flex-start;justify-content:center;position:relative;}
-  .hero-content{max-width:91vw;/*margin:5vh auto 2.5vh auto;padding:0 1vw;*/ padding-top:6vw;margin:0 auto 2vw auto;}
-  .city-title{font-size:2.05rem;}
-  .city-subtitle{font-size:1.04rem;}
-  .city-selector{gap:7vw 4vw;}
-  .hero-logo{font-size:1.2rem;top:0.5rem;left:0.8rem;padding:0.06em 0.5em 0.05em 0.11em;}
-}
-@media (min-width:701px) and (max-width:900px){
-  .hero-content{max-width:520px;margin:0 auto 7vh auto;align-items:center;}
-  .city-title{font-size:2.35rem;}
-  .city-subtitle{font-size:1.14rem;}
-  .city-selector{gap:3vw 2vw;}
-  .hero-logo{font-size:1.3rem;}
-}
-@media (min-width:901px){
-  .hero-content{max-width:620px;}
-  .city-title{font-size:3.1rem;}
-  .city-subtitle{font-size:1.29rem;}
-}
-.js-animate section,.js-animate .testimonial,.js-animate .faq-item{opacity:0;transform:translateY(28px);transition:opacity 0.39s cubic-bezier(.4,0,.2,1),transform 0.43s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;}
-.fade-in{opacity:1!important;transform:translateY(0)!important;}
-@media (prefers-reduced-motion:reduce){.js-animate section,.js-animate .testimonial,.js-animate .faq-item,.fade-in{transition:none!important;transform:none!important;opacity:1!important;}}
-footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}
-.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}
-.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}
-.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
-.footer-join-link { text-align:right; margin-top:1.1em; }
-.footer-join-link a { color:#fff; font-weight:600; background:#ff6d21; border-radius:13px; padding:0.42em 1.2em; text-decoration:none; transition:background 0.15s, color 0.13s; font-size:1.01em; }
-.footer-join-link a span { color:#ffae3a; }
-.footer-join-link a:hover, .footer-join-link a:focus { background:#ffae3a; color:#18181c; }
-@media (max-width:700px) { .footer-join-link { text-align:center; margin:1.2em 0 0 0; } .footer-join-link a { font-size:0.99em; padding:0.42em 0.8em; } }
-
-main{max-width:90vw;margin:0 auto;padding:0.7rem 1rem 0 1rem;}
-@media (min-width:700px){main{max-width:830px;padding:2.2rem 1.5rem 0 1.5rem;}}
-
-    .section-title { text-align: left; font-size: 1.45rem; font-family:'Poppins',sans-serif; color: #ffae3a; margin: 2.2em 0 1.2em 0; font-weight:700; }
-    .how-it-works, .why-bartendly ul { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin-bottom: 2rem;}
-    .how-it-works-step { background: #19191f; padding: 1.1em 1.2em 1.2em 1.1em; border-radius: 15px; max-width: 270px; flex: 1; min-width: 220px;}
-    .how-it-works-step h3 { color: #ffae3a; font-size: 1.03rem; margin-bottom: 0.38em;}
-    .how-it-works-step p { font-size: 0.98rem; color: #f5f5f5;}
-    .why-bartendly ul { list-style: none; padding: 0; margin: 0; flex-direction: column;}
-    .why-bartendly li { margin-bottom: 0.61em; font-size: 1.07em;}
-    .testimonial { background: #19191c; border-radius: 9px; margin: 1.5rem auto 1rem; padding: 1.2rem; max-width: 630px; font-style: italic;}
-    .testimonial blockquote { margin: 0;}
-    .testimonial footer { display: block; margin-top: 0.7em; color: #ffae3a;}
-    .faq-item { background: #18181c; margin-bottom: 1rem; padding: 1em; border-radius: 9px;}
-    .about { max-width: 600px; margin: 2.1rem auto 0; font-size: 1.08rem;}
-    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
-  
-    @media (max-width:700px){
-  main,.section-title,.faq-item,.about,.testimonial{padding-left:5vw!important;padding-right:5vw!important;box-sizing:border-box;}
-}
-.legal-disclaimer { font-size: 11px; color: #888; margin-top: 8px; text-align: center; }
-
-.hero-topnav{position:absolute;top:.8rem;right:1.4rem;z-index:10;display:flex;gap:.6rem}
-.hero-topnav a{color:#ffae3a;text-decoration:none;font-weight:600;background:rgba(16,13,8,.55);padding:.35em .7em;border-radius:10px;border:1px solid rgba(255,255,255,.08)}
-.hero-topnav a:hover{background:#ff6d21;color:#fff}
-@media(max-width:700px){.hero-topnav{right:.8rem;gap:.4rem}.hero-topnav a{padding:.3em .55em;font-size:.92em}}
-
-
-/* TO BE MOVED*/
-.btly-wrap { position:relative; margin:1.5rem auto; max-width:1200px; }
-.btly-track { display:grid; grid-auto-flow:column; grid-auto-columns:80%; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:.25rem 0 1rem; }
-@media (min-width:900px) { .btly-track { grid-auto-columns:calc((100% - 2rem) / 3); overflow-x:auto; } }
-.btly-card { position:relative; border-radius:20px; overflow:hidden; background:var(--bg-dark); height:58vh; max-height:520px; min-height:380px; scroll-snap-align:center; cursor:pointer; }
-.btly-card picture, .btly-card img { width:100%; height:100%; object-fit:cover; display:block; }
-.btly-overlay { position:absolute; inset:auto 0 0 0; padding:14px 16px; background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.9) 100%); color:var(--text-light); font-family:'Poppins',sans-serif; }
-.btly-name { font-size:1.1rem; font-weight:700; line-height:1.1; margin:0 0 4px 0; }
-.btly-meta { font-size:.9rem; opacity:.9; }
-.btly-arrow { display:none; position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.35); color:var(--text-light); font-size:0; line-height:0; align-items:center; justify-content:center; cursor:pointer; backdrop-filter:blur(4px); }
-.btly-arrow:focus-visible { outline:2px solid var(--primary); outline-offset:2px; }
-.btly-arrow svg { width:22px; height:22px; }
-.btly-arrow--prev { left:-10px; }
-.btly-arrow--next { right:-10px; }
-@media (min-width:900px) { .btly-arrow { display:inline-flex; } }
-.btly-card { scroll-snap-stop: always; }
-
-.home-secondary-cta{display:flex;justify-content:center;align-items:center;margin:.25em auto 0 auto;max-width:520px;width:100%;box-sizing:border-box;padding:.85em 1em;border-radius:999px;text-decoration:none;font-weight:800;background:rgba(16,13,8,0.55);border:1.5px solid rgba(255,255,255,0.10);color:#fff;backdrop-filter:blur(2.5px);transition:background .15s,transform .15s,box-shadow .15s;}
-.home-secondary-cta:hover{background:var(--primary);transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,109,33,.18);}
-@media(max-width:500px){.home-secondary-cta{font-size:.98em;padding:.78em .9em;}}
-
-/* Trade fairs (homepage) */
-#trade-fairs { margin-top: 0.8rem; }
-.trade-fairs-lead {margin: 0 0 0.6rem 0;color: #f5f5f5;font-size: 1.02rem;line-height: 1.45;max-width: 720px;}
-.trade-fairs-places {margin: 0 0 1rem 0;color: #ffe3be;font-size: 0.98rem;line-height: 1.4;opacity: 0.95;}
-.trade-fairs-quote {background: #19191c;border-radius: 9px;padding: 1.05rem 1.2rem;font-style: italic;margin: 0 0 1.05rem 0;max-width: 720px;}
-.trade-fairs-quote footer {display: block;margin-top: 0.6em;color: #ffae3a;font-style: normal;font-weight: 700;}
-.trade-fairs-actions {display: flex;gap: 0.75rem;flex-wrap: wrap;}
-.trade-fairs-cta {display: inline-flex;align-items: center;justify-content: center;padding: 0.8em 1.05em;border-radius: 999px;text-decoration: none;font-weight: 800;background: var(--primary);color: #fff;border: 1px solid rgba(255,255,255,0.08);}
-.trade-fairs-cta.secondary {background: rgba(255,255,255,0.07);border: 1px solid rgba(255,255,255,0.14);}
-.trade-fairs-cta:hover { background: var(--primary-hover); color: #231e18; }
-.trade-fairs-cta.secondary:hover { background: rgba(255,255,255,0.12); color: #fff; }
-/*.coverage-note{margin: 0.6rem 0 0.2rem 0;color: #cfcfcf;font-size: 0.98rem;line-height: 1.4;max-width: 720px;opacity: 0.92;}*/
-.coverage-note--inline{margin: 0.35rem 0 0.9rem 0;}
-.coverage-examples{opacity: 0.85;}
-
-/* HERO: keep WhatsApp CTA above the fold on mobile */
-.hero-coverage-note{margin: 0.15rem auto 0.7rem auto;text-align: center;max-width: 520px;}
-@media (max-width:700px){.city-selector{ margin-bottom: 0.65em; }.city-proof{ margin-bottom: 0.55em; }.city-subtitle{ margin-bottom: 0.9em; }.home-secondary-cta{ margin-top: 0.3em; }}
-
-@media (max-width:700px){.city-btn.coming-soon{ display:none; }}
-.coverage-note {margin: 0.8rem auto 0.6rem auto;padding: 0.4rem 0.6rem;text-align: center;font-size: 0.95rem;color: #eaeaea;max-width: 360px;line-height: 1.4;background: rgba(0,0,0,0.35);border-radius: 10px;}
-
-
-  </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Bartender Staffing for Events","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Bartendly","url":"https://www.bartendly.com/"},"serviceType":"Bartender staffing","category":"Event staffing","availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://www.bartendly.com/","availableLanguage":["en"]}}</script>
-
-<!-- Organization Schema for Bartendly Root -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bartendly Experiences | Professional Bartenders for Events</title>
+<meta name="description" content="Book professional bartenders for trade shows, brand activations and corporate events. Fast, human coordination for premium cocktail service.">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="canonical" href="https://bartendly.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bartendly Experiences">
+<meta property="og:title" content="Bartendly Experiences | Professional Bartenders for Events">
+<meta property="og:description" content="Professional bartenders for trade shows, brand activations and corporate events.">
+<meta property="og:url" content="https://bartendly.com/">
+<meta property="og:image" content="https://bartendly.com/images/og-bartendly-experiences.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bartendly Experiences | Professional Bartenders for Events">
+<meta name="twitter:description" content="Professional bartenders for trade shows, brand activations and corporate events.">
+<meta name="twitter:image" content="https://bartendly.com/images/og-bartendly-experiences.jpg">
+<link rel="preload" as="image" href="images/hero-bartendly-experiences.jpg">
+<style>
+:root{--bg:#ffffff;--bg-soft:#f7f4ef;--bg-soft-2:#f2ece3;--bg-dark:#0b0b0f;--bg-dark-2:#141419;--card:#ffffff;--card-border:rgba(17,17,17,0.08);--card-border-dark:rgba(255,255,255,0.12);--text:#101114;--text-soft:#61636d;--text-light:#ffffff;--text-light-soft:rgba(255,255,255,0.76);--accent:#d8b06f;--accent-2:#c99856;--accent-dark:#a8793f;--shadow:0 18px 60px rgba(11,11,15,0.10);--shadow-strong:0 28px 90px rgba(0,0,0,0.28);--radius-xl:32px;--radius-lg:26px;--radius-md:20px;--radius-sm:14px;--container:min(1180px,calc(100vw - 32px));--container-narrow:min(880px,calc(100vw - 32px));--space-section:96px;--space-section-mobile:60px;--ease:cubic-bezier(.22,1,.36,1);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;height:auto;}
+a{color:inherit;text-decoration:none;}
+button,input,textarea,select{font:inherit;}
+button{cursor:pointer;}
+textarea{resize:vertical;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:12px 16px;border-radius:999px;background:#ffffff;color:#000000;z-index:1000;}
+.page-shell{overflow:hidden;}
+.container{width:var(--container);margin-inline:auto;}
+.container-narrow{width:var(--container-narrow);margin-inline:auto;}
+.section{padding:var(--space-section-mobile) 0;}
+.section-title{margin:0;font-size:clamp(2rem,5vw,3.1rem);line-height:0.98;letter-spacing:-0.06em;}
+.section-intro{max-width:720px;margin:14px 0 0;font-size:1rem;color:var(--text-soft);}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:120;background:linear-gradient(180deg,rgba(11,11,15,0.88),rgba(11,11,15,0.52));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);transition:background 0.35s var(--ease),border-color 0.35s var(--ease),transform 0.35s var(--ease);}
+.topbar.is-scrolled{background:rgba(11,11,15,0.84);border-color:rgba(255,255,255,0.14);}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:var(--container);margin-inline:auto;min-height:72px;}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;}
+.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,0.20),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);}
+.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,0.76),rgba(168,121,63,0.20) 54%,transparent 74%);}
+.brand__mark::after{content:"B";position:relative;font-size:1rem;font-weight:800;letter-spacing:-0.05em;color:#ffffff;}
+.brand__text{display:flex;flex-direction:column;min-width:0;}
+.brand__name{font-size:0.96rem;font-weight:700;letter-spacing:-0.03em;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.brand__tag{margin-top:2px;font-size:0.76rem;color:rgba(255,255,255,0.62);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.topbar__actions{display:flex;align-items:center;gap:12px;}
+.language-wrap[hidden]{display:none!important;}
+.language-select{min-width:118px;height:42px;padding:0 38px 0 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#ffffff;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#ffffff 50%),linear-gradient(135deg,#ffffff 50%,transparent 50%);background-position:calc(100% - 18px) 17px,calc(100% - 12px) 17px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;}
+.topbar__contact{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.08);color:#ffffff;font-size:0.92rem;font-weight:600;transition:transform 0.3s var(--ease),background 0.3s var(--ease),border-color 0.3s var(--ease);}
+.topbar__contact:hover{transform:translateY(-1px);background:rgba(255,255,255,0.12);}
+.hero{position:relative;padding:98px 0 26px;background:var(--bg-dark);color:var(--text-light);isolation:isolate;}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,0.58),rgba(11,11,15,0.66) 42%,rgba(11,11,15,0.92));z-index:-2;}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,0.16),rgba(216,176,111,0));filter:blur(8px);z-index:-1;}
+.hero__media{position:absolute;inset:0;z-index:-3;overflow:hidden;}
+.hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(11,11,15,0.76) 8%,rgba(11,11,15,0.38) 46%,rgba(11,11,15,0.84) 100%);}
+.hero__image{width:100%;height:100%;object-fit:cover;transform:scale(1.05);}
+.hero__grid{display:grid;gap:22px;align-items:start;}
+.hero__content{position:relative;max-width:690px;}
+.hero__title{margin:16px 0 0;max-width:10ch;font-size:clamp(2.4rem,8vw,5rem);line-height:0.92;letter-spacing:-0.07em;}
+.hero__subtitle{max-width:23ch;margin:16px 0 0;font-size:1.05rem;color:var(--text-light-soft);}
+.hero__proof{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:18px 0 0;padding:0;list-style:none;color:rgba(255,255,255,0.88);}
+.hero__proof li{position:relative;padding-left:18px;font-size:0.96rem;}
+.hero__proof li::before{content:"";position:absolute;left:0;top:0.54em;width:8px;height:8px;border-radius:50%;background:var(--accent);}
+.hero__support{max-width:32ch;margin:14px 0 0;font-size:0.98rem;color:rgba(255,255,255,0.72);}
+.hero__top-actions{display:grid;gap:10px;margin:20px 0 0;max-width:420px;}
+.button-hero{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;width:100%;padding:0 18px;border:none;border-radius:18px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));color:#151515;font-weight:800;letter-spacing:-0.02em;box-shadow:0 18px 40px rgba(216,176,111,0.22);transition:transform 0.35s var(--ease),box-shadow 0.35s var(--ease),filter 0.35s var(--ease);}
+.button-hero::after{content:"↗";display:inline-flex;align-items:center;justify-content:center;font-size:1rem;transform:translateY(-1px);}
+.button-hero:hover{transform:translateY(-2px);box-shadow:0 22px 50px rgba(216,176,111,0.28);filter:saturate(1.03);}
+.hero__cta-note{margin:0;font-size:0.88rem;color:rgba(255,255,255,0.68);}
+.hero__form-wrap{position:relative;}
+.hero-card{position:relative;padding:22px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,0.97),rgba(255,255,255,0.91));color:var(--text);box-shadow:var(--shadow-strong);border:1px solid rgba(255,255,255,0.28);overflow:hidden;}
+.hero-card::before{content:"";position:absolute;right:-80px;bottom:-120px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,0.22),rgba(216,176,111,0) 68%);}
+.hero-card__title{position:relative;margin:0;font-size:1.34rem;line-height:1.02;letter-spacing:-0.04em;}
+.hero-card__divider{position:relative;width:82px;height:5px;margin:14px 0 0;border-radius:999px;background:linear-gradient(90deg,var(--accent-2),rgba(216,176,111,0.16));}
+.hero-card__grid{position:relative;display:grid;gap:16px;margin-top:18px;}
+.field{display:grid;gap:8px;}
+.field label{font-size:0.92rem;font-weight:600;letter-spacing:-0.01em;color:#191919;}
+.field input,.field textarea{width:100%;padding:14px 15px;border:1px solid rgba(17,17,17,0.10);border-radius:16px;background:#ffffff;color:#111111;transition:border-color 0.3s var(--ease),box-shadow 0.3s var(--ease),transform 0.3s var(--ease);}
+.field input::placeholder,.field textarea::placeholder{color:#8a8a92;}
+.field input:focus,.field textarea:focus{border-color:rgba(216,176,111,0.70);box-shadow:0 0 0 4px rgba(216,176,111,0.12);transform:translateY(-1px);outline:none;}
+.field textarea{min-height:148px;}
+.form-actions{display:grid;gap:10px;margin-top:4px;}
+.button-primary{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;width:100%;padding:0 18px;border:none;border-radius:18px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));color:#151515;font-weight:800;letter-spacing:-0.02em;box-shadow:0 18px 40px rgba(216,176,111,0.24);transition:transform 0.35s var(--ease),box-shadow 0.35s var(--ease),filter 0.35s var(--ease);}
+.button-primary::after{content:"↗";display:inline-flex;align-items:center;justify-content:center;font-size:1rem;transform:translateY(-1px);}
+.button-primary:hover{transform:translateY(-2px);box-shadow:0 22px 50px rgba(216,176,111,0.30);filter:saturate(1.03);}
+.button-primary:active{transform:translateY(0);}
+.form-microcopy{margin:0;font-size:0.83rem;color:#666672;text-align:center;}
+.form-reassurance{display:flex;justify-content:center;gap:10px;align-items:center;margin:2px 0 0;font-size:0.82rem;color:#4f4f56;}
+.form-reassurance::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent-2);}
+.form-feedback{display:none;padding:12px 14px;border-radius:14px;font-size:0.88rem;}
+.form-feedback.is-visible{display:block;}
+.form-feedback.is-error{background:rgba(233,78,78,0.10);border:1px solid rgba(233,78,78,0.16);color:#8a2020;}
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:140;display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 18px;border:none;border-radius:18px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));color:#151515;font-weight:800;letter-spacing:-0.02em;box-shadow:0 18px 50px rgba(216,176,111,0.28);transition:transform 0.3s var(--ease),opacity 0.3s var(--ease);}
+.sticky-cta.is-hidden{opacity:0;pointer-events:none;transform:translateY(16px);}
+.section-light{background:var(--bg);}
+.section-soft{background:linear-gradient(180deg,var(--bg-soft),#ffffff);}
+.cards-grid{display:grid;gap:18px;margin-top:26px;}
+.service-card{position:relative;overflow:hidden;padding:22px;border-radius:24px;background:#ffffff;border:1px solid var(--card-border);box-shadow:var(--shadow);transition:transform 0.45s var(--ease),box-shadow 0.45s var(--ease),border-color 0.45s var(--ease);}
+.service-card::before{content:"";position:absolute;right:-50px;top:-50px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,0.14),rgba(216,176,111,0) 70%);}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 24px 70px rgba(11,11,15,0.14);border-color:rgba(216,176,111,0.24);}
+.service-card__icon{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(180deg,rgba(216,176,111,0.16),rgba(216,176,111,0.05));color:var(--accent-dark);border:1px solid rgba(216,176,111,0.16);}
+.service-card__icon svg{width:24px;height:24px;}
+.service-card__title{margin:20px 0 0;font-size:1.28rem;line-height:1.04;letter-spacing:-0.04em;}
+.service-card__text{margin:12px 0 0;font-size:0.97rem;color:var(--text-soft);}
+.why-grid{display:grid;gap:18px;margin-top:26px;}
+.why-card{position:relative;padding:24px;border-radius:26px;background:linear-gradient(180deg,#ffffff,#fbfaf8);border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
+.why-card__number{display:inline-flex;align-items:center;justify-content:center;min-width:54px;height:34px;padding:0 12px;border-radius:999px;background:rgba(216,176,111,0.14);color:var(--accent-dark);font-size:0.84rem;font-weight:700;letter-spacing:0.02em;}
+.why-card__title{margin:18px 0 0;font-size:1.22rem;line-height:1.05;letter-spacing:-0.04em;}
+.why-card__text{margin:12px 0 0;color:var(--text-soft);}
+.how-grid{display:grid;gap:16px;margin-top:26px;}
+.step-card{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:22px;border-radius:24px;background:#ffffff;border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
+.step-card__number{display:grid;place-items:center;width:52px;height:52px;border-radius:18px;background:var(--bg-dark);color:#ffffff;font-size:1.08rem;font-weight:700;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08);}
+.step-card__title{margin:2px 0 0;font-size:1.15rem;line-height:1.1;letter-spacing:-0.03em;}
+.step-card__text{margin:8px 0 0;color:var(--text-soft);}
+.gallery-section{position:relative;overflow:hidden;background:#111116;color:#ffffff;}
+.gallery-section::before{content:"";position:absolute;left:-120px;bottom:-150px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,0.16),rgba(216,176,111,0) 70%);}
+.gallery-intro{max-width:700px;color:rgba(255,255,255,0.72);}
+.gallery-grid{display:grid;gap:14px;margin-top:28px;grid-template-columns:1.15fr 0.85fr;}
+.gallery-card{position:relative;min-height:240px;border-radius:28px;overflow:hidden;background:#1b1b22;border:1px solid rgba(255,255,255,0.10);box-shadow:0 24px 80px rgba(0,0,0,0.28);}
+.gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s var(--ease),filter 0.8s var(--ease);}
+.gallery-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,0.08),rgba(11,11,15,0.58));}
+.gallery-card:hover img{transform:scale(1.04);filter:saturate(1.03);}
+.gallery-card__label{position:absolute;left:18px;bottom:18px;z-index:2;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);backdrop-filter:blur(10px);font-size:0.85rem;color:#ffffff;}
+.gallery-stack{display:grid;gap:14px;}
+.network-wrap{display:grid;gap:20px;align-items:center;margin-top:28px;}
+.network-card{padding:24px;border-radius:28px;background:#ffffff;border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
+.network-visual{position:relative;min-height:320px;border-radius:30px;overflow:hidden;background:#111116;border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
+.network-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.network-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(11,11,15,0.74),rgba(11,11,15,0.16) 56%,rgba(11,11,15,0.58));}
+.faq-list{display:grid;gap:14px;margin-top:26px;}
+.faq-item{border-radius:24px;border:1px solid rgba(17,17,17,0.08);background:#ffffff;box-shadow:var(--shadow);overflow:hidden;}
+.faq-item button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:20px 20px 20px 22px;border:none;background:transparent;color:var(--text);text-align:left;}
+.faq-item button span:first-child{font-size:1rem;font-weight:650;letter-spacing:-0.02em;}
+.faq-item button span:last-child{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--bg-soft);color:#333333;flex-shrink:0;transition:transform 0.35s var(--ease),background 0.35s var(--ease),color 0.35s var(--ease);}
+.faq-item.is-open button span:last-child{transform:rotate(45deg);background:rgba(216,176,111,0.16);color:var(--accent-dark);}
+.faq-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows 0.45s var(--ease);}
+.faq-panel__inner{overflow:hidden;}
+.faq-panel__content{padding:0 22px 0;color:var(--text-soft);}
+.faq-item.is-open .faq-panel{grid-template-rows:1fr;}
+.faq-item.is-open .faq-panel__content{padding:0 22px 22px;}
+.cta-band{position:relative;padding:34px 0 88px;background:linear-gradient(180deg,#ffffff,#f7f4ef 36%,#0b0b0f 36%,#0b0b0f 100%);}
+.cta-card{position:relative;overflow:hidden;padding:28px;border-radius:32px;background:linear-gradient(180deg,#181820,#0f0f14);color:#ffffff;border:1px solid rgba(255,255,255,0.10);box-shadow:0 28px 90px rgba(0,0,0,0.28);}
+.cta-card::before{content:"";position:absolute;left:-90px;bottom:-90px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,0.26),rgba(216,176,111,0) 70%);}
+.cta-card::after{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.10),rgba(255,255,255,0) 70%);}
+.cta-card__inner{position:relative;display:grid;gap:20px;align-items:center;}
+.cta-card__title{margin:0;max-width:10ch;font-size:clamp(2rem,5vw,3.2rem);line-height:0.96;letter-spacing:-0.06em;}
+.cta-card__text{margin:14px 0 0;max-width:34ch;color:rgba(255,255,255,0.72);}
+.cta-card__actions{display:grid;gap:10px;}
+.cta-card__email{font-size:0.92rem;color:rgba(255,255,255,0.70);}
+.cta-card__email a{color:#ffffff;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.36);text-underline-offset:3px;}
+.footer{padding:22px 0 92px;background:#0b0b0f;color:rgba(255,255,255,0.72);}
+.footer__inner{display:grid;gap:20px;}
+.footer__brand{color:#ffffff;font-weight:700;letter-spacing:-0.03em;}
+.footer__text{max-width:520px;margin:8px 0 0;font-size:0.95rem;}
+.footer__meta{display:flex;flex-wrap:wrap;gap:14px 22px;font-size:0.92rem;}
+.footer__meta strong{color:#ffffff;font-weight:650;}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.8s var(--ease),transform 0.8s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.operate-spacer{height:16px;}
+.network-card h3{margin:0 0 10px;font-size:1.08rem;line-height:1.1;letter-spacing:-0.03em;}
+.network-card p+p{margin-top:10px;}
+[data-parallax]{will-change:transform;}
+@media (min-width:720px){.hero{padding:128px 0 74px;}.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,0.98fr);gap:28px;align-items:end;}.hero-card{padding:26px;}.cards-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.how-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.network-wrap{grid-template-columns:minmax(0,0.96fr) minmax(0,1.04fr);}.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
+@media (max-width:719px){.topbar__contact{display:none;}.hero__title{max-width:9ch;}.gallery-grid{grid-template-columns:1fr;}.gallery-card{min-height:220px;}.cta-band{padding-top:26px;}}
+@media (max-width:479px){.topbar__inner{min-height:68px;}.brand__tag{display:none;}.hero{padding-top:94px;}.hero-card{padding:20px;}.service-card,.why-card,.step-card,.network-card,.cta-card,.gallery-card,.faq-item{border-radius:24px;}.section{padding:56px 0;}.hero__proof{gap:8px 12px;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}}
+</style>
 <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Bartendly",
-      "image": "https://www.bartendly.com/images/hero-900.jpg",
-      "description": "International bartender and mixologist booking platform for private and corporate events. Hong Kong, London, Barcelona, Madrid and more.",
-      "url": "https://www.bartendly.com/",
-      "email": "martial@bartendly.com",
-      "sameAs": [
-        "https://instagram.com/bartendly",
-        "https://facebook.com/bartendly",
-        "https://linkedin.com/company/bartendly"
-      ]
-    }
-    </script>
-    
-    <!-- FAQPage Schema (root, generic) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I hire a bartender for a corporate event or company party?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — Bartendly provides professional bartenders for business launches, office parties, conferences, and brand events in every active city."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you cover private homes, rooftops, villas, or yachts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely! Bartendly bartenders serve at rooftops, private homes, villas, yachts, hotels, and more—just specify your venue."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer cocktail classes or mixology workshops?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our bartenders run cocktail masterclasses and team-building workshops for private and corporate groups, anywhere in the world."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I request non-alcoholic or mocktail specialists?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, just mention it in your request—many of our bartenders are also expert mocktail artists and can create alcohol-free experiences."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How quickly can I book a bartender for my event?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually, you’ll receive proposals within minutes, sometimes even instantly. Last-minute and urgent requests are welcome."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is the service really personalized?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes—every Bartendly event is tailored to your needs, from drinks menu to service style. You get direct chat and custom proposals."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does payment work? Any hidden fees?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":"Payments are handled through Bartendly with a single fixed invoice and deposit to confirm staffing. No hidden fees, full transparency."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17739320947"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17739320947');
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Professional bartenders for trade shows, brand activations and corporate events.","email":"contact@bartendly.com","areaServed":["Barcelona","London","Hong Kong","Madrid"],"serviceType":["Trade show bartending","Brand activation bartending","Corporate event bartending"]}
 </script>
-
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of events do you support?","acceptedAnswer":{"@type":"Answer","text":"We focus on trade shows, brand activations and corporate events."}},{"@type":"Question","name":"Do you operate only in specific cities?","acceptedAnswer":{"@type":"Answer","text":"We work in major cities and can also adapt depending on the event and location."}},{"@type":"Question","name":"How does the process work?","acceptedAnswer":{"@type":"Answer","text":"You send your request, we discuss your needs, and we propose the right setup for your event."}},{"@type":"Question","name":"Can the service be adapted to our event?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each event is different, and we adjust the team and setup accordingly."}},{"@type":"Question","name":"How quickly will I get a response?","acceptedAnswer":{"@type":"Answer","text":"We usually reply quickly after receiving your request."}}]}
+</script>
+<script defer src="i18n.js"></script>
 </head>
 <body>
-  <section class="hero" id="hero">
-   <picture class="hero-bg">
-      <source srcset="images/hero-600.webp 600w, images/hero-900.webp 900w, images/hero-1200.webp 1200w" type="image/webp" sizes="100vw">
-      <source srcset="images/hero-600.jpg 600w, images/hero-900.jpg 900w, images/hero-1200.jpg 1200w" type="image/jpeg" sizes="100vw">
-      <img src="images/hero-900.jpg"
-           alt="Bartenders in action at rooftop parties, office events in Barcelona, London, Hong Kong, Madrid"
-           width="1200" height="1800"
-           loading="eager"
-           fetchpriority="high" />
-    </picture>
-    <a href="/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>
-    <nav class="hero-topnav" aria-label="Top navigation">
-      <a href="/bartenders/">Bartenders</a>
-    </nav>
-    <div class="hero-content">
-      <h1 class="city-title">Bartender staffing for trade fairs, corporate & premium events</h1>
-      <div class="city-proof">Private & corporate bartenders, locally vetted.</div>
-      <div class="city-subtitle">Exhibitions · Brand activations · Hotels · Fashion & automotive events · Select VIP private parties</div>
-      <nav class="city-selector" aria-label="Select your city">
-        <a href="/hong-kong/" class="city-btn" aria-label="Book a bartender in Hong Kong">Hong Kong</a>
-        <a href="/london/" class="city-btn" aria-label="Book a bartender in London">London</a>
-        <a href="/barcelona/" class="city-btn" aria-label="Book a bartender in Barcelona">Barcelona</a>
-        <a href="/madrid/" class="city-btn" aria-label="Book a bartender in Madrid">Madrid</a>
-        <span class="city-btn coming-soon">
-          <span class="coming-btn-inner">
-            <span class="coming-title">Coming Soon</span>
-            <span class="coming-cities">Singapore · Dubai</span>
-          </span>
-        </span>
-      </nav>
-      <p class="coverage-note hero-coverage-note">
-        <strong>Not listed?</strong> We regularly staff events in other cities
-        <span class="coverage-examples">(e.g., Berlin, Milan, Paris, Dubai)</span>.
-      </p>
-      <a class="home-secondary-cta" href="https://wa.me/34618502493?text=Hi%20Bartendly%20%E2%80%94%20I%27m%20not%20sure%20which%20city%20page%20to%20use.%0A%0AEvent%20city%3A%20%0ADate%20%26%20hours%3A%20%0AVenue%20%2F%20area%3A%20%0AGuests%3A%20%0AStaff%20needed%3A%20%0AEvent%20type%20(corporate%20%2F%20trade%20show%20%2F%20brand%20%2F%20premium%20private)%3A%20" target="_blank" rel="noopener">Not sure? Talk to our team</a>
-    </div>
-  </section>
-  
-  <main>
-    <section id="how-it-works">
-      <h2 class="section-title">How It Works</h2>
-      <div class="how-it-works">
-        <div class="how-it-works-step">
-          <h3>1. Tell Us About Your Event</h3>
-          <p>Give us the date, city, and details—private or corporate, any style, any size.</p>
-        </div>
-        <div class="how-it-works-step">
-          <h3>2. Receive Proposals</h3>
-          <p>Top local bartenders in your chosen city will send you personalized offers in minutes.</p>
-        </div>
-        <div class="how-it-works-step">
-          <h3>3. Book & Enjoy</h3>
-          <p>Choose your favorite bartender, pay direct or via Bartendly, and enjoy your event with zero hassle.</p>
-        </div>
-      </div>
-    </section>
-  
-    <section id="why-bartendly">
-      <h2 class="section-title">Why Bartendly?</h2>
-      <div class="why-bartendly">
-        <ul>
-          <li>✅ Only trusted, pre-vetted local bartenders in every city</li>
-          <li>🍸 Corporate hospitality, trade shows, brand activations — plus premium private events in select cities</li>
-          <li>⚡ 100% personalized offers—every event is unique, no generic packages</li>
-          <li>🌍 Fast-growing global network: Hong Kong, London, Barcelona, Madrid… more coming soon</li>
-          <li>💸 Transparent pricing — book and pay securely through Bartendly.</li>
-          <li>💬 Direct chat with your bartender, tailored proposals in minutes</li>
-        </ul>
-      </div>
-    </section>    
+<a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Skip to content</a>
+<div class="page-shell">
+<header class="topbar" id="topbar">
+<div class="topbar__inner">
+<a class="brand" href="#top" aria-label="Bartendly Experiences home">
+<span class="brand__mark" aria-hidden="true"></span>
+<span class="brand__text">
+<span class="brand__name" data-i18n="brand.name">Bartendly Experiences</span>
+<span class="brand__tag" data-i18n="brand.tagline">Professional bartenders for trade shows, brand activations and corporate events</span>
+</span>
+</a>
+<div class="topbar__actions">
+<div class="language-wrap" data-language-wrap hidden>
+<label class="sr-only" for="language-select" data-i18n="lang.label">Language</label>
+<select class="language-select" id="language-select" data-language-select aria-label="Language"></select>
+</div>
+<a class="topbar__contact" href="#contact" data-i18n="topbar.contact">Contact</a>
+</div>
+</div>
+</header>
 
-    <!-- Trade fairs & conferences (homepage) -->
-<section id="trade-fairs">
-  <h2 class="section-title">Trade fairs & conferences</h2>
+<main id="main">
+<section class="hero" id="top">
+<div class="hero__media" aria-hidden="true">
+<img class="hero__image" src="images/hero-bartendly-experiences.jpg" alt="Premium event atmosphere with professional bartenders serving cocktails" width="1600" height="1200" data-parallax>
+</div>
+<div class="container hero__grid">
+<div class="hero__content reveal">
+<h1 class="hero__title" data-i18n="hero.title">Book professional bartenders for your event</h1>
+<p class="hero__subtitle" data-i18n="hero.subtitle">Trade shows, brand activations and corporate events</p>
+<div class="hero__top-actions">
+<a class="button-hero" href="#contact-form" data-i18n="hero.primaryCta">Tell us about your event</a>
+<p class="hero__cta-note" data-i18n="hero.primaryCtaNote">Fast response. No obligation.</p>
+</div>
+<ul class="hero__proof" aria-label="Trust signals">
+<li data-i18n="hero.proof.one">Fast response</li>
+<li data-i18n="hero.proof.two">Human coordination</li>
+<li data-i18n="hero.proof.three">Curated bartenders</li>
+</ul>
+<p class="hero__support" data-i18n="hero.support">A clear, human process for high-quality cocktail service.</p>
+</div>
 
-  <p class="trade-fairs-lead">
-    Bartendly coordinates bartender staffing for exhibitor hospitality, corporate receptions and brand activations
-    during major international trade fairs — with agency-grade execution and fast confirmation.
-  </p>
-
-  <p class="trade-fairs-places">
-    <strong>Including:</strong>
-    MWC · IFEMA · HKTDC · Messe venues · ExCeL London · Olympia London · major hotels & off-site venues in Hong Kong
-  </p>
-  <p class="coverage-note coverage-note--inline">
-    <strong>Not listed?</strong> We can still help — international coverage available on request
-    <span class="coverage-examples">(e.g., Berlin, Paris, Milan, Dubai)</span>.
-  </p>  
-
-  <blockquote class="trade-fairs-quote">
-    “Fast coordination, reliable team, and zero operational friction.”
-    <footer>— Event Manager, International Brand</footer>
-  </blockquote>
-
-  <div class="trade-fairs-actions">
-    <!--<a class="trade-fairs-cta" href="#ai-prompt">Request staffing</a>-->
-    <a class="trade-fairs-cta secondary"
-       href="https://wa.me/34618502493?text=Hi%20Bartendly%20—%20Trade%20fair%20or%20corporate%20event%20staffing%20request.%0A%0AEvent%20type%3A%20%0ACity%3A%20%0ADate(s)%20%26%20hours%3A%20%0AVenue%3A%20%0AHow%20many%20bartenders%3A%20%0AContact%20name%20%2B%20company%3A%20"
-       target="_blank" rel="noopener">
-      Talk to our team
-    </a>
-  </div>
+<div class="hero__form-wrap reveal">
+<div class="hero-card">
+<h2 class="hero-card__title" data-i18n="hero.form.title">Tell us about your event</h2>
+<div class="hero-card__divider" aria-hidden="true"></div>
+<form id="contact-form" class="hero-card__grid" novalidate>
+<div class="field">
+<label for="name" data-i18n="hero.form.name.label">Name</label>
+<input id="name" name="name" type="text" autocomplete="name" data-i18n-placeholder="hero.form.name.placeholder" placeholder="Your name">
+</div>
+<div class="field">
+<label for="event" data-i18n="hero.form.event.label">Describe your event</label>
+<textarea id="event" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests"></textarea>
+</div>
+<div class="form-actions">
+<button class="button-primary" type="submit" data-i18n="hero.form.submit">Get bartenders for your event</button>
+<p class="form-microcopy" data-i18n="hero.form.microcopy">You’ll continue on WhatsApp</p>
+<p class="form-reassurance" data-i18n="hero.form.reassurance">We reply quickly. No obligation.</p>
+<div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+</div>
+</form>
+</div>
+</div>
+</div>
 </section>
 
-  
-    <section id="testimonials">
-      <h2 class="section-title">What People Say</h2>
-      <div class="testimonial">
-        <blockquote>
-          “A really amazing evening! Marco was incredibly helpful with everything and really made the night so special. He kept in touch throughout the planning to make sure we had everything we needed. It was a total success and the guests loved it.”
-          <footer>— Alice G., Central District</footer>
-        </blockquote>
-      </div>
-      <div class="testimonial">
-        <blockquote>
-          “Bartendly staffed our exhibitor hospitality during ICE Barcelona. Fast coordination, reliable team, and zero operational friction.”
-          <footer>— vent Manager, International Brand</footer>
-        </blockquote>
-      </div>
-      <div class="testimonial">
-        <blockquote>
-          “Great communication and the perfect bartender for our office launch in London. Will use again for sure.”
-          <footer>— Priya S., London</footer>
-        </blockquote>
-      </div>
-    </section>
+<section class="section section-light">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title" data-i18n="useCases.title">Cocktail experiences for</h2>
+<p class="section-intro" data-i18n="useCases.intro">A focused service for professional events where reliability, presentation and execution matter.</p>
+</div>
+<div class="cards-grid">
+<article class="service-card reveal">
+<div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18"/><path d="M6 3v8"/><path d="M18 3v8"/><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 13h8"/><path d="M8 16h5"/></svg></div>
+<h3 class="service-card__title" data-i18n="useCases.items.tradeShows.title">Trade shows</h3>
+<p class="service-card__text" data-i18n="useCases.items.tradeShows.text">Professional bartenders for exhibition stands, international fairs and business events.</p>
+</article>
+<article class="service-card reveal">
+<div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14l5-5 4 4 7-7"/><path d="M20 10V4h-6"/><path d="M4 20h16"/></svg></div>
+<h3 class="service-card__title" data-i18n="useCases.items.activations.title">Brand activations</h3>
+<p class="service-card__text" data-i18n="useCases.items.activations.text">Cocktail service designed to support brand presence, interaction and memorability.</p>
+</article>
+<article class="service-card reveal">
+<div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v10l-7 4-7-4V7l7-4z"/><path d="M12 7v10"/><path d="M8 9l8 6"/><path d="M16 9l-8 6"/></svg></div>
+<h3 class="service-card__title" data-i18n="useCases.items.corporate.title">Corporate events</h3>
+<p class="service-card__text" data-i18n="useCases.items.corporate.text">Reliable, high-quality service for internal events, client events and hosted experiences.</p>
+</article>
+</div>
+</div>
+</section>
 
-    <section id="bartendly-carousel" class="btly-mount" data-city="all">
-      <h2 class="section-title">Meet the bartenders</h2>
-    </section>
-  
-    <section id="faq">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-  
-      <div class="faq-item">
-        <h3>Can I hire a bartender for a corporate event or company party?</h3>
-        <p>Yes—Bartendly provides professional bartenders for business launches, office parties, conferences, and brand events in every active city.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>Do you cover private homes, rooftops, villas, or yachts?</h3>
-        <p>Absolutely! Bartendly bartenders serve at rooftops, private homes, villas, yachts, hotels, and more—just specify your venue.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>Do you offer cocktail classes or mixology workshops?</h3>
-        <p>Yes, our bartenders run cocktail masterclasses and team-building workshops for private and corporate groups, anywhere in the world.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>Can I request non-alcoholic or mocktail specialists?</h3>
-        <p>Yes, just mention it in your request—many of our bartenders are also expert mocktail artists and can create alcohol-free experiences.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>How quickly can I book a bartender for my event?</h3>
-        <p>Usually, you’ll receive proposals within minutes, sometimes even instantly. Last-minute and urgent requests are welcome.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>Is the service really personalized?</h3>
-        <p>Yes—every Bartendly event is tailored to your needs, from drinks menu to service style. You get direct chat and custom proposals.</p>
-      </div>
-  
-      <div class="faq-item">
-        <h3>How does payment work? Any hidden fees?</h3>
-        <p>
-          All payments are made securely through Bartendly — by card, Apple Pay, or bank transfer in your local currency. 
-          A 50% deposit is required to confirm your booking, and the remaining balance is due before the event. 
-          No hidden fees — full transparency at every step.
-        </p>
-      </div>
-    </section>
-  
-    <section id="about">
-      <h2 class="section-title">About Bartendly</h2>
-      <div class="about">
-        <p>
-          Bartendly is the international platform for booking premium bartenders in any city—Hong Kong, London, Barcelona, Madrid and more coming soon. 
-          Trusted by global brands, event agencies, and private clients. 100% personalized, ultra-fast, no hidden fees. <br>
-          Powered by the team behind <a href="https://www.instagram.com/world.of.mixologists/" target="_blank" style="color:#ffae3a;">@world.of.mixologists</a>.
-        </p>
-        <p style="font-size:0.95em;opacity:.85;">
-          Bartendly coordinates bartender staffing only — alcohol is typically supplied by the venue or client.
-        </p>       
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer-links">
-      <a href="mailto:martial@bartendly.com">Contact Us</a>
-    </div>
-    <div class="social-links">
-      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
-      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
-      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
-      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
-    </div>
-    <p>&copy; 2025 Bartendly. All rights reserved.</p>
-    <div class="legal-disclaimer">
-      Bartendly is a digital platform only. <a href="/terms" target="_blank">See terms & disclaimer</a>.
-    </div>
-    <div class="footer-join-link">
-      <a href="/bartenders/join">Bartender? <span>Join Bartendly</span></a>
-    </div>    
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('js-animate');const o=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){t.target.classList.add('fade-in');o.unobserve(t.target);}})},{threshold:.15});document.querySelectorAll('section,.testimonial,.faq-item').forEach(e=>{o.observe(e);});});
-  </script>  
+<section class="section section-soft">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title" data-i18n="why.title">Why Bartendly Experiences</h2>
+<p class="section-intro" data-i18n="why.intro">A focused, curated approach for events that need more than just staffing.</p>
+</div>
+<div class="why-grid">
+<article class="why-card reveal"><div class="why-card__number">01</div><h3 class="why-card__title" data-i18n="why.items.curated.title">Curated professionals</h3><p class="why-card__text" data-i18n="why.items.curated.text">We work with experienced bartenders selected for reliability, presentation and event fit.</p></article>
+<article class="why-card reveal"><div class="why-card__number">02</div><h3 class="why-card__title" data-i18n="why.items.demanding.title">Built for demanding events</h3><p class="why-card__text" data-i18n="why.items.demanding.text">Trade shows, activations and premium corporate contexts require precision, consistency and strong presence.</p></article>
+<article class="why-card reveal"><div class="why-card__number">03</div><h3 class="why-card__title" data-i18n="why.items.coordination.title">Fast, human coordination</h3><p class="why-card__text" data-i18n="why.items.coordination.text">You speak directly with us. We understand your needs quickly and adapt the setup to your event.</p></article>
+</div>
+</div>
+</section>
 
-  <!-- put scripts just before </body> -->
-  <script src="/bartenders/bartenders.js"></script>
-  <script src="/assets/js/bartendly-carousel.js"></script>
+<section class="section section-light">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title" data-i18n="how.title">How it works</h2>
+<p class="section-intro" data-i18n="how.intro">Simple, direct and handled personally.</p>
+</div>
+<div class="how-grid">
+<article class="step-card reveal"><div class="step-card__number">1</div><div><h3 class="step-card__title" data-i18n="how.steps.one.title">Tell us your needs</h3><p class="step-card__text" data-i18n="how.steps.one.text">Share the essentials in a few seconds.</p></div></article>
+<article class="step-card reveal"><div class="step-card__number">2</div><div><h3 class="step-card__title" data-i18n="how.steps.two.title">We shape the right setup</h3><p class="step-card__text" data-i18n="how.steps.two.text">Based on your event type, scale and context.</p></div></article>
+<article class="step-card reveal"><div class="step-card__number">3</div><div><h3 class="step-card__title" data-i18n="how.steps.three.title">You confirm</h3><p class="step-card__text" data-i18n="how.steps.three.text">We finalize everything directly with you.</p></div></article>
+</div>
+</div>
+</section>
+
+<section class="section gallery-section">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title" data-i18n="gallery.title">Visualize the atmosphere</h2>
+<p class="section-intro gallery-intro" data-i18n="gallery.intro">A premium hospitality aesthetic, built for events that need presence as much as service.</p>
+</div>
+<div class="gallery-grid">
+<article class="gallery-card reveal"><img src="images/gallery-hero-activation.jpg" alt="Stylish brand activation with cocktails and premium hospitality atmosphere" width="1200" height="900"><div class="gallery-card__label">Brand activations</div></article>
+<div class="gallery-stack">
+<article class="gallery-card reveal"><img src="images/gallery-trade-show.jpg" alt="Professional bartending setup for a trade show stand" width="1200" height="900"><div class="gallery-card__label">Trade shows</div></article>
+<article class="gallery-card reveal"><img src="images/gallery-corporate-event.jpg" alt="Elegant corporate cocktail event with professional bartenders" width="1200" height="900"><div class="gallery-card__label">Corporate events</div></article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-light">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title" data-i18n="network.title">A curated network for professional events</h2>
+<p class="section-intro" data-i18n="network.text">We work with experienced bartenders across major cities, with a focus on reliability, consistency and event quality.</p>
+</div>
+<div class="network-wrap">
+<div class="network-card reveal">
+<p data-i18n="network.text2">Each request is handled individually to ensure the right fit for your event.</p>
+<p data-i18n="network.text3">From small premium setups to larger event teams, we focus on fit, presentation and smooth coordination.</p>
+</div>
+<div class="network-visual reveal">
+<img src="images/network-bartenders-event.jpg" alt="Professional bartenders working at a premium event" width="1200" height="1000">
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+    <div class="reveal">
+    <h2 class="section-title" data-i18n="operate.title">Where we operate</h2>
+    <p class="section-intro" data-i18n="operate.intro">We support trade shows, brand activations and corporate events in major event hubs across Europe and Asia.</p>
+    </div>
+    <div class="network-wrap">
+    <div class="network-card reveal">
+    <div>
+    <h3 data-i18n="operate.group1.title">Europe</h3>
+    <p data-i18n="operate.group1.item1">Barcelona — Fira Barcelona</p>
+    <p data-i18n="operate.group1.item2">Madrid — IFEMA</p>
+    <p data-i18n="operate.group1.item3">London — ExCeL London and major event venues</p>
+    </div>
+    <div class="operate-spacer" aria-hidden="true"></div>
+    <div>
+    <h3 data-i18n="operate.group2.title">Asia</h3>
+    <p data-i18n="operate.group2.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
+    <p data-i18n="operate.group2.item2">Taipei — major event venues</p>
+    <p data-i18n="operate.group2.item3">Other international trade show cities on request</p>
+    </div>
+    </div>
+    <div class="network-visual reveal">
+    <img src="images/operate-trade-show-hubs.jpg" alt="Premium trade show and event hospitality environment" width="1200" height="1000">
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="section section-soft">
+<div class="container-narrow">
+<div class="reveal">
+<h2 class="section-title" data-i18n="faq.title">Questions</h2>
+<p class="section-intro" data-i18n="faq.intro">A few answers to the questions clients usually have before getting in touch.</p>
+</div>
+<div class="faq-list" id="faq-list">
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.types.question">What types of events do you support?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.types.answer">We focus on trade shows, brand activations and corporate events.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.cities.question">Do you operate only in specific cities?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.cities.answer">We work in major cities and can also adapt depending on the event and location.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.process.question">How does the process work?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.process.answer">You send your request, we discuss your needs, and we propose the right setup for your event.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.adapt.question">Can the service be adapted to our event?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.adapt.answer">Yes. Each event is different, and we adjust the team and setup accordingly.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.response.question">How quickly will I get a response?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.response.answer">We usually reply quickly after receiving your request.</div></div></div></article>
+</div>
+</div>
+</section>
+
+<section class="section section-light">
+    <div class="container-narrow">
+    <div class="cta-card reveal">
+    <div class="cta-card__inner">
+    <div>
+    <h2 class="cta-card__title" data-i18n="bartender.title">Are you a bartender?</h2>
+    <p class="cta-card__text" data-i18n="bartender.text">Join Bartendly to build your presence and explore the platform.</p>
+    </div>
+    <div class="cta-card__actions">
+    <a class="button-primary" href="https://app.bartendly.com" data-i18n="bartender.button">Open Bartendly</a>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section class="cta-band" id="contact">
+<div class="container">
+<div class="cta-card reveal">
+<div class="cta-card__inner">
+<div>
+<h2 class="cta-card__title" data-i18n="cta.title">Tell us about your event</h2>
+<p class="cta-card__text" data-i18n="cta.text">We’ll get back to you quickly with the right setup.</p>
+</div>
+<div class="cta-card__actions">
+<a class="button-primary" href="#contact-form" data-i18n="cta.button">Tell us about your event</a>
+<p class="cta-card__email"><span data-i18n="cta.emailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com" data-i18n="cta.email">contact@bartendly.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer__inner">
+<div>
+<div class="footer__brand" data-i18n="footer.brand">Bartendly Experiences</div>
+<p class="footer__text" data-i18n="footer.text">Professional bartenders for trade shows, brand activations and corporate events.</p>
+</div>
+<div class="footer__meta">
+<div><strong data-i18n="footer.contactLabel">Contact</strong></div>
+<div><a href="mailto:contact@bartendly.com" data-i18n="footer.email">contact@bartendly.com</a></div>
+<div><span data-i18n="footer.rights">All rights reserved.</span></div>
+</div>
+</div>
+</footer>
+
+<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Tell us about your event</a>
+</div>
+
+<script>
+(function(){'use strict';
+var WHATSAPP_NUMBER='+34618502493';
+var form=document.getElementById('contact-form');
+var feedback=document.getElementById('form-feedback');
+var topbar=document.getElementById('topbar');
+var stickyCta=document.getElementById('sticky-cta');
+function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
+function setFeedback(message,type){if(!feedback){return;}feedback.textContent=message;feedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
+function clearFeedback(){if(!feedback){return;}feedback.textContent='';feedback.className='form-feedback';}
+function buildWhatsappMessage(name,eventText){var template=getText('whatsapp.message','Hi, I’m organizing an event.\n\nName: {name}\nEvent: {event}\n\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
+function openWhatsapp(name,eventText){var message=buildWhatsappMessage(name,eventText);var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);window.open(url,'_blank','noopener');}
+function validateForm(name,eventText){if(!name){setFeedback(getText('form.validation.nameRequired','Please enter your name.'),'error');return false;}if(!eventText){setFeedback(getText('form.validation.eventRequired','Please describe your event.'),'error');return false;}clearFeedback();return true;}
+function handleSubmit(event){event.preventDefault();var name=(form.querySelector('#name').value||'').trim();var eventText=(form.querySelector('#event').value||'').trim();if(!validateForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setFeedback(getText('form.error.whatsapp','Something went wrong. You can also contact us directly on WhatsApp.'),'error');}}
+function bindFaq(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');items.forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
+function bindScrollEffects(){var reveals=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){reveals.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:0.14});reveals.forEach(function(node){observer.observe(node);});}
+function bindTopbar(){function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){var offset=Math.min(window.scrollY*0.12,28);target.style.transform='scale(1.05) translate3d(0,'+offset+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
+function bindAnchorButtons(){document.querySelectorAll('a[href="#contact-form"]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();var target=document.getElementById('contact-form');if(!target){return;}window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});setTimeout(function(){var nameField=document.getElementById('name');if(nameField){nameField.focus();}},420);});});}
+function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY;var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-220);if(y<120||hideAtBottom){stickyCta.classList.add('is-hidden');}else{stickyCta.classList.remove('is-hidden');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function init(){if(form){form.addEventListener('submit',handleSubmit);}bindFaq();bindScrollEffects();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
+document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('bartendly:i18n-ready',function(){clearFeedback();});
+})();
+</script>
 </body>
 </html>

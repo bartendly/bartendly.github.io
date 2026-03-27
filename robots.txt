@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://www.bartendly.com/sitemap.xml
+Sitemap: https://bartendly.com/sitemap.xml
