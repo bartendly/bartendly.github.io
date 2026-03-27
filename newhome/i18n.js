@@ -10,9 +10,15 @@
     }
     
     function getNestedValue(obj, key) {
-    return key.split('.').reduce(function (acc, part) {
-    return acc && Object.prototype.hasOwnProperty.call(acc, part) ? acc[part] : undefined;
-    }, obj);
+        if (!obj) {
+        return undefined;
+        }
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        return obj[key];
+        }
+        return key.split('.').reduce(function (acc, part) {
+        return acc && Object.prototype.hasOwnProperty.call(acc, part) ? acc[part] : undefined;
+        }, obj);
     }
     
     function createFlatLookup(localeObject) {
@@ -90,16 +96,30 @@
     availableLanguages.forEach(function (language) {
     var option = document.createElement('option');
     option.value = language;
-    option.textContent = translations[currentLanguage]['lang.' + language] || language.toUpperCase();
+    option.textContent = flat['lang.' + language] || language.toUpperCase();
     if (language === currentLanguage) {
     option.selected = true;
     }
     selector.appendChild(option);
     });
     selector.addEventListener('change', function (event) {
-    var nextLanguage = event.target.value;
-    window.localStorage.setItem('bartendly-language', nextLanguage);
-    window.location.reload();
+        var nextLanguage = event.target.value;
+        var nextFlat = createFlatLookup(translations[nextLanguage]);
+        window.localStorage.setItem('bartendly-language', nextLanguage);
+        document.documentElement.lang = nextLanguage;
+        translateDocument(nextFlat);
+        window.__BARTENDLY_I18N__ = {
+        translations: translations,
+        currentLanguage: nextLanguage,
+        flat: nextFlat
+        };
+        document.dispatchEvent(new CustomEvent('bartendly:i18n-ready', {
+        detail: {
+        translations: translations,
+        currentLanguage: nextLanguage,
+        flat: nextFlat
+        }
+        }));
     });
     }
     
