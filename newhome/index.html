@@ -131,12 +131,9 @@ textarea{resize:vertical;}
 .gallery-stack{display:grid;gap:14px;}
 .network-wrap{display:grid;gap:20px;align-items:center;margin-top:28px;}
 .network-card{padding:24px;border-radius:28px;background:#ffffff;border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
-.network-card__cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding:0;list-style:none;}
-.network-card__cities li{padding:8px 12px;border-radius:999px;background:var(--bg-soft);border:1px solid rgba(17,17,17,0.06);font-size:0.88rem;color:#35353d;}
 .network-visual{position:relative;min-height:320px;border-radius:30px;overflow:hidden;background:#111116;border:1px solid rgba(17,17,17,0.08);box-shadow:var(--shadow);}
 .network-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .network-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(11,11,15,0.74),rgba(11,11,15,0.16) 56%,rgba(11,11,15,0.58));}
-.network-visual__badge{position:absolute;left:18px;top:18px;z-index:2;display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);backdrop-filter:blur(12px);font-size:0.85rem;color:#ffffff;}
 .faq-list{display:grid;gap:14px;margin-top:26px;}
 .faq-item{border-radius:24px;border:1px solid rgba(17,17,17,0.08);background:#ffffff;box-shadow:var(--shadow);overflow:hidden;}
 .faq-item button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:20px 20px 20px 22px;border:none;background:transparent;color:var(--text);text-align:left;}
@@ -166,6 +163,9 @@ textarea{resize:vertical;}
 .footer__meta strong{color:#ffffff;font-weight:650;}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity 0.8s var(--ease),transform 0.8s var(--ease);}
 .reveal.is-visible{opacity:1;transform:translateY(0);}
+.operate-spacer{height:16px;}
+.network-card h3{margin:0 0 10px;font-size:1.08rem;line-height:1.1;letter-spacing:-0.03em;}
+.network-card p+p{margin-top:10px;}
 [data-parallax]{will-change:transform;}
 @media (min-width:720px){.hero{padding:128px 0 74px;}.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,0.98fr);gap:28px;align-items:end;}.hero-card{padding:26px;}.cards-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.how-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.network-wrap{grid-template-columns:minmax(0,0.96fr) minmax(0,1.04fr);}.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
 @media (max-width:719px){.topbar__contact{display:none;}.hero__title{max-width:9ch;}.gallery-grid{grid-template-columns:1fr;}.gallery-card{min-height:220px;}.cta-band{padding-top:26px;}}
@@ -327,20 +327,42 @@ textarea{resize:vertical;}
 <div class="network-wrap">
 <div class="network-card reveal">
 <p data-i18n="network.text2">Each request is handled individually to ensure the right fit for your event.</p>
-<ul class="network-card__cities" aria-label="Cities">
-<li>Barcelona</li>
-<li>London</li>
-<li>Hong Kong</li>
-<li>Madrid</li>
-<li>More on request</li>
-</ul>
+<p data-i18n="network.text3">From small premium setups to larger event teams, we focus on fit, presentation and smooth coordination.</p>
 </div>
 <div class="network-visual reveal">
 <img src="images/network-bartenders-event.jpg" alt="Professional bartenders working at a premium event" width="1200" height="1000">
-<div class="network-visual__badge" data-i18n="network.badge">Curated network</div>
 </div>
 </div>
 </div>
+</section>
+
+<section class="section section-soft">
+    <div class="container">
+    <div class="reveal">
+    <h2 class="section-title" data-i18n="operate.title">Where we operate</h2>
+    <p class="section-intro" data-i18n="operate.intro">We support trade shows, brand activations and corporate events in major event hubs across Europe and Asia.</p>
+    </div>
+    <div class="network-wrap">
+    <div class="network-card reveal">
+    <div>
+    <h3 data-i18n="operate.group1.title">Europe</h3>
+    <p data-i18n="operate.group1.item1">Barcelona — Fira Barcelona</p>
+    <p data-i18n="operate.group1.item2">Madrid — IFEMA</p>
+    <p data-i18n="operate.group1.item3">London — ExCeL London and major event venues</p>
+    </div>
+    <div class="operate-spacer" aria-hidden="true"></div>
+    <div>
+    <h3 data-i18n="operate.group2.title">Asia</h3>
+    <p data-i18n="operate.group2.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
+    <p data-i18n="operate.group2.item2">Taipei — major event venues</p>
+    <p data-i18n="operate.group2.item3">Other international trade show cities on request</p>
+    </div>
+    </div>
+    <div class="network-visual reveal">
+    <img src="images/operate-trade-show-hubs.jpg" alt="Premium trade show and event hospitality environment" width="1200" height="1000">
+    </div>
+    </div>
+    </div>
 </section>
 
 <section class="section section-soft">
@@ -357,6 +379,22 @@ textarea{resize:vertical;}
 <article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.response.question">How quickly will I get a response?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.response.answer">We usually reply quickly after receiving your request.</div></div></div></article>
 </div>
 </div>
+</section>
+
+<section class="section section-light">
+    <div class="container-narrow">
+    <div class="cta-card reveal">
+    <div class="cta-card__inner">
+    <div>
+    <h2 class="cta-card__title" data-i18n="bartender.title">Are you a bartender?</h2>
+    <p class="cta-card__text" data-i18n="bartender.text">Join Bartendly to build your presence and explore the platform.</p>
+    </div>
+    <div class="cta-card__actions">
+    <a class="button-primary" href="https://app.bartendly.com" data-i18n="bartender.button">Open Bartendly</a>
+    </div>
+    </div>
+    </div>
+    </div>
 </section>
 
 <section class="cta-band" id="contact">
