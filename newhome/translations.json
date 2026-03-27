@@ -5,7 +5,6 @@
       "topbar.contact": "Contact",
       "topbar.language": "Language",
   
-      "hero.eyebrow": "Bartendly Experiences",
       "hero.title": "Book professional bartenders for your event",
       "hero.subtitle": "Trade shows, brand activations and corporate events",
       "hero.primaryCta": "Tell us about your event",
@@ -14,12 +13,6 @@
       "hero.proof.two": "Human coordination",
       "hero.proof.three": "Curated bartenders",
       "hero.support": "A clear, human process for high-quality cocktail service.",
-      "hero.stats.one.value": "Fast",
-      "hero.stats.one.label": "response",
-      "hero.stats.two.value": "Human",
-      "hero.stats.two.label": "coordination",
-      "hero.stats.three.value": "Curated",
-      "hero.stats.three.label": "bartenders",
   
       "hero.form.title": "Tell us about your event",
       "hero.form.name.label": "Name",
