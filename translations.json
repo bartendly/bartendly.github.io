@@ -124,8 +124,9 @@
       "cta.emailLabel": "Prefer email?",
       "cta.email": "contact@bartendly.com",
 
-      "seo.bottomParagraph": "Bartendly provides professional bartenders for trade shows, brand activations and corporate events in major event hubs such as Barcelona, Madrid, London and Hong Kong. Whether you need bartenders for Fira Barcelona, IFEMA, ExCeL London or other international event venues, we help you deliver high-quality cocktail service adapted to your event.",
-  
+      "seo.bottomTitle": "Professional bartenders for international events",
+      "seo.bottomParagraph": "Bartendly provides professional bartenders for trade shows, brand activations, corporate events and selected private events in major hubs such as Barcelona, Madrid, London and Hong Kong. Whether you need bartenders for Fira Barcelona, IFEMA, ExCeL London or other international venues, we help deliver high-quality cocktail service adapted to your event.",
+      
       "stickyCta.label": "Hire bartenders for your event",
   
       "footer.brand": "Bartendly Experiences",
@@ -436,8 +437,9 @@
   "cta.emailLabel": "¿Prefieres email?",
   "cta.email": "contact@bartendly.com",
 
-  "seo.bottomParagraph": "Bartendly ofrece bartenders profesionales para ferias, activaciones de marca y eventos corporativos en hubs internacionales como Barcelona, Madrid, Londres y Hong Kong. Tanto si necesitas bartenders para Fira Barcelona, IFEMA, ExCeL London u otros grandes recintos internacionales, te ayudamos a ofrecer un servicio de cócteles de alta calidad adaptado a tu evento.",
-
+  "seo.bottomTitle": "Bartenders profesionales para eventos internacionales",
+  "seo.bottomParagraph": "Bartendly proporciona bartenders profesionales para ferias, activaciones de marca, eventos corporativos y eventos privados seleccionados en hubs clave como Barcelona, Madrid, Londres y Hong Kong. Ya sea que necesites bartenders para Fira Barcelona, IFEMA, ExCeL London u otros venues internacionales, te ayudamos a ofrecer un servicio de coctelería de alta calidad adaptado a tu evento.",
+  
   "stickyCta.label": "Contratar bartenders para tu evento",
 
   "footer.brand": "Bartendly Experiences",
