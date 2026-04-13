@@ -6,12 +6,12 @@
       "topbar.language": "Language",
   
       "hero.title": "Hire professional bartenders for trade shows, brand activations, corporate and private events",
-      "hero.subtitle": "Fast human coordination, tailored to your event, vanue and guest flow",
+      "hero.subtitle": "Trusted for trade shows, brand activations and premium events worldwide",
       "hero.primaryCta": "Hire bartenders for your event",
-      "hero.primaryCtaNote": "Fast response. No obligation.",
-      "hero.proof.one": "Fast response",
-      "hero.proof.two": "Human coordination",
-      "hero.proof.three": "Curated bartenders",
+      "hero.primaryCtaNote": "Fast response. No obligation. We reply within hours.",
+      "hero.proof.one": "Experienced event bartenders",
+      "hero.proof.two": "Fast, direct coordination",
+      "hero.proof.three": "Flexible setups for any event",
       "hero.support": "A clear, human process for high-quality cocktail service.",
   
       "hero.form.title": "Tell us about your event",
@@ -56,6 +56,15 @@
       "why.items.demanding.text": "Trade shows, activations and premium corporate contexts require precision, consistency and strong presence.",
       "why.items.coordination.title": "Fast, human coordination",
       "why.items.coordination.text": "You speak directly with us. We understand your needs quickly and adapt the setup to your event.",
+
+      "testimonials.title": "Trusted by event organizers",
+      "testimonials.intro": "A few words from recent events and client collaborations.",
+      "testimonials.items.hk.quote": "“We worked with Bartendly for a large private event in Hong Kong. The bartenders were professional, efficient and perfectly adapted to the atmosphere. Everything was smooth from start to finish.”",
+      "testimonials.items.hk.author": "Alice",
+      "testimonials.items.hk.meta": "Private Event, Hong Kong",
+      "testimonials.items.bcn.quote": "“Bartendly supported us during ICE at Fira Barcelona with a team of 4 bartenders over 3 days. Reliable, well-coordinated and exactly what we needed for a busy trade show environment.”",
+      "testimonials.items.bcn.author": "Event Team",
+      "testimonials.items.bcn.meta": "Trade Show, Fira Barcelona",
   
       "how.title": "How it works",
       "how.intro": "Simple, direct and handled personally.",
