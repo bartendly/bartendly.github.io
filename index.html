@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bartendly Experiences | Professional Bartenders for Events</title>
-<meta name="description" content="Book professional bartenders for trade shows, brand activations and corporate events. Fast, human coordination for premium cocktail service.">
+<title>Hire Professional Bartenders for Trade Shows, Brand Activations & Corporate Events | Bartendly Experiences</title>
+<meta name="description" content="Hire professional bartenders for trade shows, brand activations and corporate events in Barcelona, London, Hong Kong, Madrid and other major event hubs. Fast human coordination and premium cocktail service.">
 <meta name="robots" content="index,follow">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#0b0b0f">
@@ -173,6 +173,12 @@ textarea{resize:vertical;}
 @media (max-width:719px){.topbar__about,.topbar__contact{display:none;}.hero__title{max-width:9ch;}.gallery-grid{grid-template-columns:1fr;}.gallery-card{min-height:220px;}.cta-band{padding-top:26px;}}
 @media (max-width:479px){.topbar__inner{min-height:68px;}.brand__tag{display:none;}.hero{padding-top:94px;}.hero-card{padding:20px;}.service-card,.why-card,.step-card,.network-card,.cta-card,.gallery-card,.faq-item{border-radius:24px;}.section{padding:56px 0;}.hero__proof{gap:8px 12px;}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}}
+
+.hero-card--desktop{display:none;}
+.hero-card--mobile{display:block;}
+@media (min-width:720px){.hero-card--mobile{display:none;}.hero-card--desktop{display:block;}}
+
+.form-feedback.is-success{background:rgba(60,180,90,0.12);border:1px solid rgba(60,180,90,0.22);color:#1f6b3a;}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Professional bartenders for trade shows, brand activations and corporate events.","email":"contact@bartendly.com","areaServed":["Barcelona","London","Hong Kong","Madrid"],"serviceType":["Trade show bartending","Brand activation bartending","Corporate event bartending"]}
@@ -202,6 +208,7 @@ textarea{resize:vertical;}
     </div>
     <a class="topbar__contact" href="#contact" data-i18n="topbar.contact">Contact</a>
     </div>
+</div>
 </header>
 
 <main id="main">
@@ -211,10 +218,10 @@ textarea{resize:vertical;}
 </div>
 <div class="container hero__grid">
 <div class="hero__content reveal">
-<h1 class="hero__title" data-i18n="hero.title">Book professional bartenders for your event</h1>
-<p class="hero__subtitle" data-i18n="hero.subtitle">Trade shows, brand activations and corporate events</p>
+<h1 class="hero__title" data-i18n="hero.title">Hire professional bartenders for trade shows, brand activations, corporate and private events</h1>
+<p class="hero__subtitle" data-i18n="hero.subtitle">Fast human coordination, tailored to your event, vanue and guest flow</p>
 <div class="hero__top-actions">
-<a class="button-hero" href="#contact-form" data-i18n="hero.primaryCta">Tell us about your event</a>
+<a class="button-hero" href="#contact-form" data-i18n="hero.primaryCta">Hire bartenders for your event</a>
 <p class="hero__cta-note" data-i18n="hero.primaryCtaNote">Fast response. No obligation.</p>
 </div>
 <ul class="hero__proof" aria-label="Trust signals">
@@ -225,7 +232,7 @@ textarea{resize:vertical;}
 <p class="hero__support" data-i18n="hero.support">A clear, human process for high-quality cocktail service.</p>
 </div>
 
-<div class="hero__form-wrap reveal">
+<!--<div class="hero__form-wrap reveal">
 <div class="hero-card">
 <h2 class="hero-card__title" data-i18n="hero.form.title">Tell us about your event</h2>
 <div class="hero-card__divider" aria-hidden="true"></div>
@@ -239,14 +246,75 @@ textarea{resize:vertical;}
 <textarea id="event" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests"></textarea>
 </div>
 <div class="form-actions">
-<button class="button-primary" type="submit" data-i18n="hero.form.submit">Get bartenders for your event</button>
+<button class="button-primary" type="submit" data-i18n="hero.form.submit">Request bartenders for your event</button>
 <p class="form-microcopy" data-i18n="hero.form.microcopy">You’ll continue on WhatsApp</p>
 <p class="form-reassurance" data-i18n="hero.form.reassurance">We reply quickly. No obligation.</p>
+<p class="form-email-alt"><span data-i18n="hero.form.emailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Event request" data-i18n="hero.form.emailAlt">Send your request by email</a></p>
 <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
 </div>
 </form>
 </div>
-</div>
+</div>-->
+
+<div class="hero__form-wrap reveal">
+    <div class="hero-card hero-card--mobile">
+    <h2 class="hero-card__title" data-i18n="hero.formMobile.title">Tell us about your event</h2>
+    <div class="hero-card__divider" aria-hidden="true"></div>
+    <form id="contact-form-mobile" class="hero-card__grid" novalidate>
+    <div class="field">
+    <label for="name-mobile" data-i18n="hero.form.name.label">Name</label>
+    <input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="hero.form.name.placeholder" placeholder="Your name">
+    </div>
+    <div class="field">
+    <label for="event-mobile" data-i18n="hero.form.event.label">Describe your event</label>
+    <textarea id="event-mobile" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests"></textarea>
+    </div>
+    <div class="form-actions">
+    <button class="button-primary" type="submit" data-i18n="hero.formMobile.submit">Hire bartenders for your event</button>
+    <p class="form-microcopy" data-i18n="hero.formMobile.microcopy">You’ll continue on WhatsApp</p>
+    <p class="form-reassurance" data-i18n="hero.form.reassurance">We reply quickly. No obligation.</p>
+    <div class="form-feedback" id="form-feedback-mobile" role="status" aria-live="polite"></div>
+    </div>
+    </form>
+    </div>
+    
+    <div class="hero-card hero-card--desktop">
+    <h2 class="hero-card__title" data-i18n="hero.formDesktop.title">Tell us about your event</h2>
+    <div class="hero-card__divider" aria-hidden="true"></div>
+    <!--<form id="contact-form-desktop" class="hero-card__grid" action="https://formspree.io/f/mdkevral" method="POST">-->
+    <form id="contact-form-desktop" class="hero-card__grid" data-formspree="https://formspree.io/f/mdkevral" novalidate>
+    <div class="field">
+    <label for="name-desktop" data-i18n="hero.form.name.label">Name</label>
+    <input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="hero.form.name.placeholder" placeholder="Your name" required>
+    </div>
+    <div class="field">
+    <label for="contact-desktop" data-i18n="hero.form.contact.label">Contact (WhatsApp or email)</label>
+    <input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="hero.form.contact.placeholder" placeholder="Email or WhatsApp number" required>
+    </div>
+    <div class="field">
+    <label for="city-desktop" data-i18n="hero.form.city.label">City / venue</label>
+    <input id="city-desktop" name="city" type="text" autocomplete="city" data-i18n-placeholder="hero.form.city.placeholder" placeholder="Barcelona, Fira Barcelona" required>
+    </div>
+    <div class="field">
+    <label for="event-desktop" data-i18n="hero.form.event.label">Describe your event</label>
+    <textarea id="event-desktop" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests" required></textarea>
+    </div>
+    <input type="hidden" name="_subject" value="New Bartendly Experiences request">
+    <input type="hidden" name="_captcha" value="false">
+    <div class="form-actions">
+    <button class="button-primary" type="submit" data-i18n="hero.formDesktop.submit">Hire bartenders for your event</button>
+    <p class="form-microcopy" data-i18n="hero.formDesktop.microcopy">Best for desktop users. We’ll receive your request by email.</p>
+    <p class="form-reassurance" data-i18n="hero.formDesktop.alt">Prefer WhatsApp? Use the mobile flow or contact us directly.</p>
+    </div>
+    <div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
+    <input type="hidden" name="_next" value="https://bartendly.com/thank-you">
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="New Bartendly Experiences request">
+    <input type="hidden" name="_captcha" value="false">
+    </form>
+    </div>
+    </div>
+
 </div>
 </section>
 
@@ -342,22 +410,29 @@ textarea{resize:vertical;}
     <div class="container">
     <div class="reveal">
     <h2 class="section-title" data-i18n="operate.title">Where we operate</h2>
-    <p class="section-intro" data-i18n="operate.intro">We support trade shows, brand activations and corporate events in major event hubs across Europe and Asia.</p>
+    <p class="section-intro" data-i18n="operate.intro">We regularly support events in major trade show and hospitality hubs such as Hong Kong, Barcelona, London and Madrid, and can also support selected projects in other international cities.</p>
     </div>
     <div class="network-wrap">
     <div class="network-card reveal">
     <div>
-    <h3 data-i18n="operate.group1.title">Europe</h3>
-    <p data-i18n="operate.group1.item1">Barcelona — Fira Barcelona</p>
-    <p data-i18n="operate.group1.item2">Madrid — IFEMA</p>
+    <h3 data-i18n="operate.group1.title">Core event hubs</h3>
+    <p data-i18n="operate.group1.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
+    <p data-i18n="operate.group1.item2">Barcelona — Fira Barcelona</p>
     <p data-i18n="operate.group1.item3">London — ExCeL London and major event venues</p>
+    <p data-i18n="operate.group1.item4">Madrid — IFEMA</p>
     </div>
     <div class="operate-spacer" aria-hidden="true"></div>
     <div>
-    <h3 data-i18n="operate.group2.title">Asia</h3>
-    <p data-i18n="operate.group2.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
-    <p data-i18n="operate.group2.item2">Taipei — major event venues</p>
-    <p data-i18n="operate.group2.item3">Other international trade show cities on request</p>
+    <h3 data-i18n="operate.group2.title">Other international cities</h3>
+    <p data-i18n="operate.group2.item1">Paris</p>
+    <p data-i18n="operate.group2.item2">Rome</p>
+    <p data-i18n="operate.group2.item3">Milan</p>
+    <p data-i18n="operate.group2.item4">Singapore</p>
+    <p data-i18n="operate.group2.item5">Berlin</p>
+    <p data-i18n="operate.group2.item6">Dubai</p>
+    <p data-i18n="operate.group2.item7">Bangkok</p>
+    <p data-i18n="operate.group2.item8">Taipei</p>
+    <p data-i18n="operate.group2.item9">Other locations on request</p>
     </div>
     </div>
     <div class="network-visual reveal">
@@ -405,11 +480,11 @@ textarea{resize:vertical;}
 <div class="cta-card reveal">
 <div class="cta-card__inner">
 <div>
-<h2 class="cta-card__title" data-i18n="cta.title">Tell us about your event</h2>
+<h2 class="cta-card__title" data-i18n="cta.title">Request bartenders for your event</h2>
 <p class="cta-card__text" data-i18n="cta.text">We’ll get back to you quickly with the right setup.</p>
 </div>
 <div class="cta-card__actions">
-<a class="button-primary" href="#contact-form" data-i18n="cta.button">Tell us about your event</a>
+<a class="button-primary" href="#contact-form" data-i18n="cta.button">Hire bartenders for your event</a>
 <p class="cta-card__email"><span data-i18n="cta.emailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com" data-i18n="cta.email">contact@bartendly.com</a></p>
 </div>
 </div>
@@ -417,6 +492,8 @@ textarea{resize:vertical;}
 </div>
 </section>
 </main>
+
+<p data-i18n="seo.bottomParagraph">Bartendly provides professional bartenders for trade shows, brand activations and corporate events in major event hubs such as Barcelona, Madrid, London and Hong Kong. Whether you need bartenders for Fira Barcelona, IFEMA, ExCeL London or other international event venues, we help you deliver high-quality cocktail service adapted to your event.</p>
 
 <footer class="footer">
 <div class="container footer__inner">
@@ -432,12 +509,12 @@ textarea{resize:vertical;}
 </div>
 </footer>
 
-<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Tell us about your event</a>
+<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Hire bartenders about your event</a>
 </div>
 
-<script>
+<!--<script>
 (function(){'use strict';
-var WHATSAPP_NUMBER='+34618502493';
+var WHATSAPP_NUMBER='34618502493';
 var form=document.getElementById('contact-form');
 var feedback=document.getElementById('form-feedback');
 var topbar=document.getElementById('topbar');
@@ -459,6 +536,45 @@ function init(){if(form){form.addEventListener('submit',handleSubmit);}bindFaq()
 document.addEventListener('DOMContentLoaded',init);
 document.addEventListener('bartendly:i18n-ready',function(){clearFeedback();});
 })();
+</script>-->
+
+<script>
+    (function(){'use strict';
+    var WHATSAPP_NUMBER='34618502493';
+    var mobileForm=document.getElementById('contact-form-mobile');
+    var mobileFeedback=document.getElementById('form-feedback-mobile');
+    var topbar=document.getElementById('topbar');
+    var stickyCta=document.getElementById('sticky-cta');
+    function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
+    function setMobileFeedback(message,type){if(!mobileFeedback){return;}mobileFeedback.textContent=message;mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
+    function clearMobileFeedback(){if(!mobileFeedback){return;}mobileFeedback.textContent='';mobileFeedback.className='form-feedback';}
+    function buildWhatsappMessage(name,eventText){var template=getText('whatsapp.message','Hi, I’m organizing an event.\n\nName: {name}\nEvent: {event}\n\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
+    function openWhatsapp(name,eventText){var message=buildWhatsappMessage(name,eventText);var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);window.open(url,'_blank','noopener');}
+    function validateMobileForm(name,eventText){if(!name){setMobileFeedback(getText('form.validation.nameRequired','Please enter your name.'),'error');return false;}if(!eventText){setMobileFeedback(getText('form.validation.eventRequired','Please describe your event.'),'error');return false;}clearMobileFeedback();return true;}
+    function handleMobileSubmit(event){event.preventDefault();var name=(mobileForm.querySelector('#name-mobile').value||'').trim();var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();if(!validateMobileForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setMobileFeedback(getText('form.error.whatsapp','Something went wrong. You can also contact us directly on WhatsApp.'),'error');}}
+    function bindFaq(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');items.forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
+    function bindScrollEffects(){var reveals=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){reveals.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:0.14});reveals.forEach(function(node){observer.observe(node);});}
+    function bindTopbar(){function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+    function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){var offset=Math.min(window.scrollY*0.12,28);target.style.transform='scale(1.05) translate3d(0,'+offset+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
+    function bindAnchorButtons(){document.querySelectorAll('a[href="#contact-form"],a[href="#contact-form-mobile"],a[href="#contact-form-desktop"]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();var target=window.innerWidth>=720?document.getElementById('contact-form-desktop'):document.getElementById('contact-form-mobile');if(!target){return;}window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});setTimeout(function(){var firstField=window.innerWidth>=720?document.getElementById('name-desktop'):document.getElementById('name-mobile');if(firstField){firstField.focus();}},420);});});}
+    function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY;var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-220);if(y<120||hideAtBottom){stickyCta.classList.add('is-hidden');}else{stickyCta.classList.remove('is-hidden');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+    function init(){if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}bindFaq();bindScrollEffects();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
+    document.addEventListener('DOMContentLoaded',init);
+    document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback();});
+    })();
+    </script>
+
+<script>
+    (function(){'use strict';
+    var desktopForm=document.getElementById('contact-form-desktop');
+    var desktopFeedback=document.getElementById('form-feedback-desktop');
+    if(!desktopForm||!desktopFeedback){return;}
+    function setDesktopFeedback(message,type){desktopFeedback.textContent=message;desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');}
+    function clearDesktopFeedback(){desktopFeedback.textContent='';desktopFeedback.className='form-feedback';}
+    async function handleDesktopSubmit(event){event.preventDefault();var name=(desktopForm.querySelector('#name-desktop').value||'').trim();var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();var city=(desktopForm.querySelector('#city-desktop').value||'').trim();var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();if(!name){setDesktopFeedback('Please enter your name.','error');return;}if(!contact){setDesktopFeedback('Please enter your contact (email or WhatsApp).','error');return;}if(!city){setDesktopFeedback('Please enter the city or venue.','error');return;}if(!eventText){setDesktopFeedback('Please describe your event.','error');return;}clearDesktopFeedback();try{var endpoint=desktopForm.getAttribute('data-formspree');var response=await fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(desktopForm)});if(response.ok){setDesktopFeedback('Thank you. Your request has been sent. We will get back to you quickly.','success');desktopForm.reset();}else{setDesktopFeedback('Something went wrong. Please try again or contact us by email.','error');}}catch(e){setDesktopFeedback('Network error. Please try again.','error');}}
+    desktopForm.addEventListener('submit',handleDesktopSubmit);
+    })();
 </script>
+
 </body>
 </html>
