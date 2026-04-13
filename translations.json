@@ -162,8 +162,8 @@
 
 "platform.hero.imageAlt": "Premium cocktail event atmosphere representing the Bartendly ecosystem",
 "platform.hero.eyebrow": "What is Bartendly",
-"platform.hero.title": "A growing platform for the cocktail ecosystem",
-"platform.hero.subtitle": "Bartendly connects events, bars, bartenders, brands and guests into one structured layer — from discovering where to go tonight to building history, visibility, services and future marketplace opportunities.",
+"platform.hero.title": "Bartendly connects cocktail events, bars, bartenders and brands",
+"platform.hero.subtitle": "Bartendly is building a structured layer for the cocktail world — from discovering what is happening tonight to creating long-term visibility, services and future marketplace opportunities.",
 "platform.hero.primaryCta": "Open Bartendly",
 "platform.hero.secondaryCta": "Contact us",
 "platform.hero.proof.one": "Discover events and where to go",
@@ -179,6 +179,16 @@
 "platform.hero.card.item3.title": "For partners",
 "platform.hero.card.item3.text": "A growing data and visibility layer around the real cocktail scene.",
 
+"platform.clarity.title": "What Bartendly is",
+"platform.clarity.text1": "Bartendly is a hospitality platform connecting cocktail events, bars, bartenders and brands into one structured ecosystem.",
+"platform.clarity.text2": "It helps people discover what is happening, gives professionals and venues more visibility, and creates the foundation for future services, marketplace flows and ecosystem tools.",
+"platform.clarity.text3": "Bartendly Experiences is the premium service layer of that ecosystem, focused on booking professional bartenders for trade shows, corporate events, brand activations and selected private events.",
+"platform.experiences.title": "Need bartenders for an event?",
+"platform.experiences.text1": "For trade shows, corporate events, brand activations and selected private events, the right entry point is Bartendly Experiences.",
+"platform.experiences.text2": "That is the premium service layer focused on helping clients book professional bartenders for real-world events.",
+"platform.experiences.primaryCta": "Go to Bartendly Experiences",
+"platform.experiences.secondaryCta": "Contact us",
+
 "platform.metrics.one.value": "Tonight",
 "platform.metrics.one.label": "A practical entry point: discover what is happening now and where to go.",
 "platform.metrics.two.value": "History",
@@ -187,8 +197,8 @@
 "platform.metrics.three.label": "Services, loyalty, promotion, insights and marketplace flows can all grow on top of the same ecosystem.",
 
 "platform.story.eyebrow": "The idea behind Bartendly",
-"platform.story.title": "One structured layer around a fragmented world",
-"platform.story.intro": "Bars, bartenders, brands, guest shifts, cocktail weeks, takeovers and private opportunities often live in scattered posts, stories, chats and memory. Bartendly gives that ecosystem a home.",
+"platform.story.title": "How Bartendly works",
+"platform.story.intro": "Bartendly is built around a simple principle: start from real events, connect the right people, and make that value persist over time.",
 "platform.story.card1.title": "Events first",
 "platform.story.card1.text": "Events are the most natural entry point. They create discovery, relevance, movement and immediate value for professionals and guests.",
 "platform.story.card2.title": "Connections that stay",
