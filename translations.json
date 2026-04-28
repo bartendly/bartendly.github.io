@@ -148,8 +148,8 @@
       "topbar.aboutBartendly": "What is Bartendly?",
       "bartender.learnMore": "Learn what Bartendly is",
 
-"platform.seo.title": "Bartendly | The platform for bars, bartenders, brands and cocktail lovers",
-"platform.seo.description": "Discover what Bartendly is: a growing platform connecting cocktail events, bars, bartenders, brands and guests across cities.",
+"platform.seo.title": "Bartendly | Cocktail events, bars, bartenders and hospitality experiences",
+"platform.seo.description": "Bartendly connects cocktail events, bars, bartenders and brands, with Bartendly Experiences for premium event bartender services.",
 "platform.brand.name": "Bartendly",
 "platform.brand.tagline": "The platform for bars, bartenders, brands and cocktail lovers",
 "platform.topbar.homeAria": "Bartendly home",
@@ -303,7 +303,21 @@
 "platform.footer.email": "contact@bartendly.com",
 "platform.footer.backHome": "Bartendly Experiences",
 
-"platform.stickyCta.label": "Open Bartendly"
+"platform.stickyCta.label": "Open Bartendly",
+
+"platform.choice.eyebrow": "Two ways to use Bartendly",
+"platform.choice.title": "Explore the platform or book the service layer",
+"platform.choice.intro": "Bartendly combines a growing app for the cocktail ecosystem with a premium service layer for real-world hospitality execution.",
+"platform.choice.app.label": "Bartendly App",
+"platform.choice.app.title": "Discover events, bars, bartenders and brands",
+"platform.choice.app.text": "Use Bartendly to see what is happening tonight or this week, follow guest shifts and festivals, explore bars, and understand who is shaping the cocktail scene.",
+"platform.choice.app.note": "For cocktail lovers, bartenders, bars, brands and event organizers.",
+"platform.choice.app.cta": "Open Bartendly",
+"platform.choice.experiences.label": "Bartendly Experiences",
+"platform.choice.experiences.title": "Book professional bartenders for events",
+"platform.choice.experiences.text": "For trade shows, corporate events, brand activations and selected private events, Bartendly Experiences helps clients find professional bartenders and deliver premium hospitality service.",
+"platform.choice.experiences.note": "For companies, agencies, brands, venues and private clients.",
+"platform.choice.experiences.cta": "Hire bartenders"
 
     },
    "es": {
@@ -615,6 +629,20 @@
   "platform.footer.email": "contact@bartendly.com",
   "platform.footer.backHome": "Bartendly Experiences",
 
-  "platform.stickyCta.label": "Abrir Bartendly"
+  "platform.stickyCta.label": "Abrir Bartendly",
+
+  "platform.choice.eyebrow": "Two ways to use Bartendly",
+"platform.choice.title": "Explore the platform or book the service layer",
+"platform.choice.intro": "Bartendly combines a growing app for the cocktail ecosystem with a premium service layer for real-world hospitality execution.",
+"platform.choice.app.label": "Bartendly App",
+"platform.choice.app.title": "Discover events, bars, bartenders and brands",
+"platform.choice.app.text": "Use Bartendly to see what is happening tonight or this week, follow guest shifts and festivals, explore bars, and understand who is shaping the cocktail scene.",
+"platform.choice.app.note": "For cocktail lovers, bartenders, bars, brands and event organizers.",
+"platform.choice.app.cta": "Open Bartendly",
+"platform.choice.experiences.label": "Bartendly Experiences",
+"platform.choice.experiences.title": "Book professional bartenders for events",
+"platform.choice.experiences.text": "For trade shows, corporate events, brand activations and selected private events, Bartendly Experiences helps clients find professional bartenders and deliver premium hospitality service.",
+"platform.choice.experiences.note": "For companies, agencies, brands, venues and private clients.",
+"platform.choice.experiences.cta": "Hire bartenders"
 }
   }
