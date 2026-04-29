@@ -183,6 +183,9 @@ textarea{resize:vertical;}
 .form-email-alt a{color:#151515;text-decoration:none;border-bottom:1px solid rgba(0,0,0,0.2);padding-bottom:1px;}
 .form-email-alt a:hover{border-color:rgba(0,0,0,0.5);}
 
+.network-link{display:inline-flex;margin-top:18px;font-size:0.94rem;font-weight:700;color:#151515;border-bottom:1px solid rgba(0,0,0,0.22);padding-bottom:2px;}
+.network-link:hover{border-color:rgba(0,0,0,0.55);}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders for events, trade shows, corporate events and brand activations worldwide.","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Bartendly"},"serviceType":["Event bartending","Trade show bartenders","Corporate event bartenders","Brand activation bartenders"]}
@@ -236,30 +239,6 @@ textarea{resize:vertical;}
 </ul>
 <p class="hero__support" data-i18n="hero.support">A clear, human process for high-quality cocktail service.</p>
 </div>
-
-<!--<div class="hero__form-wrap reveal">
-<div class="hero-card">
-<h2 class="hero-card__title" data-i18n="hero.form.title">Tell us about your event</h2>
-<div class="hero-card__divider" aria-hidden="true"></div>
-<form id="contact-form" class="hero-card__grid" novalidate>
-<div class="field">
-<label for="name" data-i18n="hero.form.name.label">Name</label>
-<input id="name" name="name" type="text" autocomplete="name" data-i18n-placeholder="hero.form.name.placeholder" placeholder="Your name">
-</div>
-<div class="field">
-<label for="event" data-i18n="hero.form.event.label">Describe your event</label>
-<textarea id="event" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests"></textarea>
-</div>
-<div class="form-actions">
-<button class="button-primary" type="submit" data-i18n="hero.form.submit">Request bartenders for your event</button>
-<p class="form-microcopy" data-i18n="hero.form.microcopy">You’ll continue on WhatsApp</p>
-<p class="form-reassurance" data-i18n="hero.form.reassurance">We reply quickly. No obligation.</p>
-<p class="form-email-alt"><span data-i18n="hero.form.emailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Event request" data-i18n="hero.form.emailAlt">Send your request by email</a></p>
-<div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
-</div>
-</form>
-</div>
-</div>-->
 
 <div class="hero__form-wrap reveal">
     <div class="hero-card hero-card--mobile">
@@ -422,10 +401,13 @@ textarea{resize:vertical;}
 <p class="section-intro" data-i18n="network.text">We work with experienced bartenders across major cities, with a focus on reliability, consistency and event quality.</p>
 </div>
 <div class="network-wrap">
+
 <div class="network-card reveal">
-<p data-i18n="network.text2">Each request is handled individually to ensure the right fit for your event.</p>
-<p data-i18n="network.text3">From small premium setups to larger event teams, we focus on fit, presentation and smooth coordination.</p>
+    <p data-i18n="network.text2">Each request is handled individually to ensure the right fit for your event.</p>
+    <p data-i18n="network.text3">From small premium setups to larger event teams, we focus on fit, presentation and smooth coordination.</p>
+    <a class="network-link" href="/bartenders" data-i18n="network.bartendersLink">Browse selected bartenders</a>
 </div>
+
 <div class="network-visual reveal">
 <img src="images/network-bartenders-event.jpg" alt="Professional bartenders working at a premium event" width="1200" height="1000">
 </div>
@@ -537,34 +519,8 @@ textarea{resize:vertical;}
 </div>
 </footer>
 
-<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Hire bartenders about your event</a>
+<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Hire bartenders for your event</a>
 </div>
-
-<!--<script>
-(function(){'use strict';
-var WHATSAPP_NUMBER='34618502493';
-var form=document.getElementById('contact-form');
-var feedback=document.getElementById('form-feedback');
-var topbar=document.getElementById('topbar');
-var stickyCta=document.getElementById('sticky-cta');
-function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
-function setFeedback(message,type){if(!feedback){return;}feedback.textContent=message;feedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
-function clearFeedback(){if(!feedback){return;}feedback.textContent='';feedback.className='form-feedback';}
-function buildWhatsappMessage(name,eventText){var template=getText('whatsapp.message','Hi, I’m organizing an event.\n\nName: {name}\nEvent: {event}\n\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
-function openWhatsapp(name,eventText){var message=buildWhatsappMessage(name,eventText);var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);window.open(url,'_blank','noopener');}
-function validateForm(name,eventText){if(!name){setFeedback(getText('form.validation.nameRequired','Please enter your name.'),'error');return false;}if(!eventText){setFeedback(getText('form.validation.eventRequired','Please describe your event.'),'error');return false;}clearFeedback();return true;}
-function handleSubmit(event){event.preventDefault();var name=(form.querySelector('#name').value||'').trim();var eventText=(form.querySelector('#event').value||'').trim();if(!validateForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setFeedback(getText('form.error.whatsapp','Something went wrong. You can also contact us directly on WhatsApp.'),'error');}}
-function bindFaq(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');items.forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
-function bindScrollEffects(){var reveals=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){reveals.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:0.14});reveals.forEach(function(node){observer.observe(node);});}
-function bindTopbar(){function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
-function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){var offset=Math.min(window.scrollY*0.12,28);target.style.transform='scale(1.05) translate3d(0,'+offset+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
-function bindAnchorButtons(){document.querySelectorAll('a[href="#contact-form"]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();var target=document.getElementById('contact-form');if(!target){return;}window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});setTimeout(function(){var nameField=document.getElementById('name');if(nameField){nameField.focus();}},420);});});}
-function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY;var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-220);if(y<120||hideAtBottom){stickyCta.classList.add('is-hidden');}else{stickyCta.classList.remove('is-hidden');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
-function init(){if(form){form.addEventListener('submit',handleSubmit);}bindFaq();bindScrollEffects();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
-document.addEventListener('DOMContentLoaded',init);
-document.addEventListener('bartendly:i18n-ready',function(){clearFeedback();});
-})();
-</script>-->
 
 <script>
     (function(){'use strict';

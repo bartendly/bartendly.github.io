@@ -8,4 +8,8 @@
     <loc>https://bartendly.com/what-is-bartendly</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://bartendly.com/bartenders/</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
