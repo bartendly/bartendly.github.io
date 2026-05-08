@@ -186,9 +186,26 @@ textarea{resize:vertical;}
 .network-link{display:inline-flex;margin-top:18px;font-size:0.94rem;font-weight:700;color:#151515;border-bottom:1px solid rgba(0,0,0,0.22);padding-bottom:2px;}
 .network-link:hover{border-color:rgba(0,0,0,0.55);}
 
+.city-link{display:grid;gap:4px;padding:16px;border-radius:18px;background:#f7f4ef;border:1px solid rgba(17,17,17,0.08);transition:transform 0.3s var(--ease),border-color 0.3s var(--ease),background 0.3s var(--ease);}
+.city-link:hover{transform:translateY(-2px);border-color:rgba(216,176,111,0.32);background:#ffffff;}
+.city-link strong{font-size:1rem;letter-spacing:-0.03em;color:#111111;}
+.city-link span{font-size:0.92rem;color:var(--text-soft);}
+.city-link--disabled{opacity:0.72;}
+
+.honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
+
+.city-link-grid{display:grid;gap:12px;margin-top:14px;}
+.city-link{display:grid;gap:4px;padding:16px;border-radius:18px;background:#f7f4ef;border:1px solid rgba(17,17,17,0.08);transition:transform 0.3s var(--ease),border-color 0.3s var(--ease),background 0.3s var(--ease);}
+.city-link:hover{transform:translateY(-2px);border-color:rgba(216,176,111,0.32);background:#ffffff;}
+.city-link strong{font-size:1rem;letter-spacing:-0.03em;color:#111111;}
+.city-link span{font-size:0.92rem;color:var(--text-soft);}
+@media (min-width:720px){
+.city-link-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.city-link--wide{grid-column:1/-1;}}
+
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders for events, trade shows, corporate events and brand activations worldwide.","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Bartendly"},"serviceType":["Event bartending","Trade show bartenders","Corporate event bartenders","Brand activation bartenders"]}
+    {"@context":"https://schema.org","@type":"Service","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders for trade shows, exhibition stands, brand activations and corporate events worldwide, with focused support in key event hubs such as Barcelona, Hong Kong, London and Madrid.","areaServed":"Worldwide","provider":{"@type":"Organization","name":"Bartendly"},"serviceType":["Event bartending","Trade show bartenders","Corporate event bartenders","Brand activation bartenders"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of events do you support?","acceptedAnswer":{"@type":"Answer","text":"We focus on trade shows, brand activations and corporate events."}},{"@type":"Question","name":"Do you operate only in specific cities?","acceptedAnswer":{"@type":"Answer","text":"We work in major cities and can also adapt depending on the event and location."}},{"@type":"Question","name":"How does the process work?","acceptedAnswer":{"@type":"Answer","text":"You send your request, we discuss your needs, and we propose the right setup for your event."}},{"@type":"Question","name":"Can the service be adapted to our event?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each event is different, and we adjust the team and setup accordingly."}},{"@type":"Question","name":"How quickly will I get a response?","acceptedAnswer":{"@type":"Answer","text":"We usually reply quickly after receiving your request."}}]}
@@ -226,18 +243,18 @@ textarea{resize:vertical;}
 </div>
 <div class="container hero__grid">
 <div class="hero__content reveal">
-<h1 class="hero__title" data-i18n="hero.title">Hire professional bartenders for trade shows, brand activations, corporate and private events</h1>
-<p class="hero__subtitle" data-i18n="hero.subtitle">Trusted for trade shows, brand activations and premium events worldwide</p>
+<h1 class="hero__title" data-i18n="hero.title">Hire professional bartenders for trade shows, brand activations and corporate events</h1>
+<p class="hero__subtitle" data-i18n="hero.subtitle">Premium cocktail service for exhibition stands, brand moments and business events.</p>
 <div class="hero__top-actions">
-<a class="button-hero" href="#contact-form" data-i18n="hero.primaryCta">Hire bartenders for your event</a>
+<a class="button-hero" href="#contact-form" data-i18n="hero.primaryCta">Request bartenders for your event</a>
 <p class="hero__cta-note" data-i18n="hero.primaryCtaNote">Fast response. No obligation. We reply within hours.</p>
 </div>
 <ul class="hero__proof" aria-label="Trust signals">
-<li data-i18n="hero.proof.one">Experienced event bartenders</li>
-<li data-i18n="hero.proof.two">Fast, direct coordination</li>
-<li data-i18n="hero.proof.three">Flexible setups for any event</li>
+    <li data-i18n="hero.proof.one">Trade show ready</li>
+    <li data-i18n="hero.proof.two">Brand activation friendly</li>
+    <li data-i18n="hero.proof.three">Fast human coordination</li>
 </ul>
-<p class="hero__support" data-i18n="hero.support">A clear, human process for high-quality cocktail service.</p>
+<p class="hero__support" data-i18n="hero.support">Already trusted for Fira Barcelona trade shows and premium Hong Kong events.</p>
 </div>
 
 <div class="hero__form-wrap reveal">
@@ -254,7 +271,7 @@ textarea{resize:vertical;}
     <textarea id="event-mobile" name="event" data-i18n-placeholder="hero.form.event.placeholder" placeholder="Date, location, type of event, number of guests"></textarea>
     </div>
     <div class="form-actions">
-    <button class="button-primary" type="submit" data-i18n="hero.formMobile.submit">Hire bartenders for your event</button>
+    <button class="button-primary" type="submit" data-i18n="hero.formMobile.submit">Request bartenders for your event</button>
     <p class="form-microcopy" data-i18n="hero.formMobile.microcopy">You’ll continue on WhatsApp</p>
     <p class="form-reassurance" data-i18n="hero.form.reassurance">We reply quickly. No obligation.</p>
     <p class="form-email-alt"><span data-i18n="form.emailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Event request" data-i18n="form.emailAlt">Send your request by email</a></p>
@@ -287,15 +304,13 @@ textarea{resize:vertical;}
     <input type="hidden" name="_subject" value="New Bartendly Experiences request">
     <input type="hidden" name="_captcha" value="false">
     <div class="form-actions">
-    <button class="button-primary" type="submit" data-i18n="hero.formDesktop.submit">Hire bartenders for your event</button>
+    <button class="button-primary" type="submit" data-i18n="hero.formDesktop.submit">Request bartenders for your event</button>
     <p class="form-microcopy" data-i18n="hero.formDesktop.microcopy">Best for desktop users. We’ll receive your request by email.</p>
     <p class="form-reassurance" data-i18n="hero.formDesktop.alt">Prefer WhatsApp? Use the mobile flow or contact us directly.</p>
     </div>
     <div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
     <input type="hidden" name="_next" value="https://bartendly.com/thank-you">
-    <input type="text" name="_gotcha" style="display:none">
-    <input type="hidden" name="_subject" value="New Bartendly Experiences request">
-    <input type="hidden" name="_captcha" value="false">
+    <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
     </form>
     </div>
     </div>
@@ -425,17 +440,34 @@ textarea{resize:vertical;}
     <div class="network-card reveal">
     <div>
     <h3 data-i18n="operate.group1.title">Core event hubs</h3>
-    <p data-i18n="operate.group1.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
+    <!--<p data-i18n="operate.group1.item1">Hong Kong — Hong Kong Convention and Exhibition Centre</p>
     <p data-i18n="operate.group1.item2">Barcelona — Fira Barcelona</p>
     <p data-i18n="operate.group1.item3">London — ExCeL London and major event venues</p>
-    <p data-i18n="operate.group1.item4">Madrid — IFEMA</p>
+    <p data-i18n="operate.group1.item4">Madrid — IFEMA</p>-->
+
+
+    <div class="city-link-grid">
+        <a class="city-link" href="/hong-kong-event-bartenders/">
+        <strong data-i18n="operate.city.hk.title">Hong Kong</strong>
+        <span data-i18n="operate.city.hk.text">HKCEC, brand activations, corporate and premium private events</span>
+        </a>
+        <a class="city-link" href="/barcelona-trade-show-bartenders/">
+        <strong data-i18n="operate.city.barcelona.title">Barcelona</strong>
+        <span data-i18n="operate.city.barcelona.text">Fira Barcelona, trade shows, exhibition stands and corporate events</span>
+        </a>
+        <a class="city-link" href="#contact-form">
+        <strong data-i18n="operate.city.london.title">London</strong>
+        <span data-i18n="operate.city.london.text">ExCeL London and selected corporate event venues</span>
+        </a>
+        <a class="city-link" href="#contact-form">
+        <strong data-i18n="operate.city.madrid.title">Madrid</strong>
+        <span data-i18n="operate.city.madrid.text">IFEMA and selected corporate events</span>
+        </a>
+        <a class="city-link city-link--wide" href="#contact-form">
+            <strong data-i18n="operate.city.other.title">Other international cities on request</strong>
+            <span data-i18n="operate.city.other.text">Paris, Rome, Milan, Berlin, Singapore, Dubai, Bangkok, Taipei and other major event hubs, depending on scope, timing and local availability.</span>
+        </a>
     </div>
-    <div class="operate-spacer" aria-hidden="true"></div>
-    <div>
-    <h3 data-i18n="operate.group2.title">Other international cities</h3>
-    <p data-i18n="operate.group2.item1">Paris, Rome, Milan, Berlin</p>
-    <p data-i18n="operate.group2.item2">Singapore, Dubai, Bangkok, Taipei</p>
-    <p data-i18n="operate.group2.item3">Other locations on request</p>
     </div>
     </div>
     <div class="network-visual reveal">
@@ -467,11 +499,11 @@ textarea{resize:vertical;}
     <div class="cta-card__inner">
     <div>
     <h2 class="cta-card__title" data-i18n="bartender.title">Are you a bartender?</h2>
-    <p class="cta-card__text" data-i18n="bartender.text">Join Bartendly to build your presence and explore the platform.</p>
+    <p class="cta-card__text" data-i18n="bartender.text">Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</p>
     <p class="cta-card__note"><a href="/what-is-bartendly" data-i18n="bartender.learnMore">Learn what Bartendly is</a></p>
     </div>
     <div class="cta-card__actions">
-    <a class="button-primary" href="https://app.bartendly.com" data-i18n="bartender.button">Open Bartendly</a>
+    <a class="button-primary" href="https://app.bartendly.com" data-i18n="bartender.button">Join Bartendly</a>
     </div>
     </div>
     </div>
@@ -487,7 +519,7 @@ textarea{resize:vertical;}
 <p class="cta-card__text" data-i18n="cta.text">We’ll get back to you quickly with the right setup.</p>
 </div>
 <div class="cta-card__actions">
-<a class="button-primary" href="#contact-form" data-i18n="cta.button">Hire bartenders for your event</a>
+<a class="button-primary" href="#contact-form" data-i18n="cta.button">Request bartenders for your event</a>
 <p class="cta-card__email"><span data-i18n="cta.emailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com" data-i18n="cta.email">contact@bartendly.com</a></p>
 </div>
 </div>
@@ -500,7 +532,7 @@ textarea{resize:vertical;}
     <div class="container-narrow">
     <div class="reveal">
     <h2 class="section-title" data-i18n="seo.bottomTitle">Professional bartenders for international events</h2>
-    <p class="section-intro" data-i18n="seo.bottomParagraph">Bartendly provides professional bartenders for trade shows, brand activations, corporate events and selected private events in major hubs such as Barcelona, Madrid, London and Hong Kong. Whether you need bartenders for Fira Barcelona, IFEMA, ExCeL London or other international venues, we help deliver high-quality cocktail service adapted to your event.</p>
+    <p class="section-intro" data-i18n="seo.bottomParagraph">Bartendly Experiences provides professional bartenders for trade shows, exhibition stands, brand activations and corporate events in selected international hubs, starting with Barcelona and Hong Kong. Whether you need bartenders for Fira Barcelona, HKCEC, ExCeL London, IFEMA or another major venue, we help coordinate reliable cocktail service adapted to your event.</p>
     </div>
     </div>
 </section>
@@ -519,7 +551,7 @@ textarea{resize:vertical;}
 </div>
 </footer>
 
-<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Hire bartenders for your event</a>
+<a class="sticky-cta" href="#contact-form" id="sticky-cta" data-i18n="stickyCta.label">Request bartenders for your event</a>
 </div>
 
 <script>

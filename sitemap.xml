@@ -10,6 +10,14 @@
   </url>
   <url>
     <loc>https://bartendly.com/bartenders/</loc>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bartendly.com/hong-kong-event-bartenders/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bartendly.com/barcelona-trade-show-bartenders/</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>
