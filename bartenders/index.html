@@ -1,147 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet the Bartenders | Bartendly</title>
-  <meta name="description" content="Browse the best private event bartenders. Book by city, style, or specialty — Bartendly." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --primary:#ff6d21; --primary-hover:#ffae3a; --bg-dark:#101014; --text-light:#fff; }
-    html,body { margin:0; padding:0; background:var(--bg-dark); color:var(--text-light); font-family:'Inter','Poppins',sans-serif; min-height:100vh; }
-    a { color:var(--primary-hover); text-decoration:none; }
-    .container { max-width:1080px; margin:0 auto; padding:2.5em 1em 2em 1em; }
-    h1 { font-family:'Poppins',sans-serif; font-size:2.2rem; margin-bottom:0.4em; text-align:center; color:var(--text-light);}
-    .bartender-list { display:flex; flex-wrap:wrap; gap:2.2em; justify-content:center; }
-    .bartender-card { background:#19191f; border-radius:23px; box-shadow:0 1.5px 16px #0005; width:240px; min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; padding:1.7em 1.2em 1.2em 1.2em; transition:box-shadow .16s,transform .15s; cursor:pointer; border:none; }
-    .bartender-card:hover, .bartender-card:focus { box-shadow:0 5px 38px #ff6d2122; transform:translateY(-2px) scale(1.032); outline:none; }
-    .bartender-photo { width:180px; height:180px; border-radius:50%; object-fit:cover; margin-bottom:1.0em; border:3px solid var(--primary-hover); box-shadow:0 2px 12px #0007; background:#18191c; }
-    @media (max-width:700px) { .bartender-photo { width:130px; height:130px; } }
-    .bartender-name { font-size:1.25rem; font-family:'Poppins',sans-serif; font-weight:700; color:#fff; margin-bottom:0.22em; letter-spacing:-0.5px; }
-    .bartender-location { font-size:1.06rem; color:var(--primary-hover); margin-bottom:0.7em; font-weight:500; }
-    .bartender-shortdesc { font-size:1.01rem; color:#efe7dd; min-height:2.5em; margin-bottom:0.4em; }
-    @media (max-width:700px) { .container{padding:1.1em 0.2em 2em 0.2em;} .bartender-list{gap:1.3em;} .bartender-card{width:91vw; max-width:340px;} }
-    footer{background:#16161a;color:#eee;padding:1.4rem 0 1.2rem;text-align:center}.footer-links,.social-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.2em;margin:.25em 0}.footer-links a,.social-links a{color:#ffae3a;margin:0 .5em;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;min-width:48px;min-height:48px;line-height:48px;vertical-align:middle;padding:0 .5em;border-radius:8px;font-size:1.07em;transition:background .15s}.footer-links a:hover,.social-links a:hover{background:rgba(255,174,58,0.09)}footer p{margin:.6em 0 0 0;padding:0;font-size:1em;line-height:1.3;text-align:center}@media(max-width:700px){.footer-links,.social-links{gap:.1em}.footer-links a,.social-links a{font-size:1.03em;min-width:44px;min-height:44px;line-height:44px;padding:0 .35em}footer p{font-size:.97em}}
-  
-    .back-btn { position: fixed; top: 20px; left: 14px; z-index: 40; background: rgba(16,16,20,0.91); color: #ffae3a; border: none; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 2em; box-shadow: 0 2px 8px #0004; cursor: pointer; transition: background 0.14s; }
-    .back-btn:hover { background: #18191c; color: #fff; }
-    @media (max-width:700px) { .back-btn { top: 10px; left: 7px; width: 39px; height: 39px; font-size: 1.7em; } }
-    .join-bartender-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; text-align:center; margin:2.2em 0 0.7em 0; font-size:1.10em; gap:0.6em; }
-    .join-bartender-cta span { color:#ffae3a; font-weight:500; margin-right:0.2em; white-space:nowrap; }
-    .join-link { color:#fff; background:#ff6d21; padding:0.37em 1em; border-radius:13px; text-decoration:none; font-weight:600; font-size:1em; transition:background 0.16s, color 0.14s; margin-left:0.15em; white-space:nowrap; }
-    .join-link:hover, .join-link:focus { background:#ffae3a; color:#18181c; }
-    @media (max-width:700px) { .join-bartender-cta { font-size:1em; margin:1.2em 0 0.3em 0; gap:0.3em; } .join-link { font-size:0.99em; padding:0.37em 0.8em; } }
- 
- 
-    .hero-logo { position: absolute; top: 0.8rem; left: 1.4rem; z-index: 10; color: #fff; font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; text-shadow: 0 2px 10px #0007; background: transparent; border-radius: 0 0 16px 0; padding: 0.15em 0.8em 0.1em 0.3em; margin: 0; text-decoration: none; line-height: 1.05; display: block; transition: opacity 0.18s; }
-    .hero-logo:active { opacity: 0.7; }
-    @media (max-width:500px) { .hero-logo { font-size: 1rem; top: 0.5rem; left: 0.8rem; padding: 0.06em 0.5em 0.05em 0.11em; } }
-    @media (max-width:700px) { .hero-logo { font-size: 1.2rem; top: 0.3rem; left: 0.4rem; padding: 0.1em 0.6em 0.07em 0.14em; } }
-    @media (min-width:701px) and (max-width:900px) { .hero-logo { font-size: 1.3rem; top: 0.3rem; left: 0.4rem; padding: 0.1em 0.6em 0.07em 0.14em; } }
-
-    .join-inline{margin:0.2em auto 1.4em auto;text-align:center;font-size:0.98rem;color:#cfc7bd;}
-    .join-inline span{opacity:.9}
-    .join-inline a{color:var(--primary-hover);font-weight:700;padding:0.25em 0.55em;border-radius:10px;}
-    .join-inline a:hover,
-    .join-inline a:focus{background:rgba(255,174,58,0.10);}
-
- </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Selected Bartenders for Events, Guest Shifts & Hospitality Opportunities | Bartendly</title>
+<meta name="description" content="Browse selected bartenders on Bartendly. Discover professional bartenders for events, guest shifts, trade shows, brand activations and hospitality opportunities. Bartenders can join Bartendly on the App Store.">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="canonical" href="https://bartendly.com/bartenders/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bartendly">
+<meta property="og:title" content="Selected Bartenders on Bartendly">
+<meta property="og:description" content="Discover selected bartenders for events, guest shifts, trade shows, brand activations and hospitality opportunities.">
+<meta property="og:url" content="https://bartendly.com/bartenders/">
+<meta property="og:image" content="https://bartendly.com/images/og-bartendly-experiences.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selected Bartenders on Bartendly">
+<meta name="twitter:description" content="Discover selected bartenders for events, guest shifts, trade shows, brand activations and hospitality opportunities.">
+<meta name="twitter:image" content="https://bartendly.com/images/og-bartendly-experiences.jpg">
+<style>
+:root{--bg:#0b0b0f;--bg2:#111116;--bg3:#17171d;--card:#15151b;--card2:#1b1b22;--line:rgba(255,255,255,0.10);--line2:rgba(255,255,255,0.16);--text:#ffffff;--soft:rgba(255,255,255,0.72);--muted:rgba(255,255,255,0.54);--accent:#d8b06f;--accent2:#c99856;--accent3:#a8793f;--orange:#ff6a1a;--shadow:0 24px 80px rgba(0,0,0,0.30);--container:min(1180px,calc(100vw - 32px));--narrow:min(900px,calc(100vw - 32px));--ease:cubic-bezier(.22,1,.36,1);}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+button,input,select{font:inherit;}
+button{cursor:pointer;}
+img{display:block;max-width:100%;height:auto;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+.skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:12px 16px;border-radius:999px;background:#ffffff;color:#000000;z-index:1000;}
+.page-shell{overflow:hidden;background:radial-gradient(circle at 82% 4%,rgba(216,176,111,0.12),transparent 32%),linear-gradient(180deg,#0b0b0f 0%,#111116 52%,#0b0b0f 100%);}
+.container{width:var(--container);margin-inline:auto;}
+.container-narrow{width:var(--narrow);margin-inline:auto;}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:100;background:linear-gradient(180deg,rgba(11,11,15,0.92),rgba(11,11,15,0.58));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);transition:background .3s var(--ease),border-color .3s var(--ease);}
+.topbar.is-scrolled{background:rgba(11,11,15,0.86);border-color:rgba(255,255,255,0.14);}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:var(--container);margin-inline:auto;min-height:72px;}
+.brand{display:flex;align-items:center;gap:12px;min-width:0;}
+.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,0.20),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.12);}
+.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,0.76),rgba(168,121,63,0.20) 54%,transparent 74%);}
+.brand__mark::after{content:"B";position:relative;font-size:1rem;font-weight:900;letter-spacing:-0.05em;color:#ffffff;}
+.brand__text{display:flex;flex-direction:column;min-width:0;}
+.brand__name{font-size:.96rem;font-weight:780;letter-spacing:-.03em;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.brand__tag{margin-top:2px;font-size:.76rem;color:rgba(255,255,255,.62);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.topbar__actions{display:flex;align-items:center;gap:10px;}
+.topbar__link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#ffffff;font-size:.92rem;font-weight:650;transition:transform .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);}
+.topbar__link:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);}
+.topbar__cta{background:linear-gradient(180deg,var(--accent),var(--accent3));color:#151515;border-color:transparent;font-weight:850;}
+.hero{position:relative;padding:116px 0 54px;color:#ffffff;}
+.hero__grid{display:grid;gap:28px;align-items:end;}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;color:rgba(255,255,255,.64);font-size:.88rem;}
+.breadcrumb a{border-bottom:1px solid rgba(255,255,255,.22);}
+.hero__eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.86);font-size:.84rem;font-weight:800;letter-spacing:.02em;text-transform:uppercase;}
+.hero__eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);}
+.hero h1{max-width:11ch;margin:16px 0 0;font-size:clamp(2.75rem,8vw,5.6rem);line-height:.9;letter-spacing:-.075em;}
+.hero__text{max-width:660px;margin:18px 0 0;color:var(--soft);font-size:1.08rem;line-height:1.55;}
+.hero__proof{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0;padding:0;list-style:none;}
+.hero__proof li{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);color:rgba(255,255,255,.82);font-size:.9rem;font-weight:650;}
+.hero__proof li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);}
+.hero-card{padding:24px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);}
+.hero-card h2{margin:0;font-size:1.45rem;line-height:1.05;letter-spacing:-.045em;}
+.hero-card p{margin:12px 0 0;color:var(--soft);line-height:1.5;}
+.hero-card__actions{display:grid;gap:10px;margin-top:18px;}
+.button-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;width:100%;padding:0 18px;border-radius:18px;border:0;background:linear-gradient(180deg,var(--accent),var(--accent3));color:#151515;font-weight:880;letter-spacing:-.02em;box-shadow:0 18px 40px rgba(216,176,111,.22);transition:transform .3s var(--ease),box-shadow .3s var(--ease),filter .3s var(--ease);}
+.button-primary::after{content:"↗";font-size:1rem;transform:translateY(-1px);}
+.button-primary:hover{transform:translateY(-2px);box-shadow:0 22px 50px rgba(216,176,111,.28);filter:saturate(1.03);}
+.button-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;width:100%;padding:0 18px;border-radius:18px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#ffffff;font-weight:760;transition:transform .3s var(--ease),background .3s var(--ease);}
+.button-secondary:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);}
+.section{padding:64px 0;}
+.section--soft{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));}
+.section-title{margin:0;font-size:clamp(2rem,5vw,3.15rem);line-height:.98;letter-spacing:-.06em;}
+.section-intro{max-width:760px;margin:14px 0 0;color:var(--soft);font-size:1rem;line-height:1.55;}
+.controls{display:grid;gap:14px;margin:28px 0 0;padding:16px;border-radius:24px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);}
+.controls__row{display:grid;gap:12px;}
+.field{display:grid;gap:8px;}
+.field label{font-size:.86rem;font-weight:750;color:rgba(255,255,255,.78);}
+.field input,.field select{width:100%;height:52px;padding:0 14px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:#101014;color:#ffffff;outline:none;transition:border-color .25s var(--ease),box-shadow .25s var(--ease);}
+.field input::placeholder{color:rgba(255,255,255,.42);}
+.field input:focus,.field select:focus{border-color:rgba(216,176,111,.72);box-shadow:0 0 0 4px rgba(216,176,111,.11);}
+.results-meta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 0;color:var(--muted);font-size:.93rem;}
+.clear-filter{display:none;align-items:center;justify-content:center;min-height:40px;padding:0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#ffffff;font-weight:700;}
+.clear-filter.is-visible{display:inline-flex;}
+.bartender-list{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px;}
+.bartender-card{position:relative;display:grid;grid-template-columns:82px 1fr;gap:16px;align-items:center;padding:16px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 50px rgba(0,0,0,.18);transition:transform .3s var(--ease),border-color .3s var(--ease),background .3s var(--ease),box-shadow .3s var(--ease);}
+.bartender-card:hover,.bartender-card:focus{transform:translateY(-3px);border-color:rgba(216,176,111,.30);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.055));box-shadow:0 24px 70px rgba(0,0,0,.26);outline:none;}
+.bartender-photo{width:82px;height:82px;border-radius:22px;object-fit:cover;background:#202027;border:1px solid rgba(255,255,255,.12);}
+.bartender-name{font-size:1.08rem;font-weight:820;letter-spacing:-.035em;color:#ffffff;}
+.bartender-location{margin-top:4px;font-size:.9rem;color:var(--accent);font-weight:700;}
+.bartender-shortdesc{margin-top:8px;color:var(--soft);font-size:.92rem;line-height:1.4;}
+.bartender-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.bartender-pill{display:inline-flex;align-items:center;min-height:26px;padding:0 9px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.68);font-size:.77rem;font-weight:680;}
+.empty-state{display:none;margin-top:22px;padding:24px;border-radius:24px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);text-align:center;}
+.empty-state.is-visible{display:block;}
+.empty-state h3{margin:0;font-size:1.25rem;letter-spacing:-.03em;}
+.empty-state p{margin:10px auto 0;max-width:520px;color:var(--soft);line-height:1.5;}
+.cta-grid{display:grid;gap:18px;margin-top:26px;}
+.cta-panel{position:relative;overflow:hidden;padding:24px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);}
+.cta-panel::before{content:"";position:absolute;right:-80px;bottom:-100px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,.18),transparent 70%);}
+.cta-panel h2{position:relative;margin:0;font-size:clamp(1.7rem,4vw,2.55rem);line-height:1;letter-spacing:-.055em;}
+.cta-panel p{position:relative;margin:12px 0 0;color:var(--soft);line-height:1.5;}
+.cta-panel__actions{position:relative;display:grid;gap:10px;margin-top:18px;}
+.app-badge{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;width:100%;padding:0 18px;border-radius:18px;background:#ffffff;color:#111111;font-weight:860;letter-spacing:-.02em;}
+.app-badge::before{content:"";font-size:1.25rem;line-height:1;}
+.android-note{font-size:.9rem;color:var(--muted);}
+.android-note a{color:#ffffff;border-bottom:1px solid rgba(255,255,255,.30);}
+.footer{padding:28px 0;background:#08080b;color:rgba(255,255,255,.68);border-top:1px solid rgba(255,255,255,.08);}
+.footer__inner{display:grid;gap:20px;}
+.footer__brand{color:#ffffff;font-weight:800;letter-spacing:-.03em;}
+.footer__text{max-width:560px;margin:8px 0 0;font-size:.95rem;line-height:1.45;}
+.footer__links{display:flex;flex-wrap:wrap;gap:14px 20px;font-size:.92rem;}
+.footer__links a{color:rgba(255,255,255,.78);}
+.legal-disclaimer{margin-top:12px;color:rgba(255,255,255,.46);font-size:.86rem;line-height:1.4;}
+.legal-disclaimer a{color:rgba(255,255,255,.74);border-bottom:1px solid rgba(255,255,255,.22);}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s var(--ease),transform .75s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+@media (min-width:720px){.hero{padding:138px 0 78px;}.hero__grid{grid-template-columns:minmax(0,1fr) minmax(360px,.58fr);gap:38px;}.controls__row{grid-template-columns:1fr 240px;}.bartender-list{grid-template-columns:repeat(2,minmax(0,1fr));}.cta-grid{grid-template-columns:1fr 1fr;}.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:start;}.topbar__link--mobile{display:none;}}
+@media (min-width:1040px){.bartender-list{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (max-width:719px){.topbar__link--secondary,.topbar__link--contact{display:none;}.hero h1{max-width:9ch;}.brand__tag{display:none;}.section{padding:56px 0;}.cta-grid{gap:14px;}.footer{padding-bottom:92px;}}
+@media (max-width:460px){.topbar__inner{min-height:68px;}.brand__mark{width:40px;height:40px;border-radius:14px;}.hero{padding-top:104px;}.hero-card,.cta-panel{border-radius:24px;}.bartender-card{grid-template-columns:72px 1fr;border-radius:22px;}.bartender-photo{width:72px;height:72px;border-radius:20px;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}.reveal{opacity:1;transform:none;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"Selected Bartenders on Bartendly","url":"https://bartendly.com/bartenders/","description":"Browse selected bartenders on Bartendly for events, guest shifts, trade shows, brand activations and hospitality opportunities.","publisher":{"@type":"Organization","name":"Bartendly","url":"https://bartendly.com/"}}
+</script>
 </head>
 <body>
-  
-  <div id="nav-icon"></div>
-  <div class="container">
-    <h1>Meet the Bartenders</h1>
-    <p class="join-inline">
-      <span>Bartender?</span> <a href="https://app.bartendly.com/">Join Bartendly</a>
-    </p>    
-    <div id="bartender-list" class="bartender-list"></div>
-    <div id="no-bartenders" style="display:none;text-align:center;color:#ffae3a;font-size:1.1em;margin-top:3em;">
-        No bartenders found for this city.<br>
-        <a href="/bartenders/join" class="join-link" style="margin-top:1em;display:inline-block;">Be the first to join Bartendly</a>
-      </div>      
-  </div>
-  <script src="./bartenders.js?v=2"></script>
-  <script>
-    // Utility: Get city from URL param (?city=London)
-    function getCityParam() {
-      const url = new URL(window.location.href);
-      return url.searchParams.get('city');
-    }
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-shell">
+<header class="topbar" id="topbar">
+<div class="topbar__inner">
+<a class="brand" href="/" aria-label="Bartendly home">
+<span class="brand__mark" aria-hidden="true"></span>
+<span class="brand__text">
+<span class="brand__name">Bartendly</span>
+<span class="brand__tag">Events, bartenders, bars and hospitality opportunities</span>
+</span>
+</a>
+<div class="topbar__actions">
+<a class="topbar__link topbar__link--secondary" href="/what-is-bartendly">What is Bartendly?</a>
+<a class="topbar__link topbar__link--contact" href="/#contact-form">Request bartenders</a>
+<a class="topbar__link topbar__cta" href="https://apps.apple.com/be/app/bartendly/id6758607655" target="_blank" rel="noopener">Get the app</a>
+</div>
+</div>
+</header>
 
-    function capitalizeCity(city) {
-      if (!city) return '';
-      return city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
-    }
+<main id="main">
+<section class="hero">
+<div class="container hero__grid">
+<div class="reveal">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="/">Bartendly</a>
+<span aria-hidden="true">/</span>
+<span>Selected bartenders</span>
+</nav>
+<div class="hero__eyebrow">Bartendly bartender network</div>
+<h1>Selected bartenders on Bartendly</h1>
+<p class="hero__text">Discover professional bartenders connected to Bartendly for events, guest shifts, trade shows, brand activations and hospitality opportunities.</p>
+<ul class="hero__proof" aria-label="Bartendly bartender network signals">
+<li>Event bartenders</li>
+<li>Guest shifts</li>
+<li>Trade shows</li>
+<li>Brand activations</li>
+</ul>
+</div>
+<aside class="hero-card reveal" aria-label="Join Bartendly">
+<h2>Are you a bartender?</h2>
+<p>Join Bartendly to build your profile, appear in the network, and be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</p>
+<div class="hero-card__actions">
+<a class="app-badge" href="https://apps.apple.com/search?term=Bartendly" target="_blank" rel="noopener">Download on the App Store</a>
+<a class="button-secondary" href="mailto:contact@bartendly.com?subject=Android access for Bartendly">Android? Contact us</a>
+</div>
+<p class="android-note">Android access is being handled manually for now. <a href="mailto:contact@bartendly.com?subject=Android access for Bartendly">Send us a message</a>.</p>
+</aside>
+</div>
+</section>
 
-    function renderBartenders() {
-      const city = getCityParam();
-      let data = window.bartenders || [];
-      if (city) {
-        data = data.filter(b => (b.city || '').toLowerCase() === city.toLowerCase());
-      }
-      const list = document.getElementById('bartender-list');
-      const noB = document.getElementById('no-bartenders');
-      list.innerHTML = "";
-      if (!data.length) {
-        noB.style.display = "block";
-        return;
-      } else {
-        noB.style.display = "none";
-      }
-      data.forEach(b => {
-        const card = document.createElement('a');
-        card.className = 'bartender-card';
-        card.href = `/bartenders/${b.slug}`;
-        card.setAttribute('tabindex', 0);
-        card.innerHTML = `
-          <img src="/bartenders/${b.slug}/${b.photo}" alt="${b.name}" class="bartender-photo" loading="lazy" />
-          <div class="bartender-name">${b.name}</div>
-          <div class="bartender-location">${b.city}</div>
-          ${b.shortDescription ? `<div class="bartender-shortdesc">${b.shortDescription}</div>` : ""}
-        `;
-        list.appendChild(card);
-      });
-    }
-    // On page load
-    document.addEventListener('DOMContentLoaded', renderBartenders);
-    
-    const navIcon = document.getElementById('nav-icon');
-    if (navIcon) {
-      const isFromBartendly = document.referrer && document.referrer.includes('bartendly.com');
+<section class="section section--soft">
+<div class="container">
+<div class="reveal">
+<h2 class="section-title">Browse bartenders</h2>
+<p class="section-intro">Profiles are loaded from the Bartendly bartender directory. Use search or city filters to discover relevant professionals.</p>
+</div>
+<div class="controls reveal" aria-label="Bartender filters">
+<div class="controls__row">
+<div class="field">
+<label for="search-input">Search by name, city or specialty</label>
+<input id="search-input" type="search" placeholder="Search bartenders, Barcelona, Hong Kong, cocktails...">
+</div>
+<div class="field">
+<label for="city-filter">Filter by city</label>
+<select id="city-filter">
+<option value="">All cities</option>
+</select>
+</div>
+</div>
+</div>
+<div class="results-meta">
+<div id="results-count">Loading bartenders…</div>
+<button class="clear-filter" id="clear-filter" type="button">Clear filters</button>
+</div>
+<div id="bartender-list" class="bartender-list" aria-live="polite"></div>
+<div id="empty-state" class="empty-state" aria-live="polite"></div>
+</div>
+</section>
 
-      if (isFromBartendly && window.history.length > 1) {
-       // Show back arrow
-        navIcon.innerHTML = `<button class="back-btn" aria-label="Back">&#8592;</button>`;
-        const backBtn = navIcon.querySelector('.back-btn');
-        backBtn.onclick = function () {
-        window.history.back();
-      };
-    } else {
-      // Show Bartendly logo
-      navIcon.innerHTML = `<a href="https://www.bartendly.com/" class="hero-logo" aria-label="Bartendly home">Bartendly</a>`;
-    }
-  }
+<section class="section">
+<div class="container">
+<div class="cta-grid">
+<article class="cta-panel reveal">
+<h2>Need bartenders for an event?</h2>
+<p>For trade shows, corporate events, brand activations and premium private events, Bartendly Experiences can help coordinate the right bartender setup.</p>
+<div class="cta-panel__actions">
+<a class="button-primary" href="/#contact-form">Request bartenders for your event</a>
+</div>
+</article>
+<article class="cta-panel reveal">
+<h2>Join the Bartendly app</h2>
+<p>For bartenders, Bartendly is the place to be visible for opportunities across events, bars, brands and hospitality projects.</p>
+<div class="cta-panel__actions">
+<a class="app-badge" href="https://apps.apple.com/be/app/bartendly/id6758607655" target="_blank" rel="noopener">Download on the App Store</a>
+<a class="button-secondary" href="mailto:contact@bartendly.com?subject=Android access for Bartendly">Android? Contact us</a>
+</div>
+</article>
+</div>
+</div>
+</section>
 
-  </script>
-   <div class="join-bartender-cta">
-    <span>Are you a professional bartender?</span>
-    <a href="https://app.bartendly.com/" class="join-link">Join Bartendly</a>
-  </div>  
-   <footer>
-    <div class="footer-links">
-      <a href="mailto:martial@bartendly.com">Contact Us</a>
-    </div>
-    <div class="social-links">
-      <a href="https://facebook.com/bartendly" target="_blank">FB</a>
-      <a href="https://instagram.com/bartendly" target="_blank">IG</a>
-      <a href="https://linkedin.com/company/bartendly" target="_blank">LI</a>
-      <a href="https://wa.me/34618502493" target="_blank">WhatsApp</a>
-    </div>
-    <p>&copy; 2025 Bartendly. All rights reserved.</p>
-    <div class="legal-disclaimer">
-      Bartendly is a digital platform only. <a href="/terms" target="_blank">See terms & disclaimer</a>.
-    </div>
-  </footer>
+<section class="section section--soft">
+<div class="container-narrow">
+<div class="reveal">
+<h2 class="section-title">Why profiles matter</h2>
+<p class="section-intro">Bartendly is building a professional hospitality graph: events, bartenders, bars and brands connected over time. A bartender profile is not just a listing. It becomes a visible professional presence for events, collaborations, guest shifts and future opportunities.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer__inner">
+<div>
+<div class="footer__brand">Bartendly</div>
+<p class="footer__text">A hospitality platform connecting cocktail events, bartenders, bars, brands and professional opportunities.</p>
+<div class="legal-disclaimer">Bartendly is a digital platform and coordination service only. <a href="/terms" target="_blank" rel="noopener">See terms & disclaimer</a>.</div>
+</div>
+<div class="footer__links">
+<a href="mailto:contact@bartendly.com">Contact</a>
+<a href="https://instagram.com/bartendly" target="_blank" rel="noopener">Instagram</a>
+<a href="https://linkedin.com/company/bartendly" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://wa.me/34618502493" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+</footer>
+</div>
+
+<script src="./bartenders.js?v=4"></script>
+<script>
+(function(){'use strict';
+var APP_STORE_URL='https://apps.apple.com/search?term=Bartendly';
+var bartenderList=document.getElementById('bartender-list');
+var cityFilter=document.getElementById('city-filter');
+var searchInput=document.getElementById('search-input');
+var resultsCount=document.getElementById('results-count');
+var emptyState=document.getElementById('empty-state');
+var clearFilter=document.getElementById('clear-filter');
+var topbar=document.getElementById('topbar');
+function getCityParam(){var url=new URL(window.location.href);return url.searchParams.get('city')||'';}
+function normalize(value){return String(value||'').trim().toLowerCase();}
+function escapeHtml(value){return String(value||'').replace(/[&<>"']/g,function(char){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]);});}
+function getBartenders(){return Array.isArray(window.bartenders)?window.bartenders:[];}
+function getCity(b){return b.city||b.locationDisplay||'';}
+function getSearchText(b){var parts=[b.name,b.city,b.locationDisplay,b.title,b.tagline,b.shortDescription,(b.languages||[]).join(' ')];return normalize(parts.join(' '));}
+function getCardHref(b){return'/bartenders/'+encodeURIComponent(b.slug||'');}
+function getPhotoSrc(b){if(!b.slug||!b.photo){return'';}return'/bartenders/'+encodeURIComponent(b.slug)+'/'+b.photo;}
+function createPills(b){var pills=[];if(b.title){pills.push(b.title);}if(Array.isArray(b.languages)&&b.languages.length){pills.push(b.languages.slice(0,2).join(' / '));}return pills.slice(0,2).map(function(pill){return'<span class="bartender-pill">'+escapeHtml(pill)+'</span>';}).join('');}
+function createCard(b){var card=document.createElement('a');var photo=getPhotoSrc(b);card.className='bartender-card';card.href=getCardHref(b);card.setAttribute('aria-label','View '+(b.name||'bartender')+' profile');card.innerHTML='<img src="'+escapeHtml(photo)+'" alt="'+escapeHtml(b.name||'Bartender')+'" class="bartender-photo" loading="lazy"><div><div class="bartender-name">'+escapeHtml(b.name||'Bartender')+'</div><div class="bartender-location">'+escapeHtml(getCity(b))+'</div>'+(b.shortDescription?'<div class="bartender-shortdesc">'+escapeHtml(b.shortDescription)+'</div>':'')+'<div class="bartender-meta">'+createPills(b)+'</div></div>';return card;}
+function populateCities(){var selected=getCityParam();var cities=[...new Set(getBartenders().map(function(b){return getCity(b);}).filter(Boolean))].sort(function(a,b){return a.localeCompare(b);});cities.forEach(function(city){var option=document.createElement('option');option.value=city;option.textContent=city;cityFilter.appendChild(option);});if(selected){cityFilter.value=cities.find(function(c){return normalize(c)===normalize(selected);})||'';}}
+function getFilteredData(){var data=getBartenders();var city=cityFilter.value;var query=normalize(searchInput.value);if(city){data=data.filter(function(b){return normalize(getCity(b))===normalize(city);});}if(query){data=data.filter(function(b){return getSearchText(b).includes(query);});}return data;}
+function renderEmpty(dataLength,totalLength){var hasFilters=Boolean(cityFilter.value||searchInput.value.trim());if(dataLength||!hasFilters){emptyState.classList.remove('is-visible');emptyState.innerHTML='';return;}var city=cityFilter.value;var query=searchInput.value.trim();emptyState.classList.add('is-visible');emptyState.innerHTML='<h3>No matching bartenders yet</h3><p>'+escapeHtml(city?('No public bartender profile is currently listed for '+city+'.'):'No bartender matched this search.')+' Bartenders can join Bartendly on the App Store, or contact us for Android access.</p><p><a class="button-primary" href="'+APP_STORE_URL+'" target="_blank" rel="noopener">Join Bartendly on the App Store</a></p>';}
+function render(){var total=getBartenders().length;var data=getFilteredData();bartenderList.innerHTML='';data.forEach(function(b){bartenderList.appendChild(createCard(b));});resultsCount.textContent=data.length===1?'1 bartender shown':data.length+' bartenders shown';if(total===0){resultsCount.textContent='No public bartender profiles are available yet';}renderEmpty(data.length,total);if(cityFilter.value||searchInput.value.trim()){clearFilter.classList.add('is-visible');}else{clearFilter.classList.remove('is-visible');}}
+function bindFilters(){cityFilter.addEventListener('change',render);searchInput.addEventListener('input',render);clearFilter.addEventListener('click',function(){cityFilter.value='';searchInput.value='';render();});}
+function bindTopbar(){function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function bindReveal(){var nodes=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){nodes.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.14});nodes.forEach(function(node){observer.observe(node);});}
+function init(){populateCities();bindFilters();bindTopbar();bindReveal();render();}
+document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
 </body>
 </html>
