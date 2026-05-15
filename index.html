@@ -177,6 +177,7 @@ textarea{resize:vertical;}
 .hero-card--desktop{display:none;}
 .hero-card--mobile{display:block;}
 @media (min-width:720px){.hero-card--mobile{display:none;}.hero-card--desktop{display:block;}}
+@media (min-width:720px){.testimonial-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 
 .form-feedback.is-success{background:rgba(60,180,90,0.12);border:1px solid rgba(60,180,90,0.22);color:#1f6b3a;}
 .form-email-alt{margin-top:12px;font-size:0.9rem;color:#6a6a72;text-align:center;}
@@ -208,7 +209,7 @@ textarea{resize:vertical;}
     {"@context":"https://schema.org","@type":"Service","name":"Bartendly Experiences","url":"https://bartendly.com/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders for trade shows, exhibition stands, brand activations and corporate events in Hong Kong, Barcelona and selected international event hubs.","areaServed":[{"@type":"City","name":"Hong Kong"},{"@type":"City","name":"Barcelona"},{"@type":"Place","name":"Selected international event hubs"}],"provider":{"@type":"Organization","name":"Bartendly"},"serviceType":["Event bartending","Trade show bartenders","Corporate event bartenders","Brand activation bartenders"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What types of events do you support?","acceptedAnswer":{"@type":"Answer","text":"We focus on trade shows, brand activations and corporate events."}},{"@type":"Question","name":"Do you operate only in specific cities?","acceptedAnswer":{"@type":"Answer","text":"We work in major cities and can also adapt depending on the event and location."}},{"@type":"Question","name":"How does the process work?","acceptedAnswer":{"@type":"Answer","text":"You send your request, we discuss your needs, and we propose the right setup for your event."}},{"@type":"Question","name":"Can the service be adapted to our event?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each event is different, and we adjust the team and setup accordingly."}},{"@type":"Question","name":"How quickly will I get a response?","acceptedAnswer":{"@type":"Answer","text":"We usually reply quickly after receiving your request."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can you provide bartenders for trade shows, brand activations and corporate events?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bartendly Experiences focuses on professional bartender teams for trade shows, exhibition stands, brand activations, corporate hospitality, private events and selected premium celebrations."}},{"@type":"Question","name":"Where can you provide bartenders?","acceptedAnswer":{"@type":"Answer","text":"Our strongest current focus is Hong Kong and Barcelona. We can also support selected projects in other international event hubs depending on scope, timing and bartender availability."}},{"@type":"Question","name":"What information do you need to prepare a quote?","acceptedAnswer":{"@type":"Answer","text":"We usually need the event date, location, service hours, number of guests, type of event, number of bartenders required if known, and whether alcohol, glassware, ice and bar equipment are already provided."}},{"@type":"Question","name":"Can you support premium private events, weddings or yacht parties?","acceptedAnswer":{"@type":"Answer","text":"Yes. Beyond trade shows and corporate events, we can support selected premium private events such as weddings, yacht parties, private dinners and celebrations, depending on the location, scale and setup."}},{"@type":"Question","name":"How early should we contact you?","acceptedAnswer":{"@type":"Answer","text":"For trade shows, weddings and multi-day events, the earlier the better. Short-notice requests may still be possible for smaller events depending on date, city and bartender availability."}}]}
 </script>
 <script defer src="i18n.js"></script>
 </head>
@@ -406,16 +407,26 @@ textarea{resize:vertical;}
     <h2 class="section-title" data-i18n="testimonials.title">Trusted by event organizers</h2>
     <p class="section-intro" data-i18n="testimonials.intro">A few words from recent events and client collaborations.</p>
     </div>
-    <div class="cards-grid">
+    <div class="cards-grid testimonial-grid">
     <article class="service-card reveal">
     <p class="service-card__text" data-i18n="testimonials.items.hk.quote">“We worked with Bartendly for a large private event in Hong Kong. The bartenders were professional, efficient and perfectly adapted to the atmosphere. Everything was smooth from start to finish.”</p>
     <h3 class="service-card__title" data-i18n="testimonials.items.hk.author">Alice</h3>
     <p class="service-card__text" data-i18n="testimonials.items.hk.meta">Private Event, Hong Kong</p>
     </article>
     <article class="service-card reveal">
-    <p class="service-card__text" data-i18n="testimonials.items.bcn.quote">“Bartendly supported us during ICE at Fira Barcelona with a team of 4 bartenders over 3 days. Reliable, well-coordinated and exactly what we needed for a busy trade show environment.”</p>
-    <h3 class="service-card__title" data-i18n="testimonials.items.bcn.author">Event Team</h3>
-    <p class="service-card__text" data-i18n="testimonials.items.bcn.meta">Trade Show, Fira Barcelona</p>
+        <p class="service-card__text" data-i18n="testimonials.items.bcn.quote">“Bartendly supported us during ICE at Fira Barcelona with a team of 4 bartenders over 3 days. Reliable, well-coordinated and exactly what we needed for a busy trade show environment.”</p>
+        <h3 class="service-card__title" data-i18n="testimonials.items.bcn.author">Event Team</h3>
+        <p class="service-card__text" data-i18n="testimonials.items.bcn.meta">Trade Show, Fira Barcelona</p>
+    </article>
+    <article class="service-card reveal">
+        <p class="service-card__text" data-i18n="testimonials.items.wedding.quote">Large wedding in Hong Kong with professional bartender support for a premium private celebration.</p>
+        <h3 class="service-card__title" data-i18n="testimonials.items.wedding.author">Wedding</h3>
+        <p class="service-card__text" data-i18n="testimonials.items.wedding.meta">Hong Kong</p>
+    </article>
+    <article class="service-card reveal">
+        <p class="service-card__text" data-i18n="testimonials.items.yacht.quote">Private yacht party in Hong Kong with bartenders coordinated for a premium, high-touch hospitality setting.</p>
+        <h3 class="service-card__title" data-i18n="testimonials.items.yacht.author">Yacht Party</h3>
+        <p class="service-card__text" data-i18n="testimonials.items.yacht.meta">Hong Kong</p>
     </article>
     </div>
     </div>
@@ -479,8 +490,8 @@ textarea{resize:vertical;}
 <p class="section-intro" data-i18n="faq.intro">A few answers to the questions clients usually have before getting in touch.</p>
 </div>
 <div class="faq-list" id="faq-list">
-<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.types.question">What types of events do you support?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__content" data-i18n="faq.items.cities.answer">Our strongest current focus is Hong Kong and Barcelona. We can also support selected projects in other international event hubs depending on scope, timing and bartender availability.</div></div></div></article>
-<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.cities.question">Do you operate only in specific cities?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.cities.answer">We work in major cities and can also adapt depending on the event and location.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.types.question">What types of events do you support?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.types.answer">We focus on trade shows, brand activations and corporate events.</div></div></div></article>
+<article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.cities.question">Do you operate only in specific cities?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.cities.answer">Our strongest current focus is Hong Kong and Barcelona. We can also support selected projects in other international event hubs depending on scope, timing and bartender availability.</div></div></div></article>
 <article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.process.question">How does the process work?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.process.answer">You send your request, we discuss your needs, and we propose the right setup for your event.</div></div></div></article>
 <article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.adapt.question">Can the service be adapted to our event?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.adapt.answer">Yes. Each event is different, and we adjust the team and setup accordingly.</div></div></div></article>
 <article class="faq-item reveal"><button type="button" aria-expanded="false"><span data-i18n="faq.items.response.question">How quickly will I get a response?</span><span aria-hidden="true">+</span></button><div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="faq.items.response.answer">We usually reply quickly after receiving your request.</div></div></div></article>
