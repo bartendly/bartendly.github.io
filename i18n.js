@@ -10,21 +10,26 @@
     }
     
     function getNestedValue(obj, key) {
-        if (!obj) {
-        return undefined;
-        }
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        return obj[key];
-        }
-        return key.split('.').reduce(function (acc, part) {
-        return acc && Object.prototype.hasOwnProperty.call(acc, part) ? acc[part] : undefined;
-        }, obj);
+    if (!obj) {
+    return undefined;
+    }
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    return obj[key];
+    }
+    return key.split('.').reduce(function (acc, part) {
+    return acc && Object.prototype.hasOwnProperty.call(acc, part) ? acc[part] : undefined;
+    }, obj);
     }
     
-    function createFlatLookup(localeObject) {
+    function createFlatLookup(translations, language, fallbackLanguage) {
     return new Proxy({}, {
     get: function (_, prop) {
-    return getNestedValue(localeObject, String(prop));
+    var key = String(prop);
+    var value = getNestedValue(translations[language], key);
+    if (typeof value !== 'undefined') {
+    return value;
+    }
+    return getNestedValue(translations[fallbackLanguage], key);
     }
     });
     }
@@ -38,7 +43,7 @@
     if (availableLanguages.includes(browser)) {
     return browser;
     }
-    return availableLanguages[0] || 'en';
+    return availableLanguages.includes('en') ? 'en' : availableLanguages[0];
     }
     
     function translateDocument(flat) {
@@ -73,59 +78,22 @@
     node.setAttribute('aria-label', value);
     }
     });
+    
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (node) {
+    var key = node.getAttribute('data-i18n-alt');
+    var value = flat[key];
+    if (typeof value === 'string') {
+    node.setAttribute('alt', value);
+    }
+    });
     }
     
-    async function initI18n() {
-    var translations = await loadTranslations('translations.json');
-    var availableLanguages = Object.keys(translations);
-    var currentLanguage = detectPreferredLanguage(availableLanguages);
-    var selector = document.querySelector('[data-language-select]');
-    var selectorWrap = document.querySelector('[data-language-wrap]');
-    var flat = createFlatLookup(translations[currentLanguage]);
-    
-    document.documentElement.lang = currentLanguage;
-    translateDocument(flat);
+    function dispatchReady(translations, currentLanguage, flat) {
     window.__BARTENDLY_I18N__ = {
     translations: translations,
     currentLanguage: currentLanguage,
     flat: flat
     };
-    
-    if (selector) {
-    selector.innerHTML = '';
-    availableLanguages.forEach(function (language) {
-    var option = document.createElement('option');
-    option.value = language;
-    option.textContent = flat['lang.' + language] || language.toUpperCase();
-    if (language === currentLanguage) {
-    option.selected = true;
-    }
-    selector.appendChild(option);
-    });
-    selector.addEventListener('change', function (event) {
-        var nextLanguage = event.target.value;
-        var nextFlat = createFlatLookup(translations[nextLanguage]);
-        window.localStorage.setItem('bartendly-language', nextLanguage);
-        document.documentElement.lang = nextLanguage;
-        translateDocument(nextFlat);
-        window.__BARTENDLY_I18N__ = {
-        translations: translations,
-        currentLanguage: nextLanguage,
-        flat: nextFlat
-        };
-        document.dispatchEvent(new CustomEvent('bartendly:i18n-ready', {
-        detail: {
-        translations: translations,
-        currentLanguage: nextLanguage,
-        flat: nextFlat
-        }
-        }));
-    });
-    }
-    
-    if (selectorWrap) {
-    selectorWrap.hidden = availableLanguages.length <= 1;
-    }
     
     document.dispatchEvent(new CustomEvent('bartendly:i18n-ready', {
     detail: {
@@ -134,6 +102,50 @@
     flat: flat
     }
     }));
+    }
+    
+    async function initI18n() {
+    var translations = await loadTranslations('/translations.json');
+    var availableLanguages = Object.keys(translations).filter(function (key) {
+    return translations[key] && typeof translations[key] === 'object' && !Array.isArray(translations[key]);
+    });
+    var fallbackLanguage = availableLanguages.includes('en') ? 'en' : availableLanguages[0];
+    var currentLanguage = detectPreferredLanguage(availableLanguages);
+    var selector = document.querySelector('[data-language-select]');
+    var selectorWrap = document.querySelector('[data-language-wrap]');
+    var flat = createFlatLookup(translations, currentLanguage, fallbackLanguage);
+    
+    document.documentElement.lang = currentLanguage;
+    translateDocument(flat);
+    dispatchReady(translations, currentLanguage, flat);
+    
+    if (selector) {
+    selector.innerHTML = '';
+    
+    availableLanguages.forEach(function (language) {
+    var option = document.createElement('option');
+    option.value = language;
+    option.textContent = language.toUpperCase();
+    if (language === currentLanguage) {
+    option.selected = true;
+    }
+    selector.appendChild(option);
+    });
+    
+    selector.addEventListener('change', function (event) {
+    var nextLanguage = event.target.value;
+    var nextFlat = createFlatLookup(translations, nextLanguage, fallbackLanguage);
+    
+    window.localStorage.setItem('bartendly-language', nextLanguage);
+    document.documentElement.lang = nextLanguage;
+    translateDocument(nextFlat);
+    dispatchReady(translations, nextLanguage, nextFlat);
+    });
+    }
+    
+    if (selectorWrap) {
+    selectorWrap.hidden = availableLanguages.length <= 1;
+    }
     }
     
     window.BartendlyI18n = {
