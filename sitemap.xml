@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bartendly.com/</loc>
-    <priority>1.0</priority>
+    <lastmod>2026-05-27</lastmod>
   </url>
   <url>
     <loc>https://bartendly.com/what-is-bartendly</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-27</lastmod>
   </url>
   <url>
     <loc>https://bartendly.com/bartenders/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-27</lastmod>
   </url>
   <url>
     <loc>https://bartendly.com/hong-kong-event-bartenders/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-27</lastmod>
   </url>
   <url>
     <loc>https://bartendly.com/barcelona-trade-show-bartenders/</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-05-27</lastmod>
   </url>
 </urlset>
