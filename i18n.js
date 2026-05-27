@@ -35,15 +35,21 @@
     }
     
     function detectPreferredLanguage(availableLanguages) {
-    var saved = window.localStorage.getItem('bartendly-language');
-    if (saved && availableLanguages.includes(saved)) {
-    return saved;
-    }
-    var browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
-    if (availableLanguages.includes(browser)) {
-    return browser;
-    }
-    return availableLanguages.includes('en') ? 'en' : availableLanguages[0];
+        var saved = window.localStorage.getItem('bartendly-language');
+        var legacySaved = window.localStorage.getItem('bartendly_lang');
+        if (saved && availableLanguages.includes(saved)) {
+        return saved;
+        }
+        if (legacySaved && availableLanguages.includes(legacySaved)) {
+            window.localStorage.setItem('bartendly-language', nextLanguage);
+            window.localStorage.setItem('bartendly_lang', nextLanguage);
+        return legacySaved;
+        }
+        var browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+        if (availableLanguages.includes(browser)) {
+        return browser;
+        }
+        return availableLanguages.includes('en') ? 'en' : availableLanguages[0];
     }
     
     function translateDocument(flat) {
