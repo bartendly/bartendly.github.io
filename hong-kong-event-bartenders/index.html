@@ -21,30 +21,7 @@
 <meta name="twitter:image" content="https://bartendly.com/images/og-bartendly-experiences-hk.jpg">
 <link rel="preload" as="image" href="/images/hero-bartendly-experiences-hk.jpg">
 <style>
-:root{
---bg:#ffffff;
---cream:#f7f2ea;
---cream2:#efe6d8;
---dark:#0b0b0f;
---dark2:#14141a;
---dark3:#202027;
---text:#101114;
---soft:#62646f;
---muted:#8b8d97;
---white:#ffffff;
---line:rgba(17,17,17,0.09);
---line2:rgba(255,255,255,0.13);
---gold:#d8b06f;
---gold2:#c99856;
---gold3:#a8793f;
---green:#25d366;
---shadow:0 18px 60px rgba(11,11,15,0.10);
---shadow2:0 30px 110px rgba(0,0,0,0.36);
---radius:28px;
---container:min(1180px,calc(100vw - 32px));
---narrow:min(880px,calc(100vw - 32px));
---ease:cubic-bezier(.22,1,.36,1);
-}
+:root{--bg:#fff;--cream:#f7f2ea;--cream2:#efe6d8;--dark:#0b0b0f;--dark2:#14141a;--dark3:#202027;--text:#101114;--soft:#62646f;--muted:#8b8d97;--white:#fff;--line:rgba(17,17,17,.09);--line2:rgba(255,255,255,.13);--gold:#d8b06f;--gold2:#c99856;--gold3:#a8793f;--green:#25d366;--shadow:0 18px 60px rgba(11,11,15,.10);--shadow2:0 30px 110px rgba(0,0,0,.36);--radius:28px;--container:min(1180px,calc(100vw - 32px));--narrow:min(880px,calc(100vw - 32px));--ease:cubic-bezier(.22,1,.36,1);}
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
@@ -61,12 +38,12 @@ h1,h2,h3,p{margin:0;}
 .page{overflow:hidden;}
 .container{width:var(--container);margin-inline:auto;}
 .narrow{width:var(--narrow);margin-inline:auto;}
-.topbar{position:fixed;inset:0 0 auto 0;z-index:120;background:linear-gradient(180deg,rgba(11,11,15,0.94),rgba(11,11,15,0.60));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);transition:background .25s var(--ease),border-color .25s var(--ease);}
-.topbar.is-scrolled{background:rgba(11,11,15,0.92);border-color:rgba(255,255,255,0.15);}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:120;background:linear-gradient(180deg,rgba(11,11,15,.94),rgba(11,11,15,.60));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s var(--ease),border-color .25s var(--ease);}
+.topbar.is-scrolled{background:rgba(11,11,15,.92);border-color:rgba(255,255,255,.15);}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:14px;width:var(--container);margin-inline:auto;min-height:72px;}
 .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,0.22),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);flex:0 0 auto;}
-.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,0.76),rgba(168,121,63,0.20) 54%,transparent 74%);}
+.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,.22),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);flex:0 0 auto;}
+.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,.76),rgba(168,121,63,.20) 54%,transparent 74%);}
 .brand__mark::after{content:"B";position:relative;font-size:1rem;font-weight:850;color:#fff;}
 .brand__copy{display:grid;gap:2px;min-width:0;}
 .brand__name{font-size:.96rem;font-weight:850;color:#fff;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -74,7 +51,6 @@ h1,h2,h3,p{margin:0;}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
 .topbar__link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#fff;font-size:.9rem;font-weight:750;transition:background .25s var(--ease),transform .25s var(--ease);}
 .topbar__link:hover{background:rgba(255,255,255,.10);transform:translateY(-1px);}
-.topbar__cta{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(216,176,111,.28);background:linear-gradient(180deg,var(--gold),var(--gold3));color:#111;font-size:.9rem;font-weight:850;box-shadow:0 12px 28px rgba(216,176,111,.18);}
 .language-wrap[hidden]{display:none!important;}
 .language-select{min-width:74px;height:42px;padding:0 32px 0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#fff 50%),linear-gradient(135deg,#fff 50%,transparent 50%);background-position:calc(100% - 17px) 17px,calc(100% - 11px) 17px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;}
 .language-select option{background:#111;color:#fff;}
@@ -85,9 +61,9 @@ h1,h2,h3,p{margin:0;}
 .btn-whatsapp{background:var(--green);color:#fff;box-shadow:0 14px 34px rgba(37,211,102,.18);}
 .btn-white{background:#fff;color:#111;border-color:rgba(17,17,17,.10);}
 .hero{position:relative;padding:112px 0 58px;background:var(--dark);color:#fff;isolation:isolate;}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,15,.95) 0%,rgba(11,11,15,.78) 43%,rgba(11,11,15,.34) 100%),linear-gradient(180deg,rgba(11,11,15,.12),rgba(11,11,15,.92));z-index:-2;}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,15,.95) 0%,rgba(11,11,15,.76) 43%,rgba(11,11,15,.30) 100%),linear-gradient(180deg,rgba(11,11,15,.12),rgba(11,11,15,.92));z-index:-2;}
 .hero__media{position:absolute;inset:0;z-index:-3;overflow:hidden;}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:63% center;transform:scale(1.04);}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:62% center;transform:scale(1.04);}
 .hero__grid{display:grid;gap:34px;align-items:center;}
 .hero__content{max-width:740px;}
 .breadcrumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 18px;color:rgba(255,255,255,.64);font-size:.88rem;}
@@ -99,7 +75,6 @@ h1,h2,h3,p{margin:0;}
 .hero__proof li{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);font-size:.88rem;color:rgba(255,255,255,.84);}
 .hero__proof li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);}
 .hero__support{max-width:42ch;margin-top:16px;font-size:.98rem;line-height:1.6;color:rgba(255,255,255,.70);}
-.hero__desktop-hint{display:none;margin-top:22px;padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.55;}
 .form-card{position:relative;padding:22px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.93));color:var(--text);box-shadow:var(--shadow2);border:1px solid rgba(255,255,255,.28);overflow:hidden;}
 .form-card::before{content:"";position:absolute;right:-80px;bottom:-120px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,.22),rgba(216,176,111,0) 70%);}
 .form-card>*{position:relative;z-index:1;}
@@ -138,7 +113,6 @@ h1,h2,h3,p{margin:0;}
 .use-card:hover img{transform:scale(1.04);}
 .use-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,.03),rgba(11,11,15,.24) 42%,rgba(11,11,15,.88));}
 .use-copy{position:absolute;left:20px;right:20px;bottom:20px;z-index:1;display:grid;gap:8px;color:#fff;}
-.use-eyebrow{display:inline-flex;width:max-content;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:.72rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase;color:#f6ddb0;}
 .use-copy h3{font-size:1.42rem;line-height:1.04;letter-spacing:-.045em;font-weight:900;}
 .use-copy p{font-size:.95rem;line-height:1.55;color:rgba(255,255,255,.76);}
 .why-grid,.steps-grid{display:grid;gap:16px;}
@@ -196,74 +170,29 @@ h1,h2,h3,p{margin:0;}
 .sticky-cta.is-hidden{opacity:0;pointer-events:none;transform:translateY(16px);}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
 .reveal.is-visible{opacity:1;transform:none;}
-@media (min-width:720px){
-.hero{padding:132px 0 82px;}
-.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,.86fr);}
-.hero__desktop-hint{display:block;}
-.form-card{padding:26px;}
-.form-card--mobile{display:none;}
-.form-card--desktop{display:block;}
-.section{padding:92px 0;}
-.use-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-.use-card{min-height:410px;}
-.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-.steps-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-.split-wrap{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);}
-.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}
-.bartender-box__inner{grid-template-columns:minmax(0,1fr) auto;}
-.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}
-.sticky-cta{display:none;}
-.footer{padding-bottom:36px;}
-}
-@media (max-width:719px){
-.topbar__inner{min-height:68px;width:min(calc(100vw - 24px),1180px);}
-.brand__tag{display:none;}
-.brand__name{font-size:.82rem;max-width:164px;}
-.topbar__link--secondary,.topbar__link--bartenders{display:none;}
-.topbar__link--contact{min-height:38px;padding:0 11px;font-size:.78rem;}
-.language-select{height:38px;min-width:62px;padding:0 28px 0 10px;font-size:.78rem;background-position:calc(100% - 16px) 16px,calc(100% - 10px) 16px;}
-.hero{padding-top:92px;padding-bottom:42px;}
-.hero__grid{gap:24px;}
-.hero__title{max-width:100%;font-size:clamp(2.25rem,10.2vw,3.15rem);line-height:.99;letter-spacing:-.047em;}
-.hero__subtitle{max-width:100%;font-size:1rem;line-height:1.48;}
-.btn{width:100%;}
-.section{padding:56px 0;}
-.use-grid{grid-template-columns:1fr;}
-.use-card{min-height:280px;}
-.steps-grid,.why-grid{grid-template-columns:1fr;}
-.step-card{grid-template-columns:auto 1fr;}
-.split-visual{min-height:240px;}
-.form-card,.use-card,.why-card,.step-card,.split-card,.split-visual,.proof-card,.faq-item,.cta-card,.bartender-box{border-radius:24px;}
-}
-@media (max-width:379px){
-.brand__name{max-width:132px;}
-.language-select{min-width:58px;}
-.topbar__link--contact{display:none;}
-}
-@media (prefers-reduced-motion:reduce){
-html{scroll-behavior:auto;}
-*{animation:none!important;transition:none!important;}
-.reveal{opacity:1;transform:none;}
-}
+@media (min-width:720px){.hero{padding:132px 0 82px;}.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,.86fr);}.form-card{padding:26px;}.form-card--mobile{display:none;}.form-card--desktop{display:block;}.section{padding:92px 0;}.use-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.use-card{min-height:410px;}.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.steps-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.split-wrap{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);}.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}.bartender-box__inner{grid-template-columns:minmax(0,1fr) auto;}.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
+@media (max-width:719px){.topbar__inner{min-height:68px;width:min(calc(100vw - 24px),1180px);}.brand__tag{display:none;}.brand__name{font-size:.82rem;max-width:164px;}.topbar__link--secondary,.topbar__link--bartenders{display:none;}.topbar__link--contact{min-height:38px;padding:0 11px;font-size:.78rem;}.language-select{height:38px;min-width:62px;padding:0 28px 0 10px;font-size:.78rem;background-position:calc(100% - 16px) 16px,calc(100% - 10px) 16px;}.hero{padding-top:92px;padding-bottom:42px;}.hero__grid{gap:24px;}.hero__title{max-width:100%;font-size:clamp(2.25rem,10.2vw,3.15rem);line-height:.99;letter-spacing:-.047em;}.hero__subtitle{max-width:100%;font-size:1rem;line-height:1.48;}.btn{width:100%;}.section{padding:56px 0;}.use-grid{grid-template-columns:1fr;}.use-card{min-height:280px;}.steps-grid,.why-grid{grid-template-columns:1fr;}.step-card{grid-template-columns:auto 1fr;}.split-visual{min-height:240px;}.form-card,.use-card,.why-card,.step-card,.split-card,.split-visual,.proof-card,.faq-item,.cta-card,.bartender-box{border-radius:24px;}}
+@media (max-width:379px){.brand__name{max-width:132px;}.language-select{min-width:58px;}.topbar__link--contact{display:none;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Hong Kong event bartenders by Bartendly Experiences","url":"https://bartendly.com/hong-kong-event-bartenders/","image":"https://bartendly.com/images/og-bartendly-experiences-hk.jpg","description":"Hire professional bartenders in Hong Kong for corporate events, HKCEC trade shows, brand activations and premium private events.","areaServed":{"@type":"City","name":"Hong Kong"},"provider":{"@type":"Organization","name":"Bartendly","url":"https://bartendly.com/"},"serviceType":["Hong Kong event bartenders","Corporate event bartenders","HKCEC trade show bartenders","Brand activation bartenders","Private event bartenders"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I hire bartenders for a corporate event in Hong Kong?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bartendly Experiences helps coordinate professional bartenders for corporate events, client receptions, office events and brand activations in Hong Kong."}},{"@type":"Question","name":"Can you support events at HKCEC?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can help with bartender staffing for trade shows, exhibition stands and professional events around the Hong Kong Convention and Exhibition Centre, depending on event scope and availability."}},{"@type":"Question","name":"Do you provide alcohol, glassware and ice?","acceptedAnswer":{"@type":"Answer","text":"The setup depends on the event. Clients, venues or suppliers may provide alcohol, glassware and ice, and Bartendly can help coordinate the right cocktail service around the available setup."}},{"@type":"Question","name":"Can Hong Kong bartenders join Bartendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bartenders in Hong Kong can join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I hire bartenders for a corporate event in Hong Kong?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bartendly Experiences helps coordinate professional bartenders for corporate events, client receptions, office events and brand activations in Hong Kong."}},{"@type":"Question","name":"Can you support events at HKCEC?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can help with bartender staffing for trade shows, exhibition stands and professional events around the Hong Kong Convention and Exhibition Centre, depending on event scope and availability."}},{"@type":"Question","name":"Do you provide the alcohol, glassware and ice?","acceptedAnswer":{"@type":"Answer","text":"The setup depends on the event. Clients, venues or suppliers may provide alcohol, glassware and ice, and Bartendly can help coordinate the right cocktail service around the available setup."}},{"@type":"Question","name":"Can bartenders in Hong Kong join Bartendly?","acceptedAnswer":{"@type":"Answer","text":"Yes. Bartenders in Hong Kong can join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations."}}]}
 </script>
 <script defer src="/i18n.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="common.a11ySkipToContent">Skip to content</a>
 <div class="page">
 <header class="topbar" id="topbar">
 <div class="topbar__inner">
 <a class="brand" href="/" aria-label="Bartendly Experiences home">
 <span class="brand__mark" aria-hidden="true"></span>
 <span class="brand__copy">
-<span class="brand__name" data-i18n="common.brandName">Bartendly Experiences</span>
-<span class="brand__tag" data-i18n="common.brandTagline">Professional bartenders for events, trade shows and brand activations</span>
+<span class="brand__name" data-i18n="common.brandExperiencesName">Bartendly Experiences</span>
+<span class="brand__tag" data-i18n="common.brandExperiencesTagline">Professional bartenders for events, trade shows and brand activations</span>
 </span>
 </a>
 <div class="topbar__actions">
@@ -285,72 +214,71 @@ html{scroll-behavior:auto;}
 <div class="container hero__grid">
 <div class="hero__content reveal">
 <nav class="breadcrumb" aria-label="Breadcrumb">
-<a href="/" data-i18n="hk.breadcrumbHome">Bartendly Experiences</a>
+<a href="/" data-i18n="hongKong.breadcrumbHome">Bartendly Experiences</a>
 <span aria-hidden="true">/</span>
-<span data-i18n="hk.breadcrumbCurrent">Hong Kong event bartenders</span>
+<span data-i18n="hongKong.breadcrumbCurrent">Hong Kong event bartenders</span>
 </nav>
-<div class="kicker" data-i18n="hk.heroEyebrow">Hong Kong event bartenders</div>
-<h1 class="hero__title" data-i18n="hk.heroTitle">Hire professional bartenders in Hong Kong</h1>
-<p class="hero__subtitle" data-i18n="hk.heroSubtitle">Premium cocktail service for corporate events, HKCEC trade shows, brand activations and private events.</p>
+<div class="kicker" data-i18n="hongKong.heroEyebrow">Hong Kong event bartenders</div>
+<h1 class="hero__title" data-i18n="hongKong.heroTitle">Hire professional bartenders in Hong Kong</h1>
+<p class="hero__subtitle" data-i18n="hongKong.heroSubtitle">Premium cocktail service for corporate events, HKCEC trade shows, brand activations and private events.</p>
 <ul class="hero__proof" aria-label="Hong Kong service signals">
-<li data-i18n="hk.heroProofOne">Corporate events</li>
-<li data-i18n="hk.heroProofTwo">HKCEC trade shows</li>
-<li data-i18n="hk.heroProofThree">Brand activations</li>
+<li data-i18n="hongKong.heroProofOne">Corporate events</li>
+<li data-i18n="hongKong.heroProofTwo">HKCEC trade shows</li>
+<li data-i18n="hongKong.heroProofThree">Brand activations</li>
 </ul>
-<p class="hero__support" data-i18n="hk.heroSupport">Trusted for premium private events in Hong Kong and professional event hospitality.</p>
-<p class="hero__desktop-hint" data-i18n="hk.heroDesktopHint">Send the essentials in the form. We’ll reply quickly with a practical setup based on your venue, timing, guest count and service format.</p>
+<p class="hero__support" data-i18n="hongKong.heroSupport">Trusted for premium private events in Hong Kong and professional event hospitality.</p>
 </div>
 <div class="hero__form-wrap reveal" id="contact-form">
 <div class="form-card form-card--mobile">
-<h2 class="form-card__title" data-i18n="hk.formMobileTitle">Tell us about your Hong Kong event</h2>
-<p class="form-card__text" data-i18n="hk.formMobileText">Continue on WhatsApp with the essentials.</p>
+<h2 class="form-card__title" data-i18n="hongKong.formMobileTitle">Tell us about your Hong Kong event</h2>
+<p class="form-card__text" data-i18n="hongKong.formMobileMicrocopy">You’ll continue on WhatsApp.</p>
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-mobile" class="form-grid" novalidate>
 <div class="field">
-<label for="name-mobile" data-i18n="hk.formNameLabel">Name</label>
-<input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="hk.formNamePlaceholder" placeholder="Your name">
+<label for="name-mobile" data-i18n="common.formNameLabel">Name</label>
+<input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name">
 </div>
 <div class="field">
-<label for="event-mobile" data-i18n="hk.formEventLabel">Describe your event</label>
-<textarea id="event-mobile" name="event" data-i18n-placeholder="hk.formEventPlaceholder" placeholder="Date, venue, type of event, number of guests"></textarea>
+<label for="event-mobile" data-i18n="common.formEventLabel">Describe your event</label>
+<textarea id="event-mobile" name="event" data-i18n-placeholder="hongKong.formEventPlaceholder" placeholder="Date, venue, type of event, number of guests"></textarea>
 </div>
 <div class="form-actions">
-<button class="btn btn-primary" type="submit" data-i18n="hk.formMobileSubmit">Request bartenders in Hong Kong</button>
-<p class="form-microcopy" data-i18n="hk.formMobileMicrocopy">You’ll continue on WhatsApp.</p>
-<p class="form-email-alt"><span data-i18n="hk.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Hong Kong event bartender request" data-i18n="hk.formEmailAlt">Send your request by email</a></p>
+<button class="btn btn-primary" type="submit" data-i18n="hongKong.formSubmit">Request bartenders in Hong Kong</button>
+<p class="form-microcopy" data-i18n="hongKong.formMobileMicrocopy">You’ll continue on WhatsApp.</p>
+<p class="form-email-alt"><span data-i18n="common.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Hong Kong event bartender request" data-i18n="common.formEmailAlt">Send your request by email</a></p>
 <div class="form-feedback" id="form-feedback-mobile" role="status" aria-live="polite"></div>
 </div>
 </form>
 </div>
 <div class="form-card form-card--desktop">
-<h2 class="form-card__title" data-i18n="hk.formDesktopTitle">Request bartenders in Hong Kong</h2>
-<p class="form-card__text" data-i18n="hk.formDesktopText">Send the key details. We’ll reply quickly.</p>
+<h2 class="form-card__title" data-i18n="hongKong.formDesktopTitle">Request bartenders in Hong Kong</h2>
+<p class="form-card__text" data-i18n="hongKong.formDesktopMicrocopy">Best for desktop users. We’ll receive your request by email.</p>
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-desktop" class="form-grid" data-formspree="https://formspree.io/f/mdkevral" novalidate>
 <div class="field">
-<label for="name-desktop" data-i18n="hk.formNameLabel">Name</label>
-<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="hk.formNamePlaceholder" placeholder="Your name" required>
+<label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
+<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" required>
 </div>
 <div class="field">
-<label for="contact-desktop" data-i18n="hk.formContactLabel">Contact</label>
-<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="hk.formContactPlaceholder" placeholder="Email or WhatsApp number" required>
+<label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
+<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number" required>
 </div>
 <div class="field">
-<label for="venue-desktop" data-i18n="hk.formVenueLabel">Venue / area</label>
-<input id="venue-desktop" name="venue" type="text" autocomplete="address-level2" data-i18n-placeholder="hk.formVenuePlaceholder" placeholder="HKCEC, Central, Wan Chai, private venue" required>
+<label for="venue-desktop" data-i18n="hongKong.formVenueLabel">Venue / area</label>
+<input id="venue-desktop" name="venue" type="text" autocomplete="address-level2" data-i18n-placeholder="hongKong.formVenuePlaceholder" placeholder="HKCEC, Central, Wan Chai, private venue" required>
 </div>
 <div class="field">
-<label for="event-desktop" data-i18n="hk.formEventLabel">Describe your event</label>
-<textarea id="event-desktop" name="event" data-i18n-placeholder="hk.formEventPlaceholder" placeholder="Date, venue, type of event, number of guests" required></textarea>
+<label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
+<textarea id="event-desktop" name="event" data-i18n-placeholder="hongKong.formEventPlaceholder" placeholder="Date, venue, type of event, number of guests" required></textarea>
 </div>
 <input type="hidden" name="_subject" value="New Hong Kong Bartendly Experiences request">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://bartendly.com/thank-you">
 <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
 <div class="form-actions">
-<button class="btn btn-primary" type="submit" data-i18n="hk.formDesktopSubmit">Send request</button>
-<p class="form-microcopy" data-i18n="hk.formDesktopMicrocopy">We’ll receive your request by email.</p>
-<p class="form-email-alt"><span data-i18n="hk.formWhatsappAltLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20an%20event%20in%20Hong%20Kong" target="_blank" rel="noopener noreferrer" data-i18n="hk.formWhatsappAlt">Message us directly</a></p>
+<button class="btn btn-primary" type="submit" data-i18n="hongKong.formSubmit">Request bartenders in Hong Kong</button>
+<p class="form-microcopy" data-i18n="hongKong.formDesktopMicrocopy">Best for desktop users. We’ll receive your request by email.</p>
+<p class="form-email-alt"><span data-i18n="common.formWhatsappLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20an%20event%20in%20Hong%20Kong" target="_blank" rel="noopener noreferrer" data-i18n="common.formWhatsappLink">Message us directly</a></p>
 </div>
 <div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
 </form>
@@ -361,41 +289,36 @@ html{scroll-behavior:auto;}
 <section class="section section--dark">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.useCasesEyebrow">Events we support</div>
-<h2 class="section-title" data-i18n="hk.useCasesTitle">Bartenders for Hong Kong events where execution matters.</h2>
-<p class="section-intro" data-i18n="hk.useCasesIntro">A focused service for professional and premium events where reliability, presentation and smooth execution matter.</p>
+<h2 class="section-title" data-i18n="hongKong.useCasesTitle">Bartenders for Hong Kong events</h2>
+<p class="section-intro" data-i18n="hongKong.useCasesIntro">A focused service for professional and premium events where reliability, presentation and execution matter.</p>
 </div>
 <div class="use-grid">
 <article class="use-card reveal">
-<img src="/images/use-corporate-rooftop-event.jpg" alt="Corporate rooftop cocktail event in Hong Kong">
+<img src="/images/use-corporate-rooftop-event.jpg" alt="Corporate cocktail reception in Hong Kong">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="hk.useCasesCorporateEyebrow">Corporate</span>
-<h3 data-i18n="hk.useCasesCorporateTitle">Corporate events</h3>
-<p data-i18n="hk.useCasesCorporateText">Professional cocktail service for client receptions, office events, hospitality suites and business gatherings.</p>
+<h3 data-i18n="hongKong.useCasesCorporateTitle">Corporate events</h3>
+<p data-i18n="hongKong.useCasesCorporateText">Professional cocktail service for client receptions, office events, hospitality suites and business gatherings.</p>
 </div>
 </article>
 <article class="use-card reveal">
-<img src="/images/use-trade-show-bartenders.jpg" alt="Bartenders serving cocktails at a HKCEC trade show stand">
+<img src="/images/use-trade-show-bartenders.jpg" alt="Bartenders serving cocktails at an HKCEC exhibition stand">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="hk.useCasesTradeShowsEyebrow">Trade shows</span>
-<h3 data-i18n="hk.useCasesTradeShowsTitle">HKCEC trade shows</h3>
-<p data-i18n="hk.useCasesTradeShowsText">Bartenders for exhibition stands, trade fairs, product demos and professional hospitality moments.</p>
+<h3 data-i18n="hongKong.useCasesTradeShowsTitle">HKCEC trade shows</h3>
+<p data-i18n="hongKong.useCasesTradeShowsText">Bartenders for exhibition stands, trade fairs, product demos and professional hospitality moments.</p>
 </div>
 </article>
 <article class="use-card reveal">
-<img src="/images/use-brand-activation-cocktails.jpg" alt="Brand activation cocktail service in Hong Kong">
+<img src="/images/use-brand-activation-cocktails.jpg" alt="Cocktail service for a Hong Kong brand activation">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="hk.useCasesActivationsEyebrow">Brands</span>
-<h3 data-i18n="hk.useCasesActivationsTitle">Brand activations</h3>
-<p data-i18n="hk.useCasesActivationsText">Cocktail service designed to support brand presence, guest interaction and memorable experiences.</p>
+<h3 data-i18n="hongKong.useCasesActivationsTitle">Brand activations</h3>
+<p data-i18n="hongKong.useCasesActivationsText">Cocktail service designed to support brand presence, guest interaction and memorable experiences.</p>
 </div>
 </article>
 <article class="use-card reveal">
-<img src="/images/use-private-yacht-wedding.jpg" alt="Premium private event with cocktail service in Hong Kong">
+<img src="/images/use-private-yacht-wedding.jpg" alt="Premium private cocktail event in Hong Kong">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="hk.useCasesPrivateEyebrow">Private</span>
-<h3 data-i18n="hk.useCasesPrivateTitle">Premium private events</h3>
-<p data-i18n="hk.useCasesPrivateText">Selected private dinners, parties, weddings and yacht events where a professional bartender improves the experience.</p>
+<h3 data-i18n="hongKong.useCasesPrivateTitle">Premium private events</h3>
+<p data-i18n="hongKong.useCasesPrivateText">Selected private dinners, parties and celebrations where a professional bartender improves the experience.</p>
 </div>
 </article>
 </div>
@@ -404,25 +327,24 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.whyEyebrow">Why Bartendly</div>
-<h2 class="section-title" data-i18n="hk.whyTitle">A curated approach for Hong Kong hospitality.</h2>
-<p class="section-intro" data-i18n="hk.whyIntro">Clients need reliable bartenders without operational noise. We focus on fit, availability and clear human coordination.</p>
+<h2 class="section-title" data-i18n="hongKong.whyTitle">Why Bartendly in Hong Kong</h2>
+<p class="section-intro" data-i18n="hongKong.whyIntro">A direct, curated approach for clients who need reliable bartenders without operational noise.</p>
 </div>
 <div class="why-grid">
 <article class="why-card reveal">
 <div class="why-number">01</div>
-<h3 class="card-title" data-i18n="hk.whyCuratedTitle">Selected event bartenders</h3>
-<p class="card-text" data-i18n="hk.whyCuratedText">We connect clients with relevant bartenders through the Bartendly network, based on event type, timing and availability.</p>
+<h3 class="card-title" data-i18n="hongKong.whyCuratedTitle">Selected event bartenders</h3>
+<p class="card-text" data-i18n="hongKong.whyCuratedText">We connect clients with relevant bartenders through the Bartendly network, based on event type, timing and availability.</p>
 </article>
 <article class="why-card reveal">
 <div class="why-number">02</div>
-<h3 class="card-title" data-i18n="hk.whyContextTitle">Built for premium settings</h3>
-<p class="card-text" data-i18n="hk.whyContextText">Hong Kong events often require sharp presentation, fast service and strong hospitality presence. That is the standard we aim for.</p>
+<h3 class="card-title" data-i18n="hongKong.whyContextTitle">Built for premium settings</h3>
+<p class="card-text" data-i18n="hongKong.whyContextText">Hong Kong events often require sharp presentation, fast service and strong hospitality presence. That is the standard we aim for.</p>
 </article>
 <article class="why-card reveal">
 <div class="why-number">03</div>
-<h3 class="card-title" data-i18n="hk.whyCoordinationTitle">Fast human coordination</h3>
-<p class="card-text" data-i18n="hk.whyCoordinationText">You send the request, we clarify what matters, and we help shape a practical setup for the event.</p>
+<h3 class="card-title" data-i18n="hongKong.whyCoordinationTitle">Fast human coordination</h3>
+<p class="card-text" data-i18n="hongKong.whyCoordinationText">You send the request, we clarify what matters, and we help shape a practical setup for the event.</p>
 </article>
 </div>
 </div>
@@ -430,19 +352,18 @@ html{scroll-behavior:auto;}
 <section class="section split">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.setupEyebrow">Setup</div>
-<h2 class="section-title" data-i18n="hk.setupTitle">Flexible cocktail service around your event.</h2>
-<p class="section-intro" data-i18n="hk.setupIntro">Your event may already have a venue, alcohol supplier, glassware or production team. Bartendly helps coordinate the bartender side clearly.</p>
+<h2 class="section-title" data-i18n="hongKong.setupTitle">Flexible cocktail service</h2>
+<p class="section-intro" data-i18n="hongKong.setupIntro">Your event may already have a venue, alcohol supplier, glassware or production team. Bartendly helps coordinate the bartender side clearly.</p>
 </div>
 <div class="split-wrap">
 <div class="split-card reveal">
-<h3 data-i18n="hk.setupCardTitle">What we can help with</h3>
-<p data-i18n="hk.setupCardText">We adapt the bartender setup to the event format rather than forcing one rigid package.</p>
+<h3 data-i18n="hongKong.setupCardTitle">What we can help with</h3>
+<p data-i18n="hongKong.setupCardText">We adapt the bartender setup to the event format rather than forcing one rigid package.</p>
 <ul class="split-list">
-<li data-i18n="hk.setupItemOne">Bartenders for cocktail service</li>
-<li data-i18n="hk.setupItemTwo">Simple cocktail menu direction</li>
-<li data-i18n="hk.setupItemThree">Trade show and brand activation formats</li>
-<li data-i18n="hk.setupItemFour">Optional support coordinating tools, ice, glassware or suppliers</li>
+<li data-i18n="hongKong.setupItemsOne">Bartenders for cocktail service</li>
+<li data-i18n="hongKong.setupItemsTwo">Simple cocktail menu direction</li>
+<li data-i18n="hongKong.setupItemsThree">Trade show and brand activation formats</li>
+<li data-i18n="hongKong.setupItemsFour">Optional support coordinating tools, ice, glassware or suppliers</li>
 </ul>
 </div>
 <div class="split-visual reveal">
@@ -454,37 +375,36 @@ html{scroll-behavior:auto;}
 <section class="section">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.howEyebrow">How it works</div>
-<h2 class="section-title" data-i18n="hk.howTitle">Simple request. Clear setup. Team confirmed.</h2>
-<p class="section-intro" data-i18n="hk.howIntro">Simple, direct and handled personally.</p>
+<h2 class="section-title" data-i18n="hongKong.howTitle">How it works</h2>
+<p class="section-intro" data-i18n="hongKong.howIntro">Simple, direct and handled personally.</p>
 </div>
 <div class="steps-grid">
 <article class="step-card reveal">
 <div class="step-number">1</div>
 <div>
-<h3 class="card-title" data-i18n="hk.howOneTitle">Send the event details</h3>
-<p class="card-text" data-i18n="hk.howOneText">Date, venue, format, expected guests and what you already have in place.</p>
+<h3 class="card-title" data-i18n="hongKong.howOneTitle">Send the event details</h3>
+<p class="card-text" data-i18n="hongKong.howOneText">Date, venue, format, expected guests and what you already have in place.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">2</div>
 <div>
-<h3 class="card-title" data-i18n="hk.howTwoTitle">We review the setup</h3>
-<p class="card-text" data-i18n="hk.howTwoText">We clarify the number of bartenders, timing, service style and practical constraints.</p>
+<h3 class="card-title" data-i18n="hongKong.howTwoTitle">We review the setup</h3>
+<p class="card-text" data-i18n="hongKong.howTwoText">We clarify the number of bartenders, timing, service style and practical constraints.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">3</div>
 <div>
-<h3 class="card-title" data-i18n="hk.howThreeTitle">We coordinate the team</h3>
-<p class="card-text" data-i18n="hk.howThreeText">Relevant bartenders are contacted through the Bartendly network and app.</p>
+<h3 class="card-title" data-i18n="hongKong.howThreeTitle">We coordinate the team</h3>
+<p class="card-text" data-i18n="hongKong.howThreeText">Relevant bartenders are contacted through the Bartendly network and app.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">4</div>
 <div>
-<h3 class="card-title" data-i18n="hk.howFourTitle">You confirm</h3>
-<p class="card-text" data-i18n="hk.howFourText">You receive a clear proposal and confirm the event team.</p>
+<h3 class="card-title" data-i18n="hongKong.howFourTitle">You confirm</h3>
+<p class="card-text" data-i18n="hongKong.howFourText">You receive a clear proposal and confirm the event team.</p>
 </div>
 </article>
 </div>
@@ -493,13 +413,12 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="narrow">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.proofEyebrow">Proof</div>
-<h2 class="section-title" data-i18n="hk.proofTitle">Trusted for Hong Kong events.</h2>
-<p class="section-intro" data-i18n="hk.proofIntro">Real client feedback from a recent Hong Kong event.</p>
+<h2 class="section-title" data-i18n="hongKong.proofTitle">Trusted for Hong Kong events</h2>
+<p class="section-intro" data-i18n="hongKong.proofIntro">Real client feedback from a recent Hong Kong event.</p>
 </div>
 <div class="proof-card reveal">
-<blockquote data-i18n="hk.proofQuote">“We worked with Bartendly for a large private event in Hong Kong. The bartenders were professional, efficient and perfectly adapted to the atmosphere. Everything was smooth from start to finish.”</blockquote>
-<footer data-i18n="hk.proofMeta">Alice — Private Event, Hong Kong</footer>
+<blockquote data-i18n="hongKong.proofQuote">“We worked with Bartendly for a large private event in Hong Kong. The bartenders were professional, efficient and perfectly adapted to the atmosphere. Everything was smooth from start to finish.”</blockquote>
+<footer data-i18n="hongKong.proofMeta">Alice — Private Event, Hong Kong</footer>
 </div>
 </div>
 </section>
@@ -508,12 +427,12 @@ html{scroll-behavior:auto;}
 <div class="bartender-box reveal">
 <div class="bartender-box__inner">
 <div>
-<h2 class="cta-card__title" data-i18n="hk.bartenderTitle">Bartender in Hong Kong?</h2>
-<p data-i18n="hk.bartenderText">Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</p>
-<p style="margin-top:12px;"><a class="text-link" href="/what-is-bartendly" data-i18n="hk.bartenderLearnMore">Learn what Bartendly is</a></p>
+<h2 class="cta-card__title" data-i18n="common.bartenderCtaTitle">Are you a bartender?</h2>
+<p data-i18n="common.bartenderCtaText">Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</p>
+<p style="margin-top:12px;"><a class="text-link" href="/what-is-bartendly" data-i18n="common.bartenderCtaLearnMore">Learn what Bartendly is</a></p>
 </div>
 <div>
-<a class="btn btn-primary" href="https://app.bartendly.com" target="_blank" rel="noopener noreferrer" data-i18n="hk.bartenderButton">Join Bartendly</a>
+<a class="btn btn-primary" href="https://app.bartendly.com" target="_blank" rel="noopener noreferrer" data-i18n="common.bartenderCtaButton">Join Bartendly</a>
 </div>
 </div>
 </div>
@@ -522,45 +441,44 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="narrow">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="hk.faqEyebrow">Questions</div>
-<h2 class="section-title" data-i18n="hk.faqTitle">Before you request bartenders.</h2>
-<p class="section-intro" data-i18n="hk.faqIntro">A few answers before you request bartenders in Hong Kong.</p>
+<h2 class="section-title" data-i18n="hongKong.faqTitle">Questions</h2>
+<p class="section-intro" data-i18n="hongKong.faqIntro">A few answers before you request bartenders in Hong Kong.</p>
 </div>
 <div class="faq-list" id="faq-list">
 <article class="faq-item reveal">
 <button type="button" aria-expanded="false">
-<span data-i18n="hk.faqCorporateQuestion">Can I hire bartenders for a corporate event in Hong Kong?</span>
+<span data-i18n="hongKong.faqCorporateQuestion">Can I hire bartenders for a corporate event in Hong Kong?</span>
 <span aria-hidden="true">+</span>
 </button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hk.faqCorporateAnswer">Yes. Bartendly Experiences helps coordinate professional bartenders for corporate events, client receptions, office events and brand activations in Hong Kong.</div></div></div>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hongKong.faqCorporateAnswer">Yes. Bartendly Experiences helps coordinate professional bartenders for corporate events, client receptions, office events and brand activations in Hong Kong.</div></div></div>
 </article>
 <article class="faq-item reveal">
 <button type="button" aria-expanded="false">
-<span data-i18n="hk.faqHkcecQuestion">Can you support events at HKCEC?</span>
+<span data-i18n="hongKong.faqHkcecQuestion">Can you support events at HKCEC?</span>
 <span aria-hidden="true">+</span>
 </button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hk.faqHkcecAnswer">Yes. We can help with bartender staffing for trade shows, exhibition stands and professional events around the Hong Kong Convention and Exhibition Centre, depending on event scope and availability.</div></div></div>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hongKong.faqHkcecAnswer">Yes. We can help with bartender staffing for trade shows, exhibition stands and professional events around the Hong Kong Convention and Exhibition Centre, depending on event scope and availability.</div></div></div>
 </article>
 <article class="faq-item reveal">
 <button type="button" aria-expanded="false">
-<span data-i18n="hk.faqMaterialsQuestion">Do you provide alcohol, glassware and ice?</span>
+<span data-i18n="hongKong.faqMaterialsQuestion">Do you provide alcohol, glassware and ice?</span>
 <span aria-hidden="true">+</span>
 </button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hk.faqMaterialsAnswer">The setup depends on the event. Clients, venues or suppliers may provide alcohol, glassware and ice, and Bartendly can help coordinate the right cocktail service around the available setup.</div></div></div>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hongKong.faqMaterialsAnswer">The setup depends on the event. Clients, venues or suppliers may provide alcohol, glassware and ice, and Bartendly can help coordinate the right cocktail service around the available setup.</div></div></div>
 </article>
 <article class="faq-item reveal">
 <button type="button" aria-expanded="false">
-<span data-i18n="hk.faqNoticeQuestion">How much notice do you need?</span>
+<span data-i18n="hongKong.faqNoticeQuestion">How much notice do you need?</span>
 <span aria-hidden="true">+</span>
 </button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hk.faqNoticeAnswer">The earlier the better, especially for multi-day trade shows or larger teams. For smaller events, we may still be able to help depending on date, location and availability.</div></div></div>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hongKong.faqNoticeAnswer">The earlier the better, especially for multi-day trade shows or larger teams. For smaller events, we may still be able to help depending on date, location and availability.</div></div></div>
 </article>
 <article class="faq-item reveal">
 <button type="button" aria-expanded="false">
-<span data-i18n="hk.faqBartendersQuestion">Can Hong Kong bartenders join Bartendly?</span>
+<span data-i18n="hongKong.faqBartendersQuestion">Can Hong Kong bartenders join Bartendly?</span>
 <span aria-hidden="true">+</span>
 </button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hk.faqBartendersAnswer">Yes. Bartenders in Hong Kong can join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</div></div></div>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="hongKong.faqBartendersAnswer">Yes. Bartenders in Hong Kong can join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</div></div></div>
 </article>
 </div>
 </div>
@@ -568,8 +486,8 @@ html{scroll-behavior:auto;}
 <section class="section">
 <div class="narrow">
 <div class="reveal">
-<h2 class="section-title" data-i18n="hk.seoTitle">Professional bartenders for events in Hong Kong</h2>
-<p class="section-intro" data-i18n="hk.seoParagraph">Bartendly Experiences helps clients hire professional bartenders in Hong Kong for corporate events, HKCEC trade shows, exhibition stands, brand activations and premium private events. Whether you are planning a business reception in Central, an activation in Wan Chai, a trade show moment at HKCEC or a private event in Hong Kong, Bartendly helps coordinate reliable cocktail service through selected bartenders and a clear human process.</p>
+<h2 class="section-title" data-i18n="hongKong.bottomSeoTitle">Professional bartenders for events in Hong Kong</h2>
+<p class="section-intro" data-i18n="hongKong.bottomSeoParagraph">Bartendly Experiences helps clients hire professional bartenders in Hong Kong for corporate events, HKCEC trade shows, exhibition stands, brand activations and premium private events. Whether you are planning a business reception in Central, an activation in Wan Chai, a trade show moment at HKCEC or a private event in Hong Kong, Bartendly helps coordinate reliable cocktail service through selected bartenders and a clear human process.</p>
 </div>
 </div>
 </section>
@@ -578,13 +496,13 @@ html{scroll-behavior:auto;}
 <div class="cta-card reveal">
 <div class="cta-card__inner">
 <div>
-<h2 class="cta-card__title" data-i18n="hk.ctaTitle">Request bartenders in Hong Kong</h2>
-<p class="cta-card__text" data-i18n="hk.ctaText">Tell us the date, venue and event format. We’ll get back to you quickly with the right setup.</p>
+<h2 class="cta-card__title" data-i18n="hongKong.ctaTitle">Request bartenders in Hong Kong</h2>
+<p class="cta-card__text" data-i18n="hongKong.ctaText">Tell us the date, venue and event format. We’ll get back to you quickly with the right setup.</p>
 </div>
 <div class="cta-card__actions">
-<a class="btn btn-primary" href="#contact-form" data-i18n="hk.ctaButton">Use the request form</a>
-<a class="btn btn-whatsapp" href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20an%20event%20in%20Hong%20Kong" target="_blank" rel="noopener noreferrer" data-i18n="hk.ctaWhatsapp">WhatsApp us</a>
-<p class="cta-card__email"><span data-i18n="hk.ctaEmailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Hong Kong event bartender request" data-i18n="common.footerEmail">contact@bartendly.com</a></p>
+<a class="btn btn-primary" href="#contact-form" data-i18n="hongKong.ctaButton">Request bartenders in Hong Kong</a>
+<a class="btn btn-whatsapp" href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20an%20event%20in%20Hong%20Kong" target="_blank" rel="noopener noreferrer" data-i18n="common.buttonsWhatsapp">WhatsApp us</a>
+<p class="cta-card__email"><span data-i18n="hongKong.ctaEmailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Hong Kong event bartender request" data-i18n="common.footerEmail">contact@bartendly.com</a></p>
 </div>
 </div>
 </div>
@@ -595,18 +513,18 @@ html{scroll-behavior:auto;}
 <div class="container footer__inner">
 <div>
 <div class="footer__brand" data-i18n="common.footerBrand">Bartendly Experiences</div>
-<p class="footer__text" data-i18n="hk.footerText">Professional bartenders for corporate events, HKCEC trade shows, brand activations and premium private events in Hong Kong.</p>
+<p class="footer__text" data-i18n="hongKong.footerText">Professional bartenders for corporate events, HKCEC trade shows, brand activations and premium private events in Hong Kong.</p>
 </div>
 <div class="footer__meta">
 <div><strong data-i18n="common.footerContactLabel">Contact</strong></div>
 <div><a href="mailto:contact@bartendly.com" data-i18n="common.footerEmail">contact@bartendly.com</a></div>
-<div><a href="/what-is-bartendly" data-i18n="common.footerWhatIs">What is Bartendly?</a></div>
-<div><a href="/bartenders/" data-i18n="common.footerBartenders">Bartenders</a></div>
+<div><a href="/what-is-bartendly" data-i18n="common.footerWhatIsBartendly">What is Bartendly?</a></div>
+<div><a href="/bartenders/" data-i18n="common.navBartenders">Bartenders</a></div>
 <div><span data-i18n="common.footerRights">All rights reserved.</span></div>
 </div>
 </div>
 </footer>
-<a class="sticky-cta is-hidden" href="#contact-form" id="sticky-cta" data-i18n="hk.stickyCta">Request bartenders in Hong Kong</a>
+<a class="sticky-cta is-hidden" href="#contact-form" id="sticky-cta" data-i18n="hongKong.stickyCtaLabel">Request bartenders in Hong Kong</a>
 </div>
 <script>
 (function(){'use strict';
@@ -615,146 +533,20 @@ var mobileForm=document.getElementById('contact-form-mobile');
 var mobileFeedback=document.getElementById('form-feedback-mobile');
 var topbar=document.getElementById('topbar');
 var stickyCta=document.getElementById('sticky-cta');
-function getText(key,fallback){
-if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){
-return window.__BARTENDLY_I18N__.flat[key];
-}
-return fallback||'';
-}
-function setMobileFeedback(message,type){
-if(!mobileFeedback){return;}
-mobileFeedback.textContent=message;
-mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');
-}
-function clearMobileFeedback(){
-if(!mobileFeedback){return;}
-mobileFeedback.textContent='';
-mobileFeedback.className='form-feedback';
-}
-function buildWhatsappMessage(name,eventText){
-var template=getText('hk.whatsappMessage','Hi, I’m organizing an event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?');
-return template.replace('{name}',name).replace('{event}',eventText);
-}
-function openWhatsapp(name,eventText){
-var message=buildWhatsappMessage(name,eventText);
-var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);
-window.open(url,'_blank','noopener');
-}
-function validateMobileForm(name,eventText){
-if(!name){
-setMobileFeedback(getText('hk.formValidationNameRequired','Please enter your name.'),'error');
-return false;
-}
-if(!eventText){
-setMobileFeedback(getText('hk.formValidationEventRequired','Please describe your event.'),'error');
-return false;
-}
-clearMobileFeedback();
-return true;
-}
-function handleMobileSubmit(event){
-event.preventDefault();
-var name=(mobileForm.querySelector('#name-mobile').value||'').trim();
-var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();
-if(!validateMobileForm(name,eventText)){return;}
-try{
-openWhatsapp(name,eventText);
-}catch(error){
-setMobileFeedback(getText('hk.formErrorWhatsapp','Something went wrong. You can also contact us directly by email.'),'error');
-}
-}
-function bindFaq(){
-var items=document.querySelectorAll('.faq-item');
-items.forEach(function(item){
-var button=item.querySelector('button');
-button.addEventListener('click',function(){
-var isOpen=item.classList.contains('is-open');
-items.forEach(function(other){
-other.classList.remove('is-open');
-other.querySelector('button').setAttribute('aria-expanded','false');
-});
-if(!isOpen){
-item.classList.add('is-open');
-button.setAttribute('aria-expanded','true');
-}
-});
-});
-}
-function bindScrollEffects(){
-var reveals=document.querySelectorAll('.reveal');
-if(!('IntersectionObserver' in window)){
-reveals.forEach(function(node){node.classList.add('is-visible');});
-return;
-}
-var observer=new IntersectionObserver(function(entries){
-entries.forEach(function(entry){
-if(entry.isIntersecting){
-entry.target.classList.add('is-visible');
-observer.unobserve(entry.target);
-}
-});
-},{threshold:.14});
-reveals.forEach(function(node){observer.observe(node);});
-}
-function bindTopbar(){
-function onScroll(){
-if(window.scrollY>18){
-topbar.classList.add('is-scrolled');
-}else{
-topbar.classList.remove('is-scrolled');
-}
-}
-onScroll();
-window.addEventListener('scroll',onScroll,{passive:true});
-}
-function bindParallax(){
-var target=document.querySelector('[data-parallax]');
-if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-function update(){
-var offset=Math.min(window.scrollY*.10,26);
-target.style.transform='scale(1.04) translate3d(0,'+offset+'px,0)';
-}
-update();
-window.addEventListener('scroll',update,{passive:true});
-}
-function bindAnchorButtons(){
-document.querySelectorAll('a[href="#contact-form"],a[href="#contact-form-mobile"],a[href="#contact-form-desktop"]').forEach(function(link){
-link.addEventListener('click',function(event){
-event.preventDefault();
-var target=window.innerWidth>=720?document.getElementById('contact-form-desktop'):document.getElementById('contact-form-mobile');
-if(!target){target=document.getElementById('contact-form');}
-if(!target){return;}
-window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});
-setTimeout(function(){
-var firstField=window.innerWidth>=720?document.getElementById('name-desktop'):document.getElementById('name-mobile');
-if(firstField){firstField.focus();}
-},420);
-});
-});
-}
-function bindStickyCta(){
-if(!stickyCta){return;}
-function onScroll(){
-var y=window.scrollY;
-var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);
-if(y<160||hideAtBottom){
-stickyCta.classList.add('is-hidden');
-}else{
-stickyCta.classList.remove('is-hidden');
-}
-}
-onScroll();
-window.addEventListener('scroll',onScroll,{passive:true});
-}
-function init(){
-if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}
-bindFaq();
-bindScrollEffects();
-bindTopbar();
-bindParallax();
-bindAnchorButtons();
-bindStickyCta();
-}
+function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
+function setMobileFeedback(message,type){if(!mobileFeedback){return;}mobileFeedback.textContent=message;mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
+function clearMobileFeedback(){if(!mobileFeedback){return;}mobileFeedback.textContent='';mobileFeedback.className='form-feedback';}
+function buildWhatsappMessage(name,eventText){var template=getText('hongKong.whatsappMessage','Hi, I’m organizing an event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
+function openWhatsapp(name,eventText){var message=buildWhatsappMessage(name,eventText);var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);window.open(url,'_blank','noopener');}
+function validateMobileForm(name,eventText){if(!name){setMobileFeedback(getText('common.formValidationNameRequired','Please enter your name.'),'error');return false;}if(!eventText){setMobileFeedback(getText('common.formValidationEventRequired','Please describe your event.'),'error');return false;}clearMobileFeedback();return true;}
+function handleMobileSubmit(event){event.preventDefault();var name=(mobileForm.querySelector('#name-mobile').value||'').trim();var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();if(!validateMobileForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setMobileFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}
+function bindFaq(){var items=document.querySelectorAll('.faq-item');items.forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');items.forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
+function bindScrollEffects(){var reveals=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){reveals.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.14});reveals.forEach(function(node){observer.observe(node);});}
+function bindTopbar(){if(!topbar){return;}function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){var offset=Math.min(window.scrollY*.10,26);target.style.transform='scale(1.04) translate3d(0,'+offset+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
+function bindAnchorButtons(){document.querySelectorAll('a[href="#contact-form"],a[href="#contact-form-mobile"],a[href="#contact-form-desktop"]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();var target=window.innerWidth>=720?document.getElementById('contact-form-desktop'):document.getElementById('contact-form-mobile');if(!target){target=document.getElementById('contact-form');}if(!target){return;}window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});setTimeout(function(){var firstField=window.innerWidth>=720?document.getElementById('name-desktop'):document.getElementById('name-mobile');if(firstField){firstField.focus();}},420);});});}
+function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY;var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);if(y<160||hideAtBottom){stickyCta.classList.add('is-hidden');}else{stickyCta.classList.remove('is-hidden');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function init(){if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}bindFaq();bindScrollEffects();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
 document.addEventListener('DOMContentLoaded',init);
 document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback();});
 })();
@@ -764,60 +556,10 @@ document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback(
 var desktopForm=document.getElementById('contact-form-desktop');
 var desktopFeedback=document.getElementById('form-feedback-desktop');
 if(!desktopForm||!desktopFeedback){return;}
-function getText(key,fallback){
-if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){
-return window.__BARTENDLY_I18N__.flat[key];
-}
-return fallback||'';
-}
-function setDesktopFeedback(message,type){
-desktopFeedback.textContent=message;
-desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');
-}
-function clearDesktopFeedback(){
-desktopFeedback.textContent='';
-desktopFeedback.className='form-feedback';
-}
-async function handleDesktopSubmit(event){
-event.preventDefault();
-var name=(desktopForm.querySelector('#name-desktop').value||'').trim();
-var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();
-var venue=(desktopForm.querySelector('#venue-desktop').value||'').trim();
-var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();
-if(!name){
-setDesktopFeedback(getText('hk.formValidationNameRequired','Please enter your name.'),'error');
-return;
-}
-if(!contact){
-setDesktopFeedback(getText('hk.formValidationContactRequired','Please enter your contact details.'),'error');
-return;
-}
-if(!venue){
-setDesktopFeedback(getText('hk.formValidationVenueRequired','Please enter the venue or area.'),'error');
-return;
-}
-if(!eventText){
-setDesktopFeedback(getText('hk.formValidationEventRequired','Please describe your event.'),'error');
-return;
-}
-clearDesktopFeedback();
-try{
-var endpoint=desktopForm.getAttribute('data-formspree');
-var response=await fetch(endpoint,{
-method:'POST',
-headers:{'Accept':'application/json'},
-body:new FormData(desktopForm)
-});
-if(response.ok){
-setDesktopFeedback(getText('hk.formSuccessDesktop','Thank you. Your request has been sent. We will get back to you quickly.'),'success');
-desktopForm.reset();
-}else{
-setDesktopFeedback(getText('hk.formErrorDesktop','Something went wrong. Please try again or contact us by email.'),'error');
-}
-}catch(e){
-setDesktopFeedback(getText('hk.formErrorNetwork','Network error. Please try again.'),'error');
-}
-}
+function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
+function setDesktopFeedback(message,type){desktopFeedback.textContent=message;desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');}
+function clearDesktopFeedback(){desktopFeedback.textContent='';desktopFeedback.className='form-feedback';}
+async function handleDesktopSubmit(event){event.preventDefault();var name=(desktopForm.querySelector('#name-desktop').value||'').trim();var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();var venue=(desktopForm.querySelector('#venue-desktop').value||'').trim();var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();if(!name){setDesktopFeedback(getText('common.formValidationNameRequired','Please enter your name.'),'error');return;}if(!contact){setDesktopFeedback(getText('common.formValidationContactRequired','Please enter your contact details.'),'error');return;}if(!venue){setDesktopFeedback(getText('common.formValidationCityRequired','Please enter the city or venue.'),'error');return;}if(!eventText){setDesktopFeedback(getText('common.formValidationEventRequired','Please describe your event.'),'error');return;}clearDesktopFeedback();try{var endpoint=desktopForm.getAttribute('data-formspree');var response=await fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(desktopForm)});if(response.ok){setDesktopFeedback(getText('common.formSuccess','Thank you. Your request has been sent. We will get back to you quickly.'),'success');desktopForm.reset();}else{setDesktopFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}catch(e){setDesktopFeedback(getText('common.formNetworkError','Network error. Please try again.'),'error');}}
 desktopForm.addEventListener('submit',handleDesktopSubmit);
 })();
 </script>
