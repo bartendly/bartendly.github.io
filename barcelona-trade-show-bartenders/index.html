@@ -21,30 +21,7 @@
 <meta name="twitter:image" content="https://bartendly.com/images/og-bartendly-experiences.jpg">
 <link rel="preload" as="image" href="/images/hero-bartendly-experiences.jpg">
 <style>
-:root{
---bg:#ffffff;
---cream:#f7f2ea;
---cream2:#efe6d8;
---dark:#0b0b0f;
---dark2:#14141a;
---dark3:#202027;
---text:#101114;
---soft:#62646f;
---muted:#8b8d97;
---white:#ffffff;
---line:rgba(17,17,17,0.09);
---line2:rgba(255,255,255,0.13);
---gold:#d8b06f;
---gold2:#c99856;
---gold3:#a8793f;
---green:#25d366;
---shadow:0 18px 60px rgba(11,11,15,0.10);
---shadow2:0 30px 110px rgba(0,0,0,0.36);
---radius:28px;
---container:min(1180px,calc(100vw - 32px));
---narrow:min(880px,calc(100vw - 32px));
---ease:cubic-bezier(.22,1,.36,1);
-}
+:root{--bg:#ffffff;--cream:#f7f2ea;--dark:#0b0b0f;--dark2:#14141a;--text:#101114;--soft:#62646f;--white:#ffffff;--line:rgba(17,17,17,.09);--gold:#d8b06f;--gold2:#c99856;--gold3:#a8793f;--green:#25d366;--shadow:0 18px 60px rgba(11,11,15,.10);--shadow2:0 30px 110px rgba(0,0,0,.36);--container:min(1180px,calc(100vw - 32px));--narrow:min(880px,calc(100vw - 32px));--ease:cubic-bezier(.22,1,.36,1);}
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
@@ -55,18 +32,19 @@ button{cursor:pointer;}
 textarea{resize:vertical;}
 h1,h2,h3,p{margin:0;}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+[hidden]{display:none!important;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
 .skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:12px 16px;border-radius:999px;background:#fff;color:#000;z-index:1000;}
 .page{overflow:hidden;}
 .container{width:var(--container);margin-inline:auto;}
 .narrow{width:var(--narrow);margin-inline:auto;}
-.topbar{position:fixed;inset:0 0 auto 0;z-index:120;background:linear-gradient(180deg,rgba(11,11,15,0.94),rgba(11,11,15,0.60));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.08);transition:background .25s var(--ease),border-color .25s var(--ease);}
-.topbar.is-scrolled{background:rgba(11,11,15,0.92);border-color:rgba(255,255,255,0.15);}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:120;background:linear-gradient(180deg,rgba(11,11,15,.94),rgba(11,11,15,.60));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .25s var(--ease),border-color .25s var(--ease);}
+.topbar.is-scrolled{background:rgba(11,11,15,.92);border-color:rgba(255,255,255,.15);}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:14px;width:var(--container);margin-inline:auto;min-height:72px;}
 .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,0.22),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06);flex:0 0 auto;}
-.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,0.76),rgba(168,121,63,0.20) 54%,transparent 74%);}
+.brand__mark{position:relative;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,rgba(216,176,111,.22),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);flex:0 0 auto;}
+.brand__mark::before{content:"";position:absolute;inset:8px;border-radius:11px;background:radial-gradient(circle at 30% 30%,rgba(216,176,111,.76),rgba(168,121,63,.20) 54%,transparent 74%);}
 .brand__mark::after{content:"B";position:relative;font-size:1rem;font-weight:850;color:#fff;}
 .brand__copy{display:grid;gap:2px;min-width:0;}
 .brand__name{font-size:.96rem;font-weight:850;color:#fff;letter-spacing:-.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -74,8 +52,6 @@ h1,h2,h3,p{margin:0;}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
 .topbar__link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:#fff;font-size:.9rem;font-weight:750;transition:background .25s var(--ease),transform .25s var(--ease);}
 .topbar__link:hover{background:rgba(255,255,255,.10);transform:translateY(-1px);}
-.topbar__cta{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(216,176,111,.28);background:linear-gradient(180deg,var(--gold),var(--gold3));color:#111;font-size:.9rem;font-weight:850;box-shadow:0 12px 28px rgba(216,176,111,.18);}
-.language-wrap[hidden]{display:none!important;}
 .language-select{min-width:74px;height:42px;padding:0 32px 0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#fff 50%),linear-gradient(135deg,#fff 50%,transparent 50%);background-position:calc(100% - 17px) 17px,calc(100% - 11px) 17px;background-size:6px 6px,6px 6px;background-repeat:no-repeat;}
 .language-select option{background:#111;color:#fff;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 18px;border-radius:18px;border:1px solid transparent;font-size:.96rem;font-weight:850;text-align:center;letter-spacing:-.01em;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);}
@@ -83,7 +59,6 @@ h1,h2,h3,p{margin:0;}
 .btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold3));color:#151515;box-shadow:0 18px 42px rgba(216,176,111,.23);}
 .btn-dark{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#fff;}
 .btn-whatsapp{background:var(--green);color:#fff;box-shadow:0 14px 34px rgba(37,211,102,.18);}
-.btn-white{background:#fff;color:#111;border-color:rgba(17,17,17,.10);}
 .hero{position:relative;padding:112px 0 58px;background:var(--dark);color:#fff;isolation:isolate;}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,15,.95) 0%,rgba(11,11,15,.78) 43%,rgba(11,11,15,.34) 100%),linear-gradient(180deg,rgba(11,11,15,.12),rgba(11,11,15,.92));z-index:-2;}
 .hero__media{position:absolute;inset:0;z-index:-3;overflow:hidden;}
@@ -99,12 +74,10 @@ h1,h2,h3,p{margin:0;}
 .hero__proof li{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);font-size:.88rem;color:rgba(255,255,255,.84);}
 .hero__proof li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);}
 .hero__support{max-width:42ch;margin-top:16px;font-size:.98rem;line-height:1.6;color:rgba(255,255,255,.70);}
-.hero__desktop-hint{display:none;margin-top:22px;padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.55;}
 .form-card{position:relative;padding:22px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.93));color:var(--text);box-shadow:var(--shadow2);border:1px solid rgba(255,255,255,.28);overflow:hidden;}
 .form-card::before{content:"";position:absolute;right:-80px;bottom:-120px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,.22),rgba(216,176,111,0) 70%);}
 .form-card>*{position:relative;z-index:1;}
 .form-card__title{font-size:1.38rem;line-height:1.04;letter-spacing:-.04em;font-weight:900;}
-.form-card__text{margin-top:8px;font-size:.94rem;color:var(--soft);line-height:1.5;}
 .form-card__divider{width:84px;height:5px;margin-top:14px;border-radius:999px;background:linear-gradient(90deg,var(--gold2),rgba(216,176,111,.16));}
 .form-grid{display:grid;gap:14px;margin-top:18px;}
 .field{display:grid;gap:7px;}
@@ -127,8 +100,6 @@ h1,h2,h3,p{margin:0;}
 .section--cream{background:linear-gradient(180deg,var(--cream),#fff);}
 .section--dark{background:#101015;color:#fff;}
 .section-head{display:grid;gap:14px;margin-bottom:28px;}
-.eyebrow{display:inline-flex;width:max-content;max-width:100%;padding:9px 13px;border-radius:999px;background:rgba(216,176,111,.14);color:var(--gold3);font-size:.75rem;font-weight:850;letter-spacing:.11em;text-transform:uppercase;}
-.section--dark .eyebrow{background:rgba(216,176,111,.14);color:#f6ddb0;border:1px solid rgba(216,176,111,.20);}
 .section-title{max-width:900px;font-size:clamp(2rem,5vw,3.55rem);line-height:.98;letter-spacing:-.055em;font-weight:930;text-wrap:balance;}
 .section-intro{max-width:760px;font-size:1rem;line-height:1.72;color:var(--soft);}
 .section--dark .section-intro{color:rgba(255,255,255,.72);}
@@ -196,55 +167,10 @@ h1,h2,h3,p{margin:0;}
 .sticky-cta.is-hidden{opacity:0;pointer-events:none;transform:translateY(16px);}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
 .reveal.is-visible{opacity:1;transform:none;}
-@media (min-width:720px){
-.hero{padding:132px 0 82px;}
-.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,.86fr);}
-.hero__desktop-hint{display:block;}
-.form-card{padding:26px;}
-.form-card--mobile{display:none;}
-.form-card--desktop{display:block;}
-.section{padding:92px 0;}
-.use-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-.use-card{min-height:410px;}
-.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-.steps-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
-.split-wrap{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);}
-.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}
-.bartender-box__inner{grid-template-columns:minmax(0,1fr) auto;}
-.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}
-.sticky-cta{display:none;}
-.footer{padding-bottom:36px;}
-}
-@media (max-width:719px){
-.topbar__inner{min-height:68px;width:min(calc(100vw - 24px),1180px);}
-.brand__tag{display:none;}
-.brand__name{font-size:.82rem;max-width:164px;}
-.topbar__link--secondary,.topbar__link--bartenders{display:none;}
-.topbar__link--contact{min-height:38px;padding:0 11px;font-size:.78rem;}
-.language-select{height:38px;min-width:62px;padding:0 28px 0 10px;font-size:.78rem;background-position:calc(100% - 16px) 16px,calc(100% - 10px) 16px;}
-.hero{padding-top:92px;padding-bottom:42px;}
-.hero__grid{gap:24px;}
-.hero__title{max-width:100%;font-size:clamp(2.25rem,10.2vw,3.15rem);line-height:.99;letter-spacing:-.047em;}
-.hero__subtitle{max-width:100%;font-size:1rem;line-height:1.48;}
-.btn{width:100%;}
-.section{padding:56px 0;}
-.use-grid{grid-template-columns:1fr;}
-.use-card{min-height:280px;}
-.steps-grid,.why-grid{grid-template-columns:1fr;}
-.step-card{grid-template-columns:auto 1fr;}
-.split-visual{min-height:240px;}
-.form-card,.use-card,.why-card,.step-card,.split-card,.split-visual,.proof-card,.faq-item,.cta-card,.bartender-box{border-radius:24px;}
-}
-@media (max-width:379px){
-.brand__name{max-width:132px;}
-.language-select{min-width:58px;}
-.topbar__link--contact{display:none;}
-}
-@media (prefers-reduced-motion:reduce){
-html{scroll-behavior:auto;}
-*{animation:none!important;transition:none!important;}
-.reveal{opacity:1;transform:none;}
-}
+@media (min-width:720px){.hero{padding:132px 0 82px;}.hero__grid{grid-template-columns:minmax(0,1.02fr) minmax(420px,.86fr);}.form-card{padding:26px;}.form-card--mobile{display:none;}.form-card--desktop{display:block;}.section{padding:92px 0;}.use-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.use-card{min-height:410px;}.why-grid{grid-template-columns:repeat(3,minmax(0,1fr));}.steps-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.split-wrap{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);}.cta-card__inner{grid-template-columns:minmax(0,1fr) auto;}.bartender-box__inner{grid-template-columns:minmax(0,1fr) auto;}.footer__inner{grid-template-columns:minmax(0,1fr) auto;align-items:end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
+@media (max-width:719px){.topbar__inner{min-height:68px;width:min(calc(100vw - 24px),1180px);}.brand__tag{display:none;}.brand__name{font-size:.82rem;max-width:164px;}.topbar__link--secondary,.topbar__link--bartenders{display:none;}.topbar__link--contact{min-height:38px;padding:0 11px;font-size:.78rem;}.language-select{height:38px;min-width:62px;padding:0 28px 0 10px;font-size:.78rem;background-position:calc(100% - 16px) 16px,calc(100% - 10px) 16px;}.hero{padding-top:92px;padding-bottom:42px;}.hero__grid{gap:24px;}.hero__title{max-width:100%;font-size:clamp(2.25rem,10.2vw,3.15rem);line-height:.99;letter-spacing:-.047em;}.hero__subtitle{max-width:100%;font-size:1rem;line-height:1.48;}.btn{width:100%;}.section{padding:56px 0;}.use-grid{grid-template-columns:1fr;}.use-card{min-height:280px;}.steps-grid,.why-grid{grid-template-columns:1fr;}.step-card{grid-template-columns:auto 1fr;}.split-visual{min-height:240px;}.form-card,.use-card,.why-card,.step-card,.split-card,.split-visual,.proof-card,.faq-item,.cta-card,.bartender-box{border-radius:24px;}}
+@media (max-width:379px){.brand__name{max-width:132px;}.language-select{min-width:58px;}.topbar__link--contact{display:none;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}.reveal{opacity:1;transform:none;}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Barcelona trade show bartenders by Bartendly Experiences","url":"https://bartendly.com/barcelona-trade-show-bartenders/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders in Barcelona for Fira Barcelona trade shows, exhibition stands, brand activations and corporate receptions.","areaServed":{"@type":"City","name":"Barcelona"},"provider":{"@type":"Organization","name":"Bartendly","url":"https://bartendly.com/"},"serviceType":["Fira Barcelona trade show bartenders","Exhibition stand bartenders","Corporate reception bartenders","Brand activation bartenders","Multi-day event bartenders"]}
@@ -255,15 +181,25 @@ html{scroll-behavior:auto;}
 <script defer src="/i18n.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main" data-i18n="common.skipToContent">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="common.a11ySkipToContent">Skip to content</a>
 <div class="page">
+<div id="i18n-messages" hidden>
+<span id="msg-name-required" data-i18n="common.formValidationNameRequired">Please enter your name.</span>
+<span id="msg-contact-required" data-i18n="common.formValidationContactRequired">Please enter your contact details.</span>
+<span id="msg-venue-required" data-i18n="common.formValidationCityRequired">Please enter the city or venue.</span>
+<span id="msg-event-required" data-i18n="common.formValidationEventRequired">Please describe your event.</span>
+<span id="msg-form-success" data-i18n="common.formSuccess">Thank you. Your request has been sent. We will get back to you quickly.</span>
+<span id="msg-form-error" data-i18n="common.formError">Something went wrong. Please try again or contact us by email.</span>
+<span id="msg-network-error" data-i18n="common.formNetworkError">Network error. Please try again.</span>
+<span id="msg-whatsapp-template" data-i18n="barcelona.whatsappMessage">Hi, I’m organizing a trade show or event in Barcelona.&#10;&#10;Name: {name}&#10;Event: {event}&#10;&#10;Can you help?</span>
+</div>
 <header class="topbar" id="topbar">
 <div class="topbar__inner">
 <a class="brand" href="/" aria-label="Bartendly Experiences home">
 <span class="brand__mark" aria-hidden="true"></span>
 <span class="brand__copy">
-<span class="brand__name" data-i18n="common.brandName">Bartendly Experiences</span>
-<span class="brand__tag" data-i18n="common.brandTagline">Professional bartenders for events, trade shows and brand activations</span>
+<span class="brand__name" data-i18n="common.brandExperiencesName">Bartendly Experiences</span>
+<span class="brand__tag" data-i18n="common.brandExperiencesTagline">Professional bartenders for events, trade shows and brand activations</span>
 </span>
 </a>
 <div class="topbar__actions">
@@ -285,72 +221,69 @@ html{scroll-behavior:auto;}
 <div class="container hero__grid">
 <div class="hero__content reveal">
 <nav class="breadcrumb" aria-label="Breadcrumb">
-<a href="/" data-i18n="bcn.breadcrumbHome">Bartendly Experiences</a>
+<a href="/" data-i18n="barcelona.breadcrumbHome">Bartendly Experiences</a>
 <span aria-hidden="true">/</span>
-<span data-i18n="bcn.breadcrumbCurrent">Barcelona trade show bartenders</span>
+<span data-i18n="barcelona.breadcrumbCurrent">Barcelona trade show bartenders</span>
 </nav>
-<div class="kicker" data-i18n="bcn.heroEyebrow">Barcelona trade show bartenders</div>
-<h1 class="hero__title" data-i18n="bcn.heroTitle">Hire trade show bartenders in Barcelona</h1>
-<p class="hero__subtitle" data-i18n="bcn.heroSubtitle">Professional cocktail service for Fira Barcelona exhibition stands, brand activations and corporate receptions.</p>
+<div class="kicker" data-i18n="barcelona.heroEyebrow">Barcelona trade show bartenders</div>
+<h1 class="hero__title" data-i18n="barcelona.heroTitle">Hire trade show bartenders in Barcelona</h1>
+<p class="hero__subtitle" data-i18n="barcelona.heroSubtitle">Professional cocktail service for Fira Barcelona exhibition stands, brand activations and corporate receptions.</p>
 <ul class="hero__proof" aria-label="Barcelona service signals">
-<li data-i18n="bcn.heroProofOne">Fira Barcelona ready</li>
-<li data-i18n="bcn.heroProofTwo">Exhibition stand hospitality</li>
-<li data-i18n="bcn.heroProofThree">Multi-day teams</li>
+<li data-i18n="barcelona.heroProofOne">Fira Barcelona ready</li>
+<li data-i18n="barcelona.heroProofTwo">Exhibition stand hospitality</li>
+<li data-i18n="barcelona.heroProofThree">Multi-day teams</li>
 </ul>
-<p class="hero__support" data-i18n="bcn.heroSupport">Already used for a 4-bartender, 3-day trade show setup at Fira Barcelona.</p>
-<p class="hero__desktop-hint" data-i18n="bcn.heroDesktopHint">Send the essentials in the form. We’ll reply quickly with a practical setup based on your fair, stand, timing and guest flow.</p>
+<p class="hero__support" data-i18n="barcelona.heroSupport">Already used for a 4-bartender, 3-day trade show setup at Fira Barcelona.</p>
 </div>
 <div class="hero__form-wrap reveal" id="contact-form">
 <div class="form-card form-card--mobile">
-<h2 class="form-card__title" data-i18n="bcn.formMobileTitle">Tell us about your Barcelona event</h2>
-<p class="form-card__text" data-i18n="bcn.formMobileText">Continue on WhatsApp with the essentials.</p>
+<h2 class="form-card__title" data-i18n="barcelona.formMobileTitle">Tell us about your Barcelona event</h2>
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-mobile" class="form-grid" novalidate>
 <div class="field">
-<label for="name-mobile" data-i18n="bcn.formNameLabel">Name</label>
-<input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="bcn.formNamePlaceholder" placeholder="Your name">
+<label for="name-mobile" data-i18n="common.formNameLabel">Name</label>
+<input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name">
 </div>
 <div class="field">
-<label for="event-mobile" data-i18n="bcn.formEventLabel">Describe your event</label>
-<textarea id="event-mobile" name="event" data-i18n-placeholder="bcn.formEventPlaceholder" placeholder="Date, venue, stand or event type, number of guests"></textarea>
+<label for="event-mobile" data-i18n="common.formEventLabel">Describe your event</label>
+<textarea id="event-mobile" name="event" data-i18n-placeholder="barcelona.formEventPlaceholder" placeholder="Date, venue, stand or event type, number of guests"></textarea>
 </div>
 <div class="form-actions">
-<button class="btn btn-primary" type="submit" data-i18n="bcn.formMobileSubmit">Request bartenders in Barcelona</button>
-<p class="form-microcopy" data-i18n="bcn.formMobileMicrocopy">You’ll continue on WhatsApp.</p>
-<p class="form-email-alt"><span data-i18n="bcn.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Barcelona trade show bartender request" data-i18n="bcn.formEmailAlt">Send your request by email</a></p>
+<button class="btn btn-primary" type="submit" data-i18n="barcelona.formSubmit">Request bartenders in Barcelona</button>
+<p class="form-microcopy" data-i18n="barcelona.formMobileMicrocopy">You’ll continue on WhatsApp.</p>
+<p class="form-email-alt"><span data-i18n="common.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Barcelona trade show bartender request" data-i18n="common.formEmailAlt">Send your request by email</a></p>
 <div class="form-feedback" id="form-feedback-mobile" role="status" aria-live="polite"></div>
 </div>
 </form>
 </div>
 <div class="form-card form-card--desktop">
-<h2 class="form-card__title" data-i18n="bcn.formDesktopTitle">Request bartenders in Barcelona</h2>
-<p class="form-card__text" data-i18n="bcn.formDesktopText">Send the key details. We’ll reply quickly.</p>
+<h2 class="form-card__title" data-i18n="barcelona.formDesktopTitle">Request bartenders in Barcelona</h2>
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-desktop" class="form-grid" data-formspree="https://formspree.io/f/mdkevral" novalidate>
 <div class="field">
-<label for="name-desktop" data-i18n="bcn.formNameLabel">Name</label>
-<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="bcn.formNamePlaceholder" placeholder="Your name" required>
+<label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
+<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" required>
 </div>
 <div class="field">
-<label for="contact-desktop" data-i18n="bcn.formContactLabel">Contact</label>
-<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="bcn.formContactPlaceholder" placeholder="Email or WhatsApp number" required>
+<label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
+<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number" required>
 </div>
 <div class="field">
-<label for="venue-desktop" data-i18n="bcn.formVenueLabel">Venue / fair / area</label>
-<input id="venue-desktop" name="venue" type="text" autocomplete="address-level2" data-i18n-placeholder="bcn.formVenuePlaceholder" placeholder="Fira Barcelona Gran Via, Montjuïc, hotel, showroom" required>
+<label for="venue-desktop" data-i18n="barcelona.formVenueLabel">Venue / fair / area</label>
+<input id="venue-desktop" name="venue" type="text" autocomplete="address-level2" data-i18n-placeholder="barcelona.formVenuePlaceholder" placeholder="Fira Barcelona Gran Via, Montjuïc, hotel, showroom" required>
 </div>
 <div class="field">
-<label for="event-desktop" data-i18n="bcn.formEventLabel">Describe your event</label>
-<textarea id="event-desktop" name="event" data-i18n-placeholder="bcn.formEventPlaceholder" placeholder="Date, trade show, stand size, timing, number of guests" required></textarea>
+<label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
+<textarea id="event-desktop" name="event" data-i18n-placeholder="barcelona.formEventPlaceholder" placeholder="Date, venue, stand or event type, number of guests" required></textarea>
 </div>
 <input type="hidden" name="_subject" value="New Barcelona trade show bartender request">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://bartendly.com/thank-you">
 <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
 <div class="form-actions">
-<button class="btn btn-primary" type="submit" data-i18n="bcn.formDesktopSubmit">Send request</button>
-<p class="form-microcopy" data-i18n="bcn.formDesktopMicrocopy">We’ll receive your request by email.</p>
-<p class="form-email-alt"><span data-i18n="bcn.formWhatsappAltLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20a%20trade%20show%20or%20event%20in%20Barcelona" target="_blank" rel="noopener noreferrer" data-i18n="bcn.formWhatsappAlt">Message us directly</a></p>
+<button class="btn btn-primary" type="submit" data-i18n="common.formSubmit">Send request</button>
+<p class="form-microcopy" data-i18n="barcelona.formDesktopMicrocopy">Best for desktop users. We’ll receive your request by email.</p>
+<p class="form-email-alt"><span data-i18n="common.formWhatsappLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20a%20trade%20show%20or%20event%20in%20Barcelona" target="_blank" rel="noopener noreferrer" data-i18n="common.formWhatsappLink">Message us directly</a></p>
 </div>
 <div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
 </form>
@@ -361,41 +294,40 @@ html{scroll-behavior:auto;}
 <section class="section section--dark">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.useCasesEyebrow">Built for professional events</div>
-<h2 class="section-title" data-i18n="bcn.useCasesTitle">Bartenders for Fira Barcelona, stands and business events.</h2>
-<p class="section-intro" data-i18n="bcn.useCasesIntro">Barcelona is a trade show city. This page is focused on a real need: reliable bartenders who can support exhibitors, agencies and brands during professional events.</p>
+<h2 class="section-title" data-i18n="barcelona.useCasesTitle">Built for Fira Barcelona, stands and business events</h2>
+<p class="section-intro" data-i18n="barcelona.useCasesIntro">Barcelona is a trade show city. This page is focused on the real need: reliable bartenders who can support exhibitors, agencies and brands during professional events.</p>
 </div>
 <div class="use-grid">
 <article class="use-card reveal">
 <img src="/images/use-trade-show-bartenders.jpg" alt="Bartenders serving cocktails at a trade show stand">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="bcn.useCasesTradeShowsEyebrow">Trade shows</span>
-<h3 data-i18n="bcn.useCasesTradeShowsTitle">Fira Barcelona stands</h3>
-<p data-i18n="bcn.useCasesTradeShowsText">Bartenders for exhibition stands, product demos, hosted cocktail moments and business hospitality during fairs at Gran Via or Montjuïc.</p>
+<span class="use-eyebrow" data-i18n="barcelona.useCasesTradeShowsEyebrow">Trade shows</span>
+<h3 data-i18n="barcelona.useCasesTradeShowsTitle">Fira Barcelona stands</h3>
+<p data-i18n="barcelona.useCasesTradeShowsText">Bartenders for exhibition stands, product demos, hosted cocktail moments and business hospitality during fairs at Gran Via or Montjuïc.</p>
 </div>
 </article>
 <article class="use-card reveal">
 <img src="/images/visual-trade-show-cocktail-stand.jpg" alt="Cocktail service for a professional exhibition stand">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="bcn.useCasesMultiDayEyebrow">Multi-day</span>
-<h3 data-i18n="bcn.useCasesMultiDayTitle">Fair staffing over several days</h3>
-<p data-i18n="bcn.useCasesMultiDayText">Support for multi-day schedules, rotating shifts, busy stand periods and repeated client receptions during the same exhibition.</p>
+<span class="use-eyebrow" data-i18n="barcelona.useCasesMultiDayEyebrow">Multi-day</span>
+<h3 data-i18n="barcelona.useCasesMultiDayTitle">Fair staffing over several days</h3>
+<p data-i18n="barcelona.useCasesMultiDayText">Support for multi-day schedules, rotating shifts, busy stand periods and repeated client receptions during the same exhibition.</p>
 </div>
 </article>
 <article class="use-card reveal">
 <img src="/images/use-brand-activation-cocktails.jpg" alt="Cocktail service for a brand activation">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="bcn.useCasesActivationsEyebrow">Brands</span>
-<h3 data-i18n="bcn.useCasesActivationsTitle">Brand activations</h3>
-<p data-i18n="bcn.useCasesActivationsText">Cocktail service for product launches, spirits activations, showroom events, agency projects and premium brand moments in Barcelona.</p>
+<span class="use-eyebrow" data-i18n="barcelona.useCasesActivationsEyebrow">Brands</span>
+<h3 data-i18n="barcelona.useCasesActivationsTitle">Brand activations</h3>
+<p data-i18n="barcelona.useCasesActivationsText">Cocktail service for product launches, spirits activations, showroom events, agency projects and premium brand moments in Barcelona.</p>
 </div>
 </article>
 <article class="use-card reveal">
 <img src="/images/use-corporate-rooftop-event.jpg" alt="Corporate cocktail reception in Barcelona">
 <div class="use-copy">
-<span class="use-eyebrow" data-i18n="bcn.useCasesReceptionsEyebrow">Corporate</span>
-<h3 data-i18n="bcn.useCasesReceptionsTitle">Corporate receptions</h3>
-<p data-i18n="bcn.useCasesReceptionsText">Professional bartenders for client drinks, hotel receptions, networking events, private rooms and post-fair business gatherings.</p>
+<span class="use-eyebrow" data-i18n="barcelona.useCasesReceptionsEyebrow">Corporate</span>
+<h3 data-i18n="barcelona.useCasesReceptionsTitle">Corporate receptions</h3>
+<p data-i18n="barcelona.useCasesReceptionsText">Professional bartenders for client drinks, hotel receptions, networking events, private rooms and post-fair business gatherings.</p>
 </div>
 </article>
 </div>
@@ -404,25 +336,24 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.whyEyebrow">Why Bartendly</div>
-<h2 class="section-title" data-i18n="bcn.whyTitle">Trade shows are not normal parties.</h2>
-<p class="section-intro" data-i18n="bcn.whyIntro">They need punctuality, presentation, speed and a setup that works with the stand, the venue and the production constraints.</p>
+<h2 class="section-title" data-i18n="barcelona.whyTitle">Why Bartendly for Barcelona trade shows</h2>
+<p class="section-intro" data-i18n="barcelona.whyIntro">Trade shows are not normal parties. They need punctuality, presentation, speed and a setup that works with the stand, venue and production constraints.</p>
 </div>
 <div class="why-grid">
 <article class="why-card reveal">
 <div class="why-number">01</div>
-<h3 class="card-title" data-i18n="bcn.whyFiraTitle">Fira-style execution</h3>
-<p class="card-text" data-i18n="bcn.whyFiraText">We understand the difference between a casual party and an exhibition environment: fixed hours, stand rules, guest flow and professional presentation.</p>
+<h3 class="card-title" data-i18n="barcelona.whyFiraTitle">Fira-style execution</h3>
+<p class="card-text" data-i18n="barcelona.whyFiraText">We understand the difference between a casual party and an exhibition environment: fixed hours, stand rules, guest flow and professional presentation.</p>
 </article>
 <article class="why-card reveal">
 <div class="why-number">02</div>
-<h3 class="card-title" data-i18n="bcn.whyTeamTitle">Right team for the format</h3>
-<p class="card-text" data-i18n="bcn.whyTeamText">One bartender for a small client moment, several bartenders for a busy stand, or a rotating setup for multi-day events.</p>
+<h3 class="card-title" data-i18n="barcelona.whyTeamTitle">Right team for the format</h3>
+<p class="card-text" data-i18n="barcelona.whyTeamText">One bartender for a small client moment, several bartenders for a busy stand, or a rotating setup for multi-day events.</p>
 </article>
 <article class="why-card reveal">
 <div class="why-number">03</div>
-<h3 class="card-title" data-i18n="bcn.whyLanguagesTitle">International guest context</h3>
-<p class="card-text" data-i18n="bcn.whyLanguagesText">Barcelona fairs attract international visitors. The bartender selection can prioritize professional presentation, English communication and hospitality presence.</p>
+<h3 class="card-title" data-i18n="barcelona.whyLanguagesTitle">International guest context</h3>
+<p class="card-text" data-i18n="barcelona.whyLanguagesText">Barcelona fairs attract international visitors. The bartender selection can prioritize professional presentation, English communication and hospitality presence.</p>
 </article>
 </div>
 </div>
@@ -430,19 +361,18 @@ html{scroll-behavior:auto;}
 <section class="section split">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.setupEyebrow">Before quoting</div>
-<h2 class="section-title" data-i18n="bcn.setupTitle">A practical setup for exhibitors and agencies.</h2>
-<p class="section-intro" data-i18n="bcn.setupIntro">Most trade show clients already have a stand builder, venue rules, a production team or supplier constraints. Bartendly focuses on making the bartender side clear and workable.</p>
+<h2 class="section-title" data-i18n="barcelona.setupTitle">A practical setup for exhibitors and agencies</h2>
+<p class="section-intro" data-i18n="barcelona.setupIntro">Most trade show clients already have a stand builder, venue rules, a production team or supplier constraints. Bartendly focuses on making the bartender side clear and workable.</p>
 </div>
 <div class="split-wrap">
 <div class="split-card reveal">
-<h3 data-i18n="bcn.setupCardTitle">What we clarify before quoting</h3>
-<p data-i18n="bcn.setupCardText">The goal is not to sell a vague cocktail package. The goal is to define the right service for the real conditions of your Barcelona event.</p>
+<h3 data-i18n="barcelona.setupCardTitle">What we clarify before quoting</h3>
+<p data-i18n="barcelona.setupCardText">The goal is not to sell a vague cocktail package. The goal is to define the right service for the real conditions of your Barcelona event.</p>
 <ul class="split-list">
-<li data-i18n="bcn.setupItemOne">Fair or venue name, stand location and access constraints</li>
-<li data-i18n="bcn.setupItemTwo">Opening hours, service windows and number of event days</li>
-<li data-i18n="bcn.setupItemThree">Expected guest flow and number of bartenders needed</li>
-<li data-i18n="bcn.setupItemFour">Alcohol, ice, glassware, tools and menu responsibilities</li>
+<li data-i18n="barcelona.setupItemsOne">Fair or venue name, stand location and access constraints</li>
+<li data-i18n="barcelona.setupItemsTwo">Opening hours, service windows and number of event days</li>
+<li data-i18n="barcelona.setupItemsThree">Expected guest flow and number of bartenders needed</li>
+<li data-i18n="barcelona.setupItemsFour">Alcohol, ice, glassware, tools and menu responsibilities</li>
 </ul>
 </div>
 <div class="split-visual reveal">
@@ -454,37 +384,36 @@ html{scroll-behavior:auto;}
 <section class="section">
 <div class="container">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.howEyebrow">How it works</div>
-<h2 class="section-title" data-i18n="bcn.howTitle">Simple request. Clear setup. Team confirmed.</h2>
-<p class="section-intro" data-i18n="bcn.howIntro">A direct process for exhibitors, event agencies and corporate teams.</p>
+<h2 class="section-title" data-i18n="barcelona.howTitle">How it works</h2>
+<p class="section-intro" data-i18n="barcelona.howIntro">A direct process for exhibitors, event agencies and corporate teams.</p>
 </div>
 <div class="steps-grid">
 <article class="step-card reveal">
 <div class="step-number">1</div>
 <div>
-<h3 class="card-title" data-i18n="bcn.howOneTitle">Send the trade show details</h3>
-<p class="card-text" data-i18n="bcn.howOneText">Fair name, dates, venue, stand or room setup, service hours and expected guest volume.</p>
+<h3 class="card-title" data-i18n="barcelona.howOneTitle">Send the trade show details</h3>
+<p class="card-text" data-i18n="barcelona.howOneText">Fair name, dates, venue, stand or room setup, service hours and expected guest volume.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">2</div>
 <div>
-<h3 class="card-title" data-i18n="bcn.howTwoTitle">We define the bartender setup</h3>
-<p class="card-text" data-i18n="bcn.howTwoText">We clarify team size, shift duration, tools, cocktail menu and what is provided by the client or suppliers.</p>
+<h3 class="card-title" data-i18n="barcelona.howTwoTitle">We define the bartender setup</h3>
+<p class="card-text" data-i18n="barcelona.howTwoText">We clarify team size, shift duration, tools, cocktail menu and what is provided by the client or suppliers.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">3</div>
 <div>
-<h3 class="card-title" data-i18n="bcn.howThreeTitle">We coordinate through Bartendly</h3>
-<p class="card-text" data-i18n="bcn.howThreeText">Relevant Barcelona bartenders are contacted through the Bartendly network and app.</p>
+<h3 class="card-title" data-i18n="barcelona.howThreeTitle">We coordinate through Bartendly</h3>
+<p class="card-text" data-i18n="barcelona.howThreeText">Relevant Barcelona bartenders are contacted through the Bartendly network and app.</p>
 </div>
 </article>
 <article class="step-card reveal">
 <div class="step-number">4</div>
 <div>
-<h3 class="card-title" data-i18n="bcn.howFourTitle">You confirm the team</h3>
-<p class="card-text" data-i18n="bcn.howFourText">You receive a clear proposal for the service, timing and bartender team.</p>
+<h3 class="card-title" data-i18n="barcelona.howFourTitle">You confirm the team</h3>
+<p class="card-text" data-i18n="barcelona.howFourText">You receive a clear proposal for the service, timing and bartender team.</p>
 </div>
 </article>
 </div>
@@ -493,13 +422,12 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="narrow">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.proofEyebrow">Proof</div>
-<h2 class="section-title" data-i18n="bcn.proofTitle">Already used at Fira Barcelona.</h2>
-<p class="section-intro" data-i18n="bcn.proofIntro">Real proof from a professional trade show environment in Barcelona.</p>
+<h2 class="section-title" data-i18n="barcelona.proofTitle">Already used at Fira Barcelona</h2>
+<p class="section-intro" data-i18n="barcelona.proofIntro">Real proof from a professional trade show environment in Barcelona.</p>
 </div>
 <div class="proof-card reveal">
-<blockquote data-i18n="bcn.proofQuote">“Bartendly supported us during ICE at Fira Barcelona with a team of 4 bartenders over 3 days. Reliable, well-coordinated and exactly what we needed for a busy trade show environment.”</blockquote>
-<footer data-i18n="bcn.proofMeta">Event Team — Trade Show, Fira Barcelona</footer>
+<blockquote data-i18n="barcelona.proofQuote">“Bartendly supported us during ICE at Fira Barcelona with a team of 4 bartenders over 3 days. Reliable, well-coordinated and exactly what we needed for a busy trade show environment.”</blockquote>
+<footer data-i18n="barcelona.proofMeta">Event Team — Trade Show, Fira Barcelona</footer>
 </div>
 </div>
 </section>
@@ -508,12 +436,12 @@ html{scroll-behavior:auto;}
 <div class="bartender-box reveal">
 <div class="bartender-box__inner">
 <div>
-<h2 class="cta-card__title" data-i18n="bcn.bartenderTitle">Bartender in Barcelona?</h2>
-<p data-i18n="bcn.bartenderText">Join Bartendly to be visible for paid event opportunities, trade show shifts, guest shifts, jobs and professional collaborations.</p>
-<p style="margin-top:12px;"><a class="text-link" href="/what-is-bartendly" data-i18n="bcn.bartenderLearnMore">Learn what Bartendly is</a></p>
+<h2 class="cta-card__title" data-i18n="common.bartenderCtaTitle">Are you a bartender?</h2>
+<p data-i18n="common.bartenderCtaText">Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.</p>
+<p style="margin-top:12px;"><a class="text-link" href="/what-is-bartendly" data-i18n="common.bartenderCtaLearnMore">Learn what Bartendly is</a></p>
 </div>
 <div>
-<a class="btn btn-primary" href="https://app.bartendly.com" target="_blank" rel="noopener noreferrer" data-i18n="bcn.bartenderButton">Join Bartendly</a>
+<a class="btn btn-primary" href="https://app.bartendly.com" target="_blank" rel="noopener noreferrer" data-i18n="common.bartenderCtaButton">Join Bartendly</a>
 </div>
 </div>
 </div>
@@ -522,45 +450,29 @@ html{scroll-behavior:auto;}
 <section class="section section--cream">
 <div class="narrow">
 <div class="section-head reveal">
-<div class="eyebrow" data-i18n="bcn.faqEyebrow">Questions</div>
-<h2 class="section-title" data-i18n="bcn.faqTitle">Before you request bartenders.</h2>
-<p class="section-intro" data-i18n="bcn.faqIntro">A few answers before you request bartenders for a Barcelona trade show or corporate event.</p>
+<h2 class="section-title" data-i18n="barcelona.faqTitle">Questions</h2>
+<p class="section-intro" data-i18n="barcelona.faqIntro">A few answers before you request bartenders for a Barcelona trade show or corporate event.</p>
 </div>
 <div class="faq-list" id="faq-list">
 <article class="faq-item reveal">
-<button type="button" aria-expanded="false">
-<span data-i18n="bcn.faqTradeShowQuestion">Can I hire bartenders for a trade show at Fira Barcelona?</span>
-<span aria-hidden="true">+</span>
-</button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="bcn.faqTradeShowAnswer">Yes. Bartendly Experiences helps coordinate professional bartenders for Fira Barcelona trade shows, exhibition stands, product demos, corporate receptions and brand activations.</div></div></div>
+<button type="button" aria-expanded="false"><span data-i18n="barcelona.faqTradeShowQuestion">Can I hire bartenders for a trade show at Fira Barcelona?</span><span aria-hidden="true">+</span></button>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="barcelona.faqTradeShowAnswer">Yes. Bartendly Experiences helps coordinate professional bartenders for Fira Barcelona trade shows, exhibition stands, product demos, corporate receptions and brand activations.</div></div></div>
 </article>
 <article class="faq-item reveal">
-<button type="button" aria-expanded="false">
-<span data-i18n="bcn.faqMultiDayQuestion">Can you support multi-day exhibition stands?</span>
-<span aria-hidden="true">+</span>
-</button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="bcn.faqMultiDayAnswer">Yes. Bartendly can help coordinate bartenders for multi-day trade show shifts, depending on event dates, opening hours, expected volume and bartender availability.</div></div></div>
+<button type="button" aria-expanded="false"><span data-i18n="barcelona.faqMultiDayQuestion">Can you support multi-day exhibition stands?</span><span aria-hidden="true">+</span></button>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="barcelona.faqMultiDayAnswer">Yes. Bartendly can help coordinate bartenders for multi-day trade show shifts, depending on event dates, opening hours, expected volume and bartender availability.</div></div></div>
 </article>
 <article class="faq-item reveal">
-<button type="button" aria-expanded="false">
-<span data-i18n="bcn.faqMaterialsQuestion">Do you only provide staff, or can you help with the cocktail setup?</span>
-<span aria-hidden="true">+</span>
-</button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="bcn.faqMaterialsAnswer">The setup depends on the event. Many exhibitors or venues already provide alcohol, ice, glassware or suppliers. Bartendly can help coordinate the bartender side and advise on a practical cocktail service format.</div></div></div>
+<button type="button" aria-expanded="false"><span data-i18n="barcelona.faqMaterialsQuestion">Do you only provide staff, or can you help with the cocktail setup?</span><span aria-hidden="true">+</span></button>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="barcelona.faqMaterialsAnswer">The setup depends on the event. Many exhibitors or venues already provide alcohol, ice, glassware or suppliers. Bartendly can help coordinate the bartender side and advise on a practical cocktail service format.</div></div></div>
 </article>
 <article class="faq-item reveal">
-<button type="button" aria-expanded="false">
-<span data-i18n="bcn.faqNoticeQuestion">How much notice do you need?</span>
-<span aria-hidden="true">+</span>
-</button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="bcn.faqNoticeAnswer">The earlier the better, especially for large fairs and multi-day events. Shorter notice may still work for smaller receptions depending on the date and bartender availability.</div></div></div>
+<button type="button" aria-expanded="false"><span data-i18n="barcelona.faqNoticeQuestion">How much notice do you need?</span><span aria-hidden="true">+</span></button>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="barcelona.faqNoticeAnswer">The earlier the better, especially for large fairs and multi-day events. Shorter notice may still work for smaller receptions depending on the date and bartender availability.</div></div></div>
 </article>
 <article class="faq-item reveal">
-<button type="button" aria-expanded="false">
-<span data-i18n="bcn.faqBartendersQuestion">Can Barcelona bartenders join Bartendly?</span>
-<span aria-hidden="true">+</span>
-</button>
-<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="bcn.faqBartendersAnswer">Yes. Bartenders in Barcelona can join Bartendly to be visible for paid event opportunities, trade show shifts, guest shifts, jobs and professional collaborations.</div></div></div>
+<button type="button" aria-expanded="false"><span data-i18n="barcelona.faqBartendersQuestion">Can Barcelona bartenders join Bartendly?</span><span aria-hidden="true">+</span></button>
+<div class="faq-panel"><div class="faq-panel__inner"><div class="faq-panel__content" data-i18n="barcelona.faqBartendersAnswer">Yes. Bartenders in Barcelona can join Bartendly to be visible for paid event opportunities, trade show shifts, guest shifts, jobs and professional collaborations.</div></div></div>
 </article>
 </div>
 </div>
@@ -568,8 +480,8 @@ html{scroll-behavior:auto;}
 <section class="section">
 <div class="narrow">
 <div class="reveal">
-<h2 class="section-title" data-i18n="bcn.seoTitle">Professional trade show bartenders in Barcelona</h2>
-<p class="section-intro" data-i18n="bcn.seoParagraph">Bartendly Experiences helps exhibitors, agencies and corporate teams hire professional bartenders in Barcelona for Fira Barcelona trade shows, exhibition stands, product launches, brand activations and client receptions. Whether your event is at Gran Via, Montjuïc, a hotel, showroom or private venue, Bartendly helps coordinate reliable cocktail service through selected bartenders and a clear human process.</p>
+<h2 class="section-title" data-i18n="barcelona.bottomSeoTitle">Professional trade show bartenders in Barcelona</h2>
+<p class="section-intro" data-i18n="barcelona.bottomSeoParagraph">Bartendly Experiences helps exhibitors, agencies and corporate teams hire professional bartenders in Barcelona for Fira Barcelona trade shows, exhibition stands, product launches, brand activations and client receptions. Whether your event is at Gran Via, Montjuïc, a hotel, showroom or private venue, Bartendly helps coordinate reliable cocktail service through selected bartenders and a clear human process.</p>
 </div>
 </div>
 </section>
@@ -578,13 +490,13 @@ html{scroll-behavior:auto;}
 <div class="cta-card reveal">
 <div class="cta-card__inner">
 <div>
-<h2 class="cta-card__title" data-i18n="bcn.ctaTitle">Request bartenders in Barcelona</h2>
-<p class="cta-card__text" data-i18n="bcn.ctaText">Tell us the fair, date, venue and service format. We’ll get back to you quickly with the right setup.</p>
+<h2 class="cta-card__title" data-i18n="barcelona.ctaTitle">Request bartenders in Barcelona</h2>
+<p class="cta-card__text" data-i18n="barcelona.ctaText">Tell us the fair, date, venue and service format. We’ll get back to you quickly with the right setup.</p>
 </div>
 <div class="cta-card__actions">
-<a class="btn btn-primary" href="#contact-form" data-i18n="bcn.ctaButton">Use the request form</a>
-<a class="btn btn-whatsapp" href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20a%20trade%20show%20or%20event%20in%20Barcelona" target="_blank" rel="noopener noreferrer" data-i18n="bcn.ctaWhatsapp">WhatsApp us</a>
-<p class="cta-card__email"><span data-i18n="bcn.ctaEmailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Barcelona trade show bartender request" data-i18n="common.footerEmail">contact@bartendly.com</a></p>
+<a class="btn btn-primary" href="#contact-form" data-i18n="barcelona.ctaButton">Request bartenders in Barcelona</a>
+<a class="btn btn-whatsapp" href="https://wa.me/34618502493?text=Hi%2C%20I%27m%20organizing%20a%20trade%20show%20or%20event%20in%20Barcelona" target="_blank" rel="noopener noreferrer" data-i18n="common.buttonsWhatsapp">WhatsApp us</a>
+<p class="cta-card__email"><span data-i18n="barcelona.ctaEmailLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Barcelona trade show bartender request" data-i18n="barcelona.ctaEmail">contact@bartendly.com</a></p>
 </div>
 </div>
 </div>
@@ -595,18 +507,18 @@ html{scroll-behavior:auto;}
 <div class="container footer__inner">
 <div>
 <div class="footer__brand" data-i18n="common.footerBrand">Bartendly Experiences</div>
-<p class="footer__text" data-i18n="bcn.footerText">Professional bartenders for Fira Barcelona trade shows, exhibition stands, brand activations and corporate receptions in Barcelona.</p>
+<p class="footer__text" data-i18n="barcelona.footerText">Professional bartenders for Fira Barcelona trade shows, exhibition stands, brand activations and corporate receptions in Barcelona.</p>
 </div>
 <div class="footer__meta">
 <div><strong data-i18n="common.footerContactLabel">Contact</strong></div>
 <div><a href="mailto:contact@bartendly.com" data-i18n="common.footerEmail">contact@bartendly.com</a></div>
-<div><a href="/what-is-bartendly" data-i18n="common.footerWhatIs">What is Bartendly?</a></div>
-<div><a href="/bartenders/" data-i18n="common.footerBartenders">Bartenders</a></div>
+<div><a href="/what-is-bartendly" data-i18n="common.footerWhatIsBartendly">What is Bartendly?</a></div>
+<div><a href="/bartenders/" data-i18n="common.navBartenders">Bartenders</a></div>
 <div><span data-i18n="common.footerRights">All rights reserved.</span></div>
 </div>
 </div>
 </footer>
-<a class="sticky-cta is-hidden" href="#contact-form" id="sticky-cta" data-i18n="bcn.stickyCta">Request bartenders in Barcelona</a>
+<a class="sticky-cta is-hidden" href="#contact-form" id="sticky-cta" data-i18n="barcelona.stickyCtaLabel">Request bartenders in Barcelona</a>
 </div>
 <script>
 (function(){'use strict';
@@ -615,146 +527,20 @@ var mobileForm=document.getElementById('contact-form-mobile');
 var mobileFeedback=document.getElementById('form-feedback-mobile');
 var topbar=document.getElementById('topbar');
 var stickyCta=document.getElementById('sticky-cta');
-function getText(key,fallback){
-if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){
-return window.__BARTENDLY_I18N__.flat[key];
-}
-return fallback||'';
-}
-function setMobileFeedback(message,type){
-if(!mobileFeedback){return;}
-mobileFeedback.textContent=message;
-mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');
-}
-function clearMobileFeedback(){
-if(!mobileFeedback){return;}
-mobileFeedback.textContent='';
-mobileFeedback.className='form-feedback';
-}
-function buildWhatsappMessage(name,eventText){
-var template=getText('bcn.whatsappMessage','Hi, I’m organizing a trade show or event in Barcelona.\n\nName: {name}\nEvent: {event}\n\nCan you help?');
-return template.replace('{name}',name).replace('{event}',eventText);
-}
-function openWhatsapp(name,eventText){
-var message=buildWhatsappMessage(name,eventText);
-var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);
-window.open(url,'_blank','noopener');
-}
-function validateMobileForm(name,eventText){
-if(!name){
-setMobileFeedback(getText('bcn.formValidationNameRequired','Please enter your name.'),'error');
-return false;
-}
-if(!eventText){
-setMobileFeedback(getText('bcn.formValidationEventRequired','Please describe your event.'),'error');
-return false;
-}
-clearMobileFeedback();
-return true;
-}
-function handleMobileSubmit(event){
-event.preventDefault();
-var name=(mobileForm.querySelector('#name-mobile').value||'').trim();
-var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();
-if(!validateMobileForm(name,eventText)){return;}
-try{
-openWhatsapp(name,eventText);
-}catch(error){
-setMobileFeedback(getText('bcn.formErrorWhatsapp','Something went wrong. You can also contact us directly by email.'),'error');
-}
-}
-function bindFaq(){
-var items=document.querySelectorAll('.faq-item');
-items.forEach(function(item){
-var button=item.querySelector('button');
-button.addEventListener('click',function(){
-var isOpen=item.classList.contains('is-open');
-items.forEach(function(other){
-other.classList.remove('is-open');
-other.querySelector('button').setAttribute('aria-expanded','false');
-});
-if(!isOpen){
-item.classList.add('is-open');
-button.setAttribute('aria-expanded','true');
-}
-});
-});
-}
-function bindScrollEffects(){
-var reveals=document.querySelectorAll('.reveal');
-if(!('IntersectionObserver' in window)){
-reveals.forEach(function(node){node.classList.add('is-visible');});
-return;
-}
-var observer=new IntersectionObserver(function(entries){
-entries.forEach(function(entry){
-if(entry.isIntersecting){
-entry.target.classList.add('is-visible');
-observer.unobserve(entry.target);
-}
-});
-},{threshold:.14});
-reveals.forEach(function(node){observer.observe(node);});
-}
-function bindTopbar(){
-function onScroll(){
-if(window.scrollY>18){
-topbar.classList.add('is-scrolled');
-}else{
-topbar.classList.remove('is-scrolled');
-}
-}
-onScroll();
-window.addEventListener('scroll',onScroll,{passive:true});
-}
-function bindParallax(){
-var target=document.querySelector('[data-parallax]');
-if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
-function update(){
-var offset=Math.min(window.scrollY*.10,26);
-target.style.transform='scale(1.04) translate3d(0,'+offset+'px,0)';
-}
-update();
-window.addEventListener('scroll',update,{passive:true});
-}
-function bindAnchorButtons(){
-document.querySelectorAll('a[href="#contact-form"],a[href="#contact-form-mobile"],a[href="#contact-form-desktop"]').forEach(function(link){
-link.addEventListener('click',function(event){
-event.preventDefault();
-var target=window.innerWidth>=720?document.getElementById('contact-form-desktop'):document.getElementById('contact-form-mobile');
-if(!target){target=document.getElementById('contact-form');}
-if(!target){return;}
-window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});
-setTimeout(function(){
-var firstField=window.innerWidth>=720?document.getElementById('name-desktop'):document.getElementById('name-mobile');
-if(firstField){firstField.focus();}
-},420);
-});
-});
-}
-function bindStickyCta(){
-if(!stickyCta){return;}
-function onScroll(){
-var y=window.scrollY;
-var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);
-if(y<160||hideAtBottom){
-stickyCta.classList.add('is-hidden');
-}else{
-stickyCta.classList.remove('is-hidden');
-}
-}
-onScroll();
-window.addEventListener('scroll',onScroll,{passive:true});
-}
-function init(){
-if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}
-bindFaq();
-bindScrollEffects();
-bindTopbar();
-bindParallax();
-bindAnchorButtons();
-bindStickyCta();
-}
+function text(id,fallback){var node=document.getElementById(id);return node&&node.textContent?node.textContent:fallback;}
+function setMobileFeedback(message,type){if(!mobileFeedback){return;}mobileFeedback.textContent=message;mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
+function clearMobileFeedback(){if(!mobileFeedback){return;}mobileFeedback.textContent='';mobileFeedback.className='form-feedback';}
+function buildWhatsappMessage(name,eventText){return text('msg-whatsapp-template','Hi, I’m organizing a trade show or event in Barcelona.\n\nName: {name}\nEvent: {event}\n\nCan you help?').replace('{name}',name).replace('{event}',eventText);}
+function openWhatsapp(name,eventText){var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(buildWhatsappMessage(name,eventText));window.open(url,'_blank','noopener');}
+function validateMobileForm(name,eventText){if(!name){setMobileFeedback(text('msg-name-required','Please enter your name.'),'error');return false;}if(!eventText){setMobileFeedback(text('msg-event-required','Please describe your event.'),'error');return false;}clearMobileFeedback();return true;}
+function handleMobileSubmit(event){event.preventDefault();var name=(mobileForm.querySelector('#name-mobile').value||'').trim();var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();if(!validateMobileForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setMobileFeedback(text('msg-form-error','Something went wrong. Please try again or contact us by email.'),'error');}}
+function bindFaq(){document.querySelectorAll('.faq-item').forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');document.querySelectorAll('.faq-item').forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
+function bindScrollEffects(){var reveals=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){reveals.forEach(function(node){node.classList.add('is-visible');});return;}var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.14});reveals.forEach(function(node){observer.observe(node);});}
+function bindTopbar(){function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){var offset=Math.min(window.scrollY*.10,26);target.style.transform='scale(1.04) translate3d(0,'+offset+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
+function bindAnchorButtons(){document.querySelectorAll('a[href="#contact-form"],a[href="#contact-form-mobile"],a[href="#contact-form-desktop"]').forEach(function(link){link.addEventListener('click',function(event){event.preventDefault();var target=window.innerWidth>=720?document.getElementById('contact-form-desktop'):document.getElementById('contact-form-mobile');if(!target){target=document.getElementById('contact-form');}if(!target){return;}window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-92,behavior:'smooth'});setTimeout(function(){var firstField=window.innerWidth>=720?document.getElementById('name-desktop'):document.getElementById('name-mobile');if(firstField){firstField.focus();}},420);});});}
+function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY;var hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);if(y<160||hideAtBottom){stickyCta.classList.add('is-hidden');}else{stickyCta.classList.remove('is-hidden');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
+function init(){if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}bindFaq();bindScrollEffects();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
 document.addEventListener('DOMContentLoaded',init);
 document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback();});
 })();
@@ -764,60 +550,10 @@ document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback(
 var desktopForm=document.getElementById('contact-form-desktop');
 var desktopFeedback=document.getElementById('form-feedback-desktop');
 if(!desktopForm||!desktopFeedback){return;}
-function getText(key,fallback){
-if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){
-return window.__BARTENDLY_I18N__.flat[key];
-}
-return fallback||'';
-}
-function setDesktopFeedback(message,type){
-desktopFeedback.textContent=message;
-desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');
-}
-function clearDesktopFeedback(){
-desktopFeedback.textContent='';
-desktopFeedback.className='form-feedback';
-}
-async function handleDesktopSubmit(event){
-event.preventDefault();
-var name=(desktopForm.querySelector('#name-desktop').value||'').trim();
-var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();
-var venue=(desktopForm.querySelector('#venue-desktop').value||'').trim();
-var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();
-if(!name){
-setDesktopFeedback(getText('bcn.formValidationNameRequired','Please enter your name.'),'error');
-return;
-}
-if(!contact){
-setDesktopFeedback(getText('bcn.formValidationContactRequired','Please enter your contact details.'),'error');
-return;
-}
-if(!venue){
-setDesktopFeedback(getText('bcn.formValidationVenueRequired','Please enter the venue or area.'),'error');
-return;
-}
-if(!eventText){
-setDesktopFeedback(getText('bcn.formValidationEventRequired','Please describe your event.'),'error');
-return;
-}
-clearDesktopFeedback();
-try{
-var endpoint=desktopForm.getAttribute('data-formspree');
-var response=await fetch(endpoint,{
-method:'POST',
-headers:{'Accept':'application/json'},
-body:new FormData(desktopForm)
-});
-if(response.ok){
-setDesktopFeedback(getText('bcn.formSuccessDesktop','Thank you. Your request has been sent. We will get back to you quickly.'),'success');
-desktopForm.reset();
-}else{
-setDesktopFeedback(getText('bcn.formErrorDesktop','Something went wrong. Please try again or contact us by email.'),'error');
-}
-}catch(e){
-setDesktopFeedback(getText('bcn.formErrorNetwork','Network error. Please try again.'),'error');
-}
-}
+function text(id,fallback){var node=document.getElementById(id);return node&&node.textContent?node.textContent:fallback;}
+function setDesktopFeedback(message,type){desktopFeedback.textContent=message;desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');}
+function clearDesktopFeedback(){desktopFeedback.textContent='';desktopFeedback.className='form-feedback';}
+async function handleDesktopSubmit(event){event.preventDefault();var name=(desktopForm.querySelector('#name-desktop').value||'').trim();var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();var venue=(desktopForm.querySelector('#venue-desktop').value||'').trim();var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();if(!name){setDesktopFeedback(text('msg-name-required','Please enter your name.'),'error');return;}if(!contact){setDesktopFeedback(text('msg-contact-required','Please enter your contact details.'),'error');return;}if(!venue){setDesktopFeedback(text('msg-venue-required','Please enter the city or venue.'),'error');return;}if(!eventText){setDesktopFeedback(text('msg-event-required','Please describe your event.'),'error');return;}clearDesktopFeedback();try{var endpoint=desktopForm.getAttribute('data-formspree');var response=await fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(desktopForm)});if(response.ok){setDesktopFeedback(text('msg-form-success','Thank you. Your request has been sent. We will get back to you quickly.'),'success');desktopForm.reset();}else{setDesktopFeedback(text('msg-form-error','Something went wrong. Please try again or contact us by email.'),'error');}}catch(e){setDesktopFeedback(text('msg-network-error','Network error. Please try again.'),'error');}}
 desktopForm.addEventListener('submit',handleDesktopSubmit);
 })();
 </script>
