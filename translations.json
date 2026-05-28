@@ -73,7 +73,8 @@
       "bartenderCtaTitle": "Are you a bartender?",
       "bartenderCtaText": "Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.",
       "bartenderCtaButton": "Join Bartendly",
-      "bartenderCtaLearnMore": "Learn what Bartendly is"
+      "bartenderCtaLearnMore": "Learn what Bartendly is",
+      "serviceScopeText": "Bartendly mainly coordinates the bartending service. Alcohol is usually provided by the client, venue or event supplier."
     },
     "home": {
       "heroKicker": "Event bartenders, handled fast",
@@ -331,7 +332,8 @@
       "ctaEmail": "contact@bartendly.com",
       "footerText": "Professional bartenders for corporate events, HKCEC trade shows, brand activations and premium private events in Hong Kong.",
       "stickyCtaLabel": "Request bartenders in Hong Kong",
-      "whatsappMessage": "Hi, I’m organizing an event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?"
+      "whatsappMessage": "Hi, I’m organizing an event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?",
+      "serviceScopeText": "Bartendly mainly coordinates bartending service. Alcohol is usually provided by the client, venue or event production team. Specific arrangements can be discussed case by case in Hong Kong."
     },
     "barcelona": {
       "breadcrumbHome": "Bartendly Experiences",
@@ -496,7 +498,8 @@
       "bartenderCtaTitle": "Vous êtes bartender ?",
       "bartenderCtaText": "Rejoignez Bartendly pour être visible pour des opportunités rémunérées, guest shifts, jobs et collaborations professionnelles.",
       "bartenderCtaButton": "Rejoindre Bartendly",
-      "bartenderCtaLearnMore": "Découvrir ce qu’est Bartendly"
+      "bartenderCtaLearnMore": "Découvrir ce qu’est Bartendly",
+      "serviceScopeText": "Bartendly coordonne principalement le service de bartenders. L’alcool est généralement fourni par le client, le lieu ou le fournisseur de l’événement."
     },
     "home": {
       "heroKicker": "Bartenders événementiels",
@@ -754,7 +757,8 @@
       "ctaEmail": "contact@bartendly.com",
       "footerText": "Bartenders professionnels pour événements corporate, salons HKCEC, activations de marque et événements privés premium à Hong Kong.",
       "stickyCtaLabel": "Demander des bartenders à Hong Kong",
-      "whatsappMessage": "Bonjour, j’organise un événement à Hong Kong.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?"
+      "whatsappMessage": "Bonjour, j’organise un événement à Hong Kong.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?",
+      "serviceScopeText": "Bartendly coordonne principalement le service de bartenders. L’alcool est généralement fourni par le client, le lieu ou l’équipe de production de l’événement. Des arrangements spécifiques peuvent être discutés au cas par cas à Hong Kong."
     },
     "barcelona": {
       "breadcrumbHome": "Bartendly Experiences",
@@ -919,7 +923,8 @@
       "bartenderCtaTitle": "¿Eres bartender?",
       "bartenderCtaText": "Únete a Bartendly para ser visible para oportunidades pagadas, guest shifts, trabajos y colaboraciones profesionales.",
       "bartenderCtaButton": "Únete a Bartendly",
-      "bartenderCtaLearnMore": "Descubre qué es Bartendly"
+      "bartenderCtaLearnMore": "Descubre qué es Bartendly",
+      "serviceScopeText": "Bartendly coordina principalmente el servicio de bartenders. El alcohol suele ser proporcionado por el cliente, el venue o el proveedor del evento."
     },
     "home": {
       "heroKicker": "Bartenders para eventos",
@@ -1177,7 +1182,8 @@
       "ctaEmail": "contact@bartendly.com",
       "footerText": "Bartenders profesionales para eventos corporativos, ferias en HKCEC, activaciones de marca y eventos privados premium en Hong Kong.",
       "stickyCtaLabel": "Solicitar bartenders en Hong Kong",
-      "whatsappMessage": "Hola, estoy organizando un evento en Hong Kong.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?"
+      "whatsappMessage": "Hola, estoy organizando un evento en Hong Kong.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?",
+      "serviceScopeText": "Bartendly coordina principalmente el servicio de bartenders. El alcohol suele ser proporcionado por el cliente, el venue o el equipo de producción del evento. Se pueden discutir acuerdos específicos caso por caso en Hong Kong."
     },
     "barcelona": {
       "breadcrumbHome": "Bartendly Experiences",
