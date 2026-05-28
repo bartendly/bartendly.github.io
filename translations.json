@@ -74,7 +74,9 @@
       "bartenderCtaText": "Join Bartendly to be visible for paid event opportunities, guest shifts, jobs and professional collaborations.",
       "bartenderCtaButton": "Join Bartendly",
       "bartenderCtaLearnMore": "Learn what Bartendly is",
-      "serviceScopeText": "Bartendly mainly coordinates the bartending service. Alcohol is usually provided by the client, venue or event supplier."
+      "serviceScopeText": "Bartendly mainly coordinates the bartending service. Alcohol is usually provided by the client, venue or event supplier.",
+      "scopeTitle": "Clear service scope",
+      "scopeText": "Bartendly Experiences is primarily a bartending service coordination layer. We usually do not provide alcohol. In most cases, alcohol is handled by the client, venue, stand supplier or event production team. Ice, glassware or tools can sometimes be discussed, but the cleanest setup is bartending service only."
     },
     "home": {
       "heroKicker": "Event bartenders, handled fast",
@@ -499,7 +501,9 @@
       "bartenderCtaText": "Rejoignez Bartendly pour être visible pour des opportunités rémunérées, guest shifts, jobs et collaborations professionnelles.",
       "bartenderCtaButton": "Rejoindre Bartendly",
       "bartenderCtaLearnMore": "Découvrir ce qu’est Bartendly",
-      "serviceScopeText": "Bartendly coordonne principalement le service de bartenders. L’alcool est généralement fourni par le client, le lieu ou le fournisseur de l’événement."
+      "serviceScopeText": "Bartendly coordonne principalement le service de bartenders. L’alcool est généralement fourni par le client, le lieu ou le fournisseur de l’événement.",
+      "scopeTitle": "Périmètre de service clair",
+      "scopeText": "Bartendly Experiences est avant tout une couche de coordination de service bartender. En général, nous ne fournissons pas l’alcool. Dans la plupart des cas, l’alcool est géré par le client, le lieu, le fournisseur du stand ou l’équipe de production de l’événement. La glace, la verrerie ou les outils peuvent parfois être discutés, mais le setup le plus propre reste un service de bartending uniquement."
     },
     "home": {
       "heroKicker": "Bartenders événementiels",
@@ -924,7 +928,9 @@
       "bartenderCtaText": "Únete a Bartendly para ser visible para oportunidades pagadas, guest shifts, trabajos y colaboraciones profesionales.",
       "bartenderCtaButton": "Únete a Bartendly",
       "bartenderCtaLearnMore": "Descubre qué es Bartendly",
-      "serviceScopeText": "Bartendly coordina principalmente el servicio de bartenders. El alcohol suele ser proporcionado por el cliente, el venue o el proveedor del evento."
+      "serviceScopeText": "Bartendly coordina principalmente el servicio de bartenders. El alcohol suele ser proporcionado por el cliente, el venue o el proveedor del evento.",
+      "scopeTitle": "Alcance claro del servicio",
+      "scopeText": "Bartendly Experiences es principalmente una capa de coordinación de servicio de bartenders. Por lo general, no proporcionamos alcohol. En la mayoría de los casos, el alcohol lo gestiona el cliente, el venue, el proveedor del stand o el equipo de producción del evento. El hielo, la cristalería o las herramientas pueden discutirse en algunos casos, pero el setup más limpio es solo el servicio de bartending."
     },
     "home": {
       "heroKicker": "Bartenders para eventos",
