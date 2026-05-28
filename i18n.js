@@ -1,166 +1,125 @@
-(function () {
+(function(){
     'use strict';
     
-    async function loadTranslations(url) {
-    const response = await fetch(url, { cache: 'no-store' });
-    if (!response.ok) {
-    throw new Error('Unable to load translations.');
-    }
+    async function loadTranslations(url){
+    const response=await fetch(url,{cache:'no-store'});
+    if(!response.ok){throw new Error('Unable to load translations.');}
     return response.json();
     }
     
-    function getNestedValue(obj, key) {
-    if (!obj) {
-    return undefined;
-    }
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-    return obj[key];
-    }
-    return key.split('.').reduce(function (acc, part) {
-    return acc && Object.prototype.hasOwnProperty.call(acc, part) ? acc[part] : undefined;
-    }, obj);
+    function hasOwn(obj,key){
+    return !!obj&&Object.prototype.hasOwnProperty.call(obj,key);
     }
     
-    function createFlatLookup(translations, language, fallbackLanguage) {
-    return new Proxy({}, {
-    get: function (_, prop) {
-    var key = String(prop);
-    var value = getNestedValue(translations[language], key);
-    if (typeof value !== 'undefined') {
-    return value;
+    function getValue(obj,key){
+    if(!obj||!key){return undefined;}
+    if(hasOwn(obj,key)){return obj[key];}
+    var parts=key.split('.');
+    var cursor=obj;
+    for(var i=0;i<parts.length;i++){
+    var remaining=parts.slice(i).join('.');
+    if(hasOwn(cursor,remaining)){return cursor[remaining];}
+    if(hasOwn(cursor,parts[i])){cursor=cursor[parts[i]];}else{return undefined;}
     }
-    return getNestedValue(translations[fallbackLanguage], key);
+    return cursor;
+    }
+    
+    function createLookup(translations,language,fallbackLanguage){
+    return new Proxy({},{
+    get:function(_,prop){
+    var key=String(prop);
+    var value=getValue(translations[language],key);
+    if(typeof value!=='undefined'){return value;}
+    return getValue(translations[fallbackLanguage],key);
     }
     });
     }
     
-    function detectPreferredLanguage(availableLanguages) {
-        var saved = window.localStorage.getItem('bartendly-language');
-        var legacySaved = window.localStorage.getItem('bartendly_lang');
-        if (saved && availableLanguages.includes(saved)) {
-        return saved;
-        }
-        if (legacySaved && availableLanguages.includes(legacySaved)) {
-            window.localStorage.setItem('bartendly-language', nextLanguage);
-            window.localStorage.setItem('bartendly_lang', nextLanguage);
-        return legacySaved;
-        }
-        var browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
-        if (availableLanguages.includes(browser)) {
-        return browser;
-        }
-        return availableLanguages.includes('en') ? 'en' : availableLanguages[0];
+    function detectPreferredLanguage(availableLanguages){
+    var saved=window.localStorage.getItem('bartendly-language');
+    var legacySaved=window.localStorage.getItem('bartendly_lang');
+    if(saved&&availableLanguages.includes(saved)){return saved;}
+    if(legacySaved&&availableLanguages.includes(legacySaved)){
+    window.localStorage.setItem('bartendly-language',legacySaved);
+    return legacySaved;
+    }
+    var browser=(navigator.language||'en').slice(0,2).toLowerCase();
+    if(availableLanguages.includes(browser)){return browser;}
+    return availableLanguages.includes('en')?'en':availableLanguages[0];
     }
     
-    function translateDocument(flat) {
-    document.querySelectorAll('[data-i18n]').forEach(function (node) {
-    var key = node.getAttribute('data-i18n');
-    var value = flat[key];
-    if (typeof value === 'string') {
-    node.textContent = value;
-    }
+    function translateDocument(flat){
+    document.querySelectorAll('[data-i18n]').forEach(function(node){
+    var key=node.getAttribute('data-i18n');
+    var value=flat[key];
+    if(typeof value==='string'){node.textContent=value;}
     });
-    
-    document.querySelectorAll('[data-i18n-html]').forEach(function (node) {
-    var key = node.getAttribute('data-i18n-html');
-    var value = flat[key];
-    if (typeof value === 'string') {
-    node.innerHTML = value;
-    }
+    document.querySelectorAll('[data-i18n-html]').forEach(function(node){
+    var key=node.getAttribute('data-i18n-html');
+    var value=flat[key];
+    if(typeof value==='string'){node.innerHTML=value;}
     });
-    
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (node) {
-    var key = node.getAttribute('data-i18n-placeholder');
-    var value = flat[key];
-    if (typeof value === 'string') {
-    node.setAttribute('placeholder', value);
-    }
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(node){
+    var key=node.getAttribute('data-i18n-placeholder');
+    var value=flat[key];
+    if(typeof value==='string'){node.setAttribute('placeholder',value);}
     });
-    
-    document.querySelectorAll('[data-i18n-aria-label]').forEach(function (node) {
-    var key = node.getAttribute('data-i18n-aria-label');
-    var value = flat[key];
-    if (typeof value === 'string') {
-    node.setAttribute('aria-label', value);
-    }
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(function(node){
+    var key=node.getAttribute('data-i18n-aria-label');
+    var value=flat[key];
+    if(typeof value==='string'){node.setAttribute('aria-label',value);}
     });
-    
-    document.querySelectorAll('[data-i18n-alt]').forEach(function (node) {
-    var key = node.getAttribute('data-i18n-alt');
-    var value = flat[key];
-    if (typeof value === 'string') {
-    node.setAttribute('alt', value);
-    }
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(node){
+    var key=node.getAttribute('data-i18n-alt');
+    var value=flat[key];
+    if(typeof value==='string'){node.setAttribute('alt',value);}
     });
     }
     
-    function dispatchReady(translations, currentLanguage, flat) {
-    window.__BARTENDLY_I18N__ = {
-    translations: translations,
-    currentLanguage: currentLanguage,
-    flat: flat
-    };
-    
-    document.dispatchEvent(new CustomEvent('bartendly:i18n-ready', {
-    detail: {
-    translations: translations,
-    currentLanguage: currentLanguage,
-    flat: flat
-    }
-    }));
+    function dispatchReady(translations,currentLanguage,flat){
+    window.__BARTENDLY_I18N__={translations:translations,currentLanguage:currentLanguage,flat:flat};
+    document.dispatchEvent(new CustomEvent('bartendly:i18n-ready',{detail:{translations:translations,currentLanguage:currentLanguage,flat:flat}}));
     }
     
-    async function initI18n() {
-    var translations = await loadTranslations('/translations.json');
-    var availableLanguages = Object.keys(translations).filter(function (key) {
-    return translations[key] && typeof translations[key] === 'object' && !Array.isArray(translations[key]);
+    async function initI18n(){
+    var translations=await loadTranslations('/translations.json');
+    var availableLanguages=Object.keys(translations).filter(function(key){
+    return translations[key]&&typeof translations[key]==='object'&&!Array.isArray(translations[key]);
     });
-    var fallbackLanguage = availableLanguages.includes('en') ? 'en' : availableLanguages[0];
-    var currentLanguage = detectPreferredLanguage(availableLanguages);
-    var selector = document.querySelector('[data-language-select]');
-    var selectorWrap = document.querySelector('[data-language-wrap]');
-    var flat = createFlatLookup(translations, currentLanguage, fallbackLanguage);
-    
-    document.documentElement.lang = currentLanguage;
+    var fallbackLanguage=availableLanguages.includes('en')?'en':availableLanguages[0];
+    var currentLanguage=detectPreferredLanguage(availableLanguages);
+    var selector=document.querySelector('[data-language-select]');
+    var selectorWrap=document.querySelector('[data-language-wrap]');
+    var flat=createLookup(translations,currentLanguage,fallbackLanguage);
+    document.documentElement.lang=currentLanguage;
     translateDocument(flat);
-    dispatchReady(translations, currentLanguage, flat);
-    
-    if (selector) {
-    selector.innerHTML = '';
-    
-    availableLanguages.forEach(function (language) {
-    var option = document.createElement('option');
-    option.value = language;
-    option.textContent = language.toUpperCase();
-    if (language === currentLanguage) {
-    option.selected = true;
-    }
+    dispatchReady(translations,currentLanguage,flat);
+    if(selector){
+    selector.innerHTML='';
+    availableLanguages.forEach(function(language){
+    var option=document.createElement('option');
+    option.value=language;
+    option.textContent=language.toUpperCase();
+    if(language===currentLanguage){option.selected=true;}
     selector.appendChild(option);
     });
-    
-    selector.addEventListener('change', function (event) {
-    var nextLanguage = event.target.value;
-    var nextFlat = createFlatLookup(translations, nextLanguage, fallbackLanguage);
-    
-    window.localStorage.setItem('bartendly-language', nextLanguage);
-    document.documentElement.lang = nextLanguage;
+    selector.addEventListener('change',function(event){
+    var nextLanguage=event.target.value;
+    var nextFlat=createLookup(translations,nextLanguage,fallbackLanguage);
+    window.localStorage.setItem('bartendly-language',nextLanguage);
+    window.localStorage.setItem('bartendly_lang',nextLanguage);
+    document.documentElement.lang=nextLanguage;
     translateDocument(nextFlat);
-    dispatchReady(translations, nextLanguage, nextFlat);
+    dispatchReady(translations,nextLanguage,nextFlat);
     });
     }
-    
-    if (selectorWrap) {
-    selectorWrap.hidden = availableLanguages.length <= 1;
-    }
+    if(selectorWrap){selectorWrap.hidden=availableLanguages.length<=1;}
     }
     
-    window.BartendlyI18n = {
-    init: initI18n
-    };
+    window.BartendlyI18n={init:initI18n};
     
-    document.addEventListener('DOMContentLoaded', function () {
-    initI18n().catch(function (error) {
-    console.error(error);
+    document.addEventListener('DOMContentLoaded',function(){
+    initI18n().catch(function(error){console.error(error);});
     });
-    });
+    
     })();
