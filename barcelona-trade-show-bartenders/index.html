@@ -180,10 +180,12 @@ h1,h2,h3,p{margin:0;}
 @media (max-width:379px){.brand__name{max-width:132px;}.language-select{min-width:58px;}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
 
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,15,.97) 0%,rgba(11,11,15,.86) 38%,rgba(11,11,15,.58) 62%,rgba(11,11,15,.74) 100%),linear-gradient(180deg,rgba(11,11,15,.10),rgba(11,11,15,.92));z-index:-2;}
-.hero__media img{width:100%;height:100%;object-fit:cover;object-position:58% center;transform:scale(1.04);}
-@media (max-width:719px){.hero::before{background:linear-gradient(90deg,rgba(11,11,15,.96) 0%,rgba(11,11,15,.82) 54%,rgba(11,11,15,.56) 100%),linear-gradient(180deg,rgba(11,11,15,.16),rgba(11,11,15,.88));}}
-@media (max-width:719px){.hero__media img{object-position:64% center;transform:scale(1.04);}}
+.hero{--hero-pos-desktop:54% center;--hero-pos-mobile:55% center;--hero-brightness:.76;--hero-mobile-brightness:.86;}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,15,.96) 0%,rgba(11,11,15,.86) 42%,rgba(11,11,15,.62) 62%,rgba(11,11,15,.84) 100%),linear-gradient(180deg,rgba(11,11,15,.08),rgba(11,11,15,.88));z-index:-2;}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:var(--hero-pos-desktop);filter:brightness(var(--hero-brightness)) saturate(1.04) contrast(1.03);transform:scale(1.04);}
+body.barcelona-page .hero{--hero-pos-desktop:52% center;--hero-pos-mobile:53% center;}
+@media (max-width:719px){.hero::before{background:linear-gradient(90deg,rgba(11,11,15,.88) 0%,rgba(11,11,15,.70) 52%,rgba(11,11,15,.56) 100%),linear-gradient(180deg,rgba(11,11,15,.06),rgba(11,11,15,.76));}}
+@media (max-width:719px){.hero__media img{object-position:var(--hero-pos-mobile);filter:brightness(var(--hero-mobile-brightness)) saturate(1.05) contrast(1.02);}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Barcelona trade show bartenders by Bartendly Experiences","url":"https://bartendly.com/barcelona-trade-show-bartenders/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders in Barcelona for Fira Barcelona trade shows, exhibition stands, brand activations and corporate receptions.","areaServed":{"@type":"City","name":"Barcelona"},"provider":{"@type":"Organization","name":"Bartendly","url":"https://bartendly.com/"},"serviceType":["Fira Barcelona trade show bartenders","Exhibition stand bartenders","Corporate reception bartenders","Brand activation bartenders","Multi-day event bartenders"]}
@@ -193,7 +195,7 @@ h1,h2,h3,p{margin:0;}
 </script>
 <script defer src="/i18n.js"></script>
 </head>
-<body>
+<body class="barcelona-page">
 <a class="skip-link" href="#main" data-i18n="common.a11ySkipToContent">Skip to content</a>
 <div class="page">
 <header class="topbar" id="topbar">
