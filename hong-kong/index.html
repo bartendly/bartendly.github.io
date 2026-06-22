@@ -279,16 +279,19 @@ body.hong-kong-page .hero{--hero-pos-desktop:51% center;--hero-pos-mobile:51% ce
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-desktop" class="form-grid" action="https://formspree.io/f/mdkevral" method="POST" data-formspree="https://formspree.io/f/mdkevral" novalidate>
 <div class="field">
-<label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
-<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" maxlength="80" required>
+    <label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
+    <input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" maxlength="80" aria-describedby="name-error-desktop" required>
+    <p class="field-error" id="name-error-desktop" role="alert"></p>
 </div>
 <div class="field">
-<label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
-<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number with country code" maxlength="120" required>
+    <label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
+    <input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number with country code" maxlength="120" aria-describedby="contact-error-desktop" required>
+    <p class="field-error" id="contact-error-desktop" role="alert"></p>
 </div>
 <div class="field">
-<label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
-<textarea id="event-desktop" name="event" data-i18n-placeholder="hongKong.formEventPlaceholder" placeholder="Date, venue, type of event, number of guests" maxlength="4000" required></textarea>
+    <label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
+    <textarea id="event-desktop" name="event" data-i18n-placeholder="hongKong.formEventPlaceholder" placeholder="Date, time, venue or area, number of guests, event type and the kind of cocktail service you need" maxlength="4000" aria-describedby="event-error-desktop" required></textarea>
+    <p class="field-error" id="event-error-desktop" role="alert"></p>
 </div>
 <p class="form-service-note" data-i18n="hongKong.serviceScopeText">Bartendly mainly coordinates bartending service. Alcohol is usually provided by the client, venue or event production team. Specific arrangements can be discussed case by case in Hong Kong.</p>
 <input type="hidden" name="city" value="Hong Kong">
