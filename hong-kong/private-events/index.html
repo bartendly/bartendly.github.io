@@ -80,10 +80,10 @@ h1,h2,h3,p{margin:0;}
 .mosaic-copy span{display:block;margin-top:3px;font-size:.83rem;color:rgba(255,255,255,.72);line-height:1.35;}
 .quickbar{position:relative;margin-top:-32px;z-index:4;}
 .quickbar__inner{display:grid;gap:1px;overflow:hidden;border-radius:30px;background:rgba(22,13,24,.12);box-shadow:0 28px 90px rgba(50,20,55,.18);}
-.quickitem{display:flex;align-items:center;gap:13px;padding:18px;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);}
-.quickitem__emoji{display:grid;place-items:center;width:42px;height:42px;border-radius:16px;background:linear-gradient(135deg,var(--gold),var(--pink));font-size:1.18rem;}
-.quickitem strong{display:block;font-size:.98rem;font-weight:950;letter-spacing:-.03em;}
-.quickitem span{display:block;margin-top:2px;font-size:.84rem;color:var(--muted);line-height:1.35;}
+.quickitem{position:relative;display:block;padding:20px 18px;background:rgba(255,255,255,.90);backdrop-filter:blur(12px);}
+.quickitem::before{content:"";display:block;width:42px;height:4px;margin-bottom:12px;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--orange),var(--pink));}
+.quickitem strong{display:block;font-size:1rem;font-weight:950;letter-spacing:-.035em;}
+.quickitem span{display:block;margin-top:4px;font-size:.86rem;color:var(--muted);line-height:1.4;}
 .section{padding:76px 0;}
 .section--night{background:linear-gradient(180deg,var(--night),#200d2a);color:#fff;}
 .section--cream{background:linear-gradient(180deg,var(--cream),#fffaf2);}
@@ -260,10 +260,10 @@ h1,h2,h3,p{margin:0;}
 </section>
 <section class="quickbar" aria-label="Private event quick signals">
 <div class="container quickbar__inner">
-<div class="quickitem"><span class="quickitem__emoji" aria-hidden="true">🍸</span><div><strong data-i18n="hkPrivate.quickOneTitle">Real cocktail service</strong><span data-i18n="hkPrivate.quickOneText">Not someone randomly pouring drinks.</span></div></div>
-<div class="quickitem"><span class="quickitem__emoji" aria-hidden="true">🎉</span><div><strong data-i18n="hkPrivate.quickTwoTitle">Private-party focused</strong><span data-i18n="hkPrivate.quickTwoText">Birthdays, weddings, homes, rooftops.</span></div></div>
-<div class="quickitem"><span class="quickitem__emoji" aria-hidden="true">💬</span><div><strong data-i18n="hkPrivate.quickThreeTitle">Fast request</strong><span data-i18n="hkPrivate.quickThreeText">Send details by WhatsApp or email.</span></div></div>
-<div class="quickitem"><span class="quickitem__emoji" aria-hidden="true">💎</span><div><strong data-i18n="hkPrivate.quickFourTitle">From HKD 3,000</strong><span data-i18n="hkPrivate.quickFourText">For short bartender-only events.</span></div></div>
+    <div class="quickitem"><div><strong data-i18n="hkPrivate.quickOneTitle">Real cocktail service</strong><span data-i18n="hkPrivate.quickOneText">Not someone randomly pouring drinks.</span></div></div>
+    <div class="quickitem"><div><strong data-i18n="hkPrivate.quickTwoTitle">Private-party focused</strong><span data-i18n="hkPrivate.quickTwoText">Birthdays, weddings, homes, rooftops.</span></div></div>
+    <div class="quickitem"><div><strong data-i18n="hkPrivate.quickThreeTitle">Fast request</strong><span data-i18n="hkPrivate.quickThreeText">Send details by WhatsApp or email.</span></div></div>
+    <div class="quickitem"><div><strong data-i18n="hkPrivate.quickFourTitle">From HKD 3,000</strong><span data-i18n="hkPrivate.quickFourText">For short bartender-only events.</span></div></div>
 </div>
 </section>
 <section class="section section--cream">
