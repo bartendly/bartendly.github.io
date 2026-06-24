@@ -20,4 +20,10 @@
     <loc>https://bartendly.com/barcelona/</loc>
     <lastmod>2026-05-27</lastmod>
   </url>
+  <url>
+  <loc>https://bartendly.com/hong-kong/private-events/</loc>
+  <lastmod>2026-06-24</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>
