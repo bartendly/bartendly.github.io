@@ -76,6 +76,8 @@ h1,h2,h3,p{margin:0;}
 .hero__proof li{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);font-size:.88rem;color:rgba(255,255,255,.84);}
 .hero__proof li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);}
 .hero__support{max-width:42ch;margin-top:16px;font-size:.98rem;line-height:1.6;color:rgba(255,255,255,.70);}
+.hero__deep-link{max-width:42ch;margin-top:14px;font-size:.95rem;line-height:1.55;color:#f6ddb0;}
+.hero__deep-link a{border-bottom:1px solid rgba(246,221,176,.42);padding-bottom:2px;}
 .form-card{position:relative;padding:22px;border-radius:30px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.93));color:var(--text);box-shadow:var(--shadow2);border:1px solid rgba(255,255,255,.28);overflow:hidden;}
 .form-card::before{content:"";position:absolute;right:-80px;bottom:-120px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(216,176,111,.22),rgba(216,176,111,0) 70%);}
 .form-card>*{position:relative;z-index:1;}
@@ -110,7 +112,7 @@ h1,h2,h3,p{margin:0;}
 .section-intro{max-width:760px;font-size:1rem;line-height:1.72;color:var(--soft);}
 .section--dark .section-intro{color:rgba(255,255,255,.72);}
 .use-grid{display:grid;gap:14px;}
-.use-card{position:relative;overflow:hidden;min-height:330px;border-radius:30px;background:#111;border:1px solid rgba(255,255,255,.10);box-shadow:0 22px 80px rgba(0,0,0,.24);}
+.use-card{display:block;position:relative;overflow:hidden;min-height:330px;border-radius:30px;background:#111;border:1px solid rgba(255,255,255,.10);box-shadow:0 22px 80px rgba(0,0,0,.24);color:inherit;text-decoration:none;}
 .use-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);}
 .use-card:hover img{transform:scale(1.04);}
 .use-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,.03),rgba(11,11,15,.24) 42%,rgba(11,11,15,.88));}
@@ -249,6 +251,7 @@ body.hong-kong-page .hero{--hero-pos-desktop:51% center;--hero-pos-mobile:51% ce
     <li data-i18n="hongKong.heroProofFour">Brand activations</li>
 </ul>
 <p class="hero__support" data-i18n="hongKong.heroSupport">Bartendly helps clients hire bartenders in Hong Kong for private parties, weddings, corporate receptions, HKCEC exhibitions, brand activations, product launches, cocktail catering support and mobile bar-style service.</p>
+<p class="hero__deep-link"><a href="/hong-kong/private-events/" data-i18n="hongKong.privateEventsHeroLink">Planning a birthday, wedding, rooftop, yacht or home party? See our private event bartender service in Hong Kong.</a></p>
 </div>
 <div class="hero__form-wrap reveal" id="contact-form">
 <div class="form-card form-card--mobile">
@@ -343,14 +346,14 @@ body.hong-kong-page .hero{--hero-pos-desktop:51% center;--hero-pos-mobile:51% ce
 <p data-i18n="hongKong.useCasesActivationsText">Cocktail service designed to support brand presence, guest interaction and memorable experiences.</p>
 </div>
 </article>
-<article class="use-card reveal">
-<img src="/images/use-private-yacht-wedding.jpg" alt="Premium private cocktail event in Hong Kong">
-<div class="use-copy">
+<a class="use-card reveal" href="/hong-kong/private-events/">
+    <img src="/images/use-private-yacht-wedding.jpg" alt="Premium private cocktail event in Hong Kong">
+    <div class="use-copy">
     <span class="use-eyebrow">Private</span>
     <h3 data-i18n="hongKong.useCasesPrivateTitle">Private parties, birthdays & weddings</h3>
-    <p data-i18n="hongKong.useCasesPrivateText">Bartenders for birthdays, wedding receptions, rooftops, private homes, dinners and celebrations where professional cocktail service elevates the event.</p>
-</div>
-</article>
+    <p data-i18n="hongKong.useCasesPrivateText">Birthday, wedding, rooftop, yacht or home party? See our private event bartender service in Hong Kong.</p>
+    </div>
+</a>
 </div>
 </div>
 </section>
@@ -525,6 +528,7 @@ body.hong-kong-page .hero{--hero-pos-desktop:51% center;--hero-pos-mobile:51% ce
 <div class="footer__meta">
 <div><strong data-i18n="common.footerContactLabel">Contact</strong></div>
 <div><a href="mailto:contact@bartendly.com" data-i18n="common.footerEmail">contact@bartendly.com</a></div>
+<div><a href="/hong-kong/private-events/" data-i18n="hongKong.footerPrivateEvents">Private event bartenders</a></div>
 <div><a href="/what-is-bartendly" data-i18n="common.footerWhatIsBartendly">What is Bartendly?</a></div>
 <div><a href="/bartenders/" data-i18n="common.navBartenders">Bartenders</a></div>
 <div><span data-i18n="common.footerRights">All rights reserved.</span></div>
