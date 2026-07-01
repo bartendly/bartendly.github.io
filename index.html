@@ -198,6 +198,9 @@ h1,h2,h3,h4,p{margin:0;}
 body.home-page .hero{--hero-pos-desktop:53% center;--hero-pos-mobile:54% center;}
 @media (max-width:719px){.hero::before{background:linear-gradient(90deg,rgba(11,11,15,.88) 0%,rgba(11,11,15,.70) 52%,rgba(11,11,15,.56) 100%),linear-gradient(180deg,rgba(11,11,15,.06),rgba(11,11,15,.76));}}
 @media (max-width:719px){.hero__media img{object-position:var(--hero-pos-mobile);filter:brightness(var(--hero-mobile-brightness)) saturate(1.05) contrast(1.02);}}
+.field-error{display:none;margin:0;font-size:.82rem;line-height:1.35;color:#8a2020;}
+.field-error.is-visible{display:block;}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:rgba(233,78,78,.72);box-shadow:0 0 0 4px rgba(233,78,78,.10);}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bartendly.com/#organization","name":"Bartendly Experiences","url":"https://bartendly.com/","email":"contact@bartendly.com","logo":"https://bartendly.com/images/og-bartendly-experiences.jpg"},{"@type":"WebSite","@id":"https://bartendly.com/#website","name":"Bartendly Experiences","url":"https://bartendly.com/","publisher":{"@id":"https://bartendly.com/#organization"}},{"@type":"WebPage","@id":"https://bartendly.com/#webpage","url":"https://bartendly.com/","name":"Hire Bartenders for Events & Brand Activations","description":"Bartendly Experiences helps coordinate selected professional bartenders for trade shows, brand activations, corporate events, weddings and premium private parties.","isPartOf":{"@id":"https://bartendly.com/#website"}},{"@type":"Service","@id":"https://bartendly.com/#service","name":"Bartendly Experiences","serviceType":["Event bartending","Trade show bartenders","Corporate event bartenders","Brand activation bartenders","Wedding bartenders","Private event bartenders"],"provider":{"@id":"https://bartendly.com/#organization"},"areaServed":[{"@type":"City","name":"Hong Kong"},{"@type":"City","name":"Barcelona"},{"@type":"Place","name":"Selected international event hubs"}],"description":"Professional bartenders for trade shows, exhibition stands, brand activations, corporate events, weddings and premium private hospitality."}]}
@@ -279,33 +282,39 @@ body.home-page .hero{--hero-pos-desktop:53% center;--hero-pos-mobile:54% center;
 <p class="form-card__text" data-i18n="home.heroFormDesktopText">Send the essentials. We’ll reply quickly.</p>
 <div class="form-card__divider" aria-hidden="true"></div>
 <form id="contact-form-desktop" class="form-grid" action="https://formspree.io/f/mdkevral" method="POST" data-formspree="https://formspree.io/f/mdkevral" novalidate>
-<div class="field">
-<label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
-<input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" required>
-</div>
-<div class="field">
-<label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
-<input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number" required>
-</div>
-<div class="field">
-<label for="city-desktop" data-i18n="common.formCityLabel">City / venue</label>
-<input id="city-desktop" name="city" type="text" autocomplete="address-level2" data-i18n-placeholder="common.formCityPlaceholder" placeholder="Hong Kong, HKCEC, Barcelona, Fira..." required>
-</div>
-<div class="field">
-<label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
-<textarea id="event-desktop" name="event" data-i18n-placeholder="home.formEventPlaceholderBetter" placeholder="Date, time, venue/area, number of guests, event type, service context..." required></textarea>
-</div>
-<p class="form-service-note" data-i18n="common.serviceScopeText">Bartendly mainly coordinates bartending service. Alcohol is usually provided by the client, venue or event supplier.</p>
-<input type="hidden" name="_subject" value="New Bartendly Experiences request">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://bartendly.com/thank-you">
-<input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-<div class="form-actions">
-<button class="btn btn-primary" type="submit" data-i18n="common.formSubmit">Send request</button>
-<p class="form-microcopy" data-i18n="common.formMicrocopy">We’ll receive your request by email.</p>
-<p class="form-email-alt"><span data-i18n="common.formWhatsappLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27d%20like%20help%20with%20cocktail%20service%20for%20an%20event." target="_blank" rel="noopener noreferrer" data-i18n="common.formWhatsappLink">Message us directly</a></p>
-<div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
-</div>
+    <div class="form-feedback" id="form-feedback-desktop" role="status" aria-live="polite"></div>
+    <div class="field">
+    <label for="name-desktop" data-i18n="common.formNameLabel">Name</label>
+    <input id="name-desktop" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name" maxlength="80" aria-describedby="name-error-desktop" required>
+    <p class="field-error" id="name-error-desktop" role="alert"></p>
+    </div>
+    <div class="field">
+    <label for="contact-desktop" data-i18n="common.formContactLabel">Contact</label>
+    <input id="contact-desktop" name="contact" type="text" autocomplete="email" data-i18n-placeholder="common.formContactPlaceholder" placeholder="Email or WhatsApp number with country code" maxlength="120" aria-describedby="contact-error-desktop" required>
+    <p class="field-error" id="contact-error-desktop" role="alert"></p>
+    </div>
+    <div class="field">
+    <label for="city-desktop" data-i18n="common.formCityLabel">City / venue</label>
+    <input id="city-desktop" name="city" type="text" autocomplete="address-level2" data-i18n-placeholder="common.formCityPlaceholder" placeholder="Hong Kong, HKCEC, Barcelona, Fira..." maxlength="160" aria-describedby="city-error-desktop" required>
+    <p class="field-error" id="city-error-desktop" role="alert"></p>
+    </div>
+    <div class="field">
+    <label for="event-desktop" data-i18n="common.formEventLabel">Describe your event</label>
+    <textarea id="event-desktop" name="event" data-i18n-placeholder="home.formEventPlaceholderBetter" placeholder="Date, time, venue/area, number of guests, event type, service context..." maxlength="4000" aria-describedby="event-error-desktop" required></textarea>
+    <p class="field-error" id="event-error-desktop" role="alert"></p>
+    </div>
+    <p class="form-service-note" data-i18n="common.serviceScopeText">Bartendly mainly coordinates bartending service. Alcohol is usually provided by the client, venue or event supplier.</p>
+    <input type="hidden" name="service_page" value="Bartendly Experiences homepage">
+    <input type="hidden" name="_subject" value="New Bartendly Experiences request">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://bartendly.com/thank-you">
+    <input type="hidden" name="contact_type" id="contact-type-desktop" value="">
+    <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    <div class="form-actions">
+    <button class="btn btn-primary" type="submit" data-i18n="common.formSubmit">Send request</button>
+    <p class="form-microcopy" data-i18n="common.formMicrocopy">We’ll receive your request by email.</p>
+    <p class="form-email-alt"><span data-i18n="common.formWhatsappLabel">Prefer WhatsApp?</span> <a href="https://wa.me/34618502493?text=Hi%2C%20I%27d%20like%20help%20with%20cocktail%20service%20for%20an%20event." target="_blank" rel="noopener noreferrer" data-i18n="common.formWhatsappLink">Message us directly</a></p>
+    </div>
 </form>
 </div>
 </div>
@@ -489,7 +498,7 @@ function setMobileFeedback(message,type){if(!mobileFeedback){return;}mobileFeedb
 function clearMobileFeedback(){if(!mobileFeedback){return;}mobileFeedback.textContent='';mobileFeedback.className='form-feedback';}
 function buildWhatsappMessage(name,eventText){var template=getText('home.whatsappMessage','Hi, I’d like help with cocktail service for an event.\\n\\nName: {name}\\nEvent details: {event}\\n\\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
 function openWhatsapp(name,eventText){var message=buildWhatsappMessage(name,eventText);var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message);window.open(url,'_blank','noopener');}
-function validateMobileForm(name,eventText){if(!name){setMobileFeedback(getText('common.formValidationNameRequired','Please enter your name.'),'error');return false;}if(!eventText){setMobileFeedback(getText('common.formValidationEventRequired','Please describe your event.'),'error');return false;}clearMobileFeedback();return true;}
+function validateMobileForm(name,eventText){if(name.length<2){setMobileFeedback(getText('common.formValidationNameTooShort','Please enter your name.'),'error');return false;}if(eventText.length<15){setMobileFeedback(getText('common.formValidationEventTooShort','Please add a few more details about your event. Minimum 15 characters. Example: 28 Jun, Central, birthday, 60 guests.'),'error');return false;}clearMobileFeedback();return true;}
 function handleMobileSubmit(event){event.preventDefault();var name=(mobileForm.querySelector('#name-mobile').value||'').trim();var eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();if(!validateMobileForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setMobileFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}
 function bindFaq(){document.querySelectorAll('.faq-item').forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');document.querySelectorAll('.faq-item').forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
 function bindTopbar(){if(!topbar){return;}function onScroll(){if(window.scrollY>18){topbar.classList.add('is-scrolled');}else{topbar.classList.remove('is-scrolled');}}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
@@ -502,16 +511,24 @@ document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback(
 })();
 </script>
 <script>
-(function(){'use strict';
-var desktopForm=document.getElementById('contact-form-desktop');
-var desktopFeedback=document.getElementById('form-feedback-desktop');
-if(!desktopForm||!desktopFeedback){return;}
-function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
-function setDesktopFeedback(message,type){desktopFeedback.textContent=message;desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');}
-function clearDesktopFeedback(){desktopFeedback.textContent='';desktopFeedback.className='form-feedback';}
-async function handleDesktopSubmit(event){event.preventDefault();var name=(desktopForm.querySelector('#name-desktop').value||'').trim();var contact=(desktopForm.querySelector('#contact-desktop').value||'').trim();var city=(desktopForm.querySelector('#city-desktop').value||'').trim();var eventText=(desktopForm.querySelector('#event-desktop').value||'').trim();if(!name){setDesktopFeedback(getText('common.formValidationNameRequired','Please enter your name.'),'error');return;}if(!contact){setDesktopFeedback(getText('common.formValidationContactRequired','Please enter your contact details.'),'error');return;}if(!city){setDesktopFeedback(getText('common.formValidationCityRequired','Please enter the city or venue.'),'error');return;}if(!eventText){setDesktopFeedback(getText('common.formValidationEventRequired','Please describe your event.'),'error');return;}clearDesktopFeedback();try{var endpoint=desktopForm.getAttribute('data-formspree')||desktopForm.getAttribute('action');var response=await fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(desktopForm)});if(response.ok){setDesktopFeedback(getText('common.formSuccess','Thank you. Your request has been sent. We will get back to you quickly.'),'success');desktopForm.reset();}else{setDesktopFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}catch(e){setDesktopFeedback(getText('common.formNetworkError','Network error. Please try again.'),'error');}}
-desktopForm.addEventListener('submit',handleDesktopSubmit);
-})();
+    (function(){'use strict';
+    var desktopForm=document.getElementById('contact-form-desktop');
+    var desktopFeedback=document.getElementById('form-feedback-desktop');
+    if(!desktopForm){return;}
+    function getText(key,fallback){if(window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]){return window.__BARTENDLY_I18N__.flat[key];}return fallback||'';}
+    function getError(field){if(!field){return null;}var errorId=field.getAttribute('aria-describedby');return errorId?document.getElementById(errorId):null;}
+    function showFieldError(field,message){var error=getError(field);if(!field){return;}field.setAttribute('aria-invalid','true');if(error){error.textContent=message;error.className='field-error is-visible';}}
+    function clearFieldError(field){var error=getError(field);if(!field){return;}field.setAttribute('aria-invalid','false');if(error){error.textContent='';error.className='field-error';}}
+    function setDesktopFeedback(message,type){if(!desktopFeedback){return;}desktopFeedback.textContent=message;desktopFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':type==='success'?'is-success':'');}
+    function clearDesktopFeedback(){if(!desktopFeedback){return;}desktopFeedback.textContent='';desktopFeedback.className='form-feedback';}
+    function isValidEmail(value){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(value);}
+    function cleanPhone(value){return value.replace(/[()\s.-]/g,'');}
+    function isValidInternationalPhone(value){var compact=cleanPhone(value);return /^(\+|00)[1-9]\d{7,14}$/.test(compact);}
+    function looksLikePhone(value){return /^[+\d\s().-]+$/.test(value)&&/\d{6,}/.test(value);}
+    function getContactType(value){if(isValidEmail(value)){return 'email';}if(isValidInternationalPhone(value)){return 'whatsapp_or_phone';}return '';}
+    async function handleDesktopSubmit(event){event.preventDefault();var nameField=desktopForm.querySelector('#name-desktop');var contactField=desktopForm.querySelector('#contact-desktop');var cityField=desktopForm.querySelector('#city-desktop');var eventField=desktopForm.querySelector('#event-desktop');var contactTypeField=desktopForm.querySelector('#contact-type-desktop');var name=(nameField.value||'').trim();var contact=(contactField.value||'').trim();var city=(cityField.value||'').trim();var eventText=(eventField.value||'').trim();var contactType=getContactType(contact);clearFieldError(nameField);clearFieldError(contactField);clearFieldError(cityField);clearFieldError(eventField);clearDesktopFeedback();if(name.length<2){showFieldError(nameField,getText('common.formValidationNameTooShort','Please enter your name.'));nameField.focus();return;}if(!contact){showFieldError(contactField,getText('common.formValidationContactRequired','Please enter your email or WhatsApp number.'));contactField.focus();return;}if(!contactType){if(looksLikePhone(contact)){showFieldError(contactField,getText('common.formValidationPhoneCountryCode','Please add the country code to your WhatsApp number, for example +852, +33 or +34.'));}else{showFieldError(contactField,getText('common.formValidationContactInvalid','Please enter a valid email or WhatsApp number with country code.'));}contactField.focus();return;}if(city.length<2){showFieldError(cityField,getText('common.formValidationCityRequired','Please enter the city or venue.'));cityField.focus();return;}if(eventText.length<15){showFieldError(eventField,getText('common.formValidationEventTooShort','Please add a few more details about your event. Minimum 15 characters. Example: 28 Jun, Central, birthday, 60 guests.'));eventField.focus();return;}if(contactTypeField){contactTypeField.value=contactType;}try{var endpoint=desktopForm.getAttribute('data-formspree')||desktopForm.getAttribute('action');var response=await fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(desktopForm)});if(response.ok){setDesktopFeedback(getText('common.formSuccess','Thank you. Your request has been sent. We will get back to you quickly.'),'success');desktopForm.reset();}else{setDesktopFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}catch(e){setDesktopFeedback(getText('common.formNetworkError','Network error. Please try again or contact us by email.'),'error');}}
+    desktopForm.addEventListener('submit',handleDesktopSubmit);
+    })();
 </script>
 </body>
 </html>
