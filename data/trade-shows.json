@@ -1,0 +1,174 @@
+{
+  "barcelona": [
+    {
+      "name": "ERS Congress 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-09",
+      "url": "https://www.ersnet.org/congress-and-events/congress/"
+    },
+    {
+      "name": "Battery & Energy Storage Tech Europe 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-09",
+      "url": "https://www.batterytechexpoeurope.com/"
+    },
+    {
+      "name": "FabCon Europe 2026",
+      "venue": "CCIB Barcelona",
+      "startDate": "2026-09-28",
+      "endDate": "2026-10-01",
+      "url": "https://espc.tech/conference/fabcon-europe-2026/"
+    },
+    {
+      "name": "Liber 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-09-29",
+      "endDate": "2026-10-01",
+      "url": "https://www.liber.es/en/"
+    },
+    {
+      "name": "Alimentaria FoodTech 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-08",
+      "url": "https://www.alimentariafoodtech.com/en/alimentaria-foodtech/"
+    },
+    {
+      "name": "Barcelona Textile Expo 2026",
+      "venue": "Fira Barcelona Montjuïc",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-23",
+      "url": "https://barcelonatextileexpo.com/en_us/"
+    },
+    {
+      "name": "Smart City Expo World Congress 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-11-03",
+      "endDate": "2026-11-05",
+      "url": "https://www.smartcityexpo.com/"
+    },
+    {
+      "name": "Barcelona Cybersecurity Congress 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-11-03",
+      "endDate": "2026-11-05",
+      "url": "https://www.barcelonacybersecuritycongress.com/"
+    },
+    {
+      "name": "IBTM World 2026",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2026-11-17",
+      "endDate": "2026-11-19",
+      "url": "https://www.ibtmworld.com/"
+    },
+    {
+      "name": "Integrated Systems Europe 2027",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2027-02-02",
+      "endDate": "2027-02-05",
+      "url": "https://www.iseurope.org/"
+    },
+    {
+      "name": "MWC Barcelona 2027",
+      "venue": "Fira Barcelona Gran Via",
+      "startDate": "2027-03-01",
+      "endDate": "2027-03-04",
+      "url": "https://www.mwcbarcelona.com/"
+    }
+  ],
+  "hongKong": [
+    {
+      "name": "MedTech World Asia | Hong Kong 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-28",
+      "url": "https://med-tech.world/medtech-hongkong-summit/"
+    },
+    {
+      "name": "HKTDC Hong Kong Watch & Clock Fair 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-05",
+      "url": "https://www.hktdc.com/event/hkwatchfair/en"
+    },
+    {
+      "name": "BIOHK2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-12",
+      "url": "https://bio-hk.com/"
+    },
+    {
+      "name": "Jewellery & Gem WORLD Hong Kong 2026",
+      "venue": "AsiaWorld-Expo + Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "url": "https://jgw.exhibitions.jewellerynet.com/"
+    },
+    {
+      "name": "World Cancer Congress 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-09-24",
+      "endDate": "2026-09-26",
+      "url": "https://www.worldcancercongress.org/"
+    },
+    {
+      "name": "Global Sources Hong Kong Shows 2026 - Phase 1",
+      "venue": "AsiaWorld-Expo",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-14",
+      "url": "https://www.globalsources.com/trade-fair/hk-show/about"
+    },
+    {
+      "name": "HKTDC Hong Kong Electronics Fair 2026 - Autumn Edition",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-16",
+      "url": "https://www.hktdc.com/event/hkelectronicsfairae/en"
+    },
+    {
+      "name": "Global Sources Hong Kong Shows 2026 - Phase 2",
+      "venue": "AsiaWorld-Expo",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-21",
+      "url": "https://www.globalsources.com/trade-fair/hk-show/about"
+    },
+    {
+      "name": "HKTDC Hong Kong International Optical Fair 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-06",
+      "url": "https://www.hktdc.com/event/hkopticalfair/en"
+    },
+    {
+      "name": "HKTDC Hong Kong International Wine & Spirits Fair 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-07",
+      "url": "https://www.hktdc.com/event/hkwinefair/en"
+    },
+    {
+      "name": "Cosmopack Asia 2026",
+      "venue": "AsiaWorld-Expo",
+      "startDate": "2026-11-10",
+      "endDate": "2026-11-12",
+      "url": "https://www.cosmoprof-asia.com/"
+    },
+    {
+      "name": "Cosmoprof Asia 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-13",
+      "url": "https://www.cosmoprof-asia.com/"
+    },
+    {
+      "name": "JMA Hong Kong International Jewelry Show 2026",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-12-10",
+      "endDate": "2026-12-13",
+      "url": "https://www.jewelryshows.org/en/trade/fact_sheet.php"
+    }
+  ]
+}
