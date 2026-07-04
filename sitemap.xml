@@ -1,29 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bartendly.com/</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://bartendly.com/what-is-bartendly</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://bartendly.com/bartenders/</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://bartendly.com/hong-kong/</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-    <loc>https://bartendly.com/barcelona/</loc>
-    <lastmod>2026-05-27</lastmod>
-  </url>
-  <url>
-  <loc>https://bartendly.com/hong-kong/private-events/</loc>
-  <lastmod>2026-06-24</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+
+<url>
+<loc>https://bartendly.com/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
 </url>
+
+<url>
+<loc>https://bartendly.com/what-is-bartendly/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/bartenders/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/hong-kong/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/hong-kong/private-events/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/barcelona/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.95</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/barcelona/corporate-events/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
+
+<url>
+<loc>https://bartendly.com/privacy/</loc>
+<lastmod>2026-07-04</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+
 </urlset>
