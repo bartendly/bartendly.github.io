@@ -677,7 +677,9 @@
       "whatsappMessage": "Hi, I’d like bartender staffing for a trade show or business event in Barcelona.\n\nName: {name}\nEvent: {event}\n\nCan you help?",
       "formMobileSubmit": "Continue on WhatsApp",
       "formEmailCta": "Send by email instead",
-      "formValidationEventRequired": "Please add the trade show, date or venue."
+      "formValidationEventRequired": "Please add the trade show, date or venue.",
+      "whatsappNameFallback": "Not provided",
+      "whatsappEventFallback": "I’ll share the details here."
     },
     "experiences": {
       "tradeShows": {
@@ -1366,7 +1368,9 @@
       "whatsappMessage": "Bonjour, je souhaite un staffing de bartenders pour un salon ou un événement business à Barcelone.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?",
       "formMobileSubmit": "Continuer sur WhatsApp",
       "formEmailCta": "Envoyer par email",
-      "formValidationEventRequired": "Ajoutez au moins le salon, la date ou le lieu."
+      "formValidationEventRequired": "Ajoutez au moins le salon, la date ou le lieu.",
+      "whatsappNameFallback": "Non indiqué",
+      "whatsappEventFallback": "Je donnerai les détails ici."
     },
     "experiences": {
       "tradeShows": {
@@ -2055,7 +2059,9 @@
       "whatsappMessage": "Hola, me gustaría staffing de bartenders para una feria o evento business en Barcelona.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?",
       "formMobileSubmit": "Continuar por WhatsApp",
       "formEmailCta": "Enviar por email",
-      "formValidationEventRequired": "Añade al menos la feria, la fecha o el lugar."
+      "formValidationEventRequired": "Añade al menos la feria, la fecha o el lugar.",
+      "whatsappNameFallback": "No indicado",
+      "whatsappEventFallback": "Compartiré los detalles aquí."
     },
     "experiences": {
       "tradeShows": {
