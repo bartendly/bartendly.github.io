@@ -674,7 +674,10 @@
       "footerText": "Professional bartender staffing for Fira Barcelona trade shows, exhibition stands, sponsor lounges and corporate receptions.",
       "footerCorporateEvents": "Corporate events",
       "stickyCtaLabel": "Get a quote",
-      "whatsappMessage": "Hi, I’d like bartender staffing for a trade show or business event in Barcelona.\n\nName: {name}\nEvent: {event}\n\nCan you help?"
+      "whatsappMessage": "Hi, I’d like bartender staffing for a trade show or business event in Barcelona.\n\nName: {name}\nEvent: {event}\n\nCan you help?",
+      "formMobileSubmit": "Continue on WhatsApp",
+      "formEmailCta": "Send by email instead",
+      "formValidationEventRequired": "Please add the trade show, date or venue."
     },
     "experiences": {
       "tradeShows": {
@@ -1360,7 +1363,10 @@
       "footerText": "Staffing de bartenders professionnels pour salons à Fira Barcelona, stands, lounges sponsors et réceptions corporate.",
       "footerCorporateEvents": "Événements corporate",
       "stickyCtaLabel": "Demander un devis",
-      "whatsappMessage": "Bonjour, je souhaite un staffing de bartenders pour un salon ou un événement business à Barcelone.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?"
+      "whatsappMessage": "Bonjour, je souhaite un staffing de bartenders pour un salon ou un événement business à Barcelone.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?",
+      "formMobileSubmit": "Continuer sur WhatsApp",
+      "formEmailCta": "Envoyer par email",
+      "formValidationEventRequired": "Ajoutez au moins le salon, la date ou le lieu."
     },
     "experiences": {
       "tradeShows": {
@@ -2046,7 +2052,10 @@
       "footerText": "Staffing de bartenders profesionales para ferias en Fira Barcelona, stands, lounges de patrocinadores y recepciones corporativas.",
       "footerCorporateEvents": "Eventos corporativos",
       "stickyCtaLabel": "Pedir presupuesto",
-      "whatsappMessage": "Hola, me gustaría staffing de bartenders para una feria o evento business en Barcelona.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?"
+      "whatsappMessage": "Hola, me gustaría staffing de bartenders para una feria o evento business en Barcelona.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?",
+      "formMobileSubmit": "Continuar por WhatsApp",
+      "formEmailCta": "Enviar por email",
+      "formValidationEventRequired": "Añade al menos la feria, la fecha o el lugar."
     },
     "experiences": {
       "tradeShows": {
