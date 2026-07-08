@@ -170,8 +170,6 @@ h1,h2,h3,p{margin:0;}
 .form-microcopy,.form-email-alt{margin:0;font-size:.86rem;color:#666672;text-align:center;}
 .form-legal{margin:0;font-size:.78rem;line-height:1.45;color:#77717a;text-align:center;}
 .form-legal a{color:#151515;text-decoration:none;border-bottom:1px solid rgba(0,0,0,.22);padding-bottom:1px;}
-.footer__links{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:12px;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.66);}
-.footer__links a{color:rgba(255,255,255,.80);border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:1px;}
 .form-email-alt a{color:#151515;text-decoration:none;border-bottom:1px solid rgba(0,0,0,.22);padding-bottom:1px;}
 .form-service-note{padding:12px 14px;border-radius:16px;background:rgba(216,176,111,.12);border:1px solid rgba(216,176,111,.18);font-size:.84rem;line-height:1.45;color:#5c4728;}
 .form-feedback{display:none;padding:12px 14px;border-radius:14px;font-size:.88rem;}
@@ -195,17 +193,24 @@ h1,h2,h3,p{margin:0;}
 .faq-panel__content{padding:0 22px 0;color:var(--soft);line-height:1.65;}
 .faq-item.is-open .faq-panel{grid-template-rows:1fr;}
 .faq-item.is-open .faq-panel__content{padding:0 22px 22px;}
-.footer{padding:30px 0 94px;background:#0b0b0f;color:rgba(255,255,255,.72);}
-.footer__inner{display:grid;gap:20px;}
-.footer__brand{color:#fff;font-weight:800;letter-spacing:-.03em;}
-.footer__text{max-width:600px;margin-top:8px;font-size:.95rem;line-height:1.6;}
-.footer__legal{max-width:760px;margin-top:12px;font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.52);}
-.footer__meta{display:flex;flex-wrap:wrap;gap:14px 20px;font-size:.92rem;}
-.footer__meta strong{color:#fff;font-weight:750;}
+.footer{padding:38px 0 94px;background:#0b0b0f;color:rgba(255,255,255,.72);}
+.footer__inner{display:grid;gap:28px;}
+.footer__top{display:grid;gap:16px;}
+.footer__brand{color:#fff;font-weight:850;letter-spacing:-.03em;}
+.footer__text{max-width:680px;margin-top:8px;font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.72);}
+.footer__legal{max-width:860px;margin-top:12px;font-size:.82rem;line-height:1.55;color:rgba(255,255,255,.52);}
+.footer__legal a{color:rgba(255,255,255,.72);border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:1px;}
+.footer__links{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:14px;font-size:.84rem;line-height:1.5;}
+.footer__links a{color:rgba(255,255,255,.84);border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:1px;}
+.footer__nav{display:grid;gap:22px;padding-top:24px;border-top:1px solid rgba(255,255,255,.10);}
+.footer__group{display:grid;gap:8px;align-content:start;}
+.footer__group strong{display:block;color:#fff;font-size:.84rem;font-weight:800;letter-spacing:.02em;}
+.footer__group a{display:inline-flex;width:max-content;max-width:100%;color:rgba(255,255,255,.72);font-size:.92rem;line-height:1.35;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:1px;}
+.footer__copyright{color:rgba(255,255,255,.48);font-size:.84rem;line-height:1.5;}
 .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:140;display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 18px;border:none;border-radius:18px;background:linear-gradient(180deg,var(--gold),var(--gold3));color:#151515;font-weight:850;letter-spacing:-.02em;box-shadow:0 18px 50px rgba(216,176,111,.28);transition:transform .3s var(--ease),opacity .3s var(--ease);}
 .sticky-cta.is-hidden{opacity:0;pointer-events:none;transform:translateY(16px);}
 .reveal{opacity:1;transform:none;}
-@media (min-width:720px){.hero{padding:132px 0 78px;}.hero__grid{grid-template-columns:minmax(0,1.04fr) minmax(360px,.66fr);align-items:center;}.hero-panel{align-self:center;}.hero-card{padding:22px;}.section{padding:92px 0;}.priority-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.priority-card{min-height:560px;}.priority-card:first-child img{object-position:52% center;}.priority-card:nth-child(2) img{object-position:50% center;}.signal-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.ops-wrap{grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);align-items:stretch;}.other-box__inner{grid-template-columns:minmax(0,1fr) auto;}.form-shell{grid-template-columns:minmax(0,.78fr) minmax(430px,.82fr);}.form-card{padding:26px;}.form-card--mobile{display:none;}.form-card--desktop{display:block;}.footer__inner{grid-template-columns:minmax(0,1fr) minmax(280px,520px);align-items:start;}.footer__meta{justify-content:flex-end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
+@media (min-width:720px){.hero{padding:132px 0 78px;}.hero__grid{grid-template-columns:minmax(0,1.04fr) minmax(360px,.66fr);align-items:center;}.hero-panel{align-self:center;}.hero-card{padding:22px;}.section{padding:92px 0;}.priority-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.priority-card{min-height:560px;}.priority-card:first-child img{object-position:52% center;}.priority-card:nth-child(2) img{object-position:50% center;}.signal-grid{grid-template-columns:repeat(4,minmax(0,1fr));}.ops-wrap{grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);align-items:stretch;}.other-box__inner{grid-template-columns:minmax(0,1fr) auto;}.form-shell{grid-template-columns:minmax(0,.78fr) minmax(430px,.82fr);}.form-card{padding:26px;}.form-card--mobile{display:none;}.form-card--desktop{display:block;}.footer__top{grid-template-columns:minmax(0,1fr) auto;align-items:start;}.footer__nav{grid-template-columns:minmax(260px,1.3fr) minmax(180px,.8fr) minmax(220px,.9fr);gap:56px;}.footer__copyright{text-align:right;white-space:nowrap;align-self:end;}.sticky-cta{display:none;}.footer{padding-bottom:36px;}}
 @media (max-width:719px){.topbar__inner{min-height:68px;width:min(calc(100vw - 24px),1180px);}.brand__tag{display:none;}.brand__name{font-size:.82rem;max-width:164px;}.topbar__link--desktop,.topbar__cta{display:none;}.language-select{height:38px;min-width:62px;padding:0 28px 0 10px;font-size:.78rem;background-position:calc(100% - 16px) 16px,calc(100% - 10px) 16px;}.hero{padding-top:92px;padding-bottom:42px;}.hero::before{background:linear-gradient(90deg,rgba(11,11,15,.90) 0%,rgba(11,11,15,.72) 52%,rgba(11,11,15,.58) 100%),linear-gradient(180deg,rgba(11,11,15,.05),rgba(11,11,15,.80));}.hero__media img{object-position:54% center;filter:brightness(.90) saturate(1.05) contrast(1.02);}.hero__grid{min-height:auto;gap:24px;}.kicker{font-size:.68rem;letter-spacing:.075em;padding:8px 11px;}.hero__title{max-width:100%;font-size:clamp(2.2rem,9.6vw,3rem);line-height:1;letter-spacing:-.045em;}.hero__subtitle{max-width:100%;font-size:1rem;line-height:1.48;}.hero__actions,.priority-card__actions{display:grid;}.hero__actions .btn,.priority-card__actions .btn,.btn{width:100%;}.hero-card{min-height:0;border-radius:22px;}.section{padding:56px 0;}.priority-card{min-height:420px;border-radius:26px;}.priority-card__copy{left:18px;right:18px;bottom:18px;}.signal-grid,.ops-wrap,.form-shell{grid-template-columns:1fr;}.ops-main{min-height:360px;border-radius:26px;}.signal-card,.ops-card,.other-box,.form-card,.form-intro__item,.faq-item{border-radius:24px;}.footer{padding-bottom:92px;}}
 @media (max-width:379px){.brand__name{max-width:132px;}.language-select{min-width:58px;}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation:none!important;transition:none!important;}}
@@ -303,7 +308,7 @@ h1,h2,h3,p{margin:0;}
 <div class="field"><label for="name-mobile" data-i18n="common.formNameLabel">Name</label><input id="name-mobile" name="name" type="text" autocomplete="name" data-i18n-placeholder="common.formNamePlaceholder" placeholder="Your name"></div>
 <div class="field"><label for="event-mobile" data-i18n="common.formEventLabel">Describe your event</label><textarea id="event-mobile" name="event" data-i18n-placeholder="home.formEventPlaceholder" placeholder="City, date, venue or area, guests, event type..."></textarea></div>
 <p class="form-service-note" data-i18n="home.formServiceNote">Bartendly mainly coordinates bartending service. Alcohol is usually provided by the client, venue or event supplier.</p>
-<div class="form-actions"><button class="btn btn-primary" type="submit" data-i18n="home.formMobileSubmit">Continue on WhatsApp</button><p class="form-microcopy" data-i18n="home.formMobileMicrocopy">Fastest way to get a response.</p><p class="form-email-alt"><span data-i18n="common.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Event%20bartender%20request&body=Hi%2C%0A%0AI%27d%20like%20help%20with%20bartenders%20for%20an%20event.%0A%0ACity%20%2F%20venue%3A%0ADate%20%2F%20time%3A%0ANumber%20of%20guests%3A%0AEvent%20type%3A%0A%0AThanks" data-i18n="common.formEmailAlt">Send your request by email</a></p><p class="form-legal">By continuing, you agree that Bartendly OÜ may use your details to review your request and reply. See our <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms</a>.</p><div class="form-feedback" id="form-feedback-mobile" role="status" aria-live="polite"></div></div>
+<div class="form-actions"><a class="btn btn-primary" id="mobile-whatsapp-submit" href="https://wa.me/34618502493" target="_blank" rel="noopener" data-i18n="home.formMobileSubmit">Continue on WhatsApp</a><p class="form-microcopy" data-i18n="home.formMobileMicrocopy">Fastest way to get a response.</p><p class="form-email-alt"><span data-i18n="common.formEmailAltLabel">Prefer email?</span> <a href="mailto:contact@bartendly.com?subject=Event%20bartender%20request&body=Hi%2C%0A%0AI%27d%20like%20help%20with%20bartenders%20for%20an%20event.%0A%0ACity%20%2F%20venue%3A%0ADate%20%2F%20time%3A%0ANumber%20of%20guests%3A%0AEvent%20type%3A%0A%0AThanks" data-i18n="common.formEmailAlt">Send your request by email</a></p><p class="form-legal">By continuing, you agree that Bartendly OÜ may use your details to review your request and reply. See our <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms</a>.</p><div class="form-feedback" id="form-feedback-mobile" role="status" aria-live="polite"></div></div>
 </form>
 </div>
 <div class="form-card form-card--desktop">
@@ -335,8 +340,20 @@ h1,h2,h3,p{margin:0;}
 </main>
 <footer class="footer">
     <div class="container footer__inner">
-    <div><div class="footer__brand" data-i18n="common.footerBrand">Bartendly Experiences</div><p class="footer__text" data-i18n="common.footerExperiencesText">Professional bartenders for trade shows, brand activations, corporate events and premium private hospitality.</p><p class="footer__legal">Bartendly Experiences is operated by Bartendly OÜ · Registry code 17343247 · Registered office: Tornimäe tn 5, 10145 Tallinn, Estonia · <a href="mailto:contact@bartendly.com">contact@bartendly.com</a></p><div class="footer__links"><a href="/terms/" data-i18n="common.footerTerms">Terms &amp; Conditions</a><a href="/privacy/" data-i18n="common.footerPrivacy">Privacy Policy</a></div></div>
-    <div class="footer__meta"><div><strong data-i18n="common.footerContactLabel">Contact</strong></div><div><a href="mailto:contact@bartendly.com" data-i18n="common.footerEmail">contact@bartendly.com</a></div><div><a href="/barcelona/" data-i18n="common.navBarcelonaFairs">Barcelona fairs</a></div><div><a href="/barcelona/corporate-events/" data-i18n="common.footerBarcelonaCorporate">Barcelona corporate</a></div><div><a href="/hong-kong/private-events/" data-i18n="common.navHongKongPrivate">Hong Kong private</a></div><div><a href="/hong-kong/" data-i18n="common.footerHongKong">Hong Kong</a></div><div><a href="/what-is-bartendly" data-i18n="common.footerWhatIsBartendly">What is Bartendly?</a></div><div><a href="/bartenders/" data-i18n="common.navBartenders">Bartenders</a></div><div><span data-i18n="common.footerRights">All rights reserved.</span></div></div>
+    <div class="footer__top">
+    <div>
+    <div class="footer__brand" data-i18n="common.footerBrand">Bartendly Experiences</div>
+    <p class="footer__text" data-i18n="common.footerExperiencesText">Professional bartenders for trade shows, brand activations, corporate events and premium private hospitality.</p>
+    <p class="footer__legal">Bartendly Experiences is operated by Bartendly OÜ · Registry code 17343247 · Registered office: Tornimäe tn 5, 10145 Tallinn, Estonia · <a href="mailto:contact@bartendly.com">contact@bartendly.com</a></p>
+    <div class="footer__links"><a href="/terms/" data-i18n="common.footerTerms">Terms &amp; Conditions</a><a href="/privacy/" data-i18n="common.footerPrivacy">Privacy Policy</a></div>
+    </div>
+    <p class="footer__copyright">© Bartendly OÜ. <span data-i18n="common.footerRights">All rights reserved.</span></p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+    <div class="footer__group"><strong data-i18n="common.footerServicesLabel">Services</strong><a href="/barcelona/" data-i18n="common.footerBarcelonaTradeShows">Barcelona trade shows</a><a href="/barcelona/corporate-events/" data-i18n="common.footerBarcelonaCorporateEvents">Barcelona corporate events</a><a href="/hong-kong/private-events/" data-i18n="common.footerHongKongPrivateEvents">Hong Kong private events</a><a href="/hong-kong/" data-i18n="common.footerHongKongEventBartenders">Hong Kong event bartenders</a></div>
+    <div class="footer__group"><strong data-i18n="common.footerPlatformLabel">Platform</strong><a href="/what-is-bartendly" data-i18n="common.footerWhatIsBartendly">What is Bartendly?</a><a href="/bartenders/" data-i18n="common.footerForBartenders">For bartenders</a></div>
+    <div class="footer__group"><strong data-i18n="common.footerContactLabel">Contact</strong><a href="mailto:contact@bartendly.com" data-i18n="common.footerEmail">contact@bartendly.com</a></div>
+    </nav>
     </div>
 </footer>
 <a class="sticky-cta is-hidden" href="#choose" id="sticky-cta" data-i18n="home.stickyCtaLabel">Find the right setup</a>
@@ -345,19 +362,19 @@ h1,h2,h3,p{margin:0;}
 (function(){'use strict';
 var WHATSAPP_NUMBER='34618502493',mobileForm=document.getElementById('contact-form-mobile'),mobileFeedback=document.getElementById('form-feedback-mobile'),topbar=document.getElementById('topbar'),stickyCta=document.getElementById('sticky-cta');
 function getText(key,fallback){return window.__BARTENDLY_I18N__&&window.__BARTENDLY_I18N__.flat&&window.__BARTENDLY_I18N__.flat[key]?window.__BARTENDLY_I18N__.flat[key]:fallback||'';}
-function setMobileFeedback(message,type){if(!mobileFeedback){return;}mobileFeedback.textContent=message;mobileFeedback.className='form-feedback is-visible '+(type==='error'?'is-error':'');}
 function clearMobileFeedback(){if(!mobileFeedback){return;}mobileFeedback.textContent='';mobileFeedback.className='form-feedback';}
-function buildWhatsappMessage(name,eventText){var template=getText('home.whatsappMessage','Hi, I’d like help with bartenders for an event.\\n\\nName: {name}\\nEvent details: {event}\\n\\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
-function openWhatsapp(name,eventText){window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(buildWhatsappMessage(name,eventText)),'_blank','noopener');}
-function validateMobileForm(name,eventText){if(name.length<2){setMobileFeedback(getText('common.formValidationNameTooShort','Please enter your name.'),'error');return false;}if(eventText.length<15){setMobileFeedback(getText('common.formValidationEventTooShort','Please add a few more details about your event. Minimum 15 characters. Example: 28 Jun, Central, birthday, 60 guests.'),'error');return false;}clearMobileFeedback();return true;}
-function handleMobileSubmit(event){event.preventDefault();var name=(mobileForm.querySelector('#name-mobile').value||'').trim(),eventText=(mobileForm.querySelector('#event-mobile').value||'').trim();if(!validateMobileForm(name,eventText)){return;}try{openWhatsapp(name,eventText);}catch(error){setMobileFeedback(getText('common.formError','Something went wrong. Please try again or contact us by email.'),'error');}}
+function getMobileValue(selector){if(!mobileForm){return '';}var field=mobileForm.querySelector(selector);return field?(field.value||'').trim():'';}
+function buildWhatsappMessage(){var name=getMobileValue('#name-mobile')||getText('common.whatsappNameFallback','Not provided');var eventText=getMobileValue('#event-mobile')||getText('common.whatsappEventFallback','I’ll share the details here.');var template=getText('home.whatsappMessage','Hi, I’d like help with bartenders for an event.\n\nName: {name}\nEvent details: {event}\n\nCan you help?');return template.replace('{name}',name).replace('{event}',eventText);}
+function getWhatsappUrl(){return 'https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(buildWhatsappMessage());}
+function updateWhatsappHref(){var link=document.getElementById('mobile-whatsapp-submit');if(link){link.href=getWhatsappUrl();}}
+function handleMobileSubmit(event){event.preventDefault();clearMobileFeedback();window.location.href=getWhatsappUrl();}
 function bindFaq(){document.querySelectorAll('.faq-item').forEach(function(item){var button=item.querySelector('button');button.addEventListener('click',function(){var isOpen=item.classList.contains('is-open');document.querySelectorAll('.faq-item').forEach(function(other){other.classList.remove('is-open');other.querySelector('button').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('is-open');button.setAttribute('aria-expanded','true');}});});}
 function bindTopbar(){if(!topbar){return;}function onScroll(){topbar.classList.toggle('is-scrolled',window.scrollY>18);}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
 function bindParallax(){var target=document.querySelector('[data-parallax]');if(!target||window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}function update(){target.style.transform='scale(1.04) translate3d(0,'+Math.min(window.scrollY*.10,26)+'px,0)';}update();window.addEventListener('scroll',update,{passive:true});}
 function bindAnchorButtons(){document.querySelectorAll('a[href^="#"]').forEach(function(link){link.addEventListener('click',function(event){var id=link.getAttribute('href');if(!id||id==='#'){return;}var target=document.querySelector(id);if(!target){return;}event.preventDefault();window.scrollTo({top:target.getBoundingClientRect().top+window.scrollY-88,behavior:'smooth'});});});}
 function bindStickyCta(){if(!stickyCta){return;}function onScroll(){var y=window.scrollY,hideAtBottom=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);stickyCta.classList.toggle('is-hidden',y<220||hideAtBottom);}onScroll();window.addEventListener('scroll',onScroll,{passive:true});}
-function init(){if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);}bindFaq();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
-document.addEventListener('DOMContentLoaded',init);document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback();});
+function init(){if(mobileForm){mobileForm.addEventListener('submit',handleMobileSubmit);mobileForm.addEventListener('input',updateWhatsappHref,true);mobileForm.addEventListener('change',updateWhatsappHref,true);updateWhatsappHref();}var mobileWhatsapp=document.getElementById('mobile-whatsapp-submit');if(mobileWhatsapp){mobileWhatsapp.addEventListener('click',function(){clearMobileFeedback();updateWhatsappHref();});}bindFaq();bindTopbar();bindParallax();bindAnchorButtons();bindStickyCta();}
+document.addEventListener('DOMContentLoaded',init);document.addEventListener('bartendly:i18n-ready',function(){clearMobileFeedback();updateWhatsappHref();});
 })();
 </script>
 <script>

@@ -85,7 +85,18 @@
       "footerLegal": "Bartendly Experiences is operated by Bartendly OÜ · Registry code 17343247 · Registered office: Tornimäe tn 5, 10145 Tallinn, Estonia · contact@bartendly.com",
       "footerBarcelonaCorporate": "Barcelona corporate",
       "common.footerTerms": "Terms & Conditions",
-      "common.footerPrivacy": "Privacy Policy"
+      "common.footerPrivacy": "Privacy Policy",
+      "common.footerServicesLabel": "Services",
+      "common.footerPlatformLabel": "Platform",
+      "common.footerBarcelonaTradeShows": "Barcelona trade shows",
+      "common.footerBarcelonaCorporateEvents": "Barcelona corporate events",
+      "common.footerHongKongPrivateEvents": "Hong Kong private events",
+      "common.footerHongKongEventBartenders": "Hong Kong event bartenders",
+      "common.footerForBartenders": "For bartenders",
+      "common.formLegalContinuePrefix": "By continuing, you agree that Bartendly OÜ may use your details to review your request and reply.",
+      "common.formLegalRequestPrefix": "By sending this request, you agree that Bartendly OÜ may use your details to review your request and reply.",
+      "common.whatsappNameFallback": "Not provided",
+      "common.whatsappEventFallback": "I’ll share the details here."
     },
     "home": {
       "heroImageAlt": "Professional bartenders serving cocktails at a premium event",
@@ -778,7 +789,18 @@
       "footerLegal": "Bartendly Experiences est exploité par Bartendly OÜ · Registre 17343247 · Siège social : Tornimäe tn 5, 10145 Tallinn, Estonie · contact@bartendly.com",
       "footerBarcelonaCorporate": "Corporate Barcelone",
       "common.footerTerms": "Conditions générales",
-      "common.footerPrivacy": "Politique de confidentialité"
+      "common.footerPrivacy": "Politique de confidentialité",
+      "common.footerServicesLabel": "Services",
+      "common.footerPlatformLabel": "Plateforme",
+      "common.footerBarcelonaTradeShows": "Salons professionnels à Barcelone",
+      "common.footerBarcelonaCorporateEvents": "Événements d’entreprise à Barcelone",
+      "common.footerHongKongPrivateEvents": "Événements privés à Hong Kong",
+      "common.footerHongKongEventBartenders": "Bartenders événementiels à Hong Kong",
+      "common.footerForBartenders": "Pour les bartenders",
+      "common.formLegalContinuePrefix": "En continuant, vous acceptez que Bartendly OÜ utilise vos informations pour étudier votre demande et vous répondre.",
+      "common.formLegalRequestPrefix": "En envoyant cette demande, vous acceptez que Bartendly OÜ utilise vos informations pour l’étudier et vous répondre.",
+      "common.whatsappNameFallback": "Non renseigné",
+      "common.whatsappEventFallback": "Je partagerai les détails ici."
     },
     "home": {
       "heroImageAlt": "Bartenders professionnels en service lors d’un événement premium",
@@ -1471,7 +1493,18 @@
       "footerLegal": "Bartendly Experiences está operado por Bartendly OÜ · Código de registro 17343247 · Domicilio social: Tornimäe tn 5, 10145 Tallinn, Estonia · contact@bartendly.com",
       "footerBarcelonaCorporate": "Corporate Barcelona",
       "common.footerTerms": "Términos y condiciones",
-      "common.footerPrivacy": "Política de privacidad"
+      "common.footerPrivacy": "Política de privacidad",
+      "common.footerServicesLabel": "Servicios",
+      "common.footerPlatformLabel": "Plataforma",
+      "common.footerBarcelonaTradeShows": "Ferias profesionales en Barcelona",
+      "common.footerBarcelonaCorporateEvents": "Eventos corporativos en Barcelona",
+      "common.footerHongKongPrivateEvents": "Eventos privados en Hong Kong",
+      "common.footerHongKongEventBartenders": "Bartenders para eventos en Hong Kong",
+      "common.footerForBartenders": "Para bartenders",
+      "common.formLegalContinuePrefix": "Al continuar, aceptas que Bartendly OÜ utilice tus datos para revisar tu solicitud y responderte.",
+      "common.formLegalRequestPrefix": "Al enviar esta solicitud, aceptas que Bartendly OÜ utilice tus datos para revisarla y responderte.",
+      "common.whatsappNameFallback": "No indicado",
+      "common.whatsappEventFallback": "Compartiré los detalles aquí."
     },
     "home": {
       "heroImageAlt": "Bartenders profesionales sirviendo cócteles en un evento premium",
