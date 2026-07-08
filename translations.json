@@ -83,7 +83,9 @@
       "navHongKongPrivate": "Hong Kong private",
       "navOtherRequest": "Other request",
       "footerLegal": "Bartendly Experiences is operated by Bartendly OÜ · Registry code 17343247 · Registered office: Tornimäe tn 5, 10145 Tallinn, Estonia · contact@bartendly.com",
-      "footerBarcelonaCorporate": "Barcelona corporate"
+      "footerBarcelonaCorporate": "Barcelona corporate",
+      "common.footerTerms": "Terms & Conditions",
+      "common.footerPrivacy": "Privacy Policy"
     },
     "home": {
       "heroImageAlt": "Professional bartenders serving cocktails at a premium event",
@@ -774,7 +776,9 @@
       "navHongKongPrivate": "Privé Hong Kong",
       "navOtherRequest": "Autre demande",
       "footerLegal": "Bartendly Experiences est exploité par Bartendly OÜ · Registre 17343247 · Siège social : Tornimäe tn 5, 10145 Tallinn, Estonie · contact@bartendly.com",
-      "footerBarcelonaCorporate": "Corporate Barcelone"
+      "footerBarcelonaCorporate": "Corporate Barcelone",
+      "common.footerTerms": "Conditions générales",
+      "common.footerPrivacy": "Politique de confidentialité"
     },
     "home": {
       "heroImageAlt": "Bartenders professionnels en service lors d’un événement premium",
@@ -1465,7 +1469,9 @@
       "navHongKongPrivate": "Privado Hong Kong",
       "navOtherRequest": "Otra solicitud",
       "footerLegal": "Bartendly Experiences está operado por Bartendly OÜ · Código de registro 17343247 · Domicilio social: Tornimäe tn 5, 10145 Tallinn, Estonia · contact@bartendly.com",
-      "footerBarcelonaCorporate": "Corporate Barcelona"
+      "footerBarcelonaCorporate": "Corporate Barcelona",
+      "common.footerTerms": "Términos y condiciones",
+      "common.footerPrivacy": "Política de privacidad"
     },
     "home": {
       "heroImageAlt": "Bartenders profesionales sirviendo cócteles en un evento premium",
