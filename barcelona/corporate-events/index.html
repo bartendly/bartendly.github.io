@@ -232,6 +232,56 @@ body.barcelona-corporate-page .hero__media img{filter:brightness(var(--hero-brig
   .sticky-cta{bottom:calc(12px + env(safe-area-inset-bottom))}
 }
 
+
+/* Barcelona corporate mobile hero image visibility v2 */
+@media(max-width:719px){
+  body.barcelona-corporate-page .hero{
+    min-height:auto;
+    padding-top:104px;
+    padding-bottom:46px;
+    background:#0b0b0f;
+  }
+  body.barcelona-corporate-page .hero::before{
+    background:
+      linear-gradient(90deg,
+        rgba(11,11,15,.74) 0%,
+        rgba(11,11,15,.50) 45%,
+        rgba(11,11,15,.22) 72%,
+        rgba(11,11,15,.12) 100%),
+      linear-gradient(180deg,
+        rgba(11,11,15,.03) 0%,
+        rgba(11,11,15,.14) 52%,
+        rgba(11,11,15,.58) 100%);
+  }
+  body.barcelona-corporate-page .hero__media{
+    inset:0;
+    height:100%;
+  }
+  body.barcelona-corporate-page .hero__media img{
+    object-position:64% center;
+    filter:brightness(1.08) saturate(1.08) contrast(1.01);
+    transform:scale(1.015);
+  }
+  body.barcelona-corporate-page .hero__title,
+  body.barcelona-corporate-page .hero__subtitle,
+  body.barcelona-corporate-page .hero__support{
+    text-shadow:0 3px 24px rgba(0,0,0,.42);
+  }
+  body.barcelona-corporate-page .hero__subtitle,
+  body.barcelona-corporate-page .hero__support{
+    background:rgba(11,11,15,.18);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:12px 13px;
+    backdrop-filter:blur(7px);
+  }
+  body.barcelona-corporate-page .hero__proof li{
+    background:rgba(255,255,255,.12);
+    border-color:rgba(255,255,255,.18);
+    backdrop-filter:blur(8px);
+  }
+}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","name":"Barcelona corporate event bartenders by Bartendly Experiences","url":"https://bartendly.com/barcelona/corporate-events/","image":"https://bartendly.com/images/og-bartendly-experiences.jpg","description":"Hire professional bartenders in Barcelona for corporate receptions, brand activations, product launches, trade-show side events and premium business hospitality.","areaServed":{"@type":"City","name":"Barcelona"},"provider":{"@type":"Organization","name":"Bartendly","url":"https://bartendly.com/"},"serviceType":["Corporate event bartenders in Barcelona","Brand activation bartenders","Product launch bartenders","Corporate reception bartenders","Trade-show side event bartenders","Premium hospitality bartenders"]}
