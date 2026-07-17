@@ -613,8 +613,8 @@
       "navCorporateEvents": "Corporate events",
       "navQuote": "Get a quote",
       "heroEyebrow": "Fira Barcelona bartender staffing",
-      "heroTitle": "Make your stand worth stopping for",
-      "heroSubtitle": "Selected professional bartenders for exhibition stands, sponsor lounges and client receptions at Fira Barcelona.",
+      "heroTitle": "Hire bartenders for your Fira Barcelona stand",
+      "heroSubtitle": "Professional bartender staffing for exhibition stands, sponsor lounges and client receptions at Fira Barcelona.",
       "heroPrimaryCta": "Get a quote",
       "heroWhatsappCta": "WhatsApp us",
       "heroMicroOne": "Staffing-first",
@@ -704,7 +704,7 @@
       "faqNoticeAnswer": "For large fairs and multi-day service, earlier is better. Short notice can still work if the date, hours and required profiles are available.",
       "faqRateQuestion": "Is the €220–€280 day rate fixed?",
       "faqRateAnswer": "No. It is an indicative staffing range per bartender for a standard fair day. The final quote depends on service hours, date, bartender profile, number of days and total team size.",
-      "ctaTitle": "Ready to make your stand work harder?",
+      "ctaTitle": "Ready to hire bartenders for your Fira Barcelona stand?",
       "ctaText": "Send the trade show, dates, stand or reception format and service hours. We’ll reply with a practical staffing option and clear scope.",
       "ctaButton": "Get a quote",
       "ctaEmailLabel": "Prefer email?",
@@ -717,7 +717,13 @@
       "formEmailCta": "Send by email instead",
       "formValidationEventRequired": "Please add the trade show, date or venue.",
       "whatsappNameFallback": "Not provided",
-      "whatsappEventFallback": "I’ll share the details here."
+      "whatsappEventFallback": "I’ll share the details here.",
+      "estimateBadge": "New · Beta",
+      "estimateTitle": "Estimate your Barcelona bartender staffing.",
+      "estimateText": "Use the Bartendly Quote Assistant to get an indicative team size and price range before sending your trade-show request.",
+      "estimateNote": "Indicative and non-binding. Final scope, availability and price are confirmed by Bartendly.",
+      "estimateCta": "Start instant estimate",
+      "estimateQuoteCta": "Get a quote instead"
     },
     "experiences": {
       "tradeShows": {
@@ -1342,8 +1348,8 @@
       "navCorporateEvents": "Événements corporate",
       "navQuote": "Demander un devis",
       "heroEyebrow": "Staffing bartenders · Fira Barcelona",
-      "heroTitle": "Donnez envie de s’arrêter sur votre stand",
-      "heroSubtitle": "Bartenders professionnels sélectionnés pour stands, lounges sponsors et réceptions clients à Fira Barcelona.",
+      "heroTitle": "Engagez des bartenders pour votre stand à Fira Barcelona",
+      "heroSubtitle": "Staffing de bartenders professionnels pour stands, lounges sponsors et réceptions clients à Fira Barcelona.",
       "heroPrimaryCta": "Demander un devis",
       "heroWhatsappCta": "WhatsApp",
       "heroMicroOne": "Staffing d’abord",
@@ -1433,7 +1439,7 @@
       "faqNoticeAnswer": "Pour les grands salons et services multi-jours, le plus tôt est le mieux. Une demande tardive peut encore fonctionner si la date, les horaires et les profils requis sont disponibles.",
       "faqRateQuestion": "Le tarif de 220–280 € par jour est-il fixe ?",
       "faqRateAnswer": "Non. C’est une fourchette indicative de staffing par bartender pour une journée standard de salon. Le devis final dépend des heures de service, de la date, du profil, du nombre de jours et de la taille totale de l’équipe.",
-      "ctaTitle": "Prêt à rendre votre stand plus efficace ?",
+      "ctaTitle": "Prêt à engager des bartenders pour votre stand à Fira Barcelona ?",
       "ctaText": "Envoyez le salon, les dates, le format du stand ou de la réception et les heures de service. Nous répondrons avec une option de staffing pratique et un périmètre clair.",
       "ctaButton": "Demander un devis",
       "ctaEmailLabel": "Vous préférez l’email ?",
@@ -1446,7 +1452,13 @@
       "formEmailCta": "Envoyer par email",
       "formValidationEventRequired": "Ajoutez au moins le salon, la date ou le lieu.",
       "whatsappNameFallback": "Non indiqué",
-      "whatsappEventFallback": "Je donnerai les détails ici."
+      "whatsappEventFallback": "Je donnerai les détails ici.",
+      "estimateBadge": "Nouveau · Beta",
+      "estimateTitle": "Estimez votre staffing bartender à Barcelone.",
+      "estimateText": "Utilisez le Bartendly Quote Assistant pour obtenir une taille d’équipe et une fourchette de prix indicatives avant d’envoyer votre demande salon.",
+      "estimateNote": "Estimation indicative et sans engagement. Le périmètre final, les disponibilités et le prix sont confirmés par Bartendly.",
+      "estimateCta": "Lancer l’estimation",
+      "estimateQuoteCta": "Demander un devis"
     },
     "experiences": {
       "tradeShows": {
@@ -1546,7 +1558,7 @@
       "footerBarcelonaCorporateEvents": "Eventos corporativos en Barcelona",
       "footerHongKongPrivateEvents": "Eventos privados en Hong Kong",
       "footerHongKongEventBartenders": "Bartenders para eventos en Hong Kong",
-      "footerInstantEstimate": "Estimación instantánea de bartenders",
+      "footerInstantEstimate": "Estimación inmediata de bartenders",
       "footerForBartenders": "Para bartenders",
       "bartenderCtaMiniText": "¿Eres bartender?",
       "bartenderCtaMiniLink": "Únete a Bartendly",
@@ -2071,8 +2083,8 @@
       "navCorporateEvents": "Eventos corporativos",
       "navQuote": "Pedir presupuesto",
       "heroEyebrow": "Staffing de bartenders · Fira Barcelona",
-      "heroTitle": "Haz que la gente se detenga en tu stand",
-      "heroSubtitle": "Bartenders profesionales seleccionados para stands, lounges de patrocinadores y recepciones con clientes en Fira Barcelona.",
+      "heroTitle": "Contrata bartenders para tu stand en Fira Barcelona",
+      "heroSubtitle": "Staffing de bartenders profesionales para stands, lounges de patrocinadores y recepciones con clientes en Fira Barcelona.",
       "heroPrimaryCta": "Pedir presupuesto",
       "heroWhatsappCta": "WhatsApp",
       "heroMicroOne": "Staffing primero",
@@ -2162,7 +2174,7 @@
       "faqNoticeAnswer": "Para grandes ferias y servicio multi-día, cuanto antes mejor. Una solicitud tardía puede funcionar si la fecha, horarios y perfiles requeridos están disponibles.",
       "faqRateQuestion": "¿La tarifa diaria de 220–280 € es fija?",
       "faqRateAnswer": "No. Es una horquilla orientativa de staffing por bartender para un día estándar de feria. El presupuesto final depende de horas de servicio, fecha, perfil del bartender, número de días y tamaño total del equipo.",
-      "ctaTitle": "¿Listo para hacer que tu stand trabaje más?",
+      "ctaTitle": "¿Listo para contratar bartenders para tu stand en Fira Barcelona?",
       "ctaText": "Envía la feria, fechas, formato del stand o recepción y horas de servicio. Responderemos con una opción práctica de staffing y alcance claro.",
       "ctaButton": "Pedir presupuesto",
       "ctaEmailLabel": "¿Prefieres email?",
@@ -2175,7 +2187,13 @@
       "formEmailCta": "Enviar por email",
       "formValidationEventRequired": "Añade al menos la feria, la fecha o el lugar.",
       "whatsappNameFallback": "No indicado",
-      "whatsappEventFallback": "Compartiré los detalles aquí."
+      "whatsappEventFallback": "Compartiré los detalles aquí.",
+      "estimateBadge": "Nuevo · Beta",
+      "estimateTitle": "Estima tu staffing de bartenders en Barcelona.",
+      "estimateText": "Usa el Bartendly Quote Assistant para obtener un tamaño de equipo y una horquilla de precio orientativos antes de enviar tu solicitud para la feria.",
+      "estimateNote": "Estimación orientativa y no vinculante. Bartendly confirma el alcance final, la disponibilidad y el precio.",
+      "estimateCta": "Iniciar estimación",
+      "estimateQuoteCta": "Pedir presupuesto"
     },
     "experiences": {
       "tradeShows": {
