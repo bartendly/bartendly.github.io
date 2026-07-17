@@ -76,9 +76,16 @@
       "startDate": "2027-03-01",
       "endDate": "2027-03-04",
       "url": "https://www.mwcbarcelona.com/"
+    },
+    {
+      "name": "Vitafoods Europe 2027",
+      "venue": "Fira Barcelona",
+      "startDate": "2027-05-18",
+      "endDate": "2027-05-20",
+      "url": "https://www.vitafoods.eu.com/en/home.html"
     }
   ],
-  "hongKong": [
+  "hong-kong": [
     {
       "name": "MedTech World Asia | Hong Kong 2026",
       "venue": "Hong Kong Convention and Exhibition Centre",
@@ -136,6 +143,20 @@
       "url": "https://www.globalsources.com/trade-fair/hk-show/about"
     },
     {
+      "name": "Eco Expo Asia 2026",
+      "venue": "AsiaWorld-Expo",
+      "startDate": "2026-10-26",
+      "endDate": "2026-10-29",
+      "url": "https://www.hktdc.com/event/ecoexpoasia/en"
+    },
+    {
+      "name": "HKTDC Hong Kong International Lighting Fair 2026 - Autumn Edition",
+      "venue": "Hong Kong Convention and Exhibition Centre",
+      "startDate": "2026-10-27",
+      "endDate": "2026-10-30",
+      "url": "https://www.hktdc.com/event/hklightingfairae/en"
+    },
+    {
       "name": "HKTDC Hong Kong International Optical Fair 2026",
       "venue": "Hong Kong Convention and Exhibition Centre",
       "startDate": "2026-11-04",
@@ -169,6 +190,218 @@
       "startDate": "2026-12-10",
       "endDate": "2026-12-13",
       "url": "https://www.jewelryshows.org/en/trade/fact_sheet.php"
+    }
+  ],
+  "london": [
+    {
+      "name": "IAAPA Expo Europe 2026",
+      "venue": "ExCeL London",
+      "startDate": "2026-09-21",
+      "endDate": "2026-09-25",
+      "url": "https://iaapa.org/expos-and-events/expo-europe"
+    },
+    {
+      "name": "WTM London 2026",
+      "venue": "ExCeL London",
+      "startDate": "2026-11-03",
+      "endDate": "2026-11-05",
+      "url": "https://www.wtm.com/london/en-gb.html"
+    }
+  ],
+  "paris": [
+    {
+      "name": "Maison&Objet Paris 2026 - September Edition",
+      "venue": "Paris Nord Villepinte",
+      "startDate": "2026-09-10",
+      "endDate": "2026-09-14",
+      "url": "https://www.maison-objet.com/en/paris"
+    },
+    {
+      "name": "NRF 2026: Retail's Big Show Europe",
+      "venue": "Paris Expo Porte de Versailles",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-17",
+      "url": "https://www.nrfbigshoweurope.com/en"
+    },
+    {
+      "name": "SIAL Paris 2026",
+      "venue": "Paris Nord Villepinte",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-21",
+      "url": "https://www.sialparis.com/en"
+    },
+    {
+      "name": "ALL4PACK EMBALLAGE PARIS 2027",
+      "venue": "Paris Nord Villepinte",
+      "startDate": "2027-06-29",
+      "endDate": "2027-07-01",
+      "url": "https://www.all-for-pack.com/en"
+    }
+  ],
+  "berlin": [
+    {
+      "name": "IFA Berlin 2026",
+      "venue": "Messe Berlin",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-08",
+      "url": "https://www.ifa-berlin.com/"
+    }
+  ],
+  "frankfurt": [
+    {
+      "name": "Automechanika Frankfurt 2026",
+      "venue": "Messe Frankfurt",
+      "startDate": "2026-09-08",
+      "endDate": "2026-09-12",
+      "url": "https://automechanika.messefrankfurt.com/frankfurt/en.html"
+    }
+  ],
+  "hannover": [
+    {
+      "name": "IAA Transportation 2026",
+      "venue": "Deutsche Messe Hannover",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-20",
+      "url": "https://www.iaa-transportation.com/en"
+    }
+  ],
+  "cologne": [
+    {
+      "name": "DMEXCO 2026",
+      "venue": "Koelnmesse, Cologne",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-24",
+      "url": "https://dmexco.com/"
+    }
+  ],
+  "dusseldorf": [
+    {
+      "name": "MEDICA 2026",
+      "venue": "Messe Düsseldorf",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-19",
+      "url": "https://www.medica-tradefair.com/"
+    }
+  ],
+  "vienna": [
+    {
+      "name": "AMEE 2026",
+      "venue": "Austria Center Vienna",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-26",
+      "url": "https://amee.org/amee-2026"
+    }
+  ],
+  "salzburg": [
+    {
+      "name": "Alles für den Gast 2026",
+      "venue": "Messezentrum Salzburg",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-10",
+      "url": "https://www.gastmesse.at/en/"
+    }
+  ],
+  "geneva": [
+    {
+      "name": "Watches and Wonders Geneva 2027",
+      "venue": "Palexpo Geneva",
+      "startDate": "2027-04-05",
+      "endDate": "2027-04-11",
+      "url": "https://www.watchesandwonders.com/en"
+    }
+  ],
+  "basel": [
+    {
+      "name": "Ilmac Basel 2027",
+      "venue": "Messe Basel",
+      "startDate": "2027-09-21",
+      "endDate": "2027-09-24",
+      "url": "https://www.ilmac.ch/en/basel/"
+    }
+  ],
+  "dubai": [
+    {
+      "name": "Big 5 Global 2026",
+      "venue": "Dubai World Trade Centre",
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-26",
+      "url": "https://www.big5global.com/"
+    },
+    {
+      "name": "GITEX GLOBAL 2026",
+      "venue": "Dubai World Trade Centre + Expo City Dubai",
+      "startDate": "2026-12-07",
+      "endDate": "2026-12-11",
+      "url": "https://www.gitex.com/"
+    },
+    {
+      "name": "World Health Expo Dubai 2027",
+      "venue": "Dubai Exhibition Centre + Dubai World Trade Centre",
+      "startDate": "2027-01-25",
+      "endDate": "2027-01-28",
+      "url": "https://www.worldhealthexpo.com/events/healthcare/dubai/"
+    },
+    {
+      "name": "Gulfood 2027",
+      "venue": "Dubai World Trade Centre + Dubai Exhibition Centre",
+      "startDate": "2027-03-15",
+      "endDate": "2027-03-19",
+      "url": "https://www.gulfood.com/"
+    }
+  ],
+  "bangkok": [
+    {
+      "name": "Vitafoods Asia 2026",
+      "venue": "Queen Sirikit National Convention Center",
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-04",
+      "url": "https://www.vitafoodsasia.com/"
+    }
+  ],
+  "taipei": [
+    {
+      "name": "SEMICON Taiwan 2026",
+      "venue": "Taipei Nangang Exhibition Center",
+      "startDate": "2026-09-09",
+      "endDate": "2026-09-11",
+      "url": "https://www.semicontaiwan.org/"
+    },
+    {
+      "name": "TAIPEI CYCLE 2027",
+      "venue": "Taipei Nangang Exhibition Center, Halls 1 & 2",
+      "startDate": "2027-03-24",
+      "endDate": "2027-03-27",
+      "url": "https://www.taipeicycle.com.tw/en/index.html"
+    }
+  ],
+  "singapore": [
+    {
+      "name": "ITB Asia 2026",
+      "venue": "Sands Expo & Convention Centre",
+      "startDate": "2026-10-21",
+      "endDate": "2026-10-23",
+      "url": "https://www.itb-asia.com/"
+    },
+    {
+      "name": "Singapore FinTech Festival 2026",
+      "venue": "Singapore EXPO",
+      "startDate": "2026-11-18",
+      "endDate": "2026-11-20",
+      "url": "https://www.fintechfestival.sg/"
+    },
+    {
+      "name": "OSEA 2026",
+      "venue": "Marina Bay Sands",
+      "startDate": "2026-11-24",
+      "endDate": "2026-11-26",
+      "url": "https://www.osea-asia.com/"
+    },
+    {
+      "name": "FHA - Food & Hospitality Asia 2027",
+      "venue": "Singapore EXPO",
+      "startDate": "2027-04-20",
+      "endDate": "2027-04-23",
+      "url": "https://www.foodnhotelasia.com/"
     }
   ]
 }
