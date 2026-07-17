@@ -443,7 +443,7 @@
       "goodThree": "The host stays free to enjoy the night.",
       "goodFour": "The event feels instantly more premium.",
       "requestTitle": "Send the party brief.",
-      "requestText": "No heavy questionnaire. Give us the key details and we’ll clarify the bartender setup quickly.",
+      "requestText": "No heavy questionnaire. Give us the key details and we’ll clarify the bartender setup quickly. You can also use the instant estimate first if you want a rough team size and price range.",
       "requestStepOneTitle": "Date + time",
       "requestStepOneText": "When is the party?",
       "requestStepTwoTitle": "Area + guests",
@@ -507,7 +507,12 @@
       "footerText": "Professional bartenders for birthdays, weddings, rooftops, yachts, home parties and premium private events in Hong Kong.",
       "footerHongKong": "Hong Kong services",
       "stickyCtaLabel": "Plan my party",
-      "whatsappMessage": "Hi, I’m organizing a private event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?"
+      "whatsappMessage": "Hi, I’m organizing a private event in Hong Kong.\n\nName: {name}\nEvent: {event}\n\nCan you help?",
+      "estimateBadge": "New · Beta",
+      "estimateTitle": "Estimate your private bartender setup.",
+      "estimateText": "Use the Bartendly Quote Assistant to get an indicative bartender team size and price range before sending your Hong Kong private-event request.",
+      "estimateNote": "Indicative and non-binding. Final scope, availability and price are confirmed by Bartendly.",
+      "estimateQuoteCta": "Plan my party instead"
     },
     "barcelona": {
       "navTradeShows": "Trade shows",
@@ -834,11 +839,11 @@
       "footerServicesLabel": "Services",
       "footerPlatformLabel": "Plateforme",
       "footerBarcelonaTradeShows": "Salons professionnels à Barcelone",
-      "footerBarcelonaCorporateEvents": "Événements d’entreprise à Barcelone",
+      "footerBarcelonaCorporateEvents": "Événements corporate à Barcelone",
       "footerHongKongPrivateEvents": "Événements privés à Hong Kong",
       "footerHongKongEventBartenders": "Bartenders événementiels à Hong Kong",
       "footerInstantEstimate": "Estimation bartender immédiate",
-      "footerForBartenders": "Pour les bartenders",
+      "footerForBartenders": "Pour bartenders",
       "bartenderCtaMiniText": "Vous êtes bartender ?",
       "bartenderCtaMiniLink": "Rejoindre Bartendly",
       "bartenderCtaTitle": "Vous êtes bartender ?",
@@ -1192,7 +1197,7 @@
       "goodThree": "L’hôte reste libre de profiter de la soirée.",
       "goodFour": "L’événement paraît immédiatement plus premium.",
       "requestTitle": "Envoyez les infos de la soirée.",
-      "requestText": "Pas de long questionnaire. Donnez-nous les détails clés et nous clarifierons rapidement le service bartender.",
+      "requestText": "Pas de long questionnaire. Envoyez les informations clés et nous clarifierons rapidement le setup bartender. Vous pouvez aussi utiliser l’estimation immédiate si vous voulez une idée du nombre de bartenders et du budget.",
       "requestStepOneTitle": "Date + heure",
       "requestStepOneText": "Quand a lieu la fête ?",
       "requestStepTwoTitle": "Lieu + invités",
@@ -1256,7 +1261,12 @@
       "footerText": "Bartenders professionnels pour anniversaires, mariages, rooftops, yachts, fêtes à la maison et événements privés premium à Hong Kong.",
       "footerHongKong": "Services Hong Kong",
       "stickyCtaLabel": "Préparer ma soirée",
-      "whatsappMessage": "Bonjour, j’organise un événement privé à Hong Kong.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?"
+      "whatsappMessage": "Bonjour, j’organise un événement privé à Hong Kong.\n\nNom : {name}\nÉvénement : {event}\n\nPouvez-vous m’aider ?",
+      "estimateBadge": "Nouveau · Beta",
+      "estimateTitle": "Estimez votre setup bartender privé.",
+      "estimateText": "Utilisez le Bartendly Quote Assistant pour obtenir une taille d’équipe et une fourchette de prix indicatives avant d’envoyer votre demande d’événement privé à Hong Kong.",
+      "estimateNote": "Estimation indicative et sans engagement. Le périmètre final, les disponibilités et le prix sont confirmés par Bartendly.",
+      "estimateQuoteCta": "Planifier ma soirée"
     },
     "barcelona": {
       "navTradeShows": "Salons professionnels",
@@ -1941,7 +1951,7 @@
       "goodThree": "El anfitrión queda libre para disfrutar la noche.",
       "goodFour": "El evento se siente inmediatamente más premium.",
       "requestTitle": "Envía los detalles de la fiesta.",
-      "requestText": "Sin cuestionarios largos. Danos los detalles clave y aclararemos rápidamente el servicio de bartender.",
+      "requestText": "Sin cuestionario largo. Envíanos la información clave y aclararemos rápidamente el setup de bartenders. También puedes usar la estimación inmediata si quieres una idea del equipo y del presupuesto.",
       "requestStepOneTitle": "Fecha + hora",
       "requestStepOneText": "¿Cuándo es la fiesta?",
       "requestStepTwoTitle": "Lugar + invitados",
@@ -2005,7 +2015,12 @@
       "footerText": "Bartenders profesionales para cumpleaños, bodas, rooftops, yates, fiestas en casa y eventos privados premium en Hong Kong.",
       "footerHongKong": "Servicios Hong Kong",
       "stickyCtaLabel": "Organizar mi fiesta",
-      "whatsappMessage": "Hola, estoy organizando un evento privado en Hong Kong.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?"
+      "whatsappMessage": "Hola, estoy organizando un evento privado en Hong Kong.\n\nNombre: {name}\nEvento: {event}\n\n¿Podéis ayudarme?",
+      "estimateBadge": "Nuevo · Beta",
+      "estimateTitle": "Estima tu setup de bartenders privados.",
+      "estimateText": "Usa el Bartendly Quote Assistant para obtener un tamaño de equipo y una horquilla de precio orientativos antes de enviar tu solicitud de evento privado en Hong Kong.",
+      "estimateNote": "Estimación orientativa y no vinculante. Bartendly confirma el alcance final, la disponibilidad y el precio.",
+      "estimateQuoteCta": "Planificar mi fiesta"
     },
     "barcelona": {
       "navTradeShows": "Ferias",
