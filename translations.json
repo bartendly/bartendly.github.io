@@ -100,7 +100,9 @@
       "scopeTitle": "Clear service scope",
       "scopeText": "Bartendly Experiences is primarily a bartending service coordination layer. We usually do not provide alcohol. In most cases, alcohol is handled by the client, venue, stand supplier or event production team. Ice, glassware or tools can sometimes be discussed, but the cleanest setup is bartending service only.",
       "formLegalContinuePrefix": "By continuing, you agree that Bartendly OÜ may use your details to review your request and reply.",
-      "formLegalRequestPrefix": "By sending this request, you agree that Bartendly OÜ may use your details to review your request and reply."
+      "formLegalRequestPrefix": "By sending this request, you agree that Bartendly OÜ may use your details to review your request and reply.",
+      "estimateBadge": "New",
+      "instantEstimateCta": "Get an instant estimate"
     },
     "home": {
       "heroImageAlt": "Professional bartenders serving cocktails at a premium event",
@@ -724,8 +726,7 @@
       "estimateNote": "Indicative and non-binding. Final scope, availability and price are confirmed by Bartendly.",
       "estimateCta": "Start instant estimate",
       "estimateQuoteCta": "Get a quote instead",
-      "navEstimate": "Instant estimate",
-      "heroEstimateLink": "Estimate staffing and price range"
+      "navEstimate": "Instant estimate"
     },
     "experiences": {
       "tradeShows": {
@@ -837,7 +838,9 @@
       "scopeTitle": "Périmètre de service clair",
       "scopeText": "Bartendly Experiences est avant tout une couche de coordination de service bartender. En général, nous ne fournissons pas l’alcool. Dans la plupart des cas, l’alcool est géré par le client, le lieu, le fournisseur du stand ou l’équipe de production de l’événement. La glace, la verrerie ou les outils peuvent parfois être discutés, mais le setup le plus propre reste un service de bartending uniquement.",
       "formLegalContinuePrefix": "En continuant, vous acceptez que Bartendly OÜ utilise vos informations pour étudier votre demande et vous répondre.",
-      "formLegalRequestPrefix": "En envoyant cette demande, vous acceptez que Bartendly OÜ utilise vos informations pour l’étudier et vous répondre."
+      "formLegalRequestPrefix": "En envoyant cette demande, vous acceptez que Bartendly OÜ utilise vos informations pour l’étudier et vous répondre.",
+      "estimateBadge": "Nouveau",
+      "instantEstimateCta": "Obtenir une estimation immédiate"
     },
     "home": {
       "heroImageAlt": "Bartenders professionnels en service lors d’un événement premium",
@@ -1461,8 +1464,7 @@
       "estimateNote": "Estimation indicative et sans engagement. Le périmètre final, les disponibilités et le prix sont confirmés par Bartendly.",
       "estimateCta": "Lancer l’estimation",
       "estimateQuoteCta": "Demander un devis",
-      "navEstimate": "Estimation immédiate",
-      "heroEstimateLink": "Estimer le staffing et le budget"
+      "navEstimate": "Estimation immédiate"
     },
     "experiences": {
       "tradeShows": {
@@ -1574,7 +1576,9 @@
       "scopeTitle": "Alcance claro del servicio",
       "scopeText": "Bartendly Experiences es principalmente una capa de coordinación de servicio de bartenders. Por lo general, no proporcionamos alcohol. En la mayoría de los casos, el alcohol lo gestiona el cliente, el venue, el proveedor del stand o el equipo de producción del evento. El hielo, la cristalería o las herramientas pueden discutirse en algunos casos, pero el setup más limpio es solo el servicio de bartending.",
       "formLegalContinuePrefix": "Al continuar, aceptas que Bartendly OÜ utilice tus datos para revisar tu solicitud y responderte.",
-      "formLegalRequestPrefix": "Al enviar esta solicitud, aceptas que Bartendly OÜ utilice tus datos para revisarla y responderte."
+      "formLegalRequestPrefix": "Al enviar esta solicitud, aceptas que Bartendly OÜ utilice tus datos para revisarla y responderte.",
+      "estimateBadge": "Nuevo",
+      "instantEstimateCta": "Obtener una estimación inmediata"
     },
     "home": {
       "heroImageAlt": "Bartenders profesionales sirviendo cócteles en un evento premium",
@@ -2198,8 +2202,7 @@
       "estimateNote": "Estimación orientativa y no vinculante. Bartendly confirma el alcance final, la disponibilidad y el precio.",
       "estimateCta": "Iniciar estimación",
       "estimateQuoteCta": "Pedir presupuesto",
-      "navEstimate": "Estimación inmediata",
-      "heroEstimateLink": "Estimar staffing y rango de precio"
+      "navEstimate": "Estimación inmediata"
     },
     "experiences": {
       "tradeShows": {
