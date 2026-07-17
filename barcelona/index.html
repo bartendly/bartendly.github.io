@@ -267,6 +267,18 @@ h1,h2,h3,p{margin:0}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 *{animation:none!important;transition:none!important}
 }
+
+/* Hero image visibility refinement v5 */
+.hero::before{background:linear-gradient(90deg,rgba(11,11,15,.88) 0%,rgba(11,11,15,.70) 42%,rgba(11,11,15,.30) 72%,rgba(11,11,15,.48) 100%),linear-gradient(180deg,rgba(11,11,15,.04),rgba(11,11,15,.16) 52%,rgba(11,11,15,.64))}
+.hero__media img{filter:brightness(.98) saturate(1.05) contrast(1.02)}
+@media(max-width:719px){
+  .hero{padding-top:94px}
+  .hero::before{background:linear-gradient(90deg,rgba(11,11,15,.72) 0%,rgba(11,11,15,.45) 56%,rgba(11,11,15,.12) 100%),linear-gradient(180deg,rgba(11,11,15,.02) 0%,rgba(11,11,15,.10) 36%,rgba(11,11,15,.70) 74%,rgba(11,11,15,.95) 100%)}
+  .hero__media{height:clamp(640px,94svh,860px)}
+  .hero__media img{object-position:center top;filter:brightness(1.02) saturate(1.05) contrast(1.01);transform:none}
+  .hero__subtitle{background:rgba(11,11,15,.18);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:12px 13px;backdrop-filter:blur(8px)}
+}
+
 </style>
 
 <script type="application/ld+json">
